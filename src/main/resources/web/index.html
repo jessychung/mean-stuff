@@ -10,12 +10,30 @@
   ~ inquiries@thentia.com
   -->
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel='shortcut icon' href='/assets/favicon/Thentia_fav.ico'/>
+    <link rel="stylesheet" href="/assets/styles/fontawesome/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/kendo/kendo.custom.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/kendo/kendo.common.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/kendo/kendo.common-bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/kendo/kendo.dataviz.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/kendo/kendo.dataviz.default.min.css/">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/sso/thentia.css"/>
+    <script src="/assets/scripts/bootstrap/bootstrap.min.js" language="JavaScript"></script>
+    <script src="/assets/scripts/kendo/kendo.all.min.js" language="JavaScript"></script>
+    <script src="https://use.typekit.net/vgo3enr.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <title>Thentia</title>
 </head>
-<body>
-    <img src="/assets/images/avatar_1.png"/>
+
+<body ng-app="com.thentia.sso">
+<div class="sso-controller" autoscroll ng-view>
+</div>
 </body>
 </html>

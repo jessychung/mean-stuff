@@ -124,15 +124,15 @@ input.k-textbox, textarea.k-textbox, input.k-textbox:hover, textarea.k-textbox:h
     border-color: transparent
 }
 
-.k-icon, .k-tool-icon, .k-grouping-dropclue, .k-drop-hint, .k-column-menu .k-sprite, .k-grid-mobile .k-resize-handle-inner:before, .k-grid-mobile .k-resize-handle-inner:after {
-    background-image: url('Default/sprite.png');
-    border-color: transparent
-}
+/*.k-icon, .k-tool-icon, .k-grouping-dropclue, .k-drop-hint, .k-column-menu .k-sprite, .k-grid-mobile .k-resize-handle-inner:before, .k-grid-mobile .k-resize-handle-inner:after {*/
+    /*background-image: url('Default/sprite.png');*/
+    /*border-color: transparent*/
+/*}*/
 
-.k-mobile-list .k-check:checked, .k-mobile-list .k-edit-field [type=checkbox]:checked, .k-mobile-list .k-edit-field [type=radio]:checked {
-    background-image: url('Default/sprite.png');
-    border-color: transparent
-}
+/*.k-mobile-list .k-check:checked, .k-mobile-list .k-edit-field [type=checkbox]:checked, .k-mobile-list .k-edit-field [type=radio]:checked {*/
+    /*background-image: url('Default/sprite.png');*/
+    /*border-color: transparent*/
+/*}*/
 
 .k-loading, .k-state-hover .k-loading {
     background-image: url('Default/loading.gif');
@@ -446,9 +446,9 @@ input.k-textbox, textarea.k-textbox, input.k-textbox:hover, textarea.k-textbox:h
     background-position: 50% 50%
 }
 
-.k-tool-icon {
-    background-image: url('Default/sprite.png')
-}
+/*.k-tool-icon {*/
+    /*background-image: url('Default/sprite.png')*/
+/*}*/
 
 .k-state-hover > .k-link, .k-other-month.k-state-hover .k-link, div.k-filebrowser-dropzone em {
     color: #2e2e2e
