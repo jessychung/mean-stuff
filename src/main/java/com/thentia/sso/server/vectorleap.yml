@@ -1,0 +1,48 @@
+networkHost: localhost
+esHost: 127.0.0.1
+esPort: 9300
+esCluster: vectorleap
+mongoHost: 127.0.0.1
+mongoPort: 27017
+zkHost: 127.0.0.1
+zkPort: 9001
+kafkaBrokers: 127.0.0.1
+cryptoSalt: 3faf2e7d4648ce9yb0msBMPQiWmHWuSdjVATg
+cryptoKey: 11c3ce6a4Zv4YOOS8KqybcCBKtkVQ3faf2e7d
+adminUsername: Krp42RBVK63KxCRV+UzRgDNbswMGALjjcQ7cXcDtXRdRN6IrCllXgZexEQM6mvykwQVgmEbasU9pM39u4ccFLQ==
+adminPassword: 37BoYhLJ/ULqdeIW/NquCfX3jHs0/7QLytn5kK4YRo0JdWLD80NEbVVJUxeuVYCroatn3OFeeL+qPd4jR5ahJQ==
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 32000
+      bindHost: 0.0.0.0
+      headerCacheSize: 512 bytes
+      outputBufferSize: 32KiB
+      maxRequestHeaderSize: 8KiB
+      maxResponseHeaderSize: 8KiB
+      inputBufferSize: 8KiB
+      idleTimeout: 30 seconds
+      minBufferPoolSize: 64 bytes
+      bufferPoolIncrement: 1KiB
+      maxBufferPoolSize: 64KiB
+      acceptorThreads: 1
+      selectorThreads: 2
+      acceptQueueSize: 1024
+      reuseAddress: true
+      soLingerTime: 345s
+      useServerHeader: false
+      useDateHeader: true
+      useForwardedHeaders: true
+
+  adminConnectors:
+    - type: http
+      port: 32001
+
+logging:
+  level: DEBUG
+  appenders:
+    - type: console
+      threshold: ALL
+      timeZone: UTC
+      target: stdout
