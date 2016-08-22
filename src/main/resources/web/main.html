@@ -58,10 +58,10 @@
             </div>
             <div class="pull-right hidden-xs" style="position: relative">
                 <div style="display: inline-block; position: relative">
-                    <img src="/assets/images/thentia_app.png" class="thentia-app" ng-click="openapps = !openapps">
+                    <img src="/assets/images/thentia_app.png" class="thentia-app" ng-click="openapps = !openapps" hide-apps="hideAppBox()">
                     <div class="thentia-options">
 
-                        <div class="arrow-box" ng-show="openapps">
+                        <div class="arrow-box" ng-show="openapps" hide-apps="hideAppBox()" >
                             <div class="row" style="margin: 0px !important;">
                                 <div class="app-single col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <img src="/assets/images/thentia_app_main.png">
@@ -110,11 +110,13 @@
         <div class="col-md-12 mobile-container" style="padding: 20px 50px">
 
             <div class="col-md-3 col-sm-4" style="margin-bottom: 20px">
-                <div class="card card-1">
-                    <span class="number-new">12</span>
-                    <img src="/assets/images/thentia_invoice.png">
-                    <h4>View Invoices</h4>
-                </div>
+                <a href="#">
+                    <div class="card card-1">
+                        <span class="number-new">12</span>
+                        <img src="/assets/images/thentia_invoice.png">
+                        <h4>View Invoices</h4>
+                    </div>
+                </a>
             </div>
 
             <div class="col-md-3 col-sm-4" style="margin-bottom: 20px">
