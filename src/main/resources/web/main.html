@@ -7,8 +7,8 @@
     <div class="blue"></div>
 </div>
 
-<div class="slide-apps">
-    <i class="fa fa-times exit"></i>
+<div class="slide-apps" ng-show="showappsmobile">
+    <i class="fa fa-times exit" ng-click="showappsmobile = !showappsmobile"></i>
     <div class="row" style="margin: 0px !important;">
         <div class="app-single col-sm-12 col-xs-12">
             <img src="/assets/images/thentia_app_main.png">
@@ -27,9 +27,9 @@
 
     </div>
 </div>
-<div class="slide-mobile hidden-md hidden-lg">
+<div class="slide-mobile hidden-md hidden-lg" ng-show="openmobile">
     <div class="user-mobile-info">
-        <div class="avatar-small-mobile" style="background-image: url('/assets/images/BA_avatar_1.png')"></div>
+        <div class="avatar-small-mobile" style="background-image: url('/assets/images/avatar_1.png')"></div>
         <div style="display: inline-block; margin-top: 12px;"><span>John Smith</span></div>
     </div>
     <ul>
@@ -43,7 +43,7 @@
     <!--        <li class="back-to-dash" style="margin-bottom: 20px"><a href="/form/dashboard/index.php" style="font-weight: 500; border:1px solid #e6e6e6; padding: 10px 15px;"><i class="fa fa-angle-left" style="padding-left: 0px;"></i> Back</a></li>-->
 </div>
 
-<div class="screen-overlay hidden-md hidden-lg"></div>
+<div class="screen-overlay hidden-md hidden-lg" ng-show="openmobile" ng-click="openmobile = !openmobile"></div>
 
 
 <div class="container-fluid" style="background-color: #f7f7f7;">
@@ -53,15 +53,15 @@
                 <img src="/assets/images/thentia_logo_web.svg" width="170px" height="100%" style="margin-top: 7px">
             </div>
             <div class="pull-right hidden-sm hidden-md hidden-lg">
-                <img src="/assets/images/thentia_app.png" class="thentia-app thentia-app-mobile">
-                <i class="fa fa-bars thentia-app-bars"></i>
+                <img src="/assets/images/thentia_app.png" class="thentia-app thentia-app-mobile" ng-click="showappsmobile = !showappsmobile">
+                <i class="fa fa-bars thentia-app-bars" style="font-size: 17px; vertical-align: middle;" ng-click="openmobile = !openmobile"></i>
             </div>
             <div class="pull-right hidden-xs" style="position: relative">
                 <div style="display: inline-block; position: relative">
-                    <img src="/assets/images/thentia_app.png" class="thentia-app">
+                    <img src="/assets/images/thentia_app.png" class="thentia-app" ng-click="openapps = !openapps">
                     <div class="thentia-options">
 
-                        <div class="arrow-box">
+                        <div class="arrow-box" ng-show="openapps">
                             <div class="row" style="margin: 0px !important;">
                                 <div class="app-single col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <img src="/assets/images/thentia_app_main.png">

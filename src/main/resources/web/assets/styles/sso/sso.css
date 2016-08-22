@@ -826,6 +826,7 @@ p {
 .thentia-app,
 .thentia-app-bars {
   padding: 31px 20px;
+  display: inline;
 }
 .thentia-app:hover,
 .thentia-app-bars:hover {
@@ -949,6 +950,29 @@ p {
 .user-mobile-info {
   background-color: #f2f2f2;
   padding: 50px;
+  text-align: center;
+}
+.slide-apps {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1099;
+  text-align: center;
+  overflow: auto;
+  animation: 0.5s smoothfadein;
+}
+.slide-apps.ng-hide {
+  animation: 0.5s smoothfadeout;
+}
+.slide-apps .app-single {
+  padding: 20px 0px;
 }
 .slide-mobile {
   position: fixed;
@@ -956,15 +980,17 @@ p {
   bottom: 0;
   left: 0;
   margin: 0;
-  padding: 0;
   height: 100%;
   background-color: white;
   z-index: 1999;
-  text-align: center;
   display: block;
-  max-width: 300px;
-  min-width: 200px;
+  width: 200px;
   overflow: auto;
+  text-align: center;
+  animation: 0.5s smoothslidein;
+}
+.slide-mobile.ng-hide {
+  animation: 0.5s smoothslideout;
 }
 .avatar-small-mobile {
   width: 90px;
@@ -985,11 +1011,18 @@ p {
   left: 0;
   right: 0;
   z-index: 1900;
+  animation: 0.5s bgsmoothfadein;
+}
+.screen-overlay.ng-hide {
+  animation: 0.5s bgsmoothfadeout;
 }
 .user-mobile-info span {
   font-weight: 600 !important;
   font-size: 16px !important;
   text-align: center;
+}
+.slide-mobile li {
+  padding: 0px 20px;
 }
 .slide-mobile a {
   color: #333333;
@@ -1001,4 +1034,73 @@ p {
 .slide-mobile ul {
   padding-left: 0px !important;
   list-style-type: none;
+}
+.slide-apps {
+  padding-top: 70px;
+}
+.slide-apps .app-single:hover {
+  background-color: transparent;
+}
+.exit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 17px;
+  color: #3d474f;
+}
+.exit:hover {
+  cursor: pointer;
+}
+
+@keyframes smoothfadeout {
+   0% {
+     opacity: 1;
+   }
+   100% {
+     opacity: 0;
+   }
+ }
+@keyframes smoothfadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bgsmoothfadeout {
+  0% {
+    opacity: .8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes bgsmoothfadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .8;
+  }
+}
+
+@keyframes smoothslidein {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes smoothslideout {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -200px;
+  }
 }
