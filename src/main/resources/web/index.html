@@ -1,39 +1,60 @@
 <!DOCTYPE html>
-<!--
-  ~ Copyright (c) 2016, Thentia Corporation
-  ~ All Rights Reserved.
-  ~
-  ~ Thentia Corporation
-  ~ 218-543 Richmond Street West
-  ~ Toronto, Ontario, Canada M5V 1Y6
-  ~ http://www.thentia.com
-  ~ inquiries@thentia.com
-  -->
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+      ~ Copyright (c) 2016, Thentia Corporation
+      ~ All Rights Reserved.
+      ~
+      ~ Thentia Corporation
+      ~ 218-543 Richmond Street West
+      ~ Toronto, Ontario, Canada M5V 1Y6
+      ~ http://www.thentia.com
+      ~ inquiries@thentia.com
+      -->
 
-    <link rel='shortcut icon' href='/assets/favicon/Thentia_fav.ico'/>
-    <link rel="stylesheet" href="/assets/styles/fontawesome/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <link rel='shortcut icon' href='/assets/favicon/thentia_fav.ico'/>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/fontawesome/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/kendo/kendo.custom.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/styles/kendo/kendo.common.min.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/styles/kendo/kendo.common-bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="/assets/styles/kendo/kendo.dataviz.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/kendo/kendo.dataviz.default.min.css/">
+    <link rel="stylesheet" type="text/css" href="/assets/styles/kendo/kendo.dataviz.default.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/styles/bootstrap/bootstrap.css"/>
-    <link rel="stylesheet" type="text/css" href="/assets/styles/sso/thentia.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/styles/sso/sso.css"/>
+    <script src="/assets/scripts/jquery/jquery-1.12.4.min.js" language="JavaScript"></script>
     <script src="/assets/scripts/bootstrap/bootstrap.min.js" language="JavaScript"></script>
+    <script src="/assets/scripts/angular/angular.min.js" language="JavaScript"></script>
+    <script src="/assets/scripts/angular/angular-animate.min.js" language="JavaScript"></script>
+    <script src="/assets/scripts/angular/angular-cookies.min.js" language="JavaScript"></script>
+    <script src="/assets/scripts/angular/angular-loader.min.js" language="JavaScript"></script>
+    <script src="/assets/scripts/angular/angular-resource.min.js" language="JavaScript"></script>
+    <script src="/assets/scripts/angular/angular-route.min.js" language="JavaScript"></script>
+    <script src="/assets/scripts/angular/angular-sanitize.min.js" language="JavaScript"></script>
+    <script src="/assets/scripts/angular/angular-messages.min.js" language="JavaScript"></script>
+    <script src="/assets/scripts/angular/angular-upload.min.js" language="JavaScript"></script>
+    <script src="/assets/scripts/momentjs/moment.min.js" language="JavaScript"></script>
     <script src="/assets/scripts/kendo/kendo.all.min.js" language="JavaScript"></script>
     <script src="https://use.typekit.net/vgo3enr.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <!-- SSO -->
+
+    <script src="/assets/scripts/sso/com.thentia.sso.app.js" language="JavaScript"></script>
+    <script src="/assets/scripts/sso/com.thentia.sso.routes.js" language="JavaScript"></script>
+    <script src="/assets/scripts/sso/com.thentia.sso.config.js" language="JavaScript"></script>
+    <script src="/assets/scripts/sso/com.thentia.sso.session.js" language="JavaScript"></script>
+
+    <!-- SSO Controllers -->
+
+    <script src="/assets/scripts/sso/controller/com.thentia.sso.controller.default.js" language="JavaScript"></script>
+
     <title>Thentia</title>
 </head>
 
-<body ng-app="com.thentia.sso">
-<div class="sso-controller" autoscroll ng-view>
+<body ng-app="com.thentia.sso.app" style="background-color: #f7f7f7;">
+<div ng-view>
 </div>
+
 </body>
 </html>

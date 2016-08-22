@@ -27,7 +27,7 @@ import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import org.joda.time.DateTimeZone;
 
-public class VectorLeapServer extends Application<VectorLeapConfiguration>
+public class SSOServer extends Application<VectorLeapConfiguration>
 {
 	@Override
 	public void initialize(Bootstrap<VectorLeapConfiguration> bootstrap)
@@ -76,7 +76,7 @@ public class VectorLeapServer extends Application<VectorLeapConfiguration>
 
 	public static void main(String[] args) throws Exception
 	{
-		VectorLeapServer p = new VectorLeapServer();
+		SSOServer p = new SSOServer();
 		p.run( args );
 	}
 }
