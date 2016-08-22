@@ -12,6 +12,15 @@ ssoApp.config(['$routeProvider', function ($routeProvider)
 
         )
 
+        .when
+        (
+            '/service',
+            {
+                templateUrl: '/main.html',
+                controller: 'com.thentia.sso.controller.default'
+            }
+        )
+
         .otherwise
         (
             {
