@@ -8,6 +8,7 @@ ssoApp.controller('com.thentia.sso.controller.default', function ($http, $routeP
         $scope.openapps = false;
     };
 
+
 });
 
 ssoApp.directive('hideApps', function($document){

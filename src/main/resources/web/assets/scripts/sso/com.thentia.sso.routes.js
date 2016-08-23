@@ -30,6 +30,24 @@ ssoApp.config(['$routeProvider', function ($routeProvider)
             }
         )
 
+        .when
+        (
+            '/sign-up-one',
+            {
+                templateUrl: '/register_step_one.html',
+                controller: 'com.thentia.sso.controller.default'
+            }
+        )
+
+        .when
+        (
+            '/sign-up-two',
+            {
+                templateUrl: '/register_step_two.html',
+                controller: 'com.thentia.sso.controller.default'
+            }
+        )
+
         .otherwise
         (
             {

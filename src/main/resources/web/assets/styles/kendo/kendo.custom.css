@@ -262,16 +262,16 @@ input.k-textbox:focus, input.k-textbox:active {
 }
 
 .k-dropdown-wrap.k-state-default.k-state-border-down.k-state-active.k-state-focused {
-    background-color: #f7f7f7 !important;
+    background-color: #fff !important;
 }
 
 .k-dropdown-wrap.k-state-default.k-state-border-down.k-state-active.k-state-focused .k-select {
-    background-color: #f7f7f7 !important;
+    background-color: #fff !important;
     padding-right: 15px !important;
 }
 
 .k-dropdown-wrap.k-state-default.k-state-border-down.k-state-active.k-state-focused .k-input {
-    background-color: #f7f7f7 !important;
+    background-color: #fff !important;
     line-height: 2.13em !important;
 }
 
@@ -1112,4 +1112,19 @@ html {
     font-size: 18px;
     margin-top: 10px;
     position: absolute;
+}
+
+.k-icon {
+    color: transparent!important;
+}
+
+.k-numeric-wrap .k-i-arrow-s:before, .k-select .k-i-arrow-s:before {
+    content: "\f107"!important;
+    font-family: FontAwesome!important;
+    color: #999;
+    font-size: 18px;
+    position: absolute;
+}
+.k-i-arrow-s:before {
+    content: "\e602";
 }

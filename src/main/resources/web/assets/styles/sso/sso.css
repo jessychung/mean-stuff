@@ -409,20 +409,17 @@ p {
   font-size: 34px;
 }
 .signup-right-side {
-  padding-left: 30px;
-  padding-right: 90px;
-  padding-bottom: 90px;
+  padding:20px 90px 90px 30px;
 }
 .signup-right-side .form-group {
-  margin-bottom: 30px !important;
 }
 .signup-right-side h2 {
   margin-top: 0px;
-  font-size: 28px;
+  font-size: 25px;
 }
 .sticky-button {
   position: fixed;
-  background-color: rgba(242, 242, 242, 0.5);
+  background-color: #fff;
   width: 100%;
   bottom: 0;
   right: 0;
@@ -461,7 +458,7 @@ p {
   margin-bottom: 30px;
   margin-top: 30px;
   background-color: #3d474f;
-  padding: 10px 15px;
+  padding: 10px 25px;
   color: white;
 }
 .step-indicators {
@@ -487,14 +484,14 @@ p {
   width: 11px;
   height: 11px;
   border-radius: 30px;
-  background-color: #eb563c;
-  border: 1px solid #eb563c;
+  background-color: #787878;
+  border: 1px solid #787878;
   margin-top: 5px;
 }
 .step-indicators li.completed .next-dot .line {
   height: 31px;
   width: 1px;
-  background-color: #eb563c;
+  background-color: #787878;
   margin-top: -31px;
   margin-left: 4px;
 }
@@ -545,10 +542,12 @@ p {
   right: 0;
   padding: 5px 10px;
   margin-left: 10px;
-  margin-top: -5px;
-  display: none;
 }
 .error-input {
+  border-bottom-color: #ec778e !important;
+}
+
+.error-input .k-dropdown-wrap {
   border-bottom-color: #ec778e !important;
 }
 .error-input-list {
@@ -578,18 +577,18 @@ p {
 }
 .next-step-valid {
   margin-bottom: 30px;
-  background-color: #e2ac4b;
-  padding: 10px 15px;
+  background-color: #3d474f;
+  padding: 10px 25px;
   color: white;
 }
 .next-step-valid:hover {
-  background-color: #e2ac4b;
-  padding: 10px 15px;
+  background-color: #3d474f;
+  padding: 10px 25px;
   color: white;
 }
 .next-step-valid:focus {
-  background-color: #e2ac4b;
-  padding: 10px 15px;
+  background-color: #3d474f !important;
+  padding: 10px 25px;
   color: white;
 }
 .top-bar {
@@ -739,7 +738,6 @@ p {
 .input-alternate:focus {
   border-bottom: 1px solid #c8c9cc;
   transition: all 0.5s;
-  background-color: #fafafa;
 }
 .thentia-line {
   position: fixed;
@@ -1110,3 +1108,11 @@ p {
   padding: 15px;
   text-align: center;
 }
+
+
+.fa-asterisk {
+  font-size: 9px;
+  color: #048586;
+}
+
+∫
