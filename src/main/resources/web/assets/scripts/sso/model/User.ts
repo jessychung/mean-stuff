@@ -6,6 +6,7 @@ class User
     private _sso_id: string;
     private _sso_firstname: string;
     private _sso_lastname: string;
+
     private _sso_email1: string;
     private _sso_email2: string;
     private _sso_telephone1: string;
