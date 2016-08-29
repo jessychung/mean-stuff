@@ -6,7 +6,7 @@ ssoApp.config(['$routeProvider', function ($routeProvider)
         (
             '/logout',
             {
-                templateUrl: '/logout.html',
+                templateUrl: '/forms/logout/index.html',
                 controller: 'com.thentia.sso.controller.default'
             }
 
@@ -14,9 +14,9 @@ ssoApp.config(['$routeProvider', function ($routeProvider)
 
         .when
         (
-            '/service',
+            '/main',
             {
-                templateUrl: '/main.html',
+                templateUrl: '/forms/main/index.html',
                 controller: 'com.thentia.sso.controller.default'
             }
         )
@@ -25,25 +25,25 @@ ssoApp.config(['$routeProvider', function ($routeProvider)
         (
             '/forgot',
             {
-                templateUrl: '/forgot.html',
+                templateUrl: '/forms/forgot/index.html',
                 controller: 'com.thentia.sso.controller.default'
             }
         )
 
         .when
         (
-            '/sign-up-one',
+            '/register/step-one',
             {
-                templateUrl: '/register_step_one.html',
+                templateUrl: '/forms/register/step1/index.html',
                 controller: 'com.thentia.sso.controller.default'
             }
         )
 
         .when
         (
-            '/sign-up-two',
+            '/register/step-two',
             {
-                templateUrl: '/register_step_two.html',
+                templateUrl: '/forms/register/step2/index.html',
                 controller: 'com.thentia.sso.controller.default'
             }
         )
@@ -51,7 +51,7 @@ ssoApp.config(['$routeProvider', function ($routeProvider)
         .otherwise
         (
             {
-                templateUrl: '/login.html',
+                templateUrl: '/index.html',
                 controller: "com.thentia.sso.controller.default"
             }
         );
