@@ -35,7 +35,7 @@ ssoApp.config(['$routeProvider', function ($routeProvider)
             '/register/step-one',
             {
                 templateUrl: '/forms/register/step1/index.html',
-                controller: 'com.thentia.sso.controller.default'
+                controller: 'com.thentia.sso.controller.register.stepone'
             }
         )
 
@@ -44,7 +44,7 @@ ssoApp.config(['$routeProvider', function ($routeProvider)
             '/register/step-two',
             {
                 templateUrl: '/forms/register/step2/index.html',
-                controller: 'com.thentia.sso.controller.default'
+                controller: 'com.thentia.sso.controller.register.steptwo'
             }
         )
 

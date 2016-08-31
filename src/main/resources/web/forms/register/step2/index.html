@@ -31,7 +31,7 @@
                 <p>Please complete all required fields.</p>
                 <div style="padding: 5px" class="hidden-xs"></div>
 
-                <form name="form" novalidate>
+                <form name="form" ng-submit="submitForm()" novalidate>
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="form-group">
@@ -45,61 +45,6 @@
                             <label>Last Name <i class="fa fa-asterisk" aria-hidden="true"></i></label>
                             <span class='error' ng-show="form.$submitted && form.lname.$error.required"><i class='fa fa-exclamation-circle'></i><span class="error-message">  Required</span></span>
                             <input type='text' class='form-control input-alternate' ng-class="{ 'error-input': form.$submitted && form.lname.$error.required }" name='lname' ng-model="lname" placeholder="Enter last name" required/>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>Street Address (Line 1) <i class="fa fa-asterisk" aria-hidden="true"></i></label>
-                            <span class='error' ng-show="form.$submitted && form.street.$error.required"><i class='fa fa-exclamation-circle'></i><span class="error-message">  Required</span></span>
-                            <input type='text' class='form-control input-alternate required' ng-class="{ 'error-input': form.$submitted && form.street.$error.required }" name='street' ng-model="street" placeholder="Enter your company's address" required/>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>Street Address (Line 2)</label>
-                            <input type='text' class='form-control input-alternate' name='streettwo' placeholder="Enter your company's address" />
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>City <i class="fa fa-asterisk" aria-hidden="true"></i></label>
-                            <span class='error' ng-show="form.$submitted && form.city.$error.required"><i class='fa fa-exclamation-circle'></i><span class="error-message">  Required</span></span>
-                            <input type='text' class='form-control input-alternate' ng-class="{ 'error-input': form.$submitted && form.city.$error.required }"  name='city' ng-model="city" placeholder="Enter city" required/>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>Province/State <i class="fa fa-asterisk" aria-hidden="true"></i></label>
-                            <span class='error' ng-show="form.$submitted && stateprovince == 0"><i class='fa fa-exclamation-circle'></i><span class="error-message">  Required</span></span>
-                            <select kendo-drop-down-list style='width: 100%' name="stateprovince" ng-model="stateprovince" required ng-class="{ 'error-input': form.$submitted && stateprovince == 0 }">
-                                <option value="0">Select State or Province...</option>
-                                <option value='1'>Test one</option>
-                                <option value='2'>Test two</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>Country <i class="fa fa-asterisk" aria-hidden="true"></i></label>
-                            <span class='error' ng-show="form.$submitted && country == 0"><i class='fa fa-exclamation-circle'></i><span class="error-message">  Required</span></span>
-                            <select kendo-drop-down-list  name="country" ng-model="country" style='width: 100%' ng-class="{ 'error-input': form.$submitted && country == 0 }" required>
-                                <option value="0">Select Country...</option>
-                                <option value='1'>Test one</option>
-                                <option value='2'>Test two</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label>Postal/ZIP Code <i class="fa fa-asterisk" aria-hidden="true"></i></label>
-                            <span class='error' ng-show="form.$submitted && form.postal.$error.required"><i class='fa fa-exclamation-circle'></i><span class="error-message">  Required</span></span>
-                            <input type='text' class='form-control input-alternate' ng-class="{ 'error-input': form.$submitted && form.postal.$error.required }" name='postal' ng-model="postal" placeholder="Enter postal or zip code" required/>
                         </div>
                     </div>
                 </div>
