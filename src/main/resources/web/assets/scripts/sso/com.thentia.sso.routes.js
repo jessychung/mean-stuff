@@ -51,7 +51,7 @@ ssoApp.config(['$routeProvider', function ($routeProvider)
         .otherwise
         (
             {
-                templateUrl: '/index.html',
+                templateUrl: '/forms/login/index.html',
                 controller: "com.thentia.sso.controller.default"
             }
         );

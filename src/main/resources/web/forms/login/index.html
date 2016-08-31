@@ -15,24 +15,24 @@
         <div class="login-form-mobile">
             <p>Please enter your email address and password below. Click login to continue.</p>
             <div style="padding: 10px"></div>
-            <form method="post" action="/form/auth/">
+            <form method="post" ng-submit="submitForm()">
                 <div class="form-group">
                     <label>Email Address</label>
                     <div style="padding: 2px"></div>
                     <span class="icon"><i class="fa fa-envelope-o"></i></span>
-                    <input type="email" name="hd_email1" id="hd_email1" class="form-control input-alternate"
+                    <input type="email" name="sso_email" id="sso_email" class="form-control input-alternate"
                            style="padding-left: 35px">
                 </div>
                 <div class="form-group">
                     <label>Password</label>
                     <div style="padding: 2px"></div>
                     <span class="icon"><i class="fa fa-key"></i></span>
-                    <input type="password" name="hd_password" id="hd_password"
+                    <input type="password" name="sso_password" id="sso_password"
                            class="form-control input-alternate" style="padding-left: 35px">
                 </div>
                 <a href="/#/forgot" style="margin-top: 10px; margin-bottom: 20px; display: inline-block;">Forgot your password?</a>
                 <button type="submit" class="btn btn-single" style="background-color: #3d474f; color: white; width:100%; margin-bottom: 15px">Login</button>
-                <div class="no-account">First time here? <a href="/#/sign-up-one">Sign up</a></div>
+                <div class="no-account">First time here? <a href="/#/register/step-one">Sign up</a></div>
             </form>
         </div>
     </div>
@@ -55,19 +55,18 @@
                             <label>Email Address</label>
                             <div style="padding: 2px"></div>
                             <span class="icon"><i class="fa fa-envelope-o"></i></span>
-                            <input type="email" name="hd_email1" id="hd_email1" class="form-control input-alternate"
+                            <input type="email" name="sso_email1" id="sso_email1" class="form-control input-alternate"
                                    style="padding-left: 35px">
                         </div>
                         <div class="form-group" style="margin-bottom: 0 !important;">
                             <label>Password</label>
                             <div style="padding: 2px"></div>
                             <span class="icon"><i class="fa fa-key"></i></span>
-                            <input type="password" name="hd_password" id="hd_password"
-                                   class="form-control input-alternate" style="padding-left: 35px">
+                            <input type="password" name="sso_password1" id="sso_password1" class="form-control input-alternate" style="padding-left: 35px">
                         </div>
                         <a href="/#/forgot" style="margin-top: 10px; margin-bottom: 20px; display: inline-block;">Forgot your password?</a>
                         <button type="submit" class="btn btn-single" style="background-color: #3d474f; color: white; width:100%; margin-bottom: 15px">Login</button>
-                        <div class="no-account">First time here? <a href="/#/sign-up-one">Sign up</a></div>
+                        <div class="no-account">First time here? <a href="/#/register/step-one">Sign up</a></div>
                     </form>
                 </div>
             </div>
@@ -76,5 +75,5 @@
 </div>
 
 <div class="login-footer">
-    <p>Copyright © 2016 Thentia USA Inc. All Rights Reserved.</p>
+    <p>Copyright © 2016 Thentia Corporation. All Rights Reserved.</p>
 </div>
