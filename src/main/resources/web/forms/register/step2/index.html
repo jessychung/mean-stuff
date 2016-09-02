@@ -20,6 +20,7 @@
                 <ul class="step-indicators">
                     <li class="completed"><div class="current-dot"></div><a href="/#/register/step-one">Company Information</a></li>
                     <li class="completed"><div class="next-dot"><div class="line"></div></div><a href="/#/sign-up-two">Primary Contact Info</a></li>
+                    <li class="not-completed"><div class="next-dot"><div class="line"></div></div><a href="/#/sign-up-two">Summary</a></li>
                 </ul>
             </div>
         </div>
@@ -51,15 +52,15 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>Primary Phone <i class="fa fa-asterisk" aria-hidden="true"></i></label>
+                            <label>Primary Telephone <i class="fa fa-asterisk" aria-hidden="true"></i></label>
                             <span class='error' ng-show="form.$submitted && form.primaryphone.$error.required"><i class='fa fa-exclamation-circle'></i><span class="error-message">  Required</span></span>
-                            <input type='number' class='form-control input-alternate' ng-class="{ 'error-input': form.$submitted && form.primaryphone.$error.required }" name='primaryphone' ng-model="primaryphone" placeholder="Enter primary telephone" required/>
+                            <input type='text' class='form-control input-alternate' ng-class="{ 'error-input': form.$submitted && form.primaryphone.$error.required }" name='primaryphone' ng-model="primaryphone" placeholder="Enter primary telephone" required/>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>Cell Phone</label>
-                            <input type='number' class='form-control input-alternate' name='cellphone' placeholder="Enter cell telephone"/>
+                            <label>Cell/Mobile Telephone</label>
+                            <input type='text' class='form-control input-alternate' name='cellphone' placeholder="Enter cell/mobile telephone"/>
                         </div>
                     </div>
                 </div>

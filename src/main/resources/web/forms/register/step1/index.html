@@ -19,7 +19,8 @@
                 <div style="padding: 10px"></div>
                 <ul class="step-indicators">
                     <li class="completed"><div class="current-dot"></div><a href="/#/register/step-one">Company Information</a></li>
-                    <li class="not-completed"><div class="next-dot"><div class="line"></div></div><a href="/#/register/step-two">Primary Contact Details</a></li>
+                    <li class="not-completed"><div class="next-dot"><div class="line"></div></div><a href="/#/sign-up-two">Primary Contact Info</a></li>
+                    <li class="not-completed"><div class="next-dot"><div class="line"></div></div><a href="/#/sign-up-two">Summary</a></li>
                 </ul>
 
             </div>
@@ -35,9 +36,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <label>Company Name <i class="fa fa-asterisk" aria-hidden="true"></i></label>
+                            <label>Company Legal Name <i class="fa fa-asterisk" aria-hidden="true"></i></label>
                             <span class='error' ng-show="form.$submitted && form.companyname.$error.required"><i class='fa fa-exclamation-circle'></i><span class="error-message">  Required</span></span>
-                            <input type='text' class='form-control input-alternate required' ng-class="{ 'error-input': form.$submitted && form.companyname.$error.required }" name='companyname' ng-model="companyname" placeholder="Enter your company's name" required/>
+                            <input type='text' class='form-control input-alternate required' ng-class="{ 'error-input': form.$submitted && form.companyname.$error.required }" name='companyname' ng-model="companyname" placeholder="Enter your company's full legal name" required/>
                         </div>
                     </div>
                 </div>
