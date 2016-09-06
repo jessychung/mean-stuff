@@ -1,3 +1,9 @@
+::selection {
+  background: #f2f2f2;
+}
+::-moz-selection {
+  background: #f2f2f2;
+}
 .button-toolbar {
   border-radius: 0px;
   background-color: transparent;
@@ -823,6 +829,10 @@ p {
 }
 .card h4 {
   position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #3d474f;
 }
 .card-1 {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.14);
