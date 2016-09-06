@@ -1,3 +1,9 @@
+::selection {
+  background: #f2f2f2;
+}
+::-moz-selection {
+  background: #f2f2f2;
+}
 .button-toolbar {
   border-radius: 0px;
   background-color: transparent;
@@ -348,6 +354,9 @@ p {
   .sticky-button .next-step-valid {
     margin-right: 25px !important;
   }
+  .sticky-button .previous {
+    margin-left: 25px !important;
+  }
   .signup-right-side {
     padding-left: 10px !important;
     padding-right: 10px !important;
@@ -454,12 +463,17 @@ p {
   color: #b3b3b3;
 }
 .sticky-button .next-step-valid {
-  margin-right: 90px;
+  margin-right: 105px;
   margin-bottom: 30px;
   margin-top: 30px;
   background-color: #3d474f;
   padding: 10px 25px;
   color: white;
+}
+.sticky-button .previous {
+  margin-left: 105px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 .step-indicators {
   position: relative;
@@ -481,44 +495,59 @@ p {
 .step-indicators li.completed .next-dot {
   position: absolute;
   left: 0;
-  width: 11px;
-  height: 11px;
+  width: 15px;
+  height: 15px;
   border-radius: 30px;
-  background-color: #787878;
-  border: 1px solid #787878;
+  background-color: #d4d4d4;
+  border: 2px solid #787878;
   margin-top: 5px;
 }
+
+.step-indicators li.completed i {
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  left: -2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+  background-color: #e6e6e6;
+  margin-top: 3px;
+}
 .step-indicators li.completed .next-dot .line {
-  height: 31px;
-  width: 1px;
+  height: 29px;
+  width: 2px;
   background-color: #787878;
-  margin-top: -31px;
-  margin-left: 4px;
+  margin-top: -29px;
+  margin-left: 5px;
+  display: none;
 }
 .step-indicators .current-dot {
   position: absolute;
   left: 0;
-  width: 11px;
-  height: 11px;
+  width: 15px;
+  height: 15px;
   border-radius: 30px;
-  background-color: #787878;
-  margin-top: 5px;
+  background-color: #d4d4d4;
+  border: 2px solid #787878;
+  margin-top: 3px;
 }
 .step-indicators .next-dot {
   position: absolute;
   left: 0;
-  width: 11px;
-  height: 11px;
+  width: 15px;
+  height: 15px;
   border-radius: 30px;
-  border: 1px solid #cccccc;
+  border: 2px solid #e2e2e2;
   margin-top: 5px;
 }
 .step-indicators .next-dot .line {
-  height: 31px;
-  width: 1px;
-  background-color: #cccccc;
-  margin-top: -31px;
-  margin-left: 4px;
+  height: 28px;
+  width: 2px;
+  background-color: #e2e2e2;
+  margin-top: -28px;
+  margin-left: 5px;
 }
 .selecticon {
   position: absolute;
@@ -800,6 +829,10 @@ p {
 }
 .card h4 {
   position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #3d474f;
 }
 .card-1 {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.14);
@@ -870,12 +903,12 @@ p {
   z-index: 1002;
 }
 .thentia-options {
-  position: absolute;
-  z-index: 1001;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 20px;
-}
+    position: absolute;
+    z-index: 1001;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+  }
 .app-single {
   text-align: center;
   margin-bottom: 10px;
@@ -1109,10 +1142,9 @@ p {
   text-align: center;
 }
 
-
 .fa-asterisk {
   font-size: 9px;
-  color: #048586;
+  color: #eb563c;
 }
 
 ∫
