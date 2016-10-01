@@ -44,6 +44,13 @@ public class AuthenticationResource
 
 	@POST
 	@Path ("/enroll")
+	public Response enrollOrganization (@Context javax.servlet.http.HttpServletRequest request)
+	{
+		return Response.generalFailure( "", "POST" );
+	}
+
+	@POST
+	@Path ("/enroll/{orgid}")
 	public Response enroll(@Context javax.servlet.http.HttpServletRequest request)
 	{
 		Mongo m = new Mongo();
@@ -57,7 +64,8 @@ public class AuthenticationResource
 
 			if (post.isPresent())
 			{
-				if (!post.get().containsKey( "vl_email1" ) || !post.get().containsKey( "vl_password" ))
+				if (!post.get().containsKey( "vl_email1" ) ||
+					!post.get().containsKey( "vl_password" ))
 				{
 					return Response.generalFailure( "Invalid schema", "POST" );
 				}
@@ -157,7 +165,7 @@ public class AuthenticationResource
 
 			if (post.isPresent())
 			{
-				if (!post.get().containsKey( "vl_email1" ) || !post.get().containsKey( "vl_password" ))
+				if (!post.get().containsKey( "vl_email1" ) && !post.get().containsKey("vl_token") || !post.get().containsKey( "vl_password" ))
 				{
 					return Response.generalFailure( "Invalid schema", "POST" );
 				}
