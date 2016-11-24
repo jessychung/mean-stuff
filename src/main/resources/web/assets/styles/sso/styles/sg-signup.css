@@ -1,0 +1,208 @@
+@media only screen and (max-width: 767px) {
+  .sso-signup-left-side-container {
+    height: auto !important; }
+  .sso-signup-left-side {
+    padding: 20px !important; } }
+
+.sso-signup-form {
+  padding-top: 65px; }
+  .sso-signup-form .btn {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .sso-signup-form h1 {
+    font-size: 26px;
+    font-weight: 300;
+    margin-top: 0px; }
+  .sso-signup-form p {
+    margin-bottom: 20px;
+    font-size: 14px; }
+  .sso-signup-form .sso-no-account {
+    margin-top: 0px; }
+  .sso-signup-form .k-dropdown {
+    width: 100% !important;
+    padding-right: 0 !important; }
+    .sso-signup-form .k-dropdown .k-dropdown-wrap {
+      height: 41px !important; }
+      .sso-signup-form .k-dropdown .k-dropdown-wrap .k-icon {
+        line-height: 2.5em;
+        height: 100%; }
+    .sso-signup-form .k-dropdown .k-select .k-i-arrow-s:before {
+      font-family: FontAwesome !important;
+      content: '\f107' !important;
+      font-size: 14px !important; }
+    .sso-signup-form .k-dropdown .k-select:hover {
+      background-color: transparent !important; }
+    .sso-signup-form .k-dropdown .k-input {
+      font-size: 15px !important;
+      height: 36px !important;
+      line-height: 2.35em !important; }
+    .sso-signup-form .k-dropdown .k-animation-container {
+      font-size: 15px !important; }
+
+.sso-signup-left-side {
+  padding: 50px 20px; }
+  .sso-signup-left-side .sso-signup-logo {
+    margin-left: -8px; }
+  .sso-signup-left-side p {
+    font-size: 14px; }
+
+.step-indicators {
+  position: relative; }
+  .step-indicators li {
+    list-style-type: none;
+    margin-bottom: 20px; }
+    .step-indicators li a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #cccccc;
+      cursor: not-allowed; }
+      .step-indicators li a:hover, .step-indicators li a:active, .step-indicators li a:focus {
+        text-decoration: none; }
+  .step-indicators li.completed a {
+    cursor: pointer;
+    color: #333333; }
+  .step-indicators li.completed .next-dot {
+    position: absolute;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 30px;
+    background-color: #d4d4d4;
+    border: 1px solid #787878;
+    margin-top: 5px; }
+    .step-indicators li.completed .next-dot .line {
+      height: 31px;
+      width: 1px;
+      background-color: #787878;
+      margin-top: -32px;
+      margin-left: 4px; }
+  .step-indicators li.completed i {
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    left: -2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    background-color: #e6e6e6;
+    margin-top: 3px; }
+  .step-indicators .current-dot {
+    position: absolute;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 30px;
+    background-color: #d4d4d4;
+    border: 1px solid #787878;
+    margin-top: 3px; }
+  .step-indicators .next-dot {
+    position: absolute;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 30px;
+    border: 1px solid #cccccc;
+    margin-top: 5px; }
+    .step-indicators .next-dot .line {
+      height: 30px;
+      width: 1px;
+      background-color: #cccccc;
+      margin-top: -30px;
+      margin-left: 4px; }
+
+.sticky-button {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  z-index: 120; }
+  .sticky-button .btn:disabled {
+    margin-right: 90px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: #e6e6e6;
+    padding: 10px 15px;
+    color: #b3b3b3; }
+  .sticky-button .next-step-valid {
+    margin-right: 105px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: #3d474f;
+    padding: 10px 25px;
+    color: white; }
+  .sticky-button .previous {
+    margin-left: 105px;
+    margin-bottom: 30px;
+    margin-top: 30px; }
+
+.sticky-button #button-tooltip {
+  position: absolute;
+  width: 110px;
+  height: 42px;
+  right: 0;
+  margin-right: 90px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  z-index: 10; }
+
+.sticky-button #button-tooltip-alt {
+  position: absolute;
+  width: 110px;
+  height: 42px;
+  right: 0;
+  margin-right: 90px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  z-index: 10; }
+
+.sso-signup-success h2 {
+  color: #3b58a0;
+  font-size: 17px;
+  font-weight: 600; }
+
+.sso-signup-success h1 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.sso-signup-success p {
+  font-size: 15px;
+  margin-bottom: 0; }
+
+.sso-signup-success a {
+  color: #3b58a0;
+  font-weight: 600; }
+
+.sso-signup-success .sso-circle-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 200px;
+  text-align: center;
+  line-height: 60px;
+  color: #3b58a0;
+  background-color: rgba(46, 49, 146, 0.08); }
+  .sso-signup-success .sso-circle-icon i {
+    font-size: 23px;
+    line-height: inherit; }
+
+.sso-signup-notme h2 {
+  color: #3b58a0;
+  font-size: 17px;
+  font-weight: 600; }
+
+.sso-signup-notme h1 {
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.sso-signup-notme p {
+  font-size: 15px;
+  margin-bottom: 0; }
+
+.sso-signup-notme a {
+  color: #3b58a0;
+  font-weight: 600; }

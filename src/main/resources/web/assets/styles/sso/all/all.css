@@ -1,0 +1,596 @@
+body {
+  background-color: #f7f7f7; }
+
+html,
+body {
+  font-family: "proxima-nova", sans-serif !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  color: #3d474f !important;
+  height: 100%; }
+
+::-moz-selection {
+  background: rgba(61, 71, 79, 0.05); }
+
+::selection {
+  background: rgba(61, 71, 79, 0.05); }
+
+button:hover, button:active, button:focus {
+  outline: none !important;
+  box-shadow: none !important; }
+
+.thentia-line {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 1100; }
+  .thentia-line div {
+    height: 20%;
+    left: 0;
+    width: 8px; }
+  .thentia-line .red {
+    background-color: #eb563c; }
+  .thentia-line .yellow {
+    background-color: #f0b030; }
+  .thentia-line .green {
+    background-color: #4cb89e; }
+  .thentia-line .darkgreen {
+    background-color: #048586; }
+  .thentia-line .blue {
+    background-color: #004f75; }
+
+.sso-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%; }
+
+.center {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%); }
+
+label {
+  font-weight: 600;
+  font-size: 14px; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+.form-control {
+  font-size: 15px !important; }
+
+.alert {
+  border-radius: 0px;
+  border: 0px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: block; }
+  .alert .alert-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    line-height: 40px;
+    text-align: center; }
+    .alert .alert-icon i {
+      font-size: 20px; }
+  .alert h1 {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    margin-top: 0; }
+  .alert p {
+    margin-bottom: 0px !important; }
+  .alert ul {
+    margin-bottom: 0;
+    padding-left: 15px; }
+    .alert ul li {
+      font-size: 14px; }
+
+.alert-brand {
+  background-color: rgba(0, 79, 117, 0.08);
+  color: #004f75;
+  border-bottom: 1px solid rgba(0, 79, 117, 0.1) !important; }
+  .alert-brand .alert-icon {
+    background-color: rgba(0, 79, 117, 0.09); }
+    .alert-brand .alert-icon i {
+      color: #004f75; }
+    .alert-brand .alert-icon hr {
+      border-top-color: rgba(0, 79, 117, 0.2); }
+  .alert-brand .alert-link {
+    color: #004f75; }
+
+.form-error input {
+  border-bottom: 1px solid #ef8da1 !important;
+  transition: all .3s; }
+
+.form-error .icon i {
+  color: #e9607b;
+  transition: all .3s; }
+
+.form-success {
+  position: relative; }
+  .form-success input {
+    border-bottom: 1px solid #4cb89e !important;
+    transition: all .3s; }
+  .form-success .k-dropdown-wrap {
+    border-bottom: 1px solid #4cb89e !important; }
+    .form-success .k-dropdown-wrap .k-i-arrow-s:before {
+      color: #fff !important; }
+  .form-success:after {
+    font-family: FontAwesome;
+    content: '\f00c';
+    color: #4cb89e;
+    position: absolute;
+    right: 12px;
+    font-size: 12px;
+    bottom: 12px; }
+
+.checkbox-inline .sso-help-block-checkbox {
+  z-index: 10000;
+  position: absolute;
+  bottom: -40px;
+  left: -15px;
+  background-color: #fce7eb;
+  font-size: 13px;
+  font-weight: 500;
+  color: #e23456;
+  padding: 5px 10px;
+  border-radius: 3px;
+  max-width: 50%;
+  transition: all .3s;
+  -webkit-animation: fadein .5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein .5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein .5s;
+  /* Internet Explorer */
+  -o-animation: fadein .5s;
+  /* Opera < 12.1 */
+  animation: fadein .5s; }
+  .checkbox-inline .sso-help-block-checkbox:after {
+    bottom: 100%;
+    left: 20px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fce7eb;
+    border-width: 8px;
+    margin-left: -8px; }
+
+.sso-help-block {
+  position: absolute;
+  bottom: 35px;
+  right: 10px;
+  background-color: #fce7eb;
+  font-size: 13px;
+  font-weight: 500;
+  color: #e23456;
+  padding: 5px 10px;
+  border-radius: 3px;
+  max-width: 50%;
+  transition: all .3s;
+  -webkit-animation: fadein .5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein .5s;
+  /* Firefox < 16 */
+  -ms-animation: fadein .5s;
+  /* Internet Explorer */
+  -o-animation: fadein .5s;
+  /* Opera < 12.1 */
+  animation: fadein .5s; }
+  .sso-help-block:after {
+    top: 98%;
+    left: 80%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(225, 255, 255, 0);
+    border-top-color: #fce7eb;
+    border-width: 8px;
+    margin-left: -8px; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.sso-help-block-inline {
+  color: #e23456;
+  font-size: 13px;
+  font-weight: 500; }
+
+.sso-form-footer {
+  font-size: 13px;
+  padding-top: 15px; }
+
+.btn {
+  border-radius: 3px;
+  outline: 0;
+  padding: 10px 15px;
+  color: #3d474f;
+  font-weight: 500;
+  font-size: 14px; }
+
+.btn-brand {
+  color: #fff;
+  border-bottom: 2px solid #001b29;
+  background-color: #004f75; }
+  .btn-brand:hover, .btn-brand:active, .btn-brand:focus {
+    outline: none;
+    color: #fff; }
+
+.btn-light {
+  color: #a6a6a6;
+  border-bottom: 2px solid #dddddd;
+  background-color: #eaeaea; }
+  .btn-light:hover, .btn-light:active, .btn-light:focus {
+    color: #a6a6a6; }
+
+.btn-line {
+  color: #a6a6a6;
+  border: 1px solid #cccccc;
+  background-color: transparent;
+  transition: all .3s; }
+  .btn-line:hover, .btn-line:active, .btn-line:focus {
+    color: #a6a6a6;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all .3s; }
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .sso-login-form {
+    height: auto !important;
+    padding: 50px; }
+  .center {
+    position: relative !important;
+    top: 0%;
+    transform: translate(0%, 0%); } }
+
+@media only screen and (max-width: 768px) {
+  .sso-login-form {
+    height: auto !important;
+    padding: 30px 15px; }
+  .center {
+    position: relative !important;
+    top: 0%;
+    transform: translate(0%, 0%); } }
+
+.sso-login-logo {
+  background-image: url("/src/main/resources/assets/images/sso-login-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .sso-login-logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+.form-group {
+  margin-bottom: 10px !important;
+  position: relative; }
+  .form-group .icon {
+    float: left;
+    color: #cccccc;
+    font-size: 19px;
+    display: block;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 14px; }
+  .form-group label span {
+    font-weight: 400;
+    color: rgba(61, 71, 79, 0.75); }
+
+.sso-login-form .form-control {
+  padding: 10px 15px 10px 47px; }
+  .sso-login-form .form-control:hover, .sso-login-form .form-control:active, .sso-login-form .form-control:focus {
+    background-color: #fff; }
+
+.sso-login-form .btn {
+  margin-top: 20px;
+  margin-right: 8px; }
+
+.sso-login-form h1 {
+  font-size: 26px;
+  font-weight: 300;
+  margin-top: 0px; }
+
+.sso-login-form p {
+  margin-bottom: 20px;
+  font-size: 14px; }
+
+.sso-login-footer {
+  margin-top: 20px; }
+  .sso-login-footer div {
+    vertical-align: middle; }
+    .sso-login-footer div p {
+      font-size: 13px;
+      font-weight: 300;
+      margin-bottom: 0;
+      vertical-align: middle;
+      margin-top: 15px; }
+    .sso-login-footer div img {
+      float: right; }
+
+.sso-no-account {
+  background-color: #f2f2f2;
+  padding: 15px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #3d474f;
+  font-weight: 400; }
+  .sso-no-account a {
+    color: #004f75;
+    font-weight: 600;
+    transition: all .3s; }
+    .sso-no-account a:hover, .sso-no-account a:active, .sso-no-account a:focus {
+      text-decoration: none;
+      color: #1c2024;
+      transition: all .3s; }
+
+.sso-login-logo-tablet {
+  text-align: center;
+  padding: 70px;
+  background-color: #fff;
+  background-image: url("/assets/images/vectorleap_login_tm_bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.sso-login-logo-mobile {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #fff;
+  background-image: url("/assets/images/vectorleap_login_mobile_bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .sso-login-logo-mobile img {
+    display: inline-block !important; }
+
+@media only screen and (max-width: 767px) {
+  .sso-signup-left-side-container {
+    height: auto !important; }
+  .sso-signup-left-side {
+    padding: 20px !important; } }
+
+.sso-signup-form {
+  padding-top: 65px; }
+  .sso-signup-form .btn {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .sso-signup-form h1 {
+    font-size: 26px;
+    font-weight: 300;
+    margin-top: 0px; }
+  .sso-signup-form p {
+    margin-bottom: 20px;
+    font-size: 14px; }
+  .sso-signup-form .sso-no-account {
+    margin-top: 0px; }
+  .sso-signup-form .k-dropdown {
+    width: 100% !important;
+    padding-right: 0 !important; }
+    .sso-signup-form .k-dropdown .k-dropdown-wrap {
+      height: 41px !important; }
+      .sso-signup-form .k-dropdown .k-dropdown-wrap .k-icon {
+        line-height: 2.5em;
+        height: 100%; }
+    .sso-signup-form .k-dropdown .k-select .k-i-arrow-s:before {
+      font-family: FontAwesome !important;
+      content: '\f107' !important;
+      font-size: 14px !important; }
+    .sso-signup-form .k-dropdown .k-select:hover {
+      background-color: transparent !important; }
+    .sso-signup-form .k-dropdown .k-input {
+      font-size: 15px !important;
+      height: 36px !important;
+      line-height: 2.35em !important; }
+    .sso-signup-form .k-dropdown .k-animation-container {
+      font-size: 15px !important; }
+
+.sso-signup-left-side {
+  padding: 50px 20px; }
+  .sso-signup-left-side .sso-signup-logo {
+    margin-left: -8px; }
+  .sso-signup-left-side p {
+    font-size: 14px; }
+
+.step-indicators {
+  position: relative; }
+  .step-indicators li {
+    list-style-type: none;
+    margin-bottom: 20px; }
+    .step-indicators li a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #cccccc;
+      cursor: not-allowed; }
+      .step-indicators li a:hover, .step-indicators li a:active, .step-indicators li a:focus {
+        text-decoration: none; }
+  .step-indicators li.completed a {
+    cursor: pointer;
+    color: #333333; }
+  .step-indicators li.completed .next-dot {
+    position: absolute;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 30px;
+    background-color: #d4d4d4;
+    border: 1px solid #787878;
+    margin-top: 5px; }
+    .step-indicators li.completed .next-dot .line {
+      height: 31px;
+      width: 1px;
+      background-color: #787878;
+      margin-top: -32px;
+      margin-left: 4px; }
+  .step-indicators li.completed i {
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    left: -2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    background-color: #e6e6e6;
+    margin-top: 3px; }
+  .step-indicators .current-dot {
+    position: absolute;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 30px;
+    background-color: #d4d4d4;
+    border: 1px solid #787878;
+    margin-top: 3px; }
+  .step-indicators .next-dot {
+    position: absolute;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 30px;
+    border: 1px solid #cccccc;
+    margin-top: 5px; }
+    .step-indicators .next-dot .line {
+      height: 30px;
+      width: 1px;
+      background-color: #cccccc;
+      margin-top: -30px;
+      margin-left: 4px; }
+
+.sticky-button {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  z-index: 120; }
+  .sticky-button .btn:disabled {
+    margin-right: 90px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: #e6e6e6;
+    padding: 10px 15px;
+    color: #b3b3b3; }
+  .sticky-button .next-step-valid {
+    margin-right: 105px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: #3d474f;
+    padding: 10px 25px;
+    color: white; }
+  .sticky-button .previous {
+    margin-left: 105px;
+    margin-bottom: 30px;
+    margin-top: 30px; }
+
+.sticky-button #button-tooltip {
+  position: absolute;
+  width: 110px;
+  height: 42px;
+  right: 0;
+  margin-right: 90px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  z-index: 10; }
+
+.sticky-button #button-tooltip-alt {
+  position: absolute;
+  width: 110px;
+  height: 42px;
+  right: 0;
+  margin-right: 90px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  z-index: 10; }
+
+.sso-signup-success h2 {
+  color: #3b58a0;
+  font-size: 17px;
+  font-weight: 600; }
+
+.sso-signup-success h1 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.sso-signup-success p {
+  font-size: 15px;
+  margin-bottom: 0; }
+
+.sso-signup-success a {
+  color: #3b58a0;
+  font-weight: 600; }
+
+.sso-signup-success .sso-circle-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 200px;
+  text-align: center;
+  line-height: 60px;
+  color: #3b58a0;
+  background-color: rgba(46, 49, 146, 0.08); }
+  .sso-signup-success .sso-circle-icon i {
+    font-size: 23px;
+    line-height: inherit; }
+
+.sso-signup-notme h2 {
+  color: #3b58a0;
+  font-size: 17px;
+  font-weight: 600; }
+
+.sso-signup-notme h1 {
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.sso-signup-notme p {
+  font-size: 15px;
+  margin-bottom: 0; }
+
+.sso-signup-notme a {
+  color: #3b58a0;
+  font-weight: 600; }
+

@@ -1,0 +1,27 @@
+﻿/*
+ * Copyright (c) 2016
+ * Thentia UK Limited
+ * All Rights Reserved.
+ *
+ * This software may not be reproduced in any format for any use. It is the sole property of Thentia UK Limited and may only be used by Thentia UK Limited or its licensed subsidiaries.
+ */
+
+.k-dropdown-wrap .k-input {
+    display: block !important;
+    width: 100% !important;
+    height: 42px !important;
+    padding: 10px 15px 10px 15px !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.428571429 !important;
+    color: #333333 !important;
+    background-color: #fff !important;
+    background-image: none !important;
+    border-bottom: 1px solid #e6e6e6 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 0 !important;
+    margin-bottom: 0px !important;
+    border-radius: 0px !important;
+    transition: all .3s !important;
+}

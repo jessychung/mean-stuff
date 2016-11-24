@@ -1,0 +1,41 @@
+@import "variables.scss";
+
+.btn {
+  border-radius: 3px;
+  outline:0;
+  padding: 10px 15px;
+  color: $black;
+  font-weight: $medium;
+  font-size: 14px;
+}
+
+.btn-brand {
+  color: #fff;
+  border-bottom: 2px solid darken($thentia-blue, 15%);
+  background-color: $thentia-blue;
+  @include hover-state {
+    outline: none;
+    color: #fff;
+  }
+}
+
+.btn-light {
+  color: lighten(#333333, 45%);
+  border-bottom: 2px solid darken(#eaeaea, 5%);
+  background-color: #eaeaea;
+  @include hover-state {
+    color: lighten(#333333, 45%);
+  }
+}
+
+.btn-line {
+  color: lighten(#333333, 45%);
+  border: 1px solid #cccccc;
+  background-color: transparent;
+  transition: all .3s;
+  @include hover-state {
+    color: lighten(#333333, 45%);
+    background-color: rgba(#fff, 0.9);
+    transition: all .3s;
+  }
+}

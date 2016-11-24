@@ -1,0 +1,177 @@
+﻿/*
+ * Copyright (c) 2016
+ * Thentia UK Limited
+ * All Rights Reserved.
+ *
+ * This software may not be reproduced in any format for any use. It is the sole property of Thentia UK Limited and may only be used by Thentia UK Limited or its licensed subsidiaries.
+ */
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "thentia";
+  src:url("/web/assets/fonts/thentia.eot");
+  src:url("/web/assets/fonts/thentia.eot?#iefix") format("embedded-opentype"),
+    url("/web/assets/fonts/thentia.woff") format("woff"),
+    url("/web/assets/fonts/thentia.ttf") format("truetype"),
+    url("/web/assets/fonts/thentia.svg#thentia") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "thentia" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1.7em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="thentia-"]:before,
+[class*=" thentia-"]:before {
+  font-family: "thentia" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+   line-height: 1.7em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.thentia-addcolumn:before {
+  content: "\61";
+}
+.thentia-apps:before {
+  content: "\62";
+}
+.thentia-bell:before {
+  content: "\64";
+}
+.thentia-chart:before {
+  content: "\65";
+}
+.thentia-edit:before {
+  content: "\66";
+}
+.thentia-excel:before {
+  content: "\67";
+}
+.thentia-history:before {
+  content: "\69";
+}
+.thentia-more:before {
+  content: "\6a";
+}
+.thentia-plus:before {
+  content: "\6b";
+}
+.thentia-search:before {
+  content: "\6d";
+}
+.thentia-thumbtack:before {
+  content: "\6e";
+}
+.thentia-trash:before {
+  content: "\6f";
+}
+.thentia-refresh:before {
+  content: "\70";
+}
+.thentia-logout:before {
+  content: "\72";
+}
+.thentia-code:before {
+  content: "\73";
+}
+.thentia-design:before {
+  content: "\74";
+}
+.thentia-form:before {
+  content: "\75";
+}
+.thentia-open:before {
+  content: "\76";
+}
+.thentia-help:before {
+  content: "\77";
+}
+.thentia-question:before {
+  content: "\78";
+}
+.thentia-eye:before {
+  content: "\68";
+}
+.thentia-external:before {
+  content: "\79";
+}
+.thentia-user:before {
+  content: "\7a";
+}
+.thentia-convert-to:before {
+  content: "\42";
+}
+.thentia-hand:before {
+  content: "\44";
+}
+.thentia-times:before {
+  content: "\41";
+}
+.thentia-download:before {
+  content: "\46";
+}
+.thentia-task:before {
+  content: "\47";
+}
+.thentia-schedule:before {
+  content: "\48";
+}
+.thentia-phone:before {
+  content: "\49";
+}
+.thentia-email:before {
+  content: "\4a";
+}
+.thentia-print:before {
+  content: "\4b";
+}
+.thentia-attachment:before {
+  content: "\63";
+}
+.thentia-pin-to:before {
+  content: "\4c";
+}
+.thentia-pin:before {
+  content: "\4d";
+}
+.thentia-key:before {
+  content: "\4e";
+}
+.thentia-gear:before {
+  content: "\4f";
+}
+.thentia-save:before {
+  content: "\6c";
+}
+.thentia-saveclose:before {
+  content: "\71";
+}
+.thentia-user-group:before {
+  content: "\45";
+}
+.thentia-refresh-alt:before {
+  content: "\50";
+}
+.thentia-clone:before {
+  content: "\51";
+}
+.thentia-cheque:before {
+  content: "\52";
+}

@@ -1,0 +1,26 @@
+<div class="sso-login container-fluid" style="height: 100%;">
+    <div class="row" style="height: 100%; background-color: #f7f7f7">
+        <div class="sso-signup-left-side-container col-lg-4 col-md-4 col-sm-4 col-xs-12" style="height: 100%; background-color: #fff">
+            <div class="sso-signup-left-side col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-sm-12">
+
+                <div class="sso-signup-logo">
+                    <img src="/src/main/resources/web/assets/images/thentia_logo_web.svg" width="200px">
+                </div>
+                <div style="padding: 10px"></div>
+                <p>Please complete all the steps below to setup your account with Thentia. Once your account is setup, you will be able to use our applications and engage with us when you need our help.</p>
+                <div style="padding: 10px"></div>
+                <ul class="step-indicators">
+                    <li class="completed"><div class="current-dot"></div><a [routerLink]="['/signup/signup-form-one']">Company Information</a></li>
+                    <li class="not-completed" [routerLinkActive]="['completed']"><div class="next-dot"><div class="line"></div></div><a [routerLink]="['/signup/signup-form-two']">Primary Contact Info</a></li>
+                    <li class="not-completed"><div class="next-dot"><div class="line"></div></div><a href="#">Summary</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="sso-signup-form col-md-8 col-lg-8 col-sm-8 col-xs-12" style="height: 100%; background-color: #f7f7f7">
+            <div class="col-md-10 col-md-offset-1 col-sm-12">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

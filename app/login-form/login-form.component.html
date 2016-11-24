@@ -1,0 +1,54 @@
+<!--reactive form-->
+
+<form [formGroup]="loginForm" (ngSubmit)="submitForm(loginForm.value)" novalidate>
+
+    <p>Please enter your email address and password below. <br/> Click login to continue.</p>
+
+    <div class="form-group" [ngClass]="{ 'form-error': !loginForm.controls['sgEmail'].valid && submitted }">
+        <label for="sso-email">Email Address</label>
+        <div style="padding: 2px"></div>
+        <span class="icon"><i class="thentia-email"></i></span>
+        <input type="email" id="sso-email" class="form-control" [formControl]="loginForm.controls['sgEmail']" />
+        <div class="sso-help-block" *ngIf="loginForm.controls['sgEmail'].hasError('required') && submitted">Email is required</div>
+    </div>
+    <div class="form-group" [ngClass]="{ 'form-error': !loginForm.controls['sgPassword'].valid && submitted }" style="margin-bottom: 0 !important;">
+        <label for="sso-password">Password</label>
+        <div style="padding: 2px"></div>
+        <span class="icon"><i class="thentia-key"></i></span>
+        <input type="password" id="sso-password" class="form-control" [formControl]="loginForm.controls['sgPassword']"  required />
+        <div class="sso-help-block" *ngIf="loginForm.controls['sgPassword'].hasError('required') && submitted ">Password is required</div>
+    </div>
+    <button type="submit" class="btn btn-brand">Login</button>
+    <a href="#" class="btn btn-light" [routerLink]="['/login/forgotpassword']">Forgot Password</a>
+    <div class="sso-no-account">First time here? <a href="#" [routerLink]="['/signup/signup-form-one']">Sign up</a></div>
+    <div class="sso-form-footer">Copyright © 2016 Thentia Corporation. All Rights Reserved.</div>
+</form>
+
+
+
+
+<!--template form-->
+
+
+<!--<form name="form" #sgloginform="ngForm" novalidate>-->
+
+    <!--<p>Please enter your email address and password below. <br/> Click login to continue.</p>-->
+
+    <!--<div class="form-group" [ngClass]="{ 'form-error': sgloginform.submitted && !sgEmail.valid }">-->
+        <!--<label for="sso-email">Email Address</label>-->
+        <!--<div style="padding: 2px"></div>-->
+        <!--<span class="icon"><i class="thentia-email"></i></span>-->
+        <!--<input type="email" name="sso-email" id="sso-email" #sgEmail="ngModel" (ngModel)="sgEmail" class="form-control" required />-->
+        <!--<div class="sso-help-block" *ngIf="sgloginform.submitted && !sgEmail.valid ">Email is required</div>-->
+    <!--</div>-->
+    <!--<div class="form-group" [ngClass]="{ 'form-error': sgloginform.submitted && !sgPassword.valid }" style="margin-bottom: 0 !important;">-->
+        <!--<label for="sso-password">Password</label>-->
+        <!--<div style="padding: 2px"></div>-->
+        <!--<span class="icon"><i class="thentia-key"></i></span>-->
+        <!--<input type="password" name="sso-password" id="sso-password" #sgPassword="ngModel" (ngModel)="sgPassword" class="form-control" required />-->
+        <!--<div class="sso-help-block" *ngIf="sgloginform.submitted && !sgPassword.valid ">Password is required</div>-->
+    <!--</div>-->
+    <!--<button type="submit" class="btn btn-brand">Login</button>-->
+    <!--<a href="#" class="btn btn-light" [routerLink]="['/login/forgotpassword']">Forgot Password</a>-->
+    <!--<div class="sso-no-account">First time here? <a href="#" [routerLink]="['/signup/signup-form']">Sign up</a></div>-->
+<!--</form>-->

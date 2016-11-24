@@ -1,0 +1,22 @@
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+
+$thentia-red: #eb563c;
+$thentia-yellow: #f0b030;
+$thentia-green: #4cb89e;
+$thentia-darkgreen: #048586;
+$thentia-blue: #004f75;
+
+$sg: #3b58a0;
+
+$black: #3d474f;
+
+@mixin hover-state {
+  &:hover, &:active, &:focus {
+    @content;
+  }
+}

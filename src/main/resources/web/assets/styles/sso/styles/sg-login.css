@@ -1,0 +1,110 @@
+@media (min-width: 768px) and (max-width: 992px) {
+  .sso-login-form {
+    height: auto !important;
+    padding: 50px; }
+  .center {
+    position: relative !important;
+    top: 0%;
+    transform: translate(0%, 0%); } }
+
+@media only screen and (max-width: 768px) {
+  .sso-login-form {
+    height: auto !important;
+    padding: 30px 15px; }
+  .center {
+    position: relative !important;
+    top: 0%;
+    transform: translate(0%, 0%); } }
+
+.sso-login-logo {
+  background-image: url("/src/main/resources/assets/images/sso-login-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .sso-login-logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+.form-group {
+  margin-bottom: 10px !important;
+  position: relative; }
+  .form-group .icon {
+    float: left;
+    color: #cccccc;
+    font-size: 19px;
+    display: block;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 14px; }
+  .form-group label span {
+    font-weight: 400;
+    color: rgba(61, 71, 79, 0.75); }
+
+.sso-login-form .form-control {
+  padding: 10px 15px 10px 47px; }
+  .sso-login-form .form-control:hover, .sso-login-form .form-control:active, .sso-login-form .form-control:focus {
+    background-color: #fff; }
+
+.sso-login-form .btn {
+  margin-top: 20px;
+  margin-right: 8px; }
+
+.sso-login-form h1 {
+  font-size: 26px;
+  font-weight: 300;
+  margin-top: 0px; }
+
+.sso-login-form p {
+  margin-bottom: 20px;
+  font-size: 14px; }
+
+.sso-login-footer {
+  margin-top: 20px; }
+  .sso-login-footer div {
+    vertical-align: middle; }
+    .sso-login-footer div p {
+      font-size: 13px;
+      font-weight: 300;
+      margin-bottom: 0;
+      vertical-align: middle;
+      margin-top: 15px; }
+    .sso-login-footer div img {
+      float: right; }
+
+.sso-no-account {
+  background-color: #f2f2f2;
+  padding: 15px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #3d474f;
+  font-weight: 400; }
+  .sso-no-account a {
+    color: #004f75;
+    font-weight: 600;
+    transition: all .3s; }
+    .sso-no-account a:hover, .sso-no-account a:active, .sso-no-account a:focus {
+      text-decoration: none;
+      color: #1c2024;
+      transition: all .3s; }
+
+.sso-login-logo-tablet {
+  text-align: center;
+  padding: 70px;
+  background-color: #fff;
+  background-image: url("/assets/images/vectorleap_login_tm_bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+.sso-login-logo-mobile {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #fff;
+  background-image: url("/assets/images/vectorleap_login_mobile_bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .sso-login-logo-mobile img {
+    display: inline-block !important; }

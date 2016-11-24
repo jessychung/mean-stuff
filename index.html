@@ -1,0 +1,56 @@
+<html>
+<head>
+    <base href="/">
+    <title>Thentia SSO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- favicon -->
+    <link rel='shortcut icon' href='/src/main/resources/web/assets/favicon/thentia_fav.ico' />
+
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/web/assets/styles/bootstrap/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/web/assets/styles/fonts/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/web/assets/styles/fontawesome/font-awesome.css"/>
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/web/assets/styles/kendo/kendo.common.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/web/assets/styles/kendo/kendo.custom.css"/>
+    <link rel="stylesheet" type="text/css" href="/src/main/resources/web/assets/styles/sso/all/all.css"/>
+    <link rel="stylesheet" href="./node_modules/@telerik/kendo-theme-default/dist/all.css">
+
+    <!--js-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/src/main/resources/web/assets/scripts/bootstrap/bootstrap.min.js"></script>
+
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function(err){ console.error(err); });
+    </script>
+
+    <!--Typekit-->
+    <script src="https://use.typekit.net/mhf0yey.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+
+<body>
+
+<div class="thentia-line">
+    <div class="red"></div>
+    <div class="yellow"></div>
+    <div class="green"></div>
+    <div class="darkgreen"></div>
+    <div class="blue"></div>
+</div>
+
+<my-app>
+    <img class="sso-loading" src="/src/main/resources/web/assets/images/sg_loading.gif">
+</my-app>
+
+</body>
+
+</html>
+
