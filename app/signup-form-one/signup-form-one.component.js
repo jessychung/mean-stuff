@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var forms_1 = require('@angular/forms');
-var country_1 = require('app/list/country');
+var country_1 = require('../list/country');
 var SignupFormOneComponent = (function () {
     function SignupFormOneComponent(fb) {
         this.submitted = false;

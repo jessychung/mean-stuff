@@ -1,0 +1,47 @@
+.sso-page-single h1 {
+  font-size: 20px;
+  font-weight: 600;
+  display: inline-block; }
+
+.sso-page-single .sso-search {
+  float: right; }
+
+.sso-back {
+  border: 1px solid #cccccc;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: #3d474f;
+  transition: all .3s;
+  border-radius: 300px;
+  display: inline-block; }
+  .sso-back i {
+    line-height: inherit;
+    font-size: 13px; }
+  .sso-back:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transition: all .3s; }
+
+.sso-page-menu {
+  list-style-type: none;
+  padding-top: 10px;
+  margin-bottom: 0px;
+  padding-left: 20px; }
+  .sso-page-menu li {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: rgba(61, 71, 79, 0.5);
+    font-weight: 500;
+    margin-bottom: -2px;
+    transition: color .3s; }
+    .sso-page-menu li:hover {
+      cursor: pointer;
+      color: rgba(61, 71, 79, 0.7);
+      transition: color .3s; }
+
+.sso-page-menu-active {
+  border-bottom: 3px solid #4cb89e;
+  color: #3d474f !important; }

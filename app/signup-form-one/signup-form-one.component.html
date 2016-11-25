@@ -3,7 +3,7 @@
 
 <form [formGroup]="signupForm" (ngSubmit)="submitForm(signupForm.value)" novalidate >
     <div class="row">
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-6 col-sm-12">
             <div class="form-group" [ngClass]="{ 'form-error': !signupForm.controls['ssoCname'].valid && submitted || signupForm.controls['ssoCname'].touched, 'form-success': signupForm.controls['ssoCname'].valid }" >
                 <label for="sso-cname">Company Legal Name</label>
                 <div style="padding: 2px"></div>
@@ -14,7 +14,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-6 col-sm-12">
             <div class="form-group" [ngClass]="{ 'form-error': !signupForm.controls['ssoCstreet1'].valid && submitted || signupForm.controls['ssoCstreet1'].touched, 'form-success': signupForm.controls['ssoCstreet1'].valid }">
                 <label for="sso-cstreet1">Street Address (Line 1)</label>
                 <div style="padding: 2px"></div>
@@ -22,7 +22,7 @@
                 <div class="sso-help-block-inline" *ngIf="signupForm.controls['ssoCstreet1'].hasError('required') && submitted || signupForm.controls['ssoCstreet1'].touched && !signupForm.controls['ssoCstreet1'].valid">Required</div>
             </div>
         </div>
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-6 col-sm-12">
             <div class="form-group" [ngClass]="{ 'form-success': signupForm.controls['ssoCstreet2'].touched }">
                 <label for="sso-cstreet2">Street Address (Line 2)</label>
                 <div style="padding: 2px"></div>
@@ -32,7 +32,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-12">
             <div class="form-group" [ngClass]="{ 'form-error': !signupForm.controls['ssoCcity'].valid && submitted || signupForm.controls['ssoCcity'].touched, 'form-success': signupForm.controls['ssoCcity'].valid }">
                 <label for="sso-ccity">City</label>
                 <div style="padding: 2px"></div>
@@ -40,7 +40,7 @@
                 <div class="sso-help-block-inline" *ngIf="signupForm.controls['ssoCcity'].hasError('required') && submitted || signupForm.controls['ssoCcity'].touched && !signupForm.controls['ssoCcity'].valid">Required</div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-12">
             <div class="form-group" [ngClass]="{ 'form-error': !signupForm.controls['ssoCprovince'].valid && submitted || signupForm.controls['ssoCprovince'].touched, 'form-success': signupForm.controls['ssoCprovince'].valid }">
                 <label for="sso-cprovince">Province/State</label>
                 <div style="padding: 2px"></div>
@@ -51,14 +51,14 @@
     </div>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-12">
             <div class="form-group" [ngClass]="{ 'form-error': !signupForm.controls['ssoCcountry'].valid && submitted || signupForm.controls['ssoCcountry'].touched, 'form-success': signupForm.controls['ssoCcountry'].valid }">
                 <label>Country</label>
                 <div style="padding: 2px"></div>
                 <kendo-dropdownlist [data]="countrylist" [defaultItem]="'Select...'" [formControl]="signupForm.controls['ssoCcountry']" ></kendo-dropdownlist>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-12">
             <div class="form-group" [ngClass]="{ 'form-error': !signupForm.controls['ssoCpostal'].valid && submitted || signupForm.controls['ssoCpostal'].touched, 'form-success': signupForm.controls['ssoCpostal'].valid }">
                 <label for="sso-cpostal">Postal/ZIP Code</label>
                 <div style="padding: 2px"></div>
@@ -69,7 +69,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-12">
             <div class="form-group" style="margin-bottom: 0 !important;" [ngClass]="{ 'form-error': !signupForm.controls['ssoCtel'].valid && submitted || signupForm.controls['ssoCtel'].touched, 'form-success': signupForm.controls['ssoCtel'].valid }">
                 <label for="sso-ctel">Company Telephone</label>
                 <div style="padding: 2px"></div>
@@ -79,22 +79,11 @@
         </div>
     </div>
 
-    <!--<div class="row">-->
-        <!--<div class="col-md-12">-->
-            <!--<label class="checkbox-inline" style="margin-top: 15px; margin-bottom: 10px">-->
-                <!--<div class="sso-help-block-checkbox" *ngIf="signupForm.controls['sgAgreement'].hasError('required') && submitted">Required</div>-->
-
-                <!--<input type="checkbox" value="agree" [formControl]="signupForm.controls['sgAgreement']">-->
-                <!--I agree to the Thentia <a href="#">Terms of-->
-                <!--Service</a> and <a href="#">Privacy Policy</a>.</label>-->
-        <!--</div>-->
-    <!--</div>-->
-
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-6 col-xs-6">
             <button type="button" class="btn btn-line"><i class="fa fa-angle-left"></i>  Previous</button>
         </div>
-        <div class="col-md-6" style="text-align: right">
+        <div class="col-md-6 col-sm-6 col-xs-6" style="text-align: right">
             <button type="submit" class="btn btn-brand">Continue  <i class="fa fa-angle-right"></i></button>
         </div>
     </div>

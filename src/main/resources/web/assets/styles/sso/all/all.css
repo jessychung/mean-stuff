@@ -7,7 +7,8 @@ body {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
   color: #3d474f !important;
-  height: 100%; }
+  height: 100%;
+  overflow-x: hidden; }
 
 ::-moz-selection {
   background: rgba(61, 71, 79, 0.05); }
@@ -241,6 +242,11 @@ input::-webkit-inner-spin-button {
   font-size: 13px;
   padding-top: 15px; }
 
+.sso-round-input {
+  border: 1px solid #cccccc;
+  border-radius: 500px;
+  max-width: 300px; }
+
 .btn {
   border-radius: 3px;
   outline: 0;
@@ -385,11 +391,512 @@ input::-webkit-inner-spin-button {
   .sso-login-logo-mobile img {
     display: inline-block !important; }
 
+.top-bar {
+  border-bottom: 1px solid #eaeaea;
+  background-color: #fff;
+  height: 65px; }
+  .top-bar button {
+    background-color: transparent;
+    display: inline-block;
+    height: 64px;
+    padding: 0px 25px; }
+    .top-bar button .avatar {
+      line-height: 79px;
+      vertical-align: middle;
+      float: left; }
+    .top-bar button span {
+      margin-left: 10px;
+      vertical-align: middle; }
+    .top-bar button:hover {
+      background-color: #fafafa; }
+    .top-bar button .dropdown-menu {
+      border: 1px solid #e6e6e6 !important; }
+      .top-bar button .dropdown-menu:active, .top-bar button .dropdown-menu:focus {
+        border: 1px solid #e6e6e6 !important; }
+
+.left-menu {
+  background-color: white;
+  padding: 50px 0px 100px 0px;
+  width: 23%;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  z-index: 80; }
+  .left-menu a {
+    color: #333333;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 15px;
+    display: inline-block; }
+    .left-menu a:hover {
+      color: #666666;
+      transition: 0.3s; }
+  .left-menu > ul {
+    background-color: white;
+    list-style-type: none;
+    padding-left: 50px; }
+  .left-menu ul ul {
+    padding-left: 0px;
+    margin-top: 17px;
+    list-style-type: none; }
+    .left-menu ul ul li a {
+      color: #333333;
+      font-weight: 300;
+      padding-right: 20px; }
+      .left-menu ul ul li a:hover {
+        color: #333333;
+        transition: color 0.3s; }
+    .left-menu ul ul li:hover {
+      border-left: 7px solid #e6e6e6;
+      margin-left: -15px;
+      padding-left: 23px; }
+  .left-menu i {
+    padding-right: 5px;
+    color: #808080; }
+
+.left-menu-mobile a {
+  color: #333333;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 15px;
+  display: inline-block; }
+  .left-menu-mobile a:hover {
+    color: #666666;
+    transition: 0.3s; }
+
+.left-menu-mobile > ul {
+  background-color: white;
+  list-style-type: none;
+  padding-left: 0px !important; }
+
+.left-menu-mobile .user-greet {
+  padding-left: 0px; }
+
+.sso-main-logo img {
+  padding: 7px 0px 0px 25px; }
+
+.main-area {
+  padding-top: 140px; }
+
+.sso-main-dashboard {
+  background-color: #f7f7f7; }
+
+.sso-page-controls {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea; }
+
+.sso-page-main {
+  padding: 20px 0px; }
+  .sso-page-main h1 {
+    font-weight: 300;
+    font-size: 25px;
+    margin-top: 0; }
+  .sso-page-main p {
+    font-size: 14px; }
+
+.sso-main-dashboard-cards {
+  padding: 20px; }
+
+.form-group label {
+  padding-top: 12px;
+  font-weight: 500 !important;
+  font-size: 15px; }
+
+.user-greet {
+  padding-left: 60px; }
+  .user-greet h1 {
+    font-size: 34px;
+    margin-top: 0; }
+
+.user {
+  display: inline-block;
+  background-color: transparent;
+  padding: 10px 15px;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-right: 35px; }
+  .user span {
+    font-weight: 600; }
+
+.mobile-login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50px; }
+  .mobile-login .login-logo-mobile {
+    margin-bottom: 30px; }
+
+.input-alternate:focus {
+  border-bottom: 1px solid #c8c9cc;
+  transition: all 0.5s; }
+
+.top-bar-alt {
+  -webkit-box-shadow: 0px 6px 11px -5px rgba(230, 230, 230, 0.7);
+  -moz-box-shadow: 0px 6px 11px -5px rgba(230, 230, 230, 0.7);
+  box-shadow: 0px 6px 11px -5px rgba(230, 230, 230, 0.7); }
+
+.welcome-main {
+  height: 100vh; }
+
+.card {
+  background: #fff;
+  padding: 20px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  border-radius: 3px;
+  width: 100%; }
+  .card .btn-brand {
+    color: #4d4d4d;
+    text-decoration: none;
+    background-color: #f7f7f7;
+    background-image: none;
+    margin-top: 15px;
+    border-radius: 3px; }
+    .card .btn-brand:hover {
+      background-color: #f2f2f2;
+      transition: all .3s; }
+  .card h4 {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #3d474f;
+    font-size: 15px;
+    font-weight: 500; }
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07), 0 10px 10px rgba(0, 0, 0, 0.03); }
+
+.avatar-small {
+  width: 35px;
+  height: 35px;
+  border-radius: 1000px;
+  display: inline-block;
+  color: #fff;
+  background-color: #048586;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 35px; }
+
+.dropdown-menu {
+  margin-top: 0px !important;
+  border: 1px solid #e6e6e6;
+  top: 120% !important;
+  border-radius: 3px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06); }
+  .dropdown-menu li a {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #3d474f;
+    font-weight: 500; }
+  .dropdown-menu:after, .dropdown-menu:before {
+    bottom: 100%;
+    left: 37px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1002; }
+  .dropdown-menu:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 10px;
+    margin-left: -10px;
+    display: inline-block;
+    z-index: 1002; }
+  .dropdown-menu:before {
+    border-color: rgba(230, 230, 230, 0);
+    border-bottom-color: #e6e6e6;
+    border-width: 11px;
+    margin-left: -11px;
+    display: inline-block;
+    z-index: 1002; }
+
+.thentia-app,
+.thentia-app-bars {
+  padding: 31px 20px;
+  display: inline; }
+
+.thentia-app:hover,
+.thentia-app-bars:hover {
+  background-color: #fafafa;
+  cursor: pointer; }
+
+.arrow-box {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  width: 250px;
+  height: auto;
+  padding: 15px;
+  z-index: 1002;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.1); }
+  .arrow-box:after, .arrow-box:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1002; }
+  .arrow-box:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 10px;
+    margin-left: -10px;
+    display: inline-block;
+    z-index: 1002; }
+  .arrow-box:before {
+    border-color: rgba(230, 230, 230, 0);
+    border-bottom-color: #e6e6e6;
+    border-width: 11px;
+    margin-left: -11px;
+    display: inline-block;
+    z-index: 1002; }
+
+.thentia-options {
+  position: absolute;
+  z-index: 1001;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  display: none; }
+
+.app-single {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px 0px; }
+  .app-single:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+    transition: all .3s; }
+
+.show {
+  display: none;
+  transition: all .5s;
+  opacity: 0; }
+
+.card-new-alert {
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  padding: 5px 10px;
+  border-radius: 100px;
+  border: 2px solid rgba(61, 71, 79, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 20px;
+  font-weight: 500;
+  color: #3d474f; }
+
+.number-new {
+  background-color: #eb563c;
+  color: #fff;
+  font-weight: 700;
+  top: 0;
+  right: 0;
+  padding: 4px 9px;
+  font-size: 13px;
+  border-radius: 100px;
+  margin-top: -10px;
+  margin-right: -10px;
+  position: absolute; }
+
+.thentia-options-mobile {
+  position: absolute;
+  z-index: 1001;
+  right: 0 !important;
+  margin-top: 20px;
+  transform: translateX(0%) !important; }
+
+.thentia-app.fa-bars {
+  font-size: 16px; }
+
+.mobile-profile-menu {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+  padding: 20px;
+  z-index: 1099; }
+  .mobile-profile-menu ul {
+    list-style-type: none; }
+    .mobile-profile-menu ul li {
+      font-size: 17px;
+      font-weight: 500;
+      text-align: left; }
+
+.user-mobile-info {
+  background-color: #f2f2f2;
+  padding: 50px;
+  text-align: center; }
+
+.slide-apps {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1099;
+  text-align: center;
+  overflow: auto;
+  animation: 0.5s smoothfadein; }
+  .slide-apps .app-single {
+    padding: 20px 0px; }
+
+.slide-apps.ng-hide {
+  animation: 0.5s smoothfadeout; }
+
+.slide-mobile {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  height: 100%;
+  background-color: white;
+  z-index: 1999;
+  display: block;
+  width: 200px;
+  overflow: auto;
+  text-align: center;
+  animation: 0.5s smoothslidein; }
+  .slide-mobile li {
+    padding: 0px 20px; }
+  .slide-mobile a {
+    color: #333333;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-right: 5px; }
+  .slide-mobile ul {
+    padding-left: 0px !important;
+    list-style-type: none; }
+
+.slide-mobile.ng-hide {
+  animation: 0.5s smoothslideout; }
+
+.avatar-small-mobile {
+  width: 90px;
+  height: 90px;
+  border-radius: 1000px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  margin: 0 auto; }
+
+.screen-overlay {
+  background-color: #1a1a1a;
+  opacity: .8;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1900;
+  animation: 0.5s bgsmoothfadein; }
+
+.screen-overlay.ng-hide {
+  animation: 0.5s bgsmoothfadeout; }
+
+.user-mobile-info span {
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  text-align: center; }
+
+.slide-apps {
+  padding-top: 70px; }
+  .slide-apps .app-single:hover {
+    background-color: transparent; }
+
+.exit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+  font-size: 17px;
+  color: #3d474f; }
+  .exit:hover {
+    cursor: pointer; }
+
+.sso-page-single h1 {
+  font-size: 20px;
+  font-weight: 600;
+  display: inline-block; }
+
+.sso-page-single .sso-search {
+  float: right; }
+
+.sso-back {
+  border: 1px solid #cccccc;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: #3d474f;
+  transition: all .3s;
+  border-radius: 300px;
+  display: inline-block; }
+  .sso-back i {
+    line-height: inherit;
+    font-size: 13px; }
+  .sso-back:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transition: all .3s; }
+
+.sso-page-menu {
+  list-style-type: none;
+  padding-top: 10px;
+  margin-bottom: 0px;
+  padding-left: 20px; }
+  .sso-page-menu li {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: rgba(61, 71, 79, 0.5);
+    font-weight: 500;
+    margin-bottom: -2px;
+    transition: color .3s; }
+    .sso-page-menu li:hover {
+      cursor: pointer;
+      color: rgba(61, 71, 79, 0.7);
+      transition: color .3s; }
+
+.sso-page-menu-active {
+  border-bottom: 3px solid #4cb89e;
+  color: #3d474f !important; }
+
 @media only screen and (max-width: 767px) {
   .sso-signup-left-side-container {
     height: auto !important; }
   .sso-signup-left-side {
-    padding: 20px !important; } }
+    padding: 20px !important; }
+  .sso-signup-form {
+    padding-top: 35px !important;
+    height: auto !important; } }
 
 .sso-signup-form {
   padding-top: 65px; }
@@ -545,8 +1052,8 @@ input::-webkit-inner-spin-button {
   z-index: 10; }
 
 .sso-signup-success h2 {
-  color: #3b58a0;
-  font-size: 17px;
+  color: #4cb89e;
+  font-size: 16px;
   font-weight: 600; }
 
 .sso-signup-success h1 {
@@ -560,7 +1067,7 @@ input::-webkit-inner-spin-button {
   margin-bottom: 0; }
 
 .sso-signup-success a {
-  color: #3b58a0;
+  color: #4cb89e;
   font-weight: 600; }
 
 .sso-signup-success .sso-circle-icon {
@@ -569,8 +1076,8 @@ input::-webkit-inner-spin-button {
   border-radius: 200px;
   text-align: center;
   line-height: 60px;
-  color: #3b58a0;
-  background-color: rgba(46, 49, 146, 0.08); }
+  color: #4cb89e;
+  background-color: rgba(76, 184, 158, 0.08); }
   .sso-signup-success .sso-circle-icon i {
     font-size: 23px;
     line-height: inherit; }

@@ -39,5 +39,4 @@ export class SignupFormTwoComponent {
         this.location.back();
     }
 
-
 }

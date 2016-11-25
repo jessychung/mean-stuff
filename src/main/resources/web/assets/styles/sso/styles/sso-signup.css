@@ -2,7 +2,10 @@
   .sso-signup-left-side-container {
     height: auto !important; }
   .sso-signup-left-side {
-    padding: 20px !important; } }
+    padding: 20px !important; }
+  .sso-signup-form {
+    padding-top: 35px !important;
+    height: auto !important; } }
 
 .sso-signup-form {
   padding-top: 65px; }
@@ -158,8 +161,8 @@
   z-index: 10; }
 
 .sso-signup-success h2 {
-  color: #3b58a0;
-  font-size: 17px;
+  color: #4cb89e;
+  font-size: 16px;
   font-weight: 600; }
 
 .sso-signup-success h1 {
@@ -173,7 +176,7 @@
   margin-bottom: 0; }
 
 .sso-signup-success a {
-  color: #3b58a0;
+  color: #4cb89e;
   font-weight: 600; }
 
 .sso-signup-success .sso-circle-icon {
@@ -182,8 +185,8 @@
   border-radius: 200px;
   text-align: center;
   line-height: 60px;
-  color: #3b58a0;
-  background-color: rgba(46, 49, 146, 0.08); }
+  color: #4cb89e;
+  background-color: rgba(76, 184, 158, 0.08); }
   .sso-signup-success .sso-circle-icon i {
     font-size: 23px;
     line-height: inherit; }

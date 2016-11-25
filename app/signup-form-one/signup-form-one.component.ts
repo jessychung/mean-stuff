@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { CountryList } from 'app/list/country';
+import { CountryList } from '../list/country';
 
 @Component({
     selector: 'signup-form',

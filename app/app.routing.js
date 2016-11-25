@@ -8,6 +8,13 @@ var signup_form_one_component_1 = require("./signup-form-one/signup-form-one.com
 var signup_form_two_component_1 = require("./signup-form-two/signup-form-two.component");
 var signup_success_component_1 = require("./signup-success/signup-success.component");
 var resetpassword_component_1 = require("./resetpassword/resetpassword.component");
+var main_component_1 = require("./main/main.component");
+var manage_users_component_1 = require("./manage-users/manage-users.component");
+var support_tickets_component_1 = require("./support-tickets/support-tickets.component");
+var invoices_component_1 = require("./invoices/invoices.component");
+var dashboard_component_1 = require("./dashboard/dashboard.component");
+var invoices_all_component_1 = require("./invoices-all/invoices-all.component");
+var invoices_thismonth_component_1 = require("./invoices-thismonth/invoices-thismonth.component");
 var appRoutes = [
     {
         path: '',
@@ -47,6 +54,38 @@ var appRoutes = [
             {
                 path: 'signup-success',
                 component: signup_success_component_1.SignupSuccessComponent
+            }
+        ]
+    },
+    {
+        path: 'dashboard',
+        component: dashboard_component_1.DashboardComponent
+    },
+    {
+        path: 'main',
+        component: main_component_1.MainComponent,
+        children: [
+            {
+                path: 'manage-users',
+                component: manage_users_component_1.ManageUsersComponent
+            },
+            {
+                path: 'support-tickets',
+                component: support_tickets_component_1.SupportTicketsComponent
+            },
+            {
+                path: 'invoices',
+                component: invoices_component_1.InvoicesComponent,
+                children: [
+                    {
+                        path: 'invoices-all',
+                        component: invoices_all_component_1.InvoicesAllComponent
+                    },
+                    {
+                        path: 'invoices-thismonth',
+                        component: invoices_thismonth_component_1.InvoicesThismonthComponent
+                    }
+                ]
             }
         ]
     }

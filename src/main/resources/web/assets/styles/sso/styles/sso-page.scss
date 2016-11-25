@@ -1,0 +1,59 @@
+@import "variables.scss";
+
+.sso-page-single {
+  h1 {
+    font-size: 20px;
+    font-weight: $semibold;
+    display: inline-block;
+  }
+  .sso-search {
+    float: right;
+  }
+}
+
+.sso-back {
+  border: 1px solid #cccccc;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: $black;
+  transition: all .3s;
+  border-radius: 300px;
+  display: inline-block;
+  i {
+    line-height: inherit;
+    font-size: 13px;
+  }
+  &:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transition: all .3s;
+  }
+}
+
+.sso-page-menu {
+  list-style-type: none;
+  padding-top: 10px;
+  margin-bottom: 0px;
+  padding-left: 20px;
+  li {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: rgba($black, .5);
+    font-weight: $medium;
+    margin-bottom: -2px;
+    transition: color .3s;
+    &:hover {
+      cursor: pointer;
+      color: rgba($black, .7);
+      transition: color .3s;
+    }
+  }
+}
+
+.sso-page-menu-active {
+  border-bottom: 3px solid $thentia-green;
+  color: $black !important;
+}

@@ -16,6 +16,15 @@ import {SignupFormOneComponent} from "./signup-form-one/signup-form-one.componen
 import {SignupFormTwoComponent} from "./signup-form-two/signup-form-two.component";
 import {SignupSuccessComponent} from "./signup-success/signup-success.component";
 import {ResetpasswordComponent} from "./resetpassword/resetpassword.component";
+import {MainComponent} from "./main/main.component";
+import {SupportTicketsComponent} from "./support-tickets/support-tickets.component";
+import {ManageUsersComponent} from "./manage-users/manage-users.component";
+import {InvoicesComponent} from "./invoices/invoices.component";
+import {TopbarComponent} from "./top-bar/top-bar.component";
+import {PageControlsComponent} from "./page-controls/page-controls.component";
+import {DashboardComponent} from "./dashboard/dashboard.component";
+import {InvoicesAllComponent} from "./invoices-all/invoices-all.component";
+import {InvoicesThismonthComponent} from "./invoices-thismonth/invoices-thismonth.component";
 
 
 
@@ -38,7 +47,16 @@ import {ResetpasswordComponent} from "./resetpassword/resetpassword.component";
         SignupFormOneComponent,
         SignupFormTwoComponent,
         SignupSuccessComponent,
-        ResetpasswordComponent
+        ResetpasswordComponent,
+        DashboardComponent,
+        MainComponent,
+        SupportTicketsComponent,
+        ManageUsersComponent,
+        InvoicesComponent,
+        InvoicesAllComponent,
+        InvoicesThismonthComponent,
+        TopbarComponent,
+        PageControlsComponent
     ],
     bootstrap: [ AppComponent ]
 })

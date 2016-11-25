@@ -24,6 +24,15 @@ var signup_form_one_component_1 = require("./signup-form-one/signup-form-one.com
 var signup_form_two_component_1 = require("./signup-form-two/signup-form-two.component");
 var signup_success_component_1 = require("./signup-success/signup-success.component");
 var resetpassword_component_1 = require("./resetpassword/resetpassword.component");
+var main_component_1 = require("./main/main.component");
+var support_tickets_component_1 = require("./support-tickets/support-tickets.component");
+var manage_users_component_1 = require("./manage-users/manage-users.component");
+var invoices_component_1 = require("./invoices/invoices.component");
+var top_bar_component_1 = require("./top-bar/top-bar.component");
+var page_controls_component_1 = require("./page-controls/page-controls.component");
+var dashboard_component_1 = require("./dashboard/dashboard.component");
+var invoices_all_component_1 = require("./invoices-all/invoices-all.component");
+var invoices_thismonth_component_1 = require("./invoices-thismonth/invoices-thismonth.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -47,7 +56,16 @@ var AppModule = (function () {
                 signup_form_one_component_1.SignupFormOneComponent,
                 signup_form_two_component_1.SignupFormTwoComponent,
                 signup_success_component_1.SignupSuccessComponent,
-                resetpassword_component_1.ResetpasswordComponent
+                resetpassword_component_1.ResetpasswordComponent,
+                dashboard_component_1.DashboardComponent,
+                main_component_1.MainComponent,
+                support_tickets_component_1.SupportTicketsComponent,
+                manage_users_component_1.ManageUsersComponent,
+                invoices_component_1.InvoicesComponent,
+                invoices_all_component_1.InvoicesAllComponent,
+                invoices_thismonth_component_1.InvoicesThismonthComponent,
+                top_bar_component_1.TopbarComponent,
+                page_controls_component_1.PageControlsComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
