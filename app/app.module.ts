@@ -25,7 +25,8 @@ import {PageControlsComponent} from "./page-controls/page-controls.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {InvoicesAllComponent} from "./invoices-all/invoices-all.component";
 import {InvoicesThismonthComponent} from "./invoices-thismonth/invoices-thismonth.component";
-
+import {TimesheetsComponent} from "./timesheets/timesheets.component";
+import {AddressComponent} from "./address/address.component";
 
 
 @NgModule({
@@ -52,6 +53,8 @@ import {InvoicesThismonthComponent} from "./invoices-thismonth/invoices-thismont
         MainComponent,
         SupportTicketsComponent,
         ManageUsersComponent,
+        TimesheetsComponent,
+        AddressComponent,
         InvoicesComponent,
         InvoicesAllComponent,
         InvoicesThismonthComponent,

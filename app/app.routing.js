@@ -15,6 +15,8 @@ var invoices_component_1 = require("./invoices/invoices.component");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
 var invoices_all_component_1 = require("./invoices-all/invoices-all.component");
 var invoices_thismonth_component_1 = require("./invoices-thismonth/invoices-thismonth.component");
+var timesheets_component_1 = require("./timesheets/timesheets.component");
+var address_component_1 = require("./address/address.component");
 var appRoutes = [
     {
         path: '',
@@ -86,6 +88,14 @@ var appRoutes = [
                         component: invoices_thismonth_component_1.InvoicesThismonthComponent
                     }
                 ]
+            },
+            {
+                path: 'timesheets',
+                component: timesheets_component_1.TimesheetsComponent
+            },
+            {
+                path: 'address',
+                component: address_component_1.AddressComponent
             }
         ]
     }
