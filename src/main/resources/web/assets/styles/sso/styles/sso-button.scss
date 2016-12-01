@@ -19,6 +19,16 @@
   }
 }
 
+.btn-green {
+  color: #fff;
+  border-bottom: 2px solid darken($thentia-green, 15%);
+  background-color: $thentia-green;
+  @include hover-state {
+    outline: none;
+    color: #fff;
+  }
+}
+
 .btn-light {
   color: lighten(#333333, 45%);
   border-bottom: 2px solid darken(#eaeaea, 5%);
@@ -36,6 +46,50 @@
   @include hover-state {
     color: lighten(#333333, 45%);
     background-color: rgba(#fff, 0.9);
+    transition: all .3s;
+  }
+}
+
+.sso-print {
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: $black;
+  transition: all .3s;
+  border-radius: 300px;
+  display: inline-block;
+  i {
+    line-height: inherit;
+    font-size: 20px;
+  }
+  &:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transition: all .3s;
+  }
+}
+
+.sso-back, .sso-addnew {
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: $black;
+  transition: all .3s;
+  border-radius: 300px;
+  display: inline-block;
+  i {
+    line-height: inherit;
+    font-size: 13px;
+  }
+  &:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
     transition: all .3s;
   }
 }

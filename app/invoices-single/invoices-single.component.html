@@ -1,0 +1,154 @@
+<div class="sso-page container-fluid">
+    <div class="row">
+        <top-bar></top-bar>
+    </div>
+    <div class="container">
+        <div class="row" style="padding: 20px 0">
+            <div class="col-lg-10 col-md-9">
+                <div class="sso-page-single-buttons">
+                    <div class="sso-back" (click)="goBack()" style="display:block; margin-bottom: 15px">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="sso-print" style="display:block;">
+                        <i class="thentia-print" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="sso-invoice-paper sso-interior-block">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <img src="src/main/resources/web/assets/images/sg-thentia.svg" width="150px">
+                        </div>
+                        <div class="col-md-3" style="text-align: right">
+                            <h3 style="display: inline-block">Invoice #0123</h3>
+                            <div class="sso-status sso-status-warning">Unpaid</div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding-bottom: 25px; padding-top: 25px;">
+                        <div class="col-lg-3 col-md-4">
+                            <h1>Issued by</h1>
+                            <p>Thentia Corporation. <br/>
+                                218-543 Richmond Street West <br/>
+                                Toronto, Ontario, Canada <br/>
+                                M5V 1Y6 <br/>
+                                647-925-9861</p>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <h1>Recipient</h1>
+                            <p>John Smith <br/>
+                                College of Midwives of Ontario <br/>
+                                21 St. Clair Avenue East, Suite 303 <br/>
+                                Toronto, Ontario, Canada <br/>
+                                M4T 1L9 </p>
+                        </div>
+                        <div class="col-lg-6 col-md-4" style="text-align: right">
+                            <div style="display: inline-block; width: 100%">
+                                <h1 style="display: inline-block">Date:</h1> November 11, 2016
+                            </div>
+                            <div style="display: inline-block; width: 100%">
+                                <h1 style="display: inline-block">Due Date:</h1> December 11, 2016
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding: 20px 0">
+                        <div class="col-md-12">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Memo</th>
+                                    <th>Amount</th>
+                                    <th>Tax Rate</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Registration Fee</td>
+                                    <td>Placeholder Item description</td>
+                                    <td>$1000.00</td>
+                                    <td>$130.00 <span>HST</span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Reference No.</th>
+                                    <th>Payment Date</th>
+                                    <th>Payment Type</th>
+                                    <th>Amount</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>123</td>
+                                    <td>11/15/16</td>
+                                    <td>cheque</td>
+                                    <td>$1000.00</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-8 col-md-7" style="padding-left: 0">
+                                <h1>Notes/Terms</h1>
+                                <p>whatever</p>
+                            </div>
+                            <div class="col-lg-4 col-md-5">
+                                <div class="row">
+                                    <div class="col-md-6" style="text-align: right">
+                                        <h1>subtotal</h1>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h2>$1000.00</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6" style="text-align: right">
+                                        <h1>Tax(13%)</h1>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h2>$130.00</h2>
+                                    </div>
+                                </div>
+                                <div class="row sso-invoice-total">
+                                    <div class="col-md-6" style="text-align: right">
+                                        <h1>Total Amount</h1>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h2>$1130.00</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3">
+                <div class="sso-invoice-total-box">
+                    <h1>Amount Due</h1>
+                    <h4>
+                        $1130.00
+                    </h4>
+                </div>
+                <button class="btn btn-green" style="width: 100%">Make a Payment</button>
+                <h4 style="font-size: 13px; opacity: .6; text-align: center"><i class="fa fa-lock" aria-hidden="true"></i> secure payment</h4>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+

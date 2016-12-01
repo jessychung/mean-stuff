@@ -1,36 +1,29 @@
 @import "variables.scss";
 
+.sso-page {
+  margin-left: 9px;
+}
+
 .sso-page-single {
   h1 {
     font-size: 20px;
     font-weight: $semibold;
     display: inline-block;
+    margin: 0;
   }
   .sso-search {
-    float: right;
+    height: 35px !important;
+    max-width: 220px;
+    font-size: 14px !important;
+    display: inline-block;
+  }
+  .sso-page-logo {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: -3px;
   }
 }
 
-.sso-back {
-  border: 1px solid #cccccc;
-  text-align: center;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  color: $black;
-  transition: all .3s;
-  border-radius: 300px;
-  display: inline-block;
-  i {
-    line-height: inherit;
-    font-size: 13px;
-  }
-  &:hover {
-    background-color: #f7f7f7;
-    cursor: pointer;
-    transition: all .3s;
-  }
-}
 
 .sso-page-menu {
   list-style-type: none;
@@ -56,4 +49,40 @@
 .sso-page-menu-active {
   border-bottom: 3px solid $thentia-green;
   color: $black !important;
+}
+
+.sso-green {
+  .sso-page-menu-active {
+    border-bottom: 3px solid $thentia-green;
+    color: $black !important;
+  }
+}
+
+.sso-red {
+  .sso-page-menu-active {
+    border-bottom: 3px solid $thentia-red;
+    color: $black !important;
+  }
+}
+
+.sso-yellow {
+  .sso-page-menu-active {
+    border-bottom: 3px solid $thentia-red;
+    color: $black !important;
+  }
+}
+
+.sso-blue{
+  .sso-page-menu-active {
+    border-bottom: 3px solid $thentia-blue;
+    color: $black !important;
+  }
+}
+
+.sso-page-single-buttons {
+  position: absolute;
+}
+
+.sso-interior-block {
+  margin-left: 60px;
 }

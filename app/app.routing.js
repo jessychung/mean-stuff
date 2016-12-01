@@ -17,6 +17,11 @@ var invoices_all_component_1 = require("./invoices-all/invoices-all.component");
 var invoices_thismonth_component_1 = require("./invoices-thismonth/invoices-thismonth.component");
 var timesheets_component_1 = require("./timesheets/timesheets.component");
 var address_component_1 = require("./address/address.component");
+var invoices_single_component_1 = require("./invoices-single/invoices-single.component");
+var support_tickets_all_component_1 = require("./support-tickets-all/support-tickets-all.component");
+var support_tickets_single_component_1 = require("./support-tickets-single/support-tickets-single.component");
+var support_tickets_priority_component_1 = require("./support-tickets-priority/support-tickets-priority.component");
+var manage_users_all_component_1 = require("./manage-users-all/manage-users-all.component");
 var appRoutes = [
     {
         path: '',
@@ -69,11 +74,27 @@ var appRoutes = [
         children: [
             {
                 path: 'manage-users',
-                component: manage_users_component_1.ManageUsersComponent
+                component: manage_users_component_1.ManageUsersComponent,
+                children: [
+                    {
+                        path: 'manage-users-all',
+                        component: manage_users_all_component_1.ManageUsersAllComponent
+                    }
+                ]
             },
             {
                 path: 'support-tickets',
-                component: support_tickets_component_1.SupportTicketsComponent
+                component: support_tickets_component_1.SupportTicketsComponent,
+                children: [
+                    {
+                        path: 'support-tickets-all',
+                        component: support_tickets_all_component_1.SupportTicketsAllComponent
+                    },
+                    {
+                        path: 'support-tickets-priority',
+                        component: support_tickets_priority_component_1.SupportTicketsPriorityComponent
+                    }
+                ]
             },
             {
                 path: 'invoices',
@@ -88,6 +109,14 @@ var appRoutes = [
                         component: invoices_thismonth_component_1.InvoicesThismonthComponent
                     }
                 ]
+            },
+            {
+                path: 'invoices-single',
+                component: invoices_single_component_1.InvoicesSingleComponent
+            },
+            {
+                path: 'support-tickets-single',
+                component: support_tickets_single_component_1.SupportTicketsSingleComponent
             },
             {
                 path: 'timesheets',

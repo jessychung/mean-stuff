@@ -35,6 +35,11 @@ var invoices_all_component_1 = require("./invoices-all/invoices-all.component");
 var invoices_thismonth_component_1 = require("./invoices-thismonth/invoices-thismonth.component");
 var timesheets_component_1 = require("./timesheets/timesheets.component");
 var address_component_1 = require("./address/address.component");
+var invoices_single_component_1 = require("./invoices-single/invoices-single.component");
+var support_tickets_all_component_1 = require("./support-tickets-all/support-tickets-all.component");
+var support_tickets_priority_component_1 = require("./support-tickets-priority/support-tickets-priority.component");
+var support_tickets_single_component_1 = require("./support-tickets-single/support-tickets-single.component");
+var manage_users_all_component_1 = require("./manage-users-all/manage-users-all.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -62,12 +67,17 @@ var AppModule = (function () {
                 dashboard_component_1.DashboardComponent,
                 main_component_1.MainComponent,
                 support_tickets_component_1.SupportTicketsComponent,
+                support_tickets_all_component_1.SupportTicketsAllComponent,
+                support_tickets_priority_component_1.SupportTicketsPriorityComponent,
+                support_tickets_single_component_1.SupportTicketsSingleComponent,
                 manage_users_component_1.ManageUsersComponent,
+                manage_users_all_component_1.ManageUsersAllComponent,
                 timesheets_component_1.TimesheetsComponent,
                 address_component_1.AddressComponent,
                 invoices_component_1.InvoicesComponent,
                 invoices_all_component_1.InvoicesAllComponent,
                 invoices_thismonth_component_1.InvoicesThismonthComponent,
+                invoices_single_component_1.InvoicesSingleComponent,
                 top_bar_component_1.TopbarComponent,
                 page_controls_component_1.PageControlsComponent
             ],

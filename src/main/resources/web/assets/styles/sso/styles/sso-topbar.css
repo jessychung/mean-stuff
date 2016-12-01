@@ -1,0 +1,95 @@
+.sso-top-bar {
+  border-bottom: 1px solid #eaeaea;
+  background-color: #fff;
+  height: 65px; }
+  .sso-top-bar button {
+    background-color: transparent;
+    display: inline-block;
+    height: 64px;
+    padding: 0px 25px; }
+    .sso-top-bar button .avatar {
+      line-height: 79px;
+      vertical-align: middle;
+      float: left; }
+    .sso-top-bar button span {
+      margin-left: 10px;
+      vertical-align: middle; }
+    .sso-top-bar button:hover {
+      background-color: #fafafa; }
+    .sso-top-bar button .dropdown-menu {
+      border: 1px solid #e6e6e6 !important; }
+      .sso-top-bar button .dropdown-menu:active, .sso-top-bar button .dropdown-menu:focus {
+        border: 1px solid #e6e6e6 !important; }
+
+.left-menu {
+  background-color: white;
+  padding: 50px 0px 100px 0px;
+  width: 23%;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  z-index: 80; }
+  .left-menu a {
+    color: #333333;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 15px;
+    display: inline-block; }
+    .left-menu a:hover {
+      color: #666666;
+      transition: 0.3s; }
+  .left-menu > ul {
+    background-color: white;
+    list-style-type: none;
+    padding-left: 50px; }
+  .left-menu ul ul {
+    padding-left: 0px;
+    margin-top: 17px;
+    list-style-type: none; }
+    .left-menu ul ul li a {
+      color: #333333;
+      font-weight: 300;
+      padding-right: 20px; }
+      .left-menu ul ul li a:hover {
+        color: #333333;
+        transition: color 0.3s; }
+    .left-menu ul ul li:hover {
+      border-left: 7px solid #e6e6e6;
+      margin-left: -15px;
+      padding-left: 23px; }
+  .left-menu i {
+    padding-right: 5px;
+    color: #808080; }
+
+.left-menu-mobile a {
+  color: #333333;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 15px;
+  display: inline-block; }
+  .left-menu-mobile a:hover {
+    color: #666666;
+    transition: 0.3s; }
+
+.left-menu-mobile > ul {
+  background-color: white;
+  list-style-type: none;
+  padding-left: 0px !important; }
+
+.left-menu-mobile .user-greet {
+  padding-left: 0px; }
+
+.sso-main-logo img {
+  padding: 8px 0px 8px 0px; }
+
+.sso-avatar-small {
+  width: 35px;
+  height: 35px;
+  border-radius: 1000px;
+  display: inline-block;
+  color: #fff;
+  background-color: #048586;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 35px; }

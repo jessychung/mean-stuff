@@ -1,116 +1,5 @@
 @import "variables.scss";
 
-.top-bar {
-  border-bottom: 1px solid #eaeaea;
-  background-color: #fff;
-  height: 65px;
-  button {
-    background-color: transparent;
-    display: inline-block;
-    height: 64px;
-    padding: 0px 25px;
-    .avatar {
-      line-height: 79px;
-      vertical-align: middle;
-      float: left;
-    }
-    span {
-      margin-left: 10px;
-      vertical-align: middle;
-    }
-    &:hover {
-      background-color: #fafafa;
-    }
-    .dropdown-menu {
-      border: 1px solid #e6e6e6 !important;
-      &:active, &:focus {
-        border: 1px solid #e6e6e6 !important;
-      }
-    }
-  }
-}
-
-.left-menu {
-  background-color: white;
-  padding: 50px 0px 100px 0px;
-  width: 23%;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-  z-index: 80;
-  a {
-    color: #333333;
-    font-weight: 600;
-    font-size: 15px;
-    padding: 10px 15px;
-    display: inline-block;
-    &:hover {
-      color: #666666;
-      transition: 0.3s;
-    }
-  }
-  &>ul {
-    background-color: white;
-    list-style-type: none;
-    padding-left: 50px;
-  }
-  ul {
-    ul {
-      padding-left: 0px;
-      margin-top: 17px;
-      list-style-type: none;
-      li {
-        a {
-          color: #333333;
-          font-weight: 300;
-          padding-right: 20px;
-          &:hover {
-            color: #333333;
-            transition: color 0.3s;
-          }
-        }
-        &:hover {
-          border-left: 7px solid #e6e6e6;
-          margin-left: -15px;
-          padding-left: 23px;
-        }
-      }
-    }
-  }
-  i {
-    padding-right: 5px;
-    color: #808080;
-  }
-}
-
-.left-menu-mobile {
-  a {
-    color: #333333;
-    font-weight: 600;
-    font-size: 15px;
-    padding: 10px 15px;
-    display: inline-block;
-    &:hover {
-      color: #666666;
-      transition: 0.3s;
-    }
-  }
-  &>ul {
-    background-color: white;
-    list-style-type: none;
-    padding-left: 0px !important;
-  }
-  .user-greet {
-    padding-left: 0px;
-  }
-}
-
-.sso-main-logo {
-  img {
-    padding: 7px 0px 0px 25px;
-  }
-}
-
 .main-area {
   padding-top: 140px;
 }
@@ -232,18 +121,7 @@
 .card-1:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07), 0 10px 10px rgba(0, 0, 0, 0.03);
 }
-.avatar-small {
-  width: 35px;
-  height: 35px;
-  border-radius: 1000px;
-  display: inline-block;
-  color: #fff;
-  background-color: $thentia-darkgreen;
-  text-align: center;
-  font-size: 17px;
-  font-weight: $medium;
-  line-height: 35px;
-}
+
 .dropdown-menu {
   margin-top: 0px !important;
   border: 1px solid #e6e6e6;

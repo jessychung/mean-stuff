@@ -1,28 +1,22 @@
+.sso-page {
+  margin-left: 9px; }
+
 .sso-page-single h1 {
   font-size: 20px;
   font-weight: 600;
-  display: inline-block; }
+  display: inline-block;
+  margin: 0; }
 
 .sso-page-single .sso-search {
-  float: right; }
-
-.sso-back {
-  border: 1px solid #cccccc;
-  text-align: center;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
-  color: #3d474f;
-  transition: all .3s;
-  border-radius: 300px;
+  height: 35px !important;
+  max-width: 220px;
+  font-size: 14px !important;
   display: inline-block; }
-  .sso-back i {
-    line-height: inherit;
-    font-size: 13px; }
-  .sso-back:hover {
-    background-color: #f7f7f7;
-    cursor: pointer;
-    transition: all .3s; }
+
+.sso-page-single .sso-page-logo {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: -3px; }
 
 .sso-page-menu {
   list-style-type: none;
@@ -45,3 +39,25 @@
 .sso-page-menu-active {
   border-bottom: 3px solid #4cb89e;
   color: #3d474f !important; }
+
+.sso-green .sso-page-menu-active {
+  border-bottom: 3px solid #4cb89e;
+  color: #3d474f !important; }
+
+.sso-red .sso-page-menu-active {
+  border-bottom: 3px solid #eb563c;
+  color: #3d474f !important; }
+
+.sso-yellow .sso-page-menu-active {
+  border-bottom: 3px solid #eb563c;
+  color: #3d474f !important; }
+
+.sso-blue .sso-page-menu-active {
+  border-bottom: 3px solid #004f75;
+  color: #3d474f !important; }
+
+.sso-page-single-buttons {
+  position: absolute; }
+
+.sso-interior-block {
+  margin-left: 60px; }

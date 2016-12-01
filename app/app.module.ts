@@ -27,6 +27,11 @@ import {InvoicesAllComponent} from "./invoices-all/invoices-all.component";
 import {InvoicesThismonthComponent} from "./invoices-thismonth/invoices-thismonth.component";
 import {TimesheetsComponent} from "./timesheets/timesheets.component";
 import {AddressComponent} from "./address/address.component";
+import {InvoicesSingleComponent} from "./invoices-single/invoices-single.component";
+import {SupportTicketsAllComponent} from "./support-tickets-all/support-tickets-all.component";
+import {SupportTicketsPriorityComponent} from "./support-tickets-priority/support-tickets-priority.component";
+import {SupportTicketsSingleComponent} from "./support-tickets-single/support-tickets-single.component";
+import {ManageUsersAllComponent} from "./manage-users-all/manage-users-all.component";
 
 
 @NgModule({
@@ -52,12 +57,17 @@ import {AddressComponent} from "./address/address.component";
         DashboardComponent,
         MainComponent,
         SupportTicketsComponent,
+        SupportTicketsAllComponent,
+        SupportTicketsPriorityComponent,
+        SupportTicketsSingleComponent,
         ManageUsersComponent,
+        ManageUsersAllComponent,
         TimesheetsComponent,
         AddressComponent,
         InvoicesComponent,
         InvoicesAllComponent,
         InvoicesThismonthComponent,
+        InvoicesSingleComponent,
         TopbarComponent,
         PageControlsComponent
     ],

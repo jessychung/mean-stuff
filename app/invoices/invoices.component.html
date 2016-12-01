@@ -1,37 +1,46 @@
-<div class="container-fluid">
+<div class="sso-page container-fluid">
     <div class="row">
         <top-bar></top-bar>
     </div>
-    <div class="sso-page-controls sso-page-single row">
-        <div class="row">
-            <div class="col-md-6" style="padding: 20px 50px">
-                <div class="sso-back" [routerLink]="['/dashboard']">
-                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    <div class="sso-page-controls sso-page-single sso-green row">
+        <div class="container">
+            <div class="row" style="padding: 20px 0;">
+                <div class="col-lg-8 col-md-8">
+                    <div class="sso-back" [routerLink]="['/dashboard']">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </div>
+                    <img class="sso-page-logo" src="src/main/resources/web/assets/images/thentia_invoice_sm.png" />
+                    <h1>Invoices</h1>
                 </div>
-                <img src="src/main/resources/web/assets/images/thentia_invoice_sm.png" />
-                <h1>Invoices</h1>
+                <div class="col-lg-4 col-md-4" style="text-align: right;">
+                    <div class="sso-addnew">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                    <input type="search" class="form-control sso-round-input sso-search" placeholder="Search..." />
+                </div>
             </div>
-            <div class="col-md-6">
-                <input type="search" class="form-control sso-round-input sso-search" placeholder="Search..." />
-            </div>
-        </div>
 
-        <div class="col-md-12">
-            <ul class="sso-page-menu">
-                <li [routerLink]="['/main/invoices/invoices-all']" [routerLinkActive]="['sso-page-menu-active']">All</li>
-                <li [routerLink]="['/main/invoices/invoices-thismonth']" [routerLinkActive]="['sso-page-menu-active']">This Month</li>
-                <li>Last Month</li>
-                <li>Custom Date Range</li>
-                <li>Unpaid Invoices <div class="sso-count-badge">10</div></li>
-            </ul>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div style="padding: 20px">
-                <router-outlet></router-outlet>
+            <div class="col-md-12">
+                <ul class="sso-page-menu">
+                    <li [routerLink]="['/main/invoices/invoices-all']" [routerLinkActive]="['sso-page-menu-active']">All</li>
+                    <li [routerLink]="['/main/invoices/invoices-thismonth']" [routerLinkActive]="['sso-page-menu-active']">This Month</li>
+                    <li>Last Month</li>
+                    <li>Custom Date Range</li>
+                    <li>Unpaid Invoices <div class="sso-count-badge">10</div></li>
+                </ul>
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div style="padding: 20px">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 

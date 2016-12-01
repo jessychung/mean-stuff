@@ -1,0 +1,97 @@
+.sso-support-tickets {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.08); }
+  .sso-support-tickets h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0; }
+  .sso-support-tickets h2 {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(61, 71, 79, 0.5);
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .sso-support-tickets p {
+    font-size: 14px; }
+  .sso-support-tickets .sso-avatar, .sso-support-tickets .sso-avatar-admin {
+    position: absolute; }
+  .sso-support-tickets .sso-support-tickets-textarea {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    position: relative;
+    margin-left: 70px; }
+    .sso-support-tickets .sso-support-tickets-textarea:before, .sso-support-tickets .sso-support-tickets-textarea:after {
+      right: 100%;
+      top: 20px;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none; }
+    .sso-support-tickets .sso-support-tickets-textarea:before {
+      border-color: rgba(204, 204, 204, 0);
+      border-right-color: #cccccc;
+      border-width: 11px 14px 11px 0;
+      margin-top: -11px; }
+    .sso-support-tickets .sso-support-tickets-textarea:after {
+      border-color: rgba(255, 255, 255, 0);
+      border-right-color: #fff;
+      border-width: 10px 13px 10px 0;
+      margin-top: -10px; }
+    .sso-support-tickets .sso-support-tickets-textarea .form-control {
+      border: 0px !important;
+      resize: vertical;
+      border-radius: 3px; }
+      .sso-support-tickets .sso-support-tickets-textarea .form-control:hover, .sso-support-tickets .sso-support-tickets-textarea .form-control:active, .sso-support-tickets .sso-support-tickets-textarea .form-control:focus {
+        background-color: transparent !important; }
+    .sso-support-tickets .sso-support-tickets-textarea .sso-support-tickets-controls {
+      border-top: 1px solid #e0e0e0; }
+      .sso-support-tickets .sso-support-tickets-textarea .sso-support-tickets-controls div, .sso-support-tickets .sso-support-tickets-textarea .sso-support-tickets-controls button {
+        display: inline-block;
+        font-size: 14px; }
+      .sso-support-tickets .sso-support-tickets-textarea .sso-support-tickets-controls div {
+        padding: 7px 15px;
+        color: rgba(61, 71, 79, 0.75); }
+      .sso-support-tickets .sso-support-tickets-textarea .sso-support-tickets-controls button {
+        border: 0;
+        float: right;
+        display: table-column-group;
+        padding: 7px 25px;
+        background-color: #f2f2f2;
+        border-left: 1px solid #e0e0e0; }
+        .sso-support-tickets .sso-support-tickets-textarea .sso-support-tickets-controls button:hover, .sso-support-tickets .sso-support-tickets-textarea .sso-support-tickets-controls button:active, .sso-support-tickets .sso-support-tickets-textarea .sso-support-tickets-controls button:focus {
+          background-color: #f7f7f7; }
+  .sso-support-tickets .sso-support-tickets-reply {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #f0f0f0; }
+    .sso-support-tickets .sso-support-tickets-reply .sso-reply {
+      margin-left: 70px; }
+      .sso-support-tickets .sso-support-tickets-reply .sso-reply h1 {
+        font-size: 15px; }
+      .sso-support-tickets .sso-support-tickets-reply .sso-reply span {
+        font-size: 13px;
+        color: #cbcbcb;
+        font-weight: 300; }
+    .sso-support-tickets .sso-support-tickets-reply p:last-child {
+      margin-bottom: 0; }
+    .sso-support-tickets .sso-support-tickets-reply:last-child {
+      padding-bottom: 0;
+      border-bottom: 0px; }
+
+.sso-support-tickets-information h1 {
+  font-size: 16px;
+  font-weight: 600; }
+
+.sso-support-tickets-information h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-top: 15px; }
+
+.sso-support-tickets-information p {
+  font-size: 13px;
+  font-weight: 400; }

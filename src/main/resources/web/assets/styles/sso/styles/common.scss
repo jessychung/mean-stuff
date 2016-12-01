@@ -338,3 +338,74 @@ input::-webkit-inner-spin-button {
   max-width: 300px;
 }
 
+.sso-avatar {
+  width: 47px;
+  height: 47px;
+  border-radius: 1000px;
+  display: inline-block;
+  color: #fff;
+  background-color: $thentia-darkgreen;
+  text-align: center;
+  font-size: 21px;
+  font-weight: $medium;
+  line-height: 47px;
+}
+
+.sso-avatar-admin {
+  width: 47px;
+  height: 47px;
+  border-radius: 1000px;
+  display: inline-block;
+  color: #fff;
+  background-color: $black;
+  text-align: center;
+  font-size: 21px;
+  font-weight: $medium;
+  line-height: 47px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #cccccc !important;
+  font-weight: $light !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #cccccc !important;
+  font-weight: $light !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #cccccc !important;
+  font-weight: $light !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #cccccc !important;
+  font-weight: $light !important;
+}
+
+.sso-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e6e6e6;
+}
+
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0; top: 2px;
+  width: 17px; height: 17px;
+  border: 1px solid #aaa;
+  background: #f8f8f8;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.3)
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: 3px; left: 4px;
+  font-size: 18px;
+  line-height: 0.8;
+  color: #09ad7e;
+  transition: all .2s;
+}

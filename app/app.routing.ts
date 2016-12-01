@@ -18,6 +18,11 @@ import {InvoicesAllComponent} from "./invoices-all/invoices-all.component";
 import {InvoicesThismonthComponent} from "./invoices-thismonth/invoices-thismonth.component";
 import {TimesheetsComponent} from "./timesheets/timesheets.component";
 import {AddressComponent} from "./address/address.component";
+import {InvoicesSingleComponent} from "./invoices-single/invoices-single.component";
+import {SupportTicketsAllComponent} from "./support-tickets-all/support-tickets-all.component";
+import {SupportTicketsSingleComponent} from "./support-tickets-single/support-tickets-single.component";
+import {SupportTicketsPriorityComponent} from "./support-tickets-priority/support-tickets-priority.component";
+import {ManageUsersAllComponent} from "./manage-users-all/manage-users-all.component";
 
 const appRoutes: Routes = [
     {
@@ -71,11 +76,27 @@ const appRoutes: Routes = [
         children: [
             {
                 path: 'manage-users',
-                component: ManageUsersComponent
+                component: ManageUsersComponent,
+                children: [
+                    {
+                        path: 'manage-users-all',
+                        component: ManageUsersAllComponent
+                    }
+                ]
             },
             {
                 path: 'support-tickets',
-                component: SupportTicketsComponent
+                component: SupportTicketsComponent,
+                children: [
+                    {
+                        path: 'support-tickets-all',
+                        component: SupportTicketsAllComponent
+                    },
+                    {
+                        path: 'support-tickets-priority',
+                        component: SupportTicketsPriorityComponent
+                    }
+                ]
             },
             {
                 path: 'invoices',
@@ -90,6 +111,14 @@ const appRoutes: Routes = [
                         component: InvoicesThismonthComponent
                     }
                 ]
+            },
+            {
+                path: 'invoices-single',
+                component: InvoicesSingleComponent
+            },
+            {
+                path: 'support-tickets-single',
+                component: SupportTicketsSingleComponent
             },
             {
                 path: 'timesheets',
