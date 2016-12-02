@@ -12,43 +12,44 @@ var core_1 = require('@angular/core');
 var forms_1 = require('@angular/forms');
 var common_1 = require('@angular/common');
 var router_1 = require('@angular/router');
-var country_1 = require('../list/country');
-var FormCompanyComponent = (function () {
-    function FormCompanyComponent(fb, location, _router) {
+var FormPrimaryComponent = (function () {
+    function FormPrimaryComponent(fb, location, _router) {
         this.location = location;
         this._router = _router;
+        this.emailRegex = /@/;
         this.router = this._router;
         this.submitted = false;
-        this.countrylist = new country_1.CountryList();
-        this.companyForm = fb.group({
-            'ssoCname': ['', forms_1.Validators.required],
-            'ssoCstreet1': ['', forms_1.Validators.required],
-            'ssoCstreet2': [''],
-            'ssoCcity': ['', forms_1.Validators.required],
-            'ssoCprovince': ['', forms_1.Validators.required],
-            'ssoCcountry': ['', forms_1.Validators.required],
-            'ssoCpostal': ['', forms_1.Validators.required],
-            'ssoCtel': ['', forms_1.Validators.required]
+        this.primaryForm = fb.group({
+            'ssoFname': ['', forms_1.Validators.required],
+            'ssoLname': ['', forms_1.Validators.required],
+            'ssoTel': ['', forms_1.Validators.required],
+            'ssoCell': ['', forms_1.Validators.required],
+            'ssoEmail': ['', forms_1.Validators.compose([
+                    forms_1.Validators.required,
+                    forms_1.Validators.pattern(this.emailRegex)
+                ])]
         });
-        console.log(this.router.url);
     }
-    FormCompanyComponent.prototype.submitForm = function (value) {
+    FormPrimaryComponent.prototype.submitForm = function (value) {
         console.log(value);
         this.submitted = true;
         console.log(this.submitted);
     };
-    FormCompanyComponent.prototype.isSignup = function () {
-        return this.router.url == 'main/address/address-company';
+    FormPrimaryComponent.prototype.goBack = function () {
+        this.location.back();
     };
-    FormCompanyComponent = __decorate([
+    FormPrimaryComponent.prototype.isSignup = function () {
+        return this.router.url == 'main/address/address-primary';
+    };
+    FormPrimaryComponent = __decorate([
         core_1.Component({
-            selector: 'form-company',
-            templateUrl: 'app/form-company/form-company.component.html',
+            selector: 'form-primary',
+            templateUrl: 'app/form-primary/form-primary.component.html',
             encapsulation: core_1.ViewEncapsulation.None
         }), 
         __metadata('design:paramtypes', [forms_1.FormBuilder, common_1.Location, router_1.Router])
-    ], FormCompanyComponent);
-    return FormCompanyComponent;
+    ], FormPrimaryComponent);
+    return FormPrimaryComponent;
 }());
-exports.FormCompanyComponent = FormCompanyComponent;
-//# sourceMappingURL=form-company.component.js.map
+exports.FormPrimaryComponent = FormPrimaryComponent;
+//# sourceMappingURL=form-primary.component.js.map

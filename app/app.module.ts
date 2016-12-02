@@ -36,6 +36,7 @@ import {TimesheetsAllComponent} from "./timesheets-all/timesheets-all.component"
 import {AddressCompanyComponent} from "./address-company/address-company.component";
 import {AddressPrimaryComponent} from "./address-primary/address-primary.component";
 import {FormCompanyComponent} from "./form-company/form-company.component";
+import {FormPrimaryComponent} from "./form-primary/form-primary.component";
 
 
 @NgModule({
@@ -77,7 +78,8 @@ import {FormCompanyComponent} from "./form-company/form-company.component";
         InvoicesSingleComponent,
         TopbarComponent,
         PageControlsComponent,
-        FormCompanyComponent
+        FormCompanyComponent,
+        FormPrimaryComponent
     ],
     bootstrap: [ AppComponent ]
 })

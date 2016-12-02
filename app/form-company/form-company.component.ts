@@ -41,9 +41,7 @@ export class FormCompanyComponent {
     countrylist = new CountryList();
 
     isSignup():boolean {
-        return
+        return this.router.url == 'main/address/address-company';
     }
-
-    signup: boolean = true;
 
 }

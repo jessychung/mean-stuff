@@ -44,6 +44,14 @@
   border-bottom: 3px solid #4cb89e;
   color: #3d474f !important; }
 
+.sso-green .btn-brand {
+  color: #fff;
+  border-bottom: 2px solid #348370;
+  background-color: #4cb89e; }
+  .sso-green .btn-brand:hover, .sso-green .btn-brand:active, .sso-green .btn-brand:focus {
+    outline: none;
+    color: #fff; }
+
 .sso-red .sso-page-menu-active {
   border-bottom: 3px solid #eb563c;
   color: #3d474f !important; }

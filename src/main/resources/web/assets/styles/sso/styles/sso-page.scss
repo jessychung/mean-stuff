@@ -57,6 +57,15 @@
     border-bottom: 3px solid $thentia-green;
     color: $black !important;
   }
+  .btn-brand {
+    color: #fff;
+    border-bottom: 2px solid darken($thentia-green, 15%);
+    background-color: $thentia-green;
+    @include hover-state {
+      outline: none;
+      color: #fff;
+    }
+  }
 }
 
 .sso-red {

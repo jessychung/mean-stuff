@@ -44,6 +44,7 @@ var timesheets_all_component_1 = require("./timesheets-all/timesheets-all.compon
 var address_company_component_1 = require("./address-company/address-company.component");
 var address_primary_component_1 = require("./address-primary/address-primary.component");
 var form_company_component_1 = require("./form-company/form-company.component");
+var form_primary_component_1 = require("./form-primary/form-primary.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -87,7 +88,8 @@ var AppModule = (function () {
                 invoices_single_component_1.InvoicesSingleComponent,
                 top_bar_component_1.TopbarComponent,
                 page_controls_component_1.PageControlsComponent,
-                form_company_component_1.FormCompanyComponent
+                form_company_component_1.FormCompanyComponent,
+                form_primary_component_1.FormPrimaryComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 
