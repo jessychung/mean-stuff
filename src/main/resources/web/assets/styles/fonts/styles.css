@@ -10,11 +10,11 @@
 
 @font-face {
   font-family: "thentia";
-  src:url("/web/assets/fonts/thentia.eot");
-  src:url("/web/assets/fonts/thentia.eot?#iefix") format("embedded-opentype"),
-    url("/web/assets/fonts/thentia.woff") format("woff"),
-    url("/web/assets/fonts/thentia.ttf") format("truetype"),
-    url("/web/assets/fonts/thentia.svg#thentia") format("svg");
+  src:url("../../fonts/thentia.eot");
+  src:url("../../fonts/thentia.eot?#iefix") format("embedded-opentype"),
+    url("../../fonts/thentia.woff") format("woff"),
+    url("../../fonts/thentia.ttf") format("truetype"),
+    url("../../fonts/thentia.svg#thentia") format("svg");
   font-weight: normal;
   font-style: normal;
 

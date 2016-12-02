@@ -983,7 +983,7 @@ input::-webkit-inner-spin-button {
   list-style-type: none;
   padding-top: 10px;
   margin-bottom: 0px;
-  padding-left: 20px; }
+  padding-left: 0; }
   .sso-page-menu li {
     display: inline-block;
     padding: 10px 15px;
