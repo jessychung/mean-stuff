@@ -10,12 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var forms_1 = require('@angular/forms');
+var common_1 = require('@angular/common');
+var router_1 = require('@angular/router');
 var country_1 = require('../list/country');
-var SignupFormOneComponent = (function () {
-    function SignupFormOneComponent(fb) {
+var FormCompanyComponent = (function () {
+    function FormCompanyComponent(fb, location, _router) {
+        this.location = location;
+        this._router = _router;
+        this.router = this._router;
         this.submitted = false;
         this.countrylist = new country_1.CountryList();
-        this.signupForm = fb.group({
+        this.signup = true;
+        this.companyForm = fb.group({
             'ssoCname': ['', forms_1.Validators.required],
             'ssoCstreet1': ['', forms_1.Validators.required],
             'ssoCstreet2': [''],
@@ -25,21 +31,25 @@ var SignupFormOneComponent = (function () {
             'ssoCpostal': ['', forms_1.Validators.required],
             'ssoCtel': ['', forms_1.Validators.required]
         });
+        console.log(this.router.url);
     }
-    SignupFormOneComponent.prototype.submitForm = function (value) {
+    FormCompanyComponent.prototype.submitForm = function (value) {
         console.log(value);
         this.submitted = true;
         console.log(this.submitted);
     };
-    SignupFormOneComponent = __decorate([
+    FormCompanyComponent.prototype.isSignup = function () {
+        return;
+    };
+    FormCompanyComponent = __decorate([
         core_1.Component({
-            selector: 'signup-form-one',
-            templateUrl: 'app/signup-form-one/signup-form-one.component.html',
+            selector: 'form-company',
+            templateUrl: 'app/form-company/form-company.component.html',
             encapsulation: core_1.ViewEncapsulation.None
         }), 
-        __metadata('design:paramtypes', [forms_1.FormBuilder])
-    ], SignupFormOneComponent);
-    return SignupFormOneComponent;
+        __metadata('design:paramtypes', [forms_1.FormBuilder, common_1.Location, router_1.Router])
+    ], FormCompanyComponent);
+    return FormCompanyComponent;
 }());
-exports.SignupFormOneComponent = SignupFormOneComponent;
-//# sourceMappingURL=signup-form-one.component.js.map
+exports.FormCompanyComponent = FormCompanyComponent;
+//# sourceMappingURL=form-company.component.js.map

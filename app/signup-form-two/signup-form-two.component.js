@@ -37,7 +37,7 @@ var SignupFormTwoComponent = (function () {
     };
     SignupFormTwoComponent = __decorate([
         core_1.Component({
-            selector: 'signup-form',
+            selector: 'signup-form-two',
             templateUrl: 'app/signup-form-two/signup-form-two.component.html',
             encapsulation: core_1.ViewEncapsulation.None
         }), 

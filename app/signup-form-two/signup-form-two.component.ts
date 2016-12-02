@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
 
 @Component({
-    selector: 'signup-form',
+    selector: 'signup-form-two',
     templateUrl: 'app/signup-form-two/signup-form-two.component.html',
     encapsulation: ViewEncapsulation.None
 })

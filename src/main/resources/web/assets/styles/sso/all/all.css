@@ -21,6 +21,9 @@ button:hover, button:active, button:focus {
   outline: none !important;
   box-shadow: none !important; }
 
+a:hover, a:focus {
+  color: inherit !important; }
+
 .thentia-line {
   position: fixed;
   height: 100%;
@@ -63,6 +66,11 @@ input::-webkit-inner-spin-button {
 
 .form-control {
   font-size: 15px !important; }
+
+.form-group label {
+  padding-top: 12px;
+  font-weight: 500 !important;
+  font-size: 14px; }
 
 .table {
   font-size: 14px !important; }
@@ -627,11 +635,6 @@ input::-webkit-inner-spin-button {
 .sso-main-dashboard-cards {
   padding: 20px; }
 
-.form-group label {
-  padding-top: 12px;
-  font-weight: 500 !important;
-  font-size: 15px; }
-
 .user-greet {
   padding-left: 60px; }
   .user-greet h1 {
@@ -675,6 +678,7 @@ input::-webkit-inner-spin-button {
   padding: 20px;
   display: inline-block;
   position: relative;
+  color: #3d474f;
   text-align: center;
   border-radius: 3px;
   width: 100%; }
@@ -699,10 +703,18 @@ input::-webkit-inner-spin-button {
 
 .card-1 {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -moz-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -ms-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -o-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  color: #3d474f; }
 
 .card-1:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07), 0 10px 10px rgba(0, 0, 0, 0.03); }
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07), 0 10px 10px rgba(0, 0, 0, 0.03);
+  color: inherit; }
+  .card-1:hover .number-new {
+    color: #fff !important; }
 
 .dropdown-menu {
   margin-top: 0px !important;
@@ -1010,18 +1022,68 @@ input::-webkit-inner-spin-button {
   color: #3d474f !important; }
 
 .sso-yellow .sso-page-menu-active {
-  border-bottom: 3px solid #eb563c;
+  border-bottom: 3px solid #f0b030;
   color: #3d474f !important; }
 
 .sso-blue .sso-page-menu-active {
   border-bottom: 3px solid #004f75;
   color: #3d474f !important; }
 
+.sso-page-menu-new {
+  background-color: #f7f7f7;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+  padding: 10px 15px;
+  border-top: 1px solid #eaeaea;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px; }
+  .sso-page-menu-new:hover, .sso-page-menu-new:active, .sso-page-menu-new:focus {
+    background-color: #fff;
+    cursor: pointer; }
+  .sso-page-menu-new i {
+    font-size: 12px; }
+
 .sso-page-single-buttons {
   position: absolute; }
 
 .sso-interior-block {
   margin-left: 60px; }
+
+.sso-interior-form .btn {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.sso-interior-form p {
+  margin-bottom: 20px;
+  font-size: 14px; }
+
+.sso-interior-form .sso-no-account {
+  margin-top: 0px; }
+
+.sso-interior-form .k-dropdown {
+  width: 100% !important;
+  padding-right: 0 !important; }
+  .sso-interior-form .k-dropdown .k-dropdown-wrap {
+    height: 41px !important; }
+    .sso-interior-form .k-dropdown .k-dropdown-wrap .k-icon {
+      line-height: 2.5em;
+      height: 100%; }
+  .sso-interior-form .k-dropdown .k-select .k-i-arrow-s:before {
+    font-family: FontAwesome !important;
+    content: '\f107' !important;
+    font-size: 14px !important; }
+  .sso-interior-form .k-dropdown .k-select:hover {
+    background-color: transparent !important; }
+  .sso-interior-form .k-dropdown .k-input {
+    font-size: 15px !important;
+    height: 36px !important;
+    line-height: 2.35em !important; }
+  .sso-interior-form .k-dropdown .k-animation-container {
+    font-size: 15px !important; }
 
 @media only screen and (max-width: 767px) {
   .sso-signup-left-side-container {

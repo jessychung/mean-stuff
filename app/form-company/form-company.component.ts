@@ -1,19 +1,23 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 import { CountryList } from '../list/country';
 
 @Component({
-    selector: 'signup-form-one',
-    templateUrl: 'app/signup-form-one/signup-form-one.component.html',
+    selector: 'form-company',
+    templateUrl: 'app/form-company/form-company.component.html',
     encapsulation: ViewEncapsulation.None
 })
 
-export class SignupFormOneComponent {
+export class FormCompanyComponent {
 
-    signupForm : FormGroup;
+    companyForm : FormGroup;
 
-    constructor(fb: FormBuilder) {
-        this.signupForm = fb.group({
+    router = this._router;
+
+    constructor(fb: FormBuilder, private location: Location, private _router: Router) {
+        this.companyForm = fb.group({
             'ssoCname': ['', Validators.required],
             'ssoCstreet1': ['', Validators.required],
             'ssoCstreet2': [''],
@@ -22,7 +26,8 @@ export class SignupFormOneComponent {
             'ssoCcountry': ['', Validators.required],
             'ssoCpostal': ['', Validators.required],
             'ssoCtel': ['', Validators.required]
-        })
+        });
+        console.log(this.router.url)
     }
 
     submitted = false;
@@ -34,5 +39,11 @@ export class SignupFormOneComponent {
     }
 
     countrylist = new CountryList();
+
+    isSignup():boolean {
+        return
+    }
+
+    signup: boolean = true;
 
 }
