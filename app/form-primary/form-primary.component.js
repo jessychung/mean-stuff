@@ -11,12 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var forms_1 = require('@angular/forms');
 var common_1 = require('@angular/common');
-var SignupFormTwoComponent = (function () {
-    function SignupFormTwoComponent(fb, location) {
+var router_1 = require('@angular/router');
+var FormPrimaryComponent = (function () {
+    function FormPrimaryComponent(fb, location, _router) {
         this.location = location;
+        this._router = _router;
         this.emailRegex = /@/;
+        this.router = this._router;
         this.submitted = false;
-        this.signupForm2 = fb.group({
+        this.primaryForm = fb.group({
             'ssoFname': ['', forms_1.Validators.required],
             'ssoLname': ['', forms_1.Validators.required],
             'ssoTel': ['', forms_1.Validators.required],
@@ -27,23 +30,26 @@ var SignupFormTwoComponent = (function () {
                 ])]
         });
     }
-    SignupFormTwoComponent.prototype.submitForm = function (value) {
+    FormPrimaryComponent.prototype.submitForm = function (value) {
         console.log(value);
         this.submitted = true;
         console.log(this.submitted);
     };
-    SignupFormTwoComponent.prototype.goBack = function () {
+    FormPrimaryComponent.prototype.goBack = function () {
         this.location.back();
     };
-    SignupFormTwoComponent = __decorate([
+    FormPrimaryComponent.prototype.isSignup = function () {
+        return this.router.url == 'main/address/address-primary';
+    };
+    FormPrimaryComponent = __decorate([
         core_1.Component({
-            selector: 'signup-form-two',
-            templateUrl: 'app/signup-form-two/signup-form-two.component.html',
+            selector: 'form-primary',
+            templateUrl: 'app/form-primary/form-primary.component.html',
             encapsulation: core_1.ViewEncapsulation.None
         }), 
-        __metadata('design:paramtypes', [forms_1.FormBuilder, common_1.Location])
-    ], SignupFormTwoComponent);
-    return SignupFormTwoComponent;
+        __metadata('design:paramtypes', [forms_1.FormBuilder, common_1.Location, router_1.Router])
+    ], FormPrimaryComponent);
+    return FormPrimaryComponent;
 }());
-exports.SignupFormTwoComponent = SignupFormTwoComponent;
-//# sourceMappingURL=signup-form-two.component.js.map
+exports.FormPrimaryComponent = FormPrimaryComponent;
+//# sourceMappingURL=form-primary.component.js.map

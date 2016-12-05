@@ -1,0 +1,71 @@
+<form [formGroup]="primaryForm" (ngSubmit)="submitForm(primaryForm.value)" novalidate>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <div class="form-group" [ngClass]="{ 'form-error': !primaryForm.controls['ssoFname'].valid && submitted || primaryForm.controls['ssoFname'].touched, 'form-success': primaryForm.controls['ssoFname'].valid }">
+                <label for="sso-fname">First Name</label>
+                <div style="padding: 2px"></div>
+                <input type="text" class="form-control" id="sso-fname" [formControl]="primaryForm.controls['ssoFname']" />
+                <div class="sso-help-block-inline" *ngIf="primaryForm.controls['ssoFname'].hasError('required') && submitted || primaryForm.controls['ssoFname'].hasError('required') && primaryForm.controls['ssoFname'].touched">Required</div>
+                <div class="sso-help-block-inline" *ngIf="primaryForm.controls['ssoFname'].hasError('pattern') && submitted || primaryForm.controls['ssoFname'].hasError('pattern') && primaryForm.controls['ssoFname'].touched">Invalid email address</div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="form-group" [ngClass]="{ 'form-error': !primaryForm.controls['ssoLname'].valid && submitted || primaryForm.controls['ssoLname'].touched, 'form-success': primaryForm.controls['ssoLname'].valid }">
+                <label for="sso-lname">Last Name</label>
+                <div style="padding: 2px"></div>
+                <input type="text" class="form-control" id="sso-lname" [formControl]="primaryForm.controls['ssoLname']" />
+                <div class="sso-help-block-inline" *ngIf="primaryForm.controls['ssoLname'].hasError('required') && submitted || primaryForm.controls['ssoLname'].hasError('required') && primaryForm.controls['ssoLname'].touched">Required</div>
+                <div class="sso-help-block-inline" *ngIf="primaryForm.controls['ssoLname'].hasError('pattern') && submitted || primaryForm.controls['ssoLname'].hasError('pattern') && primaryForm.controls['ssoLname'].touched">Invalid email address</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group" [ngClass]="{ 'form-error': !primaryForm.controls['ssoTel'].valid && submitted || primaryForm.controls['ssoTel'].touched, 'form-success': primaryForm.controls['ssoTel'].valid }">
+                <label for="sso-tel">Primary Telephone</label>
+                <div style="padding: 2px"></div>
+                <input type="number" class="form-control" id="sso-tel" [formControl]="primaryForm.controls['ssoTel']" />
+                <div class="sso-help-block-inline" *ngIf="primaryForm.controls['ssoTel'].hasError('required') && submitted || primaryForm.controls['ssoTel'].hasError('required') && primaryForm.controls['ssoTel'].touched">Required</div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group" [ngClass]="{ 'form-error': !primaryForm.controls['ssoCell'].valid && submitted || primaryForm.controls['ssoCell'].touched, 'form-success': primaryForm.controls['ssoCell'].valid }">
+                <label for="sso-cell">Cell/Mobile Telephone</label>
+                <div style="padding: 2px"></div>
+                <input type="number" class="form-control" id="sso-cell" [formControl]="primaryForm.controls['ssoCell']" />
+                <div class="sso-help-block-inline" *ngIf="primaryForm.controls['ssoCell'].hasError('required') && submitted || primaryForm.controls['ssoCell'].hasError('required') && primaryForm.controls['ssoCell'].touched">Required</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group" [ngClass]="{ 'form-error': !primaryForm.controls['ssoEmail'].valid && submitted || primaryForm.controls['ssoEmail'].touched, 'form-success': primaryForm.controls['ssoEmail'].valid }">
+                <label for="sso-email">Email</label>
+                <div style="padding: 2px"></div>
+                <input type="email" class="form-control" id="sso-email" [formControl]="primaryForm.controls['ssoEmail']" />
+                <div class="sso-help-block-inline" *ngIf="primaryForm.controls['ssoEmail'].hasError('required') && submitted || primaryForm.controls['ssoEmail'].hasError('required') && primaryForm.controls['ssoEmail'].touched">Required</div>
+                <div class="sso-help-block-inline" *ngIf="primaryForm.controls['ssoEmail'].hasError('pattern') && submitted || primaryForm.controls['ssoEmail'].hasError('pattern') && primaryForm.controls['ssoEmail'].touched">Invalid email address</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" *ngIf="isSignup()">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <button type="button" class="btn btn-line"><i class="fa fa-angle-left"></i>  Previous</button>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6" style="text-align: right">
+            <button type="submit" class="btn btn-brand">Continue  <i class="fa fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="!isSignup()">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <button type="submit" class="btn btn-green">Save & Update</button>
+        </div>
+    </div>
+
+</form>

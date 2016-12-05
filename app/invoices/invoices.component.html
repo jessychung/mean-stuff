@@ -21,7 +21,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-lg-10 col-md-10 col-sm-8">
                     <ul class="sso-page-menu">
                         <li [routerLink]="['/main/invoices/invoices-all']" [routerLinkActive]="['sso-page-menu-active']">All</li>
                         <li [routerLink]="['/main/invoices/invoices-thismonth']" [routerLinkActive]="['sso-page-menu-active']">This Month</li>
@@ -29,6 +29,11 @@
                         <li>Custom Date Range</li>
                         <li>Unpaid Invoices <div class="sso-count-badge">10</div></li>
                     </ul>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-4">
+                    <div class="sso-page-menu-new">
+                        <i aria-hidden="true" class="fa fa-plus"></i>   Add New
+                    </div>
                 </div>
             </div>
 

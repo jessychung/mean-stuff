@@ -1,18 +1,20 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Location }                 from '@angular/common';
 import { CountryList } from '../list/country';
 
-@Component({
-    selector: 'signup-form-one',
-    templateUrl: 'app/signup-form-one/signup-form-one.component.html',
+@Component ({
+    selector: 'address-primary',
+    templateUrl: 'app/address-primary/address-primary.component.html',
     encapsulation: ViewEncapsulation.None
 })
 
-export class SignupFormOneComponent {
+export class AddressPrimaryComponent {
+
 
     signupForm : FormGroup;
 
-    constructor(fb: FormBuilder) {
+    constructor(fb: FormBuilder, private location: Location) {
         this.signupForm = fb.group({
             'ssoCname': ['', Validators.required],
             'ssoCstreet1': ['', Validators.required],
@@ -35,4 +37,7 @@ export class SignupFormOneComponent {
 
     countrylist = new CountryList();
 
+    goBack(): void {
+        this.location.back();
+    }
 }

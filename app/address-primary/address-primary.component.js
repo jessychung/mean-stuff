@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var forms_1 = require('@angular/forms');
+var common_1 = require('@angular/common');
 var country_1 = require('../list/country');
-var SignupFormOneComponent = (function () {
-    function SignupFormOneComponent(fb) {
+var AddressPrimaryComponent = (function () {
+    function AddressPrimaryComponent(fb, location) {
+        this.location = location;
         this.submitted = false;
         this.countrylist = new country_1.CountryList();
         this.signupForm = fb.group({
@@ -26,20 +28,23 @@ var SignupFormOneComponent = (function () {
             'ssoCtel': ['', forms_1.Validators.required]
         });
     }
-    SignupFormOneComponent.prototype.submitForm = function (value) {
+    AddressPrimaryComponent.prototype.submitForm = function (value) {
         console.log(value);
         this.submitted = true;
         console.log(this.submitted);
     };
-    SignupFormOneComponent = __decorate([
+    AddressPrimaryComponent.prototype.goBack = function () {
+        this.location.back();
+    };
+    AddressPrimaryComponent = __decorate([
         core_1.Component({
-            selector: 'signup-form-one',
-            templateUrl: 'app/signup-form-one/signup-form-one.component.html',
+            selector: 'address-primary',
+            templateUrl: 'app/address-primary/address-primary.component.html',
             encapsulation: core_1.ViewEncapsulation.None
         }), 
-        __metadata('design:paramtypes', [forms_1.FormBuilder])
-    ], SignupFormOneComponent);
-    return SignupFormOneComponent;
+        __metadata('design:paramtypes', [forms_1.FormBuilder, common_1.Location])
+    ], AddressPrimaryComponent);
+    return AddressPrimaryComponent;
 }());
-exports.SignupFormOneComponent = SignupFormOneComponent;
-//# sourceMappingURL=signup-form-one.component.js.map
+exports.AddressPrimaryComponent = AddressPrimaryComponent;
+//# sourceMappingURL=address-primary.component.js.map

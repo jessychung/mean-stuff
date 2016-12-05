@@ -2,6 +2,7 @@
 <p>Please fill the following fields to complete the sign up process.</p>
 
 <form [formGroup]="signupForm" (ngSubmit)="submitForm(signupForm.value)" novalidate >
+
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <div class="form-group" [ngClass]="{ 'form-error': !signupForm.controls['ssoCname'].valid && submitted || signupForm.controls['ssoCname'].touched, 'form-success': signupForm.controls['ssoCname'].valid }" >

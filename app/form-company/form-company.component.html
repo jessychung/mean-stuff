@@ -1,0 +1,97 @@
+<form [formGroup]="companyForm" (ngSubmit)="submitForm(companyForm.value)" novalidate >
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group" [ngClass]="{ 'form-error': !companyForm.controls['ssoCname'].valid && submitted || companyForm.controls['ssoCname'].touched, 'form-success': companyForm.controls['ssoCname'].valid }" >
+                <label for="sso-cname">Company Legal Name</label>
+                <div style="padding: 2px"></div>
+                <input type="text" class="form-control" id="sso-cname" [formControl]="companyForm.controls['ssoCname']"/>
+                <div class="sso-help-block-inline" *ngIf="companyForm.controls['ssoCname'].hasError('required') && submitted || companyForm.controls['ssoCname'].touched && !companyForm.controls['ssoCname'].valid">Required</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group" [ngClass]="{ 'form-error': !companyForm.controls['ssoCstreet1'].valid && submitted || companyForm.controls['ssoCstreet1'].touched, 'form-success': companyForm.controls['ssoCstreet1'].valid }">
+                <label for="sso-cstreet1">Street Address (Line 1)</label>
+                <div style="padding: 2px"></div>
+                <input type="text" class="form-control" id="sso-cstreet1" [formControl]="companyForm.controls['ssoCstreet1']" />
+                <div class="sso-help-block-inline" *ngIf="companyForm.controls['ssoCstreet1'].hasError('required') && submitted || companyForm.controls['ssoCstreet1'].touched && !companyForm.controls['ssoCstreet1'].valid">Required</div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group" [ngClass]="{ 'form-success': companyForm.controls['ssoCstreet2'].touched }">
+                <label for="sso-cstreet2">Street Address (Line 2)</label>
+                <div style="padding: 2px"></div>
+                <input type="text" class="form-control" id="sso-cstreet2" [formControl]="companyForm.controls['ssoCstreet2']" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group" [ngClass]="{ 'form-error': !companyForm.controls['ssoCcity'].valid && submitted || companyForm.controls['ssoCcity'].touched, 'form-success': companyForm.controls['ssoCcity'].valid }">
+                <label for="sso-ccity">City</label>
+                <div style="padding: 2px"></div>
+                <input type="text" class="form-control" id="sso-ccity" [formControl]="companyForm.controls['ssoCcity']" />
+                <div class="sso-help-block-inline" *ngIf="companyForm.controls['ssoCcity'].hasError('required') && submitted || companyForm.controls['ssoCcity'].touched && !companyForm.controls['ssoCcity'].valid">Required</div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group" [ngClass]="{ 'form-error': !companyForm.controls['ssoCprovince'].valid && submitted || companyForm.controls['ssoCprovince'].touched, 'form-success': companyForm.controls['ssoCprovince'].valid }">
+                <label for="sso-cprovince">Province/State</label>
+                <div style="padding: 2px"></div>
+                <input type="text" class="form-control" id="sso-cprovince" [formControl]="companyForm.controls['ssoCprovince']" />
+                <div class="sso-help-block-inline" *ngIf="companyForm.controls['ssoCprovince'].hasError('required') && submitted || companyForm.controls['ssoCprovince'].touched && !companyForm.controls['ssoCprovince'].valid">Required</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group" [ngClass]="{ 'form-error': !companyForm.controls['ssoCcountry'].valid && submitted || companyForm.controls['ssoCcountry'].touched, 'form-success': companyForm.controls['ssoCcountry'].valid }">
+                <label>Country</label>
+                <div style="padding: 2px"></div>
+                <kendo-dropdownlist [data]="countrylist" [defaultItem]="'Select...'" [formControl]="companyForm.controls['ssoCcountry']" ></kendo-dropdownlist>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group" [ngClass]="{ 'form-error': !companyForm.controls['ssoCpostal'].valid && submitted || companyForm.controls['ssoCpostal'].touched, 'form-success': companyForm.controls['ssoCpostal'].valid }">
+                <label for="sso-cpostal">Postal/ZIP Code</label>
+                <div style="padding: 2px"></div>
+                <input type="text" class="form-control" id="sso-cpostal" [formControl]="companyForm.controls['ssoCpostal']" />
+                <div class="sso-help-block-inline" *ngIf="companyForm.controls['ssoCpostal'].hasError('required') && submitted || companyForm.controls['ssoCpostal'].touched && !companyForm.controls['ssoCpostal'].valid">Required</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div class="form-group" style="margin-bottom: 0 !important;" [ngClass]="{ 'form-error': !companyForm.controls['ssoCtel'].valid && submitted || companyForm.controls['ssoCtel'].touched, 'form-success': companyForm.controls['ssoCtel'].valid }">
+                <label for="sso-ctel">Company Telephone</label>
+                <div style="padding: 2px"></div>
+                <input type="number" class="form-control" id="sso-ctel" [formControl]="companyForm.controls['ssoCtel']" />
+                <div class="sso-help-block-inline" *ngIf="companyForm.controls['ssoCtel'].hasError('required') && submitted || companyForm.controls['ssoCtel'].touched && !companyForm.controls['ssoCtel'].valid">Required</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="isSignup()">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <button type="button" class="btn btn-line"><i class="fa fa-angle-left"></i>  Previous</button>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6" style="text-align: right">
+            <button type="submit" class="btn btn-brand">Continue  <i class="fa fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <div class="row" *ngIf="!isSignup()">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <button type="submit" class="btn btn-green">Save & Update</button>
+        </div>
+    </div>
+
+
+
+</form>

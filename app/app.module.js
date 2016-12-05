@@ -40,6 +40,11 @@ var support_tickets_all_component_1 = require("./support-tickets-all/support-tic
 var support_tickets_priority_component_1 = require("./support-tickets-priority/support-tickets-priority.component");
 var support_tickets_single_component_1 = require("./support-tickets-single/support-tickets-single.component");
 var manage_users_all_component_1 = require("./manage-users-all/manage-users-all.component");
+var timesheets_all_component_1 = require("./timesheets-all/timesheets-all.component");
+var address_company_component_1 = require("./address-company/address-company.component");
+var address_primary_component_1 = require("./address-primary/address-primary.component");
+var form_company_component_1 = require("./form-company/form-company.component");
+var form_primary_component_1 = require("./form-primary/form-primary.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -73,13 +78,18 @@ var AppModule = (function () {
                 manage_users_component_1.ManageUsersComponent,
                 manage_users_all_component_1.ManageUsersAllComponent,
                 timesheets_component_1.TimesheetsComponent,
+                timesheets_all_component_1.TimesheetsAllComponent,
                 address_component_1.AddressComponent,
+                address_company_component_1.AddressCompanyComponent,
+                address_primary_component_1.AddressPrimaryComponent,
                 invoices_component_1.InvoicesComponent,
                 invoices_all_component_1.InvoicesAllComponent,
                 invoices_thismonth_component_1.InvoicesThismonthComponent,
                 invoices_single_component_1.InvoicesSingleComponent,
                 top_bar_component_1.TopbarComponent,
-                page_controls_component_1.PageControlsComponent
+                page_controls_component_1.PageControlsComponent,
+                form_company_component_1.FormCompanyComponent,
+                form_primary_component_1.FormPrimaryComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

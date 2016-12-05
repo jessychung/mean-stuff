@@ -1,21 +1,24 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
-    selector: 'signup-form-two',
-    templateUrl: 'app/signup-form-two/signup-form-two.component.html',
+    selector: 'form-primary',
+    templateUrl: 'app/form-primary/form-primary.component.html',
     encapsulation: ViewEncapsulation.None
 })
 
-export class SignupFormTwoComponent {
+export class FormPrimaryComponent {
 
-    signupForm2 : FormGroup;
+    primaryForm : FormGroup;
 
     emailRegex = /@/;
 
-    constructor(fb: FormBuilder, private location: Location) {
-        this.signupForm2 = fb.group({
+    router = this._router;
+
+    constructor(fb: FormBuilder, private location: Location, private _router: Router) {
+        this.primaryForm = fb.group({
             'ssoFname': ['', Validators.required],
             'ssoLname': ['', Validators.required],
             'ssoTel': ['', Validators.required],
@@ -37,6 +40,10 @@ export class SignupFormTwoComponent {
 
     goBack(): void {
         this.location.back();
+    }
+
+    isSignup():boolean {
+        return this.router.url == 'main/address/address-primary';
     }
 
 }

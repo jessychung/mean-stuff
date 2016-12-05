@@ -32,6 +32,11 @@ import {SupportTicketsAllComponent} from "./support-tickets-all/support-tickets-
 import {SupportTicketsPriorityComponent} from "./support-tickets-priority/support-tickets-priority.component";
 import {SupportTicketsSingleComponent} from "./support-tickets-single/support-tickets-single.component";
 import {ManageUsersAllComponent} from "./manage-users-all/manage-users-all.component";
+import {TimesheetsAllComponent} from "./timesheets-all/timesheets-all.component";
+import {AddressCompanyComponent} from "./address-company/address-company.component";
+import {AddressPrimaryComponent} from "./address-primary/address-primary.component";
+import {FormCompanyComponent} from "./form-company/form-company.component";
+import {FormPrimaryComponent} from "./form-primary/form-primary.component";
 
 
 @NgModule({
@@ -63,13 +68,18 @@ import {ManageUsersAllComponent} from "./manage-users-all/manage-users-all.compo
         ManageUsersComponent,
         ManageUsersAllComponent,
         TimesheetsComponent,
+        TimesheetsAllComponent,
         AddressComponent,
+        AddressCompanyComponent,
+        AddressPrimaryComponent,
         InvoicesComponent,
         InvoicesAllComponent,
         InvoicesThismonthComponent,
         InvoicesSingleComponent,
         TopbarComponent,
-        PageControlsComponent
+        PageControlsComponent,
+        FormCompanyComponent,
+        FormPrimaryComponent
     ],
     bootstrap: [ AppComponent ]
 })

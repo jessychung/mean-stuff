@@ -23,6 +23,9 @@ import {SupportTicketsAllComponent} from "./support-tickets-all/support-tickets-
 import {SupportTicketsSingleComponent} from "./support-tickets-single/support-tickets-single.component";
 import {SupportTicketsPriorityComponent} from "./support-tickets-priority/support-tickets-priority.component";
 import {ManageUsersAllComponent} from "./manage-users-all/manage-users-all.component";
+import {TimesheetsAllComponent} from "./timesheets-all/timesheets-all.component";
+import {AddressCompanyComponent} from "./address-company/address-company.component";
+import {AddressPrimaryComponent} from "./address-primary/address-primary.component";
 
 const appRoutes: Routes = [
     {
@@ -122,11 +125,27 @@ const appRoutes: Routes = [
             },
             {
                 path: 'timesheets',
-                component: TimesheetsComponent
+                component: TimesheetsComponent,
+                children: [
+                    {
+                        path: 'timesheets-all',
+                        component: TimesheetsAllComponent
+                    }
+                ]
             },
             {
                 path: 'address',
-                component: AddressComponent
+                component: AddressComponent,
+                children: [
+                    {
+                        path: 'address-company',
+                        component: AddressCompanyComponent
+                    },
+                    {
+                        path: 'address-primary',
+                        component: AddressPrimaryComponent
+                    }
+                ]
             }
         ]
     }

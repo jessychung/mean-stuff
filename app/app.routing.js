@@ -22,6 +22,9 @@ var support_tickets_all_component_1 = require("./support-tickets-all/support-tic
 var support_tickets_single_component_1 = require("./support-tickets-single/support-tickets-single.component");
 var support_tickets_priority_component_1 = require("./support-tickets-priority/support-tickets-priority.component");
 var manage_users_all_component_1 = require("./manage-users-all/manage-users-all.component");
+var timesheets_all_component_1 = require("./timesheets-all/timesheets-all.component");
+var address_company_component_1 = require("./address-company/address-company.component");
+var address_primary_component_1 = require("./address-primary/address-primary.component");
 var appRoutes = [
     {
         path: '',
@@ -120,11 +123,27 @@ var appRoutes = [
             },
             {
                 path: 'timesheets',
-                component: timesheets_component_1.TimesheetsComponent
+                component: timesheets_component_1.TimesheetsComponent,
+                children: [
+                    {
+                        path: 'timesheets-all',
+                        component: timesheets_all_component_1.TimesheetsAllComponent
+                    }
+                ]
             },
             {
                 path: 'address',
-                component: address_component_1.AddressComponent
+                component: address_component_1.AddressComponent,
+                children: [
+                    {
+                        path: 'address-company',
+                        component: address_company_component_1.AddressCompanyComponent
+                    },
+                    {
+                        path: 'address-primary',
+                        component: address_primary_component_1.AddressPrimaryComponent
+                    }
+                ]
             }
         ]
     }
