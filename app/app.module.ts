@@ -37,6 +37,7 @@ import {AddressCompanyComponent} from "./address-company/address-company.compone
 import {AddressPrimaryComponent} from "./address-primary/address-primary.component";
 import {FormCompanyComponent} from "./form-company/form-company.component";
 import {FormPrimaryComponent} from "./form-primary/form-primary.component";
+import {ManageUsersSingleComponent} from "./manage-users-single/manage-users-single.component";
 
 
 @NgModule({
@@ -67,6 +68,7 @@ import {FormPrimaryComponent} from "./form-primary/form-primary.component";
         SupportTicketsSingleComponent,
         ManageUsersComponent,
         ManageUsersAllComponent,
+        ManageUsersSingleComponent,
         TimesheetsComponent,
         TimesheetsAllComponent,
         AddressComponent,

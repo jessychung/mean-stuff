@@ -45,6 +45,7 @@ var address_company_component_1 = require("./address-company/address-company.com
 var address_primary_component_1 = require("./address-primary/address-primary.component");
 var form_company_component_1 = require("./form-company/form-company.component");
 var form_primary_component_1 = require("./form-primary/form-primary.component");
+var manage_users_single_component_1 = require("./manage-users-single/manage-users-single.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -77,6 +78,7 @@ var AppModule = (function () {
                 support_tickets_single_component_1.SupportTicketsSingleComponent,
                 manage_users_component_1.ManageUsersComponent,
                 manage_users_all_component_1.ManageUsersAllComponent,
+                manage_users_single_component_1.ManageUsersSingleComponent,
                 timesheets_component_1.TimesheetsComponent,
                 timesheets_all_component_1.TimesheetsAllComponent,
                 address_component_1.AddressComponent,

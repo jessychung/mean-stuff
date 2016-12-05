@@ -79,8 +79,10 @@
 .left-menu-mobile .user-greet {
   padding-left: 0px; }
 
-.sso-main-logo img {
-  padding: 8px 0px 8px 0px; }
+.sso-main-logo {
+  padding-left: 20px; }
+  .sso-main-logo img {
+    padding: 8px 0px 8px 0px; }
 
 .sso-avatar-small {
   width: 35px;

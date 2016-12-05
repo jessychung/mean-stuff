@@ -2,7 +2,8 @@
   padding-top: 140px; }
 
 .sso-main-dashboard {
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  margin-left: 9px; }
 
 .sso-page-controls {
   background-color: #fff;
@@ -18,7 +19,7 @@
     font-size: 14px; }
 
 .sso-main-dashboard-cards {
-  padding: 20px; }
+  padding: 35px 0; }
 
 .user-greet {
   padding-left: 60px; }
@@ -58,7 +59,7 @@
 .welcome-main {
   height: 100vh; }
 
-.card {
+.sso-card {
   background: #fff;
   padding: 20px;
   display: inline-block;
@@ -67,17 +68,17 @@
   text-align: center;
   border-radius: 3px;
   width: 100%; }
-  .card .btn-brand {
+  .sso-card .btn-brand {
     color: #4d4d4d;
     text-decoration: none;
     background-color: #f7f7f7;
     background-image: none;
     margin-top: 15px;
     border-radius: 3px; }
-    .card .btn-brand:hover {
+    .sso-card .btn-brand:hover {
       background-color: #f2f2f2;
       transition: all .3s; }
-  .card h4 {
+  .sso-card h4 {
     position: relative;
     white-space: nowrap;
     overflow: hidden;
@@ -86,7 +87,7 @@
     font-size: 15px;
     font-weight: 500; }
 
-.card-1 {
+.sso-card-default {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.08);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   -moz-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -95,11 +96,14 @@
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   color: #3d474f; }
 
-.card-1:hover {
+.sso-card-default:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07), 0 10px 10px rgba(0, 0, 0, 0.03);
   color: inherit; }
-  .card-1:hover .number-new {
+  .sso-card-default:hover .number-new {
     color: #fff !important; }
+
+.sso-card-disabled {
+  opacity: .35; }
 
 .dropdown-menu {
   margin-top: 0px !important;

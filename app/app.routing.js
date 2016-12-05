@@ -25,6 +25,7 @@ var manage_users_all_component_1 = require("./manage-users-all/manage-users-all.
 var timesheets_all_component_1 = require("./timesheets-all/timesheets-all.component");
 var address_company_component_1 = require("./address-company/address-company.component");
 var address_primary_component_1 = require("./address-primary/address-primary.component");
+var manage_users_single_component_1 = require("./manage-users-single/manage-users-single.component");
 var appRoutes = [
     {
         path: '',
@@ -114,14 +115,6 @@ var appRoutes = [
                 ]
             },
             {
-                path: 'invoices-single',
-                component: invoices_single_component_1.InvoicesSingleComponent
-            },
-            {
-                path: 'support-tickets-single',
-                component: support_tickets_single_component_1.SupportTicketsSingleComponent
-            },
-            {
                 path: 'timesheets',
                 component: timesheets_component_1.TimesheetsComponent,
                 children: [
@@ -144,6 +137,18 @@ var appRoutes = [
                         component: address_primary_component_1.AddressPrimaryComponent
                     }
                 ]
+            },
+            {
+                path: 'invoices-single',
+                component: invoices_single_component_1.InvoicesSingleComponent
+            },
+            {
+                path: 'support-tickets-single',
+                component: support_tickets_single_component_1.SupportTicketsSingleComponent
+            },
+            {
+                path: 'manage-users-single',
+                component: manage_users_single_component_1.ManageUsersSingleComponent
             }
         ]
     }

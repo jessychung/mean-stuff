@@ -26,6 +26,7 @@ import {ManageUsersAllComponent} from "./manage-users-all/manage-users-all.compo
 import {TimesheetsAllComponent} from "./timesheets-all/timesheets-all.component";
 import {AddressCompanyComponent} from "./address-company/address-company.component";
 import {AddressPrimaryComponent} from "./address-primary/address-primary.component";
+import {ManageUsersSingleComponent} from "./manage-users-single/manage-users-single.component";
 
 const appRoutes: Routes = [
     {
@@ -116,14 +117,6 @@ const appRoutes: Routes = [
                 ]
             },
             {
-                path: 'invoices-single',
-                component: InvoicesSingleComponent
-            },
-            {
-                path: 'support-tickets-single',
-                component: SupportTicketsSingleComponent
-            },
-            {
                 path: 'timesheets',
                 component: TimesheetsComponent,
                 children: [
@@ -146,6 +139,18 @@ const appRoutes: Routes = [
                         component: AddressPrimaryComponent
                     }
                 ]
+            },
+            {
+                path: 'invoices-single',
+                component: InvoicesSingleComponent
+            },
+            {
+                path: 'support-tickets-single',
+                component: SupportTicketsSingleComponent
+            },
+            {
+                path: 'manage-users-single',
+                component: ManageUsersSingleComponent
             }
         ]
     }

@@ -6,6 +6,7 @@
 
 .sso-main-dashboard {
   background-color: #f7f7f7;
+  margin-left: 9px;
 }
 
 .sso-page-controls {
@@ -26,7 +27,7 @@
 }
 
 .sso-main-dashboard-cards {
-  padding: 20px;
+  padding: 35px 0;
 }
 
 .user-greet {
@@ -74,7 +75,7 @@
   height: 100vh;
 }
 
-.card {
+.sso-card {
   background: #fff;
   padding: 20px;
   display: inline-block;
@@ -106,7 +107,7 @@
   }
 }
 
-.card-1 {
+.sso-card-default {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.08);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   -moz-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -115,12 +116,16 @@
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   color: $black;
 }
-.card-1:hover {
+.sso-card-default:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.07), 0 10px 10px rgba(0, 0, 0, 0.03);
   color: inherit;
   .number-new {
     color: #fff !important;
   }
+}
+
+.sso-card-disabled {
+  opacity: .35;
 }
 
 .dropdown-menu {
