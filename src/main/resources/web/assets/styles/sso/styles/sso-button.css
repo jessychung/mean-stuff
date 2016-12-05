@@ -76,3 +76,22 @@
     background-color: #f7f7f7;
     cursor: pointer;
     transition: all .3s; }
+
+.sso-edit, .sso-delete {
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: #3d474f;
+  transition: all .3s;
+  border-radius: 300px;
+  display: inline-block; }
+  .sso-edit i, .sso-delete i {
+    line-height: inherit;
+    font-size: 18px; }
+  .sso-edit:hover, .sso-delete:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transition: all .3s; }

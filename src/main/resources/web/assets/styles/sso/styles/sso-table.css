@@ -1,13 +1,15 @@
 .sso-table-button {
   border: 1px solid #cccccc;
+  background-color: #fff;
   font-weight: 600;
   display: inline-block;
   text-align: center;
   padding: 3px 7px;
   border-radius: 3px;
   font-size: 13px;
-  transition: all .3s; }
-  .sso-table-button:hover {
+  transition: all .3s;
+  margin-right: 5px; }
+  .sso-table-button:hover, .sso-table-button:active, .sso-table-button:focus {
     cursor: pointer;
     background-color: #fff;
     transition: all .3s; }

@@ -27,6 +27,9 @@ import {TimesheetsAllComponent} from "./timesheets-all/timesheets-all.component"
 import {AddressCompanyComponent} from "./address-company/address-company.component";
 import {AddressPrimaryComponent} from "./address-primary/address-primary.component";
 import {ManageUsersSingleComponent} from "./manage-users-single/manage-users-single.component";
+import {ManageUsersDisplayComponent} from "./manage-users-display/manage-users-display.component";
+import {ManageUsersEditComponent} from "./manage-users-edit/manage-users-edit.component";
+import {TimesheetsSingleComponent} from "./timesheets-single/timesheets-single.component";
 
 const appRoutes: Routes = [
     {
@@ -150,7 +153,21 @@ const appRoutes: Routes = [
             },
             {
                 path: 'manage-users-single',
-                component: ManageUsersSingleComponent
+                component: ManageUsersSingleComponent,
+                children: [
+                    {
+                        path: 'view-user',
+                        component: ManageUsersDisplayComponent
+                    },
+                    {
+                        path: 'edit-user',
+                        component: ManageUsersEditComponent
+                    }
+                ]
+            },
+            {
+                path: 'timesheets-single',
+                component: TimesheetsSingleComponent
             }
         ]
     }

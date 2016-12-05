@@ -13,6 +13,8 @@ var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var kendo_angular_buttons_1 = require('@progress/kendo-angular-buttons');
 var kendo_angular_dropdowns_1 = require('@progress/kendo-angular-dropdowns');
+var angular_in_memory_web_api_1 = require('angular-in-memory-web-api');
+var fake_service_1 = require('./fake.service');
 var app_routing_1 = require('./app.routing');
 var app_component_1 = require('./app.component');
 var login_component_1 = require("./login/login.component");
@@ -46,6 +48,10 @@ var address_primary_component_1 = require("./address-primary/address-primary.com
 var form_company_component_1 = require("./form-company/form-company.component");
 var form_primary_component_1 = require("./form-primary/form-primary.component");
 var manage_users_single_component_1 = require("./manage-users-single/manage-users-single.component");
+var form_user_component_1 = require("./form-user/form-user.component");
+var manage_users_display_component_1 = require("./manage-users-display/manage-users-display.component");
+var manage_users_edit_component_1 = require("./manage-users-edit/manage-users-edit.component");
+var timesheets_single_component_1 = require("./timesheets-single/timesheets-single.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -57,7 +63,8 @@ var AppModule = (function () {
                 forms_1.ReactiveFormsModule,
                 kendo_angular_dropdowns_1.DropDownsModule,
                 kendo_angular_buttons_1.ButtonsModule,
-                app_routing_1.routing
+                app_routing_1.routing,
+                angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(fake_service_1.InMemoryDataService)
             ],
             declarations: [
                 app_component_1.AppComponent,
@@ -79,8 +86,11 @@ var AppModule = (function () {
                 manage_users_component_1.ManageUsersComponent,
                 manage_users_all_component_1.ManageUsersAllComponent,
                 manage_users_single_component_1.ManageUsersSingleComponent,
+                manage_users_display_component_1.ManageUsersDisplayComponent,
+                manage_users_edit_component_1.ManageUsersEditComponent,
                 timesheets_component_1.TimesheetsComponent,
                 timesheets_all_component_1.TimesheetsAllComponent,
+                timesheets_single_component_1.TimesheetsSingleComponent,
                 address_component_1.AddressComponent,
                 address_company_component_1.AddressCompanyComponent,
                 address_primary_component_1.AddressPrimaryComponent,
@@ -91,7 +101,8 @@ var AppModule = (function () {
                 top_bar_component_1.TopbarComponent,
                 page_controls_component_1.PageControlsComponent,
                 form_company_component_1.FormCompanyComponent,
-                form_primary_component_1.FormPrimaryComponent
+                form_primary_component_1.FormPrimaryComponent,
+                form_user_component_1.FormUserComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

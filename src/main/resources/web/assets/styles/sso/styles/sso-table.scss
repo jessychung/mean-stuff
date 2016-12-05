@@ -2,6 +2,7 @@
 
 .sso-table-button {
   border: 1px solid #cccccc;
+  background-color: #fff;
   font-weight: 600;
   display: inline-block;
   text-align: center;
@@ -9,7 +10,8 @@
   border-radius: 3px;
   font-size: 13px;
   transition: all .3s;
-  &:hover {
+  margin-right: 5px;
+  @include  hover-state {
     cursor: pointer;
     background-color: #fff;
     transition: all .3s;

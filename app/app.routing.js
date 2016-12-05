@@ -26,6 +26,9 @@ var timesheets_all_component_1 = require("./timesheets-all/timesheets-all.compon
 var address_company_component_1 = require("./address-company/address-company.component");
 var address_primary_component_1 = require("./address-primary/address-primary.component");
 var manage_users_single_component_1 = require("./manage-users-single/manage-users-single.component");
+var manage_users_display_component_1 = require("./manage-users-display/manage-users-display.component");
+var manage_users_edit_component_1 = require("./manage-users-edit/manage-users-edit.component");
+var timesheets_single_component_1 = require("./timesheets-single/timesheets-single.component");
 var appRoutes = [
     {
         path: '',
@@ -148,7 +151,21 @@ var appRoutes = [
             },
             {
                 path: 'manage-users-single',
-                component: manage_users_single_component_1.ManageUsersSingleComponent
+                component: manage_users_single_component_1.ManageUsersSingleComponent,
+                children: [
+                    {
+                        path: 'view-user',
+                        component: manage_users_display_component_1.ManageUsersDisplayComponent
+                    },
+                    {
+                        path: 'edit-user',
+                        component: manage_users_edit_component_1.ManageUsersEditComponent
+                    }
+                ]
+            },
+            {
+                path: 'timesheets-single',
+                component: timesheets_single_component_1.TimesheetsSingleComponent
             }
         ]
     }

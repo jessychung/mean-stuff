@@ -449,6 +449,25 @@ input::-webkit-inner-spin-button {
     cursor: pointer;
     transition: all .3s; }
 
+.sso-edit, .sso-delete {
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  color: #3d474f;
+  transition: all .3s;
+  border-radius: 300px;
+  display: inline-block; }
+  .sso-edit i, .sso-delete i {
+    line-height: inherit;
+    font-size: 18px; }
+  .sso-edit:hover, .sso-delete:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transition: all .3s; }
+
 .sso-invoice-paper {
   background-color: #fff;
   border-radius: 3px;
@@ -1063,7 +1082,20 @@ input::-webkit-inner-spin-button {
   position: absolute; }
 
 .sso-interior-block {
-  margin-left: 60px; }
+  margin-left: 60px;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.08); }
+  .sso-interior-block h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 0; }
+  .sso-interior-block p {
+    font-size: 14px; }
+  .sso-interior-block .sso-form-display-only {
+    font-weight: 500;
+    background-color: #f9f9f9 !important; }
 
 .sso-interior-form .btn {
   margin-top: 20px;
@@ -1409,14 +1441,16 @@ input::-webkit-inner-spin-button {
 
 .sso-table-button {
   border: 1px solid #cccccc;
+  background-color: #fff;
   font-weight: 600;
   display: inline-block;
   text-align: center;
   padding: 3px 7px;
   border-radius: 3px;
   font-size: 13px;
-  transition: all .3s; }
-  .sso-table-button:hover {
+  transition: all .3s;
+  margin-right: 5px; }
+  .sso-table-button:hover, .sso-table-button:active, .sso-table-button:focus {
     cursor: pointer;
     background-color: #fff;
     transition: all .3s; }
@@ -1521,7 +1555,7 @@ input::-webkit-inner-spin-button {
   color: #fff;
   background-color: #048586;
   text-align: center;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 35px; }
 

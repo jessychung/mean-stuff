@@ -4,6 +4,8 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './fake.service';
 import { routing } from './app.routing';
 
 import { AppComponent }   from './app.component';
@@ -38,6 +40,10 @@ import {AddressPrimaryComponent} from "./address-primary/address-primary.compone
 import {FormCompanyComponent} from "./form-company/form-company.component";
 import {FormPrimaryComponent} from "./form-primary/form-primary.component";
 import {ManageUsersSingleComponent} from "./manage-users-single/manage-users-single.component";
+import {FormUserComponent} from "./form-user/form-user.component";
+import {ManageUsersDisplayComponent} from "./manage-users-display/manage-users-display.component";
+import {ManageUsersEditComponent} from "./manage-users-edit/manage-users-edit.component";
+import {TimesheetsSingleComponent} from "./timesheets-single/timesheets-single.component";
 
 
 @NgModule({
@@ -47,7 +53,8 @@ import {ManageUsersSingleComponent} from "./manage-users-single/manage-users-sin
         ReactiveFormsModule,
         DropDownsModule,
         ButtonsModule,
-        routing
+        routing,
+        InMemoryWebApiModule.forRoot(InMemoryDataService)
     ],
     declarations: [
         AppComponent,
@@ -69,8 +76,11 @@ import {ManageUsersSingleComponent} from "./manage-users-single/manage-users-sin
         ManageUsersComponent,
         ManageUsersAllComponent,
         ManageUsersSingleComponent,
+        ManageUsersDisplayComponent,
+        ManageUsersEditComponent,
         TimesheetsComponent,
         TimesheetsAllComponent,
+        TimesheetsSingleComponent,
         AddressComponent,
         AddressCompanyComponent,
         AddressPrimaryComponent,
@@ -81,7 +91,8 @@ import {ManageUsersSingleComponent} from "./manage-users-single/manage-users-sin
         TopbarComponent,
         PageControlsComponent,
         FormCompanyComponent,
-        FormPrimaryComponent
+        FormPrimaryComponent,
+        FormUserComponent
     ],
     bootstrap: [ AppComponent ]
 })
