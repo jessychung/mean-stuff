@@ -17,6 +17,15 @@
     margin-top: 0; }
   .sso-page-main p {
     font-size: 14px; }
+  .sso-page-main .sso-last-login {
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    padding: 20px; }
+    .sso-page-main .sso-last-login span {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(61, 71, 79, 0.5);
+      display: block; }
 
 .sso-main-dashboard-cards {
   padding: 35px 0; }

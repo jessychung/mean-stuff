@@ -22,6 +22,22 @@
     outline: none;
     color: #fff; }
 
+.btn-yellow {
+  color: #fff;
+  border-bottom: 2px solid #c5880e;
+  background-color: #f0b030; }
+  .btn-yellow:hover, .btn-yellow:active, .btn-yellow:focus {
+    outline: none;
+    color: #fff; }
+
+.btn-red {
+  color: #fff;
+  border-bottom: 2px solid #c62f14;
+  background-color: #eb563c; }
+  .btn-red:hover, .btn-red:active, .btn-red:focus {
+    outline: none;
+    color: #fff; }
+
 .btn-light {
   color: #a6a6a6;
   border-bottom: 2px solid #dddddd;
@@ -38,6 +54,12 @@
     color: #a6a6a6;
     background-color: rgba(255, 255, 255, 0.9);
     transition: all .3s; }
+
+.btn-sm {
+  font-size: 13px;
+  padding: 7px 20px; }
+  .btn-sm i {
+    font-size: 12px; }
 
 .sso-print {
   background-color: #fff;

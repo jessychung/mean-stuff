@@ -20,11 +20,18 @@
                 </div>
             </div>
 
-            <div class="col-md-12">
-                <ul class="sso-page-menu">
-                    <li [routerLink]="['/main/manage-users/manage-users-all']" [routerLinkActive]="['sso-page-menu-active']">All</li>
-                    <li>Admin</li>
-                </ul>
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <ul class="sso-page-menu">
+                        <li [routerLink]="['/main/manage-users/manage-users-all']" [routerLinkActive]="['sso-page-menu-active']">All</li>
+                        <li>Admin</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-4" style="text-align: right">
+                    <button class="btn btn-sm btn-brand" style="margin-top: 7px">
+                        <i aria-hidden="true" class="fa fa-plus"></i>   Add New
+                    </button>
+                </div>
             </div>
 
         </div>
@@ -33,7 +40,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div style="padding: 20px">
+                <div style="padding: 20px 0">
                     <router-outlet></router-outlet>
                 </div>
             </div>

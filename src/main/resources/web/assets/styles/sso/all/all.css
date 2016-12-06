@@ -394,6 +394,22 @@ input::-webkit-inner-spin-button {
     outline: none;
     color: #fff; }
 
+.btn-yellow {
+  color: #fff;
+  border-bottom: 2px solid #c5880e;
+  background-color: #f0b030; }
+  .btn-yellow:hover, .btn-yellow:active, .btn-yellow:focus {
+    outline: none;
+    color: #fff; }
+
+.btn-red {
+  color: #fff;
+  border-bottom: 2px solid #c62f14;
+  background-color: #eb563c; }
+  .btn-red:hover, .btn-red:active, .btn-red:focus {
+    outline: none;
+    color: #fff; }
+
 .btn-light {
   color: #a6a6a6;
   border-bottom: 2px solid #dddddd;
@@ -410,6 +426,12 @@ input::-webkit-inner-spin-button {
     color: #a6a6a6;
     background-color: rgba(255, 255, 255, 0.9);
     transition: all .3s; }
+
+.btn-sm {
+  font-size: 13px;
+  padding: 7px 20px; }
+  .btn-sm i {
+    font-size: 12px; }
 
 .sso-print {
   background-color: #fff;
@@ -474,11 +496,11 @@ input::-webkit-inner-spin-button {
   padding: 30px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.08); }
   .sso-invoice-paper h1 {
-    font-size: 14px;
-    font-weight: 400;
-    color: rgba(61, 71, 79, 0.5);
-    margin-top: 10px;
-    margin-bottom: 10px; }
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: rgba(61, 71, 79, 0.5) !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important; }
   .sso-invoice-paper h2 {
     font-size: 15px;
     font-weight: 500;
@@ -550,7 +572,7 @@ input::-webkit-inner-spin-button {
     margin-right: auto; }
 
 .form-group {
-  margin-bottom: 10px !important;
+  margin-bottom: 10px;
   position: relative; }
   .form-group .icon {
     float: left;
@@ -651,6 +673,15 @@ input::-webkit-inner-spin-button {
     margin-top: 0; }
   .sso-page-main p {
     font-size: 14px; }
+  .sso-page-main .sso-last-login {
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    padding: 20px; }
+    .sso-page-main .sso-last-login span {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(61, 71, 79, 0.5);
+      display: block; }
 
 .sso-main-dashboard-cards {
   padding: 35px 0; }
@@ -1097,6 +1128,15 @@ input::-webkit-inner-spin-button {
     font-weight: 500;
     background-color: #f9f9f9 !important; }
 
+.sso-page-search {
+  background-color: #f2f2f2;
+  margin-top: -20px;
+  padding: 15px; }
+  .sso-page-search .form-inline {
+    margin-bottom: 0; }
+    .sso-page-search .form-inline .form-group {
+      margin-bottom: 0; }
+
 .sso-interior-form .btn {
   margin-top: 20px;
   margin-bottom: 20px; }
@@ -1461,9 +1501,11 @@ input::-webkit-inner-spin-button {
 .table > thead > tr > th {
   border-bottom: 1px solid #dddddd !important; }
 
-.table ul {
-  padding-left: 17px;
+.table {
   margin-bottom: 0; }
+  .table ul {
+    padding-left: 17px;
+    margin-bottom: 0; }
 
 .table-no-hover tr:hover, .table-no-hover tr:active, .table-no-hover tr:focus {
   background-color: transparent !important; }
@@ -1473,6 +1515,9 @@ input::-webkit-inner-spin-button {
 
 .table > tbody + tbody {
   border-top: 0; }
+
+.body-striped tbody:nth-of-type(even) {
+  background-color: #f3f3f3; }
 
 .sso-top-bar {
   border-bottom: 1px solid #eaeaea;

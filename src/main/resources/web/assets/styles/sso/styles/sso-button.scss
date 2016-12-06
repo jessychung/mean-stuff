@@ -29,6 +29,26 @@
   }
 }
 
+.btn-yellow {
+  color: #fff;
+  border-bottom: 2px solid darken($thentia-yellow, 15%);
+  background-color: $thentia-yellow;
+  @include hover-state {
+    outline: none;
+    color: #fff;
+  }
+}
+
+.btn-red {
+  color: #fff;
+  border-bottom: 2px solid darken($thentia-red, 15%);
+  background-color: $thentia-red;
+  @include hover-state {
+    outline: none;
+    color: #fff;
+  }
+}
+
 .btn-light {
   color: lighten(#333333, 45%);
   border-bottom: 2px solid darken(#eaeaea, 5%);
@@ -47,6 +67,14 @@
     color: lighten(#333333, 45%);
     background-color: rgba(#fff, 0.9);
     transition: all .3s;
+  }
+}
+
+.btn-sm {
+  font-size: 13px;
+  padding: 7px 20px;
+  i {
+    font-size: 12px;
   }
 }
 

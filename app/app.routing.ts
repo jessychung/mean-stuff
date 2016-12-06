@@ -31,6 +31,8 @@ import {ManageUsersDisplayComponent} from "./manage-users-display/manage-users-d
 import {ManageUsersEditComponent} from "./manage-users-edit/manage-users-edit.component";
 import {TimesheetsSingleComponent} from "./timesheets-single/timesheets-single.component";
 import {TimesheetsClientsComponent} from "./timesheets-clients/timesheets-clients.component";
+import {InvoicesCustomComponent} from "./invoices-custom/invoices-custom.component";
+import {VectorleapComponent} from "./vectorleap/vectorleap.component";
 
 const appRoutes: Routes = [
     {
@@ -117,6 +119,10 @@ const appRoutes: Routes = [
                     {
                         path: 'invoices-thismonth',
                         component: InvoicesThismonthComponent
+                    },
+                    {
+                        path: 'invoices-custom',
+                        component: InvoicesCustomComponent
                     }
                 ]
             },
@@ -173,6 +179,10 @@ const appRoutes: Routes = [
             {
                 path: 'timesheets-single',
                 component: TimesheetsSingleComponent
+            },
+            {
+                path: 'vectorleap',
+                component: VectorleapComponent
             }
         ]
     }

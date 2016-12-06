@@ -53,6 +53,8 @@ var manage_users_display_component_1 = require("./manage-users-display/manage-us
 var manage_users_edit_component_1 = require("./manage-users-edit/manage-users-edit.component");
 var timesheets_single_component_1 = require("./timesheets-single/timesheets-single.component");
 var timesheets_clients_component_1 = require("./timesheets-clients/timesheets-clients.component");
+var invoices_custom_component_1 = require("./invoices-custom/invoices-custom.component");
+var vectorleap_component_1 = require("./vectorleap/vectorleap.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -100,11 +102,13 @@ var AppModule = (function () {
                 invoices_all_component_1.InvoicesAllComponent,
                 invoices_thismonth_component_1.InvoicesThismonthComponent,
                 invoices_single_component_1.InvoicesSingleComponent,
+                invoices_custom_component_1.InvoicesCustomComponent,
                 top_bar_component_1.TopbarComponent,
                 page_controls_component_1.PageControlsComponent,
                 form_company_component_1.FormCompanyComponent,
                 form_primary_component_1.FormPrimaryComponent,
-                form_user_component_1.FormUserComponent
+                form_user_component_1.FormUserComponent,
+                vectorleap_component_1.VectorleapComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

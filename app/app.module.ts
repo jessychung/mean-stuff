@@ -45,6 +45,8 @@ import {ManageUsersDisplayComponent} from "./manage-users-display/manage-users-d
 import {ManageUsersEditComponent} from "./manage-users-edit/manage-users-edit.component";
 import {TimesheetsSingleComponent} from "./timesheets-single/timesheets-single.component";
 import {TimesheetsClientsComponent} from "./timesheets-clients/timesheets-clients.component";
+import {InvoicesCustomComponent} from "./invoices-custom/invoices-custom.component";
+import {VectorleapComponent} from "./vectorleap/vectorleap.component";
 
 
 @NgModule({
@@ -90,11 +92,13 @@ import {TimesheetsClientsComponent} from "./timesheets-clients/timesheets-client
         InvoicesAllComponent,
         InvoicesThismonthComponent,
         InvoicesSingleComponent,
+        InvoicesCustomComponent,
         TopbarComponent,
         PageControlsComponent,
         FormCompanyComponent,
         FormPrimaryComponent,
-        FormUserComponent
+        FormUserComponent,
+        VectorleapComponent
     ],
     bootstrap: [ AppComponent ]
 })

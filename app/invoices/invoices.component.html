@@ -5,17 +5,14 @@
     <div class="sso-page-controls sso-page-single sso-green row">
         <div class="container">
             <div class="row" style="padding: 20px 0;">
-                <div class="col-lg-8 col-md-8">
+                <div class="col-lg-8 col-md-8 col-sm-6">
                     <div class="sso-back" [routerLink]="['/dashboard']">
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </div>
                     <img class="sso-page-logo" src="src/main/resources/web/assets/images/thentia_invoice_sm.png" />
                     <h1>Invoices</h1>
                 </div>
-                <div class="col-lg-4 col-md-4" style="text-align: right;">
-                    <div class="sso-addnew">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
-                    </div>
+                <div class="col-lg-4 col-md-4 col-sm-6" style="text-align: right;">
                     <input type="search" class="form-control sso-round-input sso-search" placeholder="Search..." />
                 </div>
             </div>
@@ -25,15 +22,15 @@
                     <ul class="sso-page-menu">
                         <li [routerLink]="['/main/invoices/invoices-all']" [routerLinkActive]="['sso-page-menu-active']">All</li>
                         <li [routerLink]="['/main/invoices/invoices-thismonth']" [routerLinkActive]="['sso-page-menu-active']">This Month</li>
-                        <li>Last Month</li>
-                        <li>Custom Date Range</li>
+                        <li >Last Month</li>
+                        <li [routerLink]="['/main/invoices/invoices-custom']" [routerLinkActive]="['sso-page-menu-active']">Custom Date Range</li>
                         <li>Unpaid Invoices <div class="sso-count-badge">10</div></li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-2 col-sm-4">
-                    <div class="sso-page-menu-new">
+                <div class="col-lg-2 col-md-2 col-sm-4" style="text-align: right">
+                    <button class="btn btn-sm btn-green" style="margin-top: 7px">
                         <i aria-hidden="true" class="fa fa-plus"></i>   Add New
-                    </div>
+                    </button>
                 </div>
             </div>
 

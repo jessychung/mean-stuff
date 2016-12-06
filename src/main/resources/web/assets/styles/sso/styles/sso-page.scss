@@ -135,6 +135,18 @@
   }
 }
 
+.sso-page-search {
+  background-color: #f2f2f2;
+  margin-top: -20px;
+  padding: 15px;
+  .form-inline {
+    margin-bottom: 0;
+    .form-group {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .sso-interior-form {
   .btn {
     margin-top: 20px;

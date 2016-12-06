@@ -101,6 +101,15 @@
     font-weight: 500;
     background-color: #f9f9f9 !important; }
 
+.sso-page-search {
+  background-color: #f2f2f2;
+  margin-top: -20px;
+  padding: 15px; }
+  .sso-page-search .form-inline {
+    margin-bottom: 0; }
+    .sso-page-search .form-inline .form-group {
+      margin-bottom: 0; }
+
 .sso-interior-form .btn {
   margin-top: 20px;
   margin-bottom: 20px; }

@@ -30,6 +30,8 @@ var manage_users_display_component_1 = require("./manage-users-display/manage-us
 var manage_users_edit_component_1 = require("./manage-users-edit/manage-users-edit.component");
 var timesheets_single_component_1 = require("./timesheets-single/timesheets-single.component");
 var timesheets_clients_component_1 = require("./timesheets-clients/timesheets-clients.component");
+var invoices_custom_component_1 = require("./invoices-custom/invoices-custom.component");
+var vectorleap_component_1 = require("./vectorleap/vectorleap.component");
 var appRoutes = [
     {
         path: '',
@@ -115,6 +117,10 @@ var appRoutes = [
                     {
                         path: 'invoices-thismonth',
                         component: invoices_thismonth_component_1.InvoicesThismonthComponent
+                    },
+                    {
+                        path: 'invoices-custom',
+                        component: invoices_custom_component_1.InvoicesCustomComponent
                     }
                 ]
             },
@@ -171,6 +177,10 @@ var appRoutes = [
             {
                 path: 'timesheets-single',
                 component: timesheets_single_component_1.TimesheetsSingleComponent
+            },
+            {
+                path: 'vectorleap',
+                component: vectorleap_component_1.VectorleapComponent
             }
         ]
     }

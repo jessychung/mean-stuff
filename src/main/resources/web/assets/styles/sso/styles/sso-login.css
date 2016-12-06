@@ -27,7 +27,7 @@
     margin-right: auto; }
 
 .form-group {
-  margin-bottom: 10px !important;
+  margin-bottom: 10px;
   position: relative; }
   .form-group .icon {
     float: left;

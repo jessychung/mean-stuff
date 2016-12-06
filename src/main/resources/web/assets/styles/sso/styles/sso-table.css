@@ -20,9 +20,11 @@
 .table > thead > tr > th {
   border-bottom: 1px solid #dddddd !important; }
 
-.table ul {
-  padding-left: 17px;
+.table {
   margin-bottom: 0; }
+  .table ul {
+    padding-left: 17px;
+    margin-bottom: 0; }
 
 .table-no-hover tr:hover, .table-no-hover tr:active, .table-no-hover tr:focus {
   background-color: transparent !important; }
@@ -32,3 +34,6 @@
 
 .table > tbody + tbody {
   border-top: 0; }
+
+.body-striped tbody:nth-of-type(even) {
+  background-color: #f3f3f3; }

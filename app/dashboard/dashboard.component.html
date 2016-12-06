@@ -11,7 +11,11 @@
                         <p>Welcome to the Thentia Self-service Portal. This self-service system offers all the tools you need to manage all your accounts with Thentia.</p>
                     </div>
                     <div class="col-lg-4 col-md-4">
-                        Last login: 12:20PM 12/12/16
+                        <div class="sso-last-login">
+                            <span>Last login:</span>
+                            12:20PM 12/12/16
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -80,7 +84,7 @@
                     </div>
 
                     <div class="col-md-3 col-sm-4" style="margin-bottom: 20px">
-                        <a href="#"[routerLink]="['/main/timesheets/timesheets-all']">
+                        <a href="#" [routerLink]="['/main/timesheets/timesheets-all']">
                             <div class="sso-card sso-card-default">
                                 <img src="src/main/resources/web/assets/images/thentia_timesheets.png">
                                 <h4>View Timesheets</h4>
@@ -98,9 +102,9 @@
                     </div>
 
                     <div class="col-md-3 col-sm-4" style="margin-bottom: 20px">
-                        <a>
+                        <a href="#" [routerLink]="['/main/vectorleap']">
                             <div class="sso-card sso-card-default">
-                                <img src="src/main/resources/web/assets/images/thentia_vectorleap.png" width="100px">
+                                <img src="src/main/resources/web/assets/images/thentia_vectorleap.png" width="100%" style="padding-top: 35px; padding-bottom: 35px;">
                                 <h4>Vectorleap</h4>
                             </div>
                         </a>
