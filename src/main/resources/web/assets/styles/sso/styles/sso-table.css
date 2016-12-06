@@ -19,3 +19,16 @@
 
 .table > thead > tr > th {
   border-bottom: 1px solid #dddddd !important; }
+
+.table ul {
+  padding-left: 17px;
+  margin-bottom: 0; }
+
+.table-no-hover tr:hover, .table-no-hover tr:active, .table-no-hover tr:focus {
+  background-color: transparent !important; }
+
+.table-no-hover:hover, .table-no-hover:active, .table-no-hover:focus {
+  background-color: transparent !important; }
+
+.table > tbody + tbody {
+  border-top: 0; }

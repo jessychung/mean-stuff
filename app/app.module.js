@@ -52,6 +52,7 @@ var form_user_component_1 = require("./form-user/form-user.component");
 var manage_users_display_component_1 = require("./manage-users-display/manage-users-display.component");
 var manage_users_edit_component_1 = require("./manage-users-edit/manage-users-edit.component");
 var timesheets_single_component_1 = require("./timesheets-single/timesheets-single.component");
+var timesheets_clients_component_1 = require("./timesheets-clients/timesheets-clients.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -90,6 +91,7 @@ var AppModule = (function () {
                 manage_users_edit_component_1.ManageUsersEditComponent,
                 timesheets_component_1.TimesheetsComponent,
                 timesheets_all_component_1.TimesheetsAllComponent,
+                timesheets_clients_component_1.TimesheetsClientsComponent,
                 timesheets_single_component_1.TimesheetsSingleComponent,
                 address_component_1.AddressComponent,
                 address_company_component_1.AddressCompanyComponent,

@@ -25,3 +25,25 @@
 .table > thead > tr > th {
   border-bottom: 1px solid #dddddd !important;
 }
+
+.table {
+  ul {
+    padding-left: 17px;
+    margin-bottom: 0;
+  }
+}
+
+.table-no-hover {
+  tr {
+    @include hover-state {
+      background-color: transparent !important;
+    }
+  }
+  @include hover-state {
+    background-color: transparent !important;
+  }
+}
+
+.table > tbody + tbody {
+  border-top: 0;
+}

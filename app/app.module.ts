@@ -44,6 +44,7 @@ import {FormUserComponent} from "./form-user/form-user.component";
 import {ManageUsersDisplayComponent} from "./manage-users-display/manage-users-display.component";
 import {ManageUsersEditComponent} from "./manage-users-edit/manage-users-edit.component";
 import {TimesheetsSingleComponent} from "./timesheets-single/timesheets-single.component";
+import {TimesheetsClientsComponent} from "./timesheets-clients/timesheets-clients.component";
 
 
 @NgModule({
@@ -80,6 +81,7 @@ import {TimesheetsSingleComponent} from "./timesheets-single/timesheets-single.c
         ManageUsersEditComponent,
         TimesheetsComponent,
         TimesheetsAllComponent,
+        TimesheetsClientsComponent,
         TimesheetsSingleComponent,
         AddressComponent,
         AddressCompanyComponent,

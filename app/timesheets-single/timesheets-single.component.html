@@ -4,147 +4,150 @@
     </div>
     <div class="container">
         <div class="row" style="padding: 20px 0">
-            <div class="col-lg-10 col-md-9">
+            <div class="col-lg-12 col-md-12">
                 <div class="sso-page-single-buttons">
                     <div class="sso-back" (click)="goBack()" style="display:block; margin-bottom: 15px">
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </div>
-                    <div class="sso-print" style="display:block;">
-                        <i class="thentia-print" aria-hidden="true"></i>
+                    <div class="sso-delete" style="display:block;">
+                        <i class="thentia-trash" aria-hidden="true"></i>
                     </div>
                 </div>
 
-                <div class="sso-support-tickets sso-interior-block">
+                <div class="sso-timesheets sso-interior-block">
+                    <h1>CMO: Online Self Service</h1>
 
-                    <div class="row" style="margin-bottom: 20px">
-                        <div class="col-lg-11 col-md-10 col-sm-9">
-                            <h1>Support Ticket #0123</h1>
-                            <h2>Opened on 12/12/16</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.</p>
-                        </div>
-                        <div class="col-lg-1 col-md-2 col-sm-3" style="text-align: right">
-                            <div class="sso-status sso-status-error">High</div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12" style="position: relative">
-                            <div class="sso-avatar">JS</div>
-                            <form novalidate>
-                                <div class="sso-support-tickets-textarea">
-                                    <textarea class="form-control" placeholder="Enter your reply..."></textarea>
-                                    <div class="sso-support-tickets-controls">
-                                        <div><i class="thentia-attachment"></i>  Attach files <span>(Accepted files include: pngs, jpegs, pdfs and gifs)</span></div>
-                                        <button type="submit">Post</button>
-                                    </div>
+                    <table class="table table-no-hover">
+                        <thead>
+                        <tr>
+                            <th>Assignee</th>
+                            <th>Tasks</th>
+                            <th>Notes</th>
+                            <th>Hours</th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td rowspan="3">
+                                <div class="sso-avatar-small">BE</div>
+                                Beth Ericksen
+                            </td>
+                            <td>Adding invoicing capability</td>
+                            <td>
+                                <ul>
+                                    <li>Designed UI</li>
+                                    <li>Added responsive layout</li>
+                                </ul>
+                            </td>
+                            <td><strong>3h30m</strong></td>
+                            <td>
+                                <div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">
+                                    <i class="thentia-edit"></i> edit
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="sso-support-tickets-reply row">
-                        <div class="col-lg-12 col-md-12" style="position: relative">
-                            <div class="sso-avatar-admin">SA</div>
-                            <div class="sso-reply">
-                                <div class="row">
-                                    <div class="col-lg-9 col-md-6">
-                                        <h1>System Admin</h1>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6" style="text-align: right">
-                                        <span>Today 12:20PM</span>
-                                    </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Adding invoicing capability</td>
+                            <td>
+                                <ul>
+                                    <li>Designed UI</li>
+                                    <li>Added responsive layout</li>
+                                </ul>
+                            </td>
+                            <td><strong>3h30m</strong></td>
+                            <td>
+                                <div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">
+                                    <i class="thentia-edit"></i> edit
                                 </div>
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.
-                                        </p>
-                                    </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Adding invoicing capability</td>
+                            <td>
+                                <ul>
+                                    <li>Designed UI</li>
+                                    <li>Added responsive layout</li>
+                                </ul>
+                            </td>
+                            <td><strong>3h30m</strong></td>
+                            <td>
+                                <div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">
+                                    <i class="thentia-edit"></i> edit
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sso-support-tickets-reply row">
-                        <div class="col-lg-12 col-md-12" style="position: relative">
-                            <div class="sso-avatar">JS</div>
-                            <div class="sso-reply">
-                                <div class="row">
-                                    <div class="col-lg-9 col-md-6">
-                                        <h1>You</h1>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6" style="text-align: right">
-                                        <span>12/12/16 03:20PM</span>
-                                    </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <td rowspan="3">
+                                <div class="sso-avatar-small">BE</div>
+                                Beth Ericksen
+                            </td>
+                            <td>Adding invoicing capability</td>
+                            <td>
+                                <ul>
+                                    <li>Designed UI</li>
+                                    <li>Added responsive layout</li>
+                                </ul>
+                            </td>
+                            <td><strong>3h30m</strong></td>
+                            <td>
+                                <div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">
+                                    <i class="thentia-edit"></i> edit
                                 </div>
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.
-                                        </p>
-                                    </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Adding invoicing capability</td>
+                            <td>
+                                <ul>
+                                    <li>Designed UI</li>
+                                    <li>Added responsive layout</li>
+                                </ul>
+                            </td>
+                            <td><strong>3h30m</strong></td>
+                            <td>
+                                <div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">
+                                    <i class="thentia-edit"></i> edit
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-                    <div class="sso-support-tickets-reply row">
-                        <div class="col-lg-12 col-md-12" style="position: relative">
-                            <div class="sso-avatar-admin">SA</div>
-                            <div class="sso-reply">
-                                <div class="row">
-                                    <div class="col-lg-9 col-md-6">
-                                        <h1>System Admin</h1>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6" style="text-align: right">
-                                        <span>Today 12:20PM</span>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>
-            <div class="col-lg-2 col-md-3">
-                <div class="sso-support-tickets-information">
+            <!--<div class="col-lg-2 col-md-3">-->
+                <!--<div class="sso-support-tickets-information">-->
 
-                    <h1>Ticket Information</h1>
+                    <!--<h1>Ticket Information</h1>-->
 
-                    <div class="sso-divider"></div>
+                    <!--<div class="sso-divider"></div>-->
 
-                    <h2>Submitted on</h2>
-                    <p>November 15, 2016 at 10:30AM</p>
+                    <!--<h2>Submitted on</h2>-->
+                    <!--<p>November 15, 2016 at 10:30AM</p>-->
 
-                    <h2>Status</h2>
-                    <p>Open</p>
+                    <!--<h2>Status</h2>-->
+                    <!--<p>Open</p>-->
 
-                    <h2></h2>
+                    <!--<h2></h2>-->
 
-                    <div class="sso-divider"></div>
+                    <!--<div class="sso-divider"></div>-->
 
-                    <div>
-                        <div style="display: inline-block">
-                            Mark as solved?
-                        </div>
-                        <div style="text-align: right; display: inline-block">
-                            <input type="checkbox" />
-                        </div>
-                    </div>
+                    <!--<div>-->
+                        <!--<div style="display: inline-block">-->
+                            <!--Mark as solved?-->
+                        <!--</div>-->
+                        <!--<div style="text-align: right; display: inline-block">-->
+                            <!--<input type="checkbox" />-->
+                        <!--</div>-->
+                    <!--</div>-->
 
-                </div>
+                <!--</div>-->
 
-            </div>
+            <!--</div>-->
         </div>
     </div>
 

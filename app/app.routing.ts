@@ -30,6 +30,7 @@ import {ManageUsersSingleComponent} from "./manage-users-single/manage-users-sin
 import {ManageUsersDisplayComponent} from "./manage-users-display/manage-users-display.component";
 import {ManageUsersEditComponent} from "./manage-users-edit/manage-users-edit.component";
 import {TimesheetsSingleComponent} from "./timesheets-single/timesheets-single.component";
+import {TimesheetsClientsComponent} from "./timesheets-clients/timesheets-clients.component";
 
 const appRoutes: Routes = [
     {
@@ -126,6 +127,10 @@ const appRoutes: Routes = [
                     {
                         path: 'timesheets-all',
                         component: TimesheetsAllComponent
+                    },
+                    {
+                        path: 'timesheets-clients',
+                        component: TimesheetsClientsComponent
                     }
                 ]
             },
