@@ -901,29 +901,33 @@ span.k-numerictextbox {
 .accept .k-tooltip-validation {
     margin-left: 237px !important;
 }
-
-.k-header {
-    background-color: white !important;
-    border: 0px !important;
-}
-
 .k-grid-header {
     border-bottom: 1px solid #e6e6e6 !important;
+}
+
+.k-widget.k-grid {
+    background-color: transparent !important;
 }
 
 #rowSelection {
     max-height: auto !important;
 }
 
-#example {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
+.k-grid td {
+    font-size: 14px;
+    border-right: 0px;
+    border-width: 0 0 0 0px !important;
+    border-top: 1px solid #e6e6e6 !important;
 }
 
 .k-grid-header th.k-header {
-    padding: 17px 15px !important;
     font-size: 14px;
-    color: #b9b9b9;
+    font-weight: 600 !important;
+    border-width: 0 0 0 0px !important;
+}
+#example {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 #grid .k-grid-toolbar {
@@ -935,29 +939,8 @@ span.k-numerictextbox {
 }
 
 .k-grid-header {
-    background-color: white !important;
+    background-color: transparent !important;
 }
-
-.k-grid-header tr th {
-    border-bottom: 1px solid #e6e6e6 !important;
-}
-
-.k-alt {
-    background-color: white !important;
-}
-
-.k-alt:active {
-    background-color: #f7f7f7 !important;
-}
-
-/*tbody tr td {
-    border-bottom: 1px solid #e6e6e6 !important;
-    padding: 15px !important;
-    border-left: 0px !important;
-    border-right: 0px !important;
-    font-size: 13px;
-    color: #4d4d4d;
-}*/
 
 tbody tr:active {
     background-color: #f7f7f7;
@@ -970,6 +953,10 @@ tbody tr:active {
 
 .k-pager-wrap > .k-link:focus {
     outline: none;
+}
+
+.k-grid-content {
+    overflow-y: auto !important;
 }
 
 .k-pager-numbers .k-link:hover {
@@ -989,7 +976,6 @@ tbody tr:active {
 }
 
 .k-pager-wrap {
-    background-color: white !important;
     border-top: 1px solid #e6e6e6 !important;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -1002,40 +988,25 @@ tbody tr:active {
     border-top: 1px solid #e6e6e6 !important;
 }
 
+.k-grid-pager .k-link, .k-grid-pager .k-link:link {
+    color: rgba(61, 71, 79, 0.5) !important;
+    font-weight: 600 !important;
+    border: 0px !important;
+}
+
+.k-pager-numbers .k-state-selected {
+    color: #3d474f !important;
+    background-color: #eaeaea !important;
+    border-radius: 100px;
+    font-weight: 600 !important;
+}
+
 .k-grid .k-widget {
     border-top: 1px solid #e6e6e6 !important;
 }
 
 .k-state-selected {
     border: 0px !important;
-}
-
-
-
-.k-pager-numbers .k-state-selected {
-    padding: 0px 5px !important;
-    font-size: 15px;
-    line-height: 2em !important;
-    min-width: 1.4em !important;
-    margin-top: 0px !important;
-    margin-left: 10px;
-    background-color: rgba(225, 56, 45, 0.18) !important;
-    border-radius: 100px;
-    color: #e1382d !important;
-    border: 1px solid rgba(225, 56, 45, 0.49) !important;
-}
-
-.k-pager-numbers .k-link {
-    padding: 0px 5px !important;
-    font-size: 15px;
-    line-height: 2em !important;
-    min-width: 1.4em !important;
-    margin-top: 0px !important;
-    /*background-color: #f7f7f7 !important;*/
-    margin-left: 10px;
-    color: #728a8f !important;
-    border-radius: 100px;
-    /*border: 1px solid #f7f7f7 !important;*/
 }
 
 .k-pager-numbers .k-link:hover {

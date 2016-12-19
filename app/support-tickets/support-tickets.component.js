@@ -8,19 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var SupportTicketsComponent = (function () {
     function SupportTicketsComponent() {
     }
-    SupportTicketsComponent = __decorate([
-        core_1.Component({
-            selector: 'support-tickets',
-            templateUrl: 'app/support-tickets/support-tickets.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [])
-    ], SupportTicketsComponent);
     return SupportTicketsComponent;
 }());
+SupportTicketsComponent = __decorate([
+    core_1.Component({
+        selector: 'support-tickets',
+        templateUrl: 'app/support-tickets/support-tickets.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [])
+], SupportTicketsComponent);
 exports.SupportTicketsComponent = SupportTicketsComponent;
 //# sourceMappingURL=support-tickets.component.js.map

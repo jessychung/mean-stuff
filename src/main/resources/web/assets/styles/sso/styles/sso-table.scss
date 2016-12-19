@@ -32,6 +32,10 @@
     padding-left: 17px;
     margin-bottom: 0;
   }
+  a {
+    font-weight: $semibold;
+    text-decoration: none;
+  }
 }
 
 .table-no-hover {
@@ -43,6 +47,11 @@
   @include hover-state {
     background-color: transparent !important;
   }
+  .sso-table-total {
+    &:hover {
+      background-color: #f7f7f7 !important;
+    }
+  }
 }
 
 .table > tbody + tbody {
@@ -52,5 +61,48 @@
 .body-striped {
   tbody:nth-of-type(even) {
     background-color: #f3f3f3;
+  }
+}
+
+.sso-table-total {
+  background-color: #f7f7f7;
+  td {
+    padding: 12px 10px !important;
+    font-weight: $semibold;
+  }
+  @include hover-state {
+    background-color: #f7f7f7 !important;
+  }
+}
+
+.datatable.material {
+  background: transparent !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.pagination > li > a, .pagination > li > span {
+  color: rgba($black, .5) !important;
+  font-weight: $semibold;
+  background-color: transparent !important;
+  border: 0px !important;
+  @include transition;
+  @include hover-state {
+    background-color: #eaeaea !important;
+    border-radius: 100px !important;
+    color: $black !important;
+    cursor: pointer;
+    @include transition;
+  }
+}
+
+.pagination {
+  .active {
+    a {
+      background-color: #eaeaea !important;
+      border-radius: 100px;
+      color: $black !important;
+    }
   }
 }

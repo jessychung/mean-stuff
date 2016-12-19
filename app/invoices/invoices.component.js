@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var InvoicesComponent = (function () {
     function InvoicesComponent(location) {
         this.location = location;
@@ -17,15 +17,15 @@ var InvoicesComponent = (function () {
     InvoicesComponent.prototype.goBack = function () {
         this.location.back();
     };
-    InvoicesComponent = __decorate([
-        core_1.Component({
-            selector: 'invoices',
-            templateUrl: 'app/invoices/invoices.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [common_1.Location])
-    ], InvoicesComponent);
     return InvoicesComponent;
 }());
+InvoicesComponent = __decorate([
+    core_1.Component({
+        selector: 'invoices',
+        templateUrl: 'app/invoices/invoices.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [common_1.Location])
+], InvoicesComponent);
 exports.InvoicesComponent = InvoicesComponent;
 //# sourceMappingURL=invoices.component.js.map

@@ -30,9 +30,11 @@ import {ManageUsersSingleComponent} from "./manage-users-single/manage-users-sin
 import {ManageUsersDisplayComponent} from "./manage-users-display/manage-users-display.component";
 import {ManageUsersEditComponent} from "./manage-users-edit/manage-users-edit.component";
 import {TimesheetsSingleComponent} from "./timesheets-single/timesheets-single.component";
+import {TimesheetsTaskComponent} from "./timesheets-task/timesheets-task.component"
 import {TimesheetsClientsComponent} from "./timesheets-clients/timesheets-clients.component";
 import {InvoicesCustomComponent} from "./invoices-custom/invoices-custom.component";
 import {VectorleapComponent} from "./vectorleap/vectorleap.component";
+import {TimesheetsClientsAddeditComponent} from "./timesheets-clients-addedit/timesheets-clients-addedit.component";
 
 const appRoutes: Routes = [
     {
@@ -137,6 +139,14 @@ const appRoutes: Routes = [
                     {
                         path: 'timesheets-clients',
                         component: TimesheetsClientsComponent
+                    },
+                    {
+                        path: 'timesheets-clients-edit/:id',
+                        component: TimesheetsClientsAddeditComponent
+                    },
+                    {
+                        path: 'timesheets-clients-add',
+                        component: TimesheetsClientsAddeditComponent
                     }
                 ]
             },
@@ -179,6 +189,10 @@ const appRoutes: Routes = [
             {
                 path: 'timesheets-single',
                 component: TimesheetsSingleComponent
+            },
+            {
+                path: 'timesheets-task',
+                component: TimesheetsTaskComponent
             },
             {
                 path: 'vectorleap',

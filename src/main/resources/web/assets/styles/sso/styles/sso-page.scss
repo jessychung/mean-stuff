@@ -47,13 +47,13 @@
 }
 
 
-.sso-page-menu-active {
+.sso-page-menu-active, .ssopagemenuactive {
   border-bottom: 3px solid $thentia-green;
   color: $black !important;
 }
 
 .sso-green {
-  .sso-page-menu-active {
+  .sso-page-menu-active, .ssopagemenuactive {
     border-bottom: 3px solid $thentia-green;
     color: $black !important;
   }
@@ -69,21 +69,21 @@
 }
 
 .sso-red {
-  .sso-page-menu-active {
+  .sso-page-menu-active, .ssopagemenuactive {
     border-bottom: 3px solid $thentia-red;
     color: $black !important;
   }
 }
 
 .sso-yellow {
-  .sso-page-menu-active {
+  .sso-page-menu-active, .ssopagemenuactive {
     border-bottom: 3px solid $thentia-yellow;
     color: $black !important;
   }
 }
 
 .sso-blue{
-  .sso-page-menu-active {
+  .sso-page-menu-active, .ssopagemenuactive {
     border-bottom: 3px solid $thentia-blue;
     color: $black !important;
   }
@@ -201,5 +201,22 @@
     .k-animation-container {
       font-size: 15px !important;
     }
+  }
+}
+
+.sso-breadcrumbs {
+  font-size: 14px;
+  a {
+    color: rgba($black, .7);
+    @include hover-state {
+      text-decoration: none;
+    }
+  }
+  span {
+    color: rgba($black, .35);
+  }
+  .active {
+    font-weight: $semibold;
+    color: $black;
   }
 }

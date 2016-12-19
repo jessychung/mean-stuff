@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var ManageUsersSingleComponent = (function () {
     function ManageUsersSingleComponent(location) {
         this.location = location;
@@ -17,15 +17,15 @@ var ManageUsersSingleComponent = (function () {
     ManageUsersSingleComponent.prototype.goBack = function () {
         this.location.back();
     };
-    ManageUsersSingleComponent = __decorate([
-        core_1.Component({
-            selector: 'manage-users-single',
-            templateUrl: 'app/manage-users-single/manage-users-single.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [common_1.Location])
-    ], ManageUsersSingleComponent);
     return ManageUsersSingleComponent;
 }());
+ManageUsersSingleComponent = __decorate([
+    core_1.Component({
+        selector: 'manage-users-single',
+        templateUrl: 'app/manage-users-single/manage-users-single.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [common_1.Location])
+], ManageUsersSingleComponent);
 exports.ManageUsersSingleComponent = ManageUsersSingleComponent;
 //# sourceMappingURL=manage-users-single.component.js.map

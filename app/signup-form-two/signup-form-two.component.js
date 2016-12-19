@@ -8,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var forms_1 = require('@angular/forms');
-var common_1 = require('@angular/common');
+var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
+var common_1 = require("@angular/common");
 var SignupFormTwoComponent = (function () {
     function SignupFormTwoComponent(fb, location) {
         this.location = location;
@@ -35,15 +35,15 @@ var SignupFormTwoComponent = (function () {
     SignupFormTwoComponent.prototype.goBack = function () {
         this.location.back();
     };
-    SignupFormTwoComponent = __decorate([
-        core_1.Component({
-            selector: 'signup-form-two',
-            templateUrl: 'app/signup-form-two/signup-form-two.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [forms_1.FormBuilder, common_1.Location])
-    ], SignupFormTwoComponent);
     return SignupFormTwoComponent;
 }());
+SignupFormTwoComponent = __decorate([
+    core_1.Component({
+        selector: 'signup-form-two',
+        templateUrl: 'app/signup-form-two/signup-form-two.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [forms_1.FormBuilder, common_1.Location])
+], SignupFormTwoComponent);
 exports.SignupFormTwoComponent = SignupFormTwoComponent;
 //# sourceMappingURL=signup-form-two.component.js.map

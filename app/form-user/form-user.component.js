@@ -8,10 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var forms_1 = require('@angular/forms');
-var common_1 = require('@angular/common');
-var router_1 = require('@angular/router');
+var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
+var common_1 = require("@angular/common");
+var router_1 = require("@angular/router");
 var FormUserComponent = (function () {
     function FormUserComponent(fb, location, _router) {
         this.location = location;
@@ -41,15 +41,15 @@ var FormUserComponent = (function () {
     FormUserComponent.prototype.isAddNew = function () {
         return this.router.url == 'main/manage-users-single';
     };
-    FormUserComponent = __decorate([
-        core_1.Component({
-            selector: 'form-user',
-            templateUrl: 'app/form-user/form-user.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [forms_1.FormBuilder, common_1.Location, router_1.Router])
-    ], FormUserComponent);
     return FormUserComponent;
 }());
+FormUserComponent = __decorate([
+    core_1.Component({
+        selector: 'form-user',
+        templateUrl: 'app/form-user/form-user.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [forms_1.FormBuilder, common_1.Location, router_1.Router])
+], FormUserComponent);
 exports.FormUserComponent = FormUserComponent;
 //# sourceMappingURL=form-user.component.js.map

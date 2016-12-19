@@ -1,5 +1,5 @@
 "use strict";
-var router_1 = require('@angular/router');
+var router_1 = require("@angular/router");
 var login_component_1 = require("./login/login.component");
 var login_form_component_1 = require("./login-form/login-form.component");
 var forgotpassword_component_1 = require("./forgotpassword/forgotpassword.component");
@@ -29,9 +29,11 @@ var manage_users_single_component_1 = require("./manage-users-single/manage-user
 var manage_users_display_component_1 = require("./manage-users-display/manage-users-display.component");
 var manage_users_edit_component_1 = require("./manage-users-edit/manage-users-edit.component");
 var timesheets_single_component_1 = require("./timesheets-single/timesheets-single.component");
+var timesheets_task_component_1 = require("./timesheets-task/timesheets-task.component");
 var timesheets_clients_component_1 = require("./timesheets-clients/timesheets-clients.component");
 var invoices_custom_component_1 = require("./invoices-custom/invoices-custom.component");
 var vectorleap_component_1 = require("./vectorleap/vectorleap.component");
+var timesheets_clients_addedit_component_1 = require("./timesheets-clients-addedit/timesheets-clients-addedit.component");
 var appRoutes = [
     {
         path: '',
@@ -135,6 +137,14 @@ var appRoutes = [
                     {
                         path: 'timesheets-clients',
                         component: timesheets_clients_component_1.TimesheetsClientsComponent
+                    },
+                    {
+                        path: 'timesheets-clients-edit/:id',
+                        component: timesheets_clients_addedit_component_1.TimesheetsClientsAddeditComponent
+                    },
+                    {
+                        path: 'timesheets-clients-add',
+                        component: timesheets_clients_addedit_component_1.TimesheetsClientsAddeditComponent
                     }
                 ]
             },
@@ -177,6 +187,10 @@ var appRoutes = [
             {
                 path: 'timesheets-single',
                 component: timesheets_single_component_1.TimesheetsSingleComponent
+            },
+            {
+                path: 'timesheets-task',
+                component: timesheets_task_component_1.TimesheetsTaskComponent
             },
             {
                 path: 'vectorleap',

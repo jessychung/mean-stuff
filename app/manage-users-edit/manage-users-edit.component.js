@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var ManageUsersEditComponent = (function () {
     function ManageUsersEditComponent(location) {
         this.location = location;
@@ -17,15 +17,15 @@ var ManageUsersEditComponent = (function () {
     ManageUsersEditComponent.prototype.goBack = function () {
         this.location.back();
     };
-    ManageUsersEditComponent = __decorate([
-        core_1.Component({
-            selector: 'manage-users-edit',
-            templateUrl: 'app/manage-users-edit/manage-users-edit.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [common_1.Location])
-    ], ManageUsersEditComponent);
     return ManageUsersEditComponent;
 }());
+ManageUsersEditComponent = __decorate([
+    core_1.Component({
+        selector: 'manage-users-edit',
+        templateUrl: 'app/manage-users-edit/manage-users-edit.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [common_1.Location])
+], ManageUsersEditComponent);
 exports.ManageUsersEditComponent = ManageUsersEditComponent;
 //# sourceMappingURL=manage-users-edit.component.js.map

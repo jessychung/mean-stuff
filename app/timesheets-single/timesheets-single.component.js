@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var TimesheetsSingleComponent = (function () {
     function TimesheetsSingleComponent(location) {
         this.location = location;
@@ -17,15 +17,15 @@ var TimesheetsSingleComponent = (function () {
     TimesheetsSingleComponent.prototype.goBack = function () {
         this.location.back();
     };
-    TimesheetsSingleComponent = __decorate([
-        core_1.Component({
-            selector: 'timesheets-single',
-            templateUrl: 'app/timesheets-single/timesheets-single.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [common_1.Location])
-    ], TimesheetsSingleComponent);
     return TimesheetsSingleComponent;
 }());
+TimesheetsSingleComponent = __decorate([
+    core_1.Component({
+        selector: 'timesheets-single',
+        templateUrl: 'app/timesheets-single/timesheets-single.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [common_1.Location])
+], TimesheetsSingleComponent);
 exports.TimesheetsSingleComponent = TimesheetsSingleComponent;
 //# sourceMappingURL=timesheets-single.component.js.map

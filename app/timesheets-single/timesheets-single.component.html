@@ -9,14 +9,26 @@
                     <div class="sso-back" (click)="goBack()" style="display:block; margin-bottom: 15px">
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </div>
-                    <div class="sso-delete" style="display:block;">
+
+                    <div class="sso-addnew" style="display:block; margin-bottom: 15px" tooltipPlacement="right" tooltip="Add new">
+                        <i aria-hidden="true" class="fa fa-plus"></i>
+                    </div>
+
+                    <div class="sso-delete" style="display:block;" tooltipPlacement="right" tooltip="Delete">
                         <i class="thentia-trash" aria-hidden="true"></i>
                     </div>
                 </div>
 
                 <div class="sso-timesheets sso-interior-block">
-                    <h1><a href="#">CMO</a>
-                        <span> / </span> Online Self Service</h1>
+                    <div class="sso-breadcrumbs">
+                        <a href="#">CMO</a>
+                        <span> / </span>
+                        <a href="#">Projects</a>
+                        <span> / </span>
+                        <a class="active">Tasks</a>
+                    </div>
+
+                    <h1 style="margin-top: 10px; margin-bottom: 20px">CMO Online Self Service</h1>
 
                     <table class="table table-no-hover">
                         <thead>
@@ -31,8 +43,8 @@
                         <tbody>
                         <tr>
                             <td rowspan="3">
-                                <div class="sso-avatar-small" style="background-color: #ad2c57">BE</div>
-                                Beth Ericksen
+                                <div class="sso-avatar-small">JS</div>
+                                John Smith <span style="opacity: .5">(you)</span>
                             </td>
                             <td>Adding invoicing capability</td>
                             <td>
@@ -82,7 +94,7 @@
                         <tbody>
                         <tr>
                             <td rowspan="3">
-                                <div class="sso-avatar-small" style="background-color: #1a9872">BE</div>
+                                <div class="sso-avatar-small" style="background-color: #ad2c57">BE</div>
                                 Jane Doe
                             </td>
                             <td>Adding invoicing capability</td>
@@ -94,9 +106,7 @@
                             </td>
                             <td><strong>3h30m</strong></td>
                             <td>
-                                <div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">
-                                    <i class="thentia-edit"></i> edit
-                                </div>
+
                             </td>
                         </tr>
                         <tr>
@@ -109,10 +119,16 @@
                             </td>
                             <td><strong>3h30m</strong></td>
                             <td>
-                                <div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">
-                                    <i class="thentia-edit"></i> edit
-                                </div>
+
                             </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr class="sso-table-total">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td colspan="2">Total: 30h30m</td>
                         </tr>
                         </tbody>
                     </table>

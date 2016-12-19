@@ -1063,11 +1063,11 @@ input::-webkit-inner-spin-button {
       color: rgba(61, 71, 79, 0.7);
       transition: color .3s; }
 
-.sso-page-menu-active {
+.sso-page-menu-active, .ssopagemenuactive {
   border-bottom: 3px solid #4cb89e;
   color: #3d474f !important; }
 
-.sso-green .sso-page-menu-active {
+.sso-green .sso-page-menu-active, .sso-green .ssopagemenuactive {
   border-bottom: 3px solid #4cb89e;
   color: #3d474f !important; }
 
@@ -1079,15 +1079,15 @@ input::-webkit-inner-spin-button {
     outline: none;
     color: #fff; }
 
-.sso-red .sso-page-menu-active {
+.sso-red .sso-page-menu-active, .sso-red .ssopagemenuactive {
   border-bottom: 3px solid #eb563c;
   color: #3d474f !important; }
 
-.sso-yellow .sso-page-menu-active {
+.sso-yellow .sso-page-menu-active, .sso-yellow .ssopagemenuactive {
   border-bottom: 3px solid #f0b030;
   color: #3d474f !important; }
 
-.sso-blue .sso-page-menu-active {
+.sso-blue .sso-page-menu-active, .sso-blue .ssopagemenuactive {
   border-bottom: 3px solid #004f75;
   color: #3d474f !important; }
 
@@ -1168,6 +1168,18 @@ input::-webkit-inner-spin-button {
     line-height: 2.35em !important; }
   .sso-interior-form .k-dropdown .k-animation-container {
     font-size: 15px !important; }
+
+.sso-breadcrumbs {
+  font-size: 14px; }
+  .sso-breadcrumbs a {
+    color: rgba(61, 71, 79, 0.7); }
+    .sso-breadcrumbs a:hover, .sso-breadcrumbs a:active, .sso-breadcrumbs a:focus {
+      text-decoration: none; }
+  .sso-breadcrumbs span {
+    color: rgba(61, 71, 79, 0.35); }
+  .sso-breadcrumbs .active {
+    font-weight: 600;
+    color: #3d474f; }
 
 @media only screen and (max-width: 767px) {
   .sso-signup-left-side-container {
@@ -1432,6 +1444,8 @@ input::-webkit-inner-spin-button {
         background-color: transparent !important; }
     .sso-support-tickets .sso-support-tickets-textarea .sso-support-tickets-controls {
       border-top: 1px solid #e0e0e0; }
+      .sso-support-tickets .sso-support-tickets-textarea .sso-support-tickets-controls span {
+        color: #cccccc; }
       .sso-support-tickets .sso-support-tickets-textarea .sso-support-tickets-controls div, .sso-support-tickets .sso-support-tickets-textarea .sso-support-tickets-controls button {
         display: inline-block;
         font-size: 14px; }
@@ -1479,6 +1493,37 @@ input::-webkit-inner-spin-button {
   font-size: 13px;
   font-weight: 400; }
 
+.sso-mark-as {
+  background-color: #f1f1f1;
+  padding: 10px 15px;
+  margin-top: 15px;
+  font-size: 14px; }
+  .sso-mark-as input[type="checkbox"] {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    margin-top: 0; }
+  .sso-mark-as input[type="checkbox"]:after {
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-size: 12px;
+    color: #f7f7f7;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-radius: 100px;
+    background-color: #e0e0e0;
+    display: block; }
+  .sso-mark-as input[type=checkbox]:checked:after {
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-size: 12px;
+    background-color: #4cb89e;
+    color: #fff; }
+
 .sso-table-button {
   border: 1px solid #cccccc;
   background-color: #fff;
@@ -1506,6 +1551,9 @@ input::-webkit-inner-spin-button {
   .table ul {
     padding-left: 17px;
     margin-bottom: 0; }
+  .table a {
+    font-weight: 600;
+    text-decoration: none; }
 
 .table-no-hover tr:hover, .table-no-hover tr:active, .table-no-hover tr:focus {
   background-color: transparent !important; }
@@ -1513,11 +1561,57 @@ input::-webkit-inner-spin-button {
 .table-no-hover:hover, .table-no-hover:active, .table-no-hover:focus {
   background-color: transparent !important; }
 
+.table-no-hover .sso-table-total:hover {
+  background-color: #f7f7f7 !important; }
+
 .table > tbody + tbody {
   border-top: 0; }
 
 .body-striped tbody:nth-of-type(even) {
   background-color: #f3f3f3; }
+
+.sso-table-total {
+  background-color: #f7f7f7; }
+  .sso-table-total td {
+    padding: 12px 10px !important;
+    font-weight: 600; }
+  .sso-table-total:hover, .sso-table-total:active, .sso-table-total:focus {
+    background-color: #f7f7f7 !important; }
+
+.datatable.material {
+  background: transparent !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important; }
+
+.pagination > li > a, .pagination > li > span {
+  color: rgba(61, 71, 79, 0.5) !important;
+  font-weight: 600;
+  background-color: transparent !important;
+  border: 0px !important;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+  .pagination > li > a:hover, .pagination > li > a:active, .pagination > li > a:focus, .pagination > li > span:hover, .pagination > li > span:active, .pagination > li > span:focus {
+    background-color: #eaeaea !important;
+    border-radius: 100px !important;
+    color: #3d474f !important;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+
+.pagination .active a {
+  background-color: #eaeaea !important;
+  border-radius: 100px;
+  color: #3d474f !important; }
+
+.k-widget.k-grid {
+  background-color: transparent !important; }
 
 .sso-top-bar {
   border-bottom: 1px solid #eaeaea;

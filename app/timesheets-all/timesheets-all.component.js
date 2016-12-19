@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var TimesheetsAllComponent = (function () {
     function TimesheetsAllComponent(location) {
         this.location = location;
@@ -17,15 +17,15 @@ var TimesheetsAllComponent = (function () {
     TimesheetsAllComponent.prototype.goBack = function () {
         this.location.back();
     };
-    TimesheetsAllComponent = __decorate([
-        core_1.Component({
-            selector: 'timesheets-all',
-            templateUrl: 'app/timesheets-all/timesheets-all.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [common_1.Location])
-    ], TimesheetsAllComponent);
     return TimesheetsAllComponent;
 }());
+TimesheetsAllComponent = __decorate([
+    core_1.Component({
+        selector: 'timesheets-all',
+        templateUrl: 'app/timesheets-all/timesheets-all.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [common_1.Location])
+], TimesheetsAllComponent);
 exports.TimesheetsAllComponent = TimesheetsAllComponent;
 //# sourceMappingURL=timesheets-all.component.js.map

@@ -23,14 +23,14 @@
             <div class="row">
                 <div class="col-lg-10 col-md-10 col-sm-8">
                     <ul class="sso-page-menu">
-                        <li [routerLink]="['/main/timesheets/timesheets-all']" [routerLinkActive]="['sso-page-menu-active']">All Tasks</li>
-                        <li [routerLink]="['/main/timesheets/timesheets-clients']" [routerLinkActive]="['sso-page-menu-active']">Clients</li>
+                        <li [routerLink]="['/main/timesheets/timesheets-all']" [routerLinkActive]="['sso-page-menu-active']">All Projects</li>
+                        <li [routerLink]="['/main/timesheets/timesheets-clients']" [routerLinkActive]="['sso-page-menu-active']" [ngClass]="{ ssopagemenuactive: checkifactive() }">Clients</li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-4" style="text-align: right">
-                    <button class="btn btn-sm btn-yellow" style="margin-top: 7px">
-                        <i class="fa fa-plus"></i> Add New
-                    </button>
+                    <!--<button class="btn btn-sm btn-yellow" style="margin-top: 7px">-->
+                        <!--<i class="fa fa-plus"></i> Add New-->
+                    <!--</button>-->
                 </div>
             </div>
 

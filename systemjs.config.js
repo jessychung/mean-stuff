@@ -1,7 +1,3 @@
-/**
- * System configuration for Angular samples
- * Adjust as necessary for your application needs.
- */
 (function (global) {
     System.config({
         paths: {
@@ -25,6 +21,8 @@
             // other libraries
             'rxjs':                      'npm:rxjs',
             'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+            'ng2-bootstrap': 'npm:ng2-bootstrap',
+            'moment': 'npm:moment',
             //kendo
             '@progress': 'npm:@progress',
             '@telerik': 'npm:@telerik'
@@ -41,8 +39,14 @@
             "@progress/kendo-angular-dropdowns": { main: './dist/npm/js/main.js', defaultExtension: 'js' },
             "@progress/kendo-angular-buttons": { main: './dist/npm/main.js', defaultExtension: 'js' },
             "@progress/kendo-angular-popup": { main: './dist/npm/js/main.js', defaultExtension: 'js' },
+            "@progress/kendo-angular-grid": { main: './dist/npm/main.js', defaultExtension: 'js' },
+            "@progress/kendo-data-query": { main: './dist/npm/main.js', defaultExtension: 'js' },
+            "@progress/kendo-angular-intl": { main: './dist/npm/main.js', defaultExtension: 'js' },
+            "@telerik/kendo-intl": { main: './dist/npm/main.js', defaultExtension: 'js' },
             "@telerik/kendo-dropdowns-common": { main: './dist/npm/js/main.js', defaultExtension: 'js' },
-            "@progress/kendo-popup-common": { main: './dist/npm/js/main.js', defaultExtension: 'js' }
+            "@progress/kendo-popup-common": { main: './dist/npm/js/main.js', defaultExtension: 'js' },
+            'ng2-bootstrap': { main: './ng2-bootstrap.js', defaultExtension: 'js' },
+            'moment': { main: './moment.js', defaultExtension: 'js' }
         }
     });
 })(this);

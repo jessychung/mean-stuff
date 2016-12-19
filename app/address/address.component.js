@@ -8,19 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var AddressComponent = (function () {
     function AddressComponent() {
     }
-    AddressComponent = __decorate([
-        core_1.Component({
-            selector: 'address',
-            templateUrl: 'app/address/address.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AddressComponent);
     return AddressComponent;
 }());
+AddressComponent = __decorate([
+    core_1.Component({
+        selector: 'address',
+        templateUrl: 'app/address/address.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [])
+], AddressComponent);
 exports.AddressComponent = AddressComponent;
 //# sourceMappingURL=address.component.js.map

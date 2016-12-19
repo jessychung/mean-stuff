@@ -8,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var forms_1 = require('@angular/forms');
-var country_1 = require('../list/country');
+var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
+var country_1 = require("../list/country");
 var SignupFormOneComponent = (function () {
     function SignupFormOneComponent(fb) {
         this.submitted = false;
@@ -31,15 +31,15 @@ var SignupFormOneComponent = (function () {
         this.submitted = true;
         console.log(this.submitted);
     };
-    SignupFormOneComponent = __decorate([
-        core_1.Component({
-            selector: 'signup-form-one',
-            templateUrl: 'app/signup-form-one/signup-form-one.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [forms_1.FormBuilder])
-    ], SignupFormOneComponent);
     return SignupFormOneComponent;
 }());
+SignupFormOneComponent = __decorate([
+    core_1.Component({
+        selector: 'signup-form-one',
+        templateUrl: 'app/signup-form-one/signup-form-one.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [forms_1.FormBuilder])
+], SignupFormOneComponent);
 exports.SignupFormOneComponent = SignupFormOneComponent;
 //# sourceMappingURL=signup-form-one.component.js.map

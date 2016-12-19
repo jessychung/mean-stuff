@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { TooltipModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './fake.service';
@@ -47,6 +50,9 @@ import {TimesheetsSingleComponent} from "./timesheets-single/timesheets-single.c
 import {TimesheetsClientsComponent} from "./timesheets-clients/timesheets-clients.component";
 import {InvoicesCustomComponent} from "./invoices-custom/invoices-custom.component";
 import {VectorleapComponent} from "./vectorleap/vectorleap.component";
+import {TimesheetsTaskComponent} from "./timesheets-task/timesheets-task.component";
+import {TimesheetsClientsAddeditComponent} from "./timesheets-clients-addedit/timesheets-clients-addedit.component";
+import {FormClientComponent} from "./form-client/form-client.component";
 
 
 @NgModule({
@@ -56,6 +62,8 @@ import {VectorleapComponent} from "./vectorleap/vectorleap.component";
         ReactiveFormsModule,
         DropDownsModule,
         ButtonsModule,
+        TooltipModule,
+        GridModule,
         routing,
         InMemoryWebApiModule.forRoot(InMemoryDataService)
     ],
@@ -85,6 +93,8 @@ import {VectorleapComponent} from "./vectorleap/vectorleap.component";
         TimesheetsAllComponent,
         TimesheetsClientsComponent,
         TimesheetsSingleComponent,
+        TimesheetsTaskComponent,
+        TimesheetsClientsAddeditComponent,
         AddressComponent,
         AddressCompanyComponent,
         AddressPrimaryComponent,
@@ -98,6 +108,7 @@ import {VectorleapComponent} from "./vectorleap/vectorleap.component";
         FormCompanyComponent,
         FormPrimaryComponent,
         FormUserComponent,
+        FormClientComponent,
         VectorleapComponent
     ],
     bootstrap: [ AppComponent ]

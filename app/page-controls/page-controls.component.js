@@ -8,19 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var PageControlsComponent = (function () {
     function PageControlsComponent() {
     }
-    PageControlsComponent = __decorate([
-        core_1.Component({
-            selector: 'page-controls',
-            templateUrl: 'app/page-controls/page-controls.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [])
-    ], PageControlsComponent);
     return PageControlsComponent;
 }());
+PageControlsComponent = __decorate([
+    core_1.Component({
+        selector: 'page-controls',
+        templateUrl: 'app/page-controls/page-controls.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [])
+], PageControlsComponent);
 exports.PageControlsComponent = PageControlsComponent;
 //# sourceMappingURL=page-controls.component.js.map

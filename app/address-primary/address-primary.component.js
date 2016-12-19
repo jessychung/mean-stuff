@@ -8,10 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var forms_1 = require('@angular/forms');
-var common_1 = require('@angular/common');
-var country_1 = require('../list/country');
+var core_1 = require("@angular/core");
+var forms_1 = require("@angular/forms");
+var common_1 = require("@angular/common");
+var country_1 = require("../list/country");
 var AddressPrimaryComponent = (function () {
     function AddressPrimaryComponent(fb, location) {
         this.location = location;
@@ -36,15 +36,15 @@ var AddressPrimaryComponent = (function () {
     AddressPrimaryComponent.prototype.goBack = function () {
         this.location.back();
     };
-    AddressPrimaryComponent = __decorate([
-        core_1.Component({
-            selector: 'address-primary',
-            templateUrl: 'app/address-primary/address-primary.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [forms_1.FormBuilder, common_1.Location])
-    ], AddressPrimaryComponent);
     return AddressPrimaryComponent;
 }());
+AddressPrimaryComponent = __decorate([
+    core_1.Component({
+        selector: 'address-primary',
+        templateUrl: 'app/address-primary/address-primary.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [forms_1.FormBuilder, common_1.Location])
+], AddressPrimaryComponent);
 exports.AddressPrimaryComponent = AddressPrimaryComponent;
 //# sourceMappingURL=address-primary.component.js.map

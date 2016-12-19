@@ -8,19 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var TopbarComponent = (function () {
     function TopbarComponent() {
     }
-    TopbarComponent = __decorate([
-        core_1.Component({
-            selector: 'top-bar',
-            templateUrl: 'app/top-bar/top-bar.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [])
-    ], TopbarComponent);
     return TopbarComponent;
 }());
+TopbarComponent = __decorate([
+    core_1.Component({
+        selector: 'top-bar',
+        templateUrl: 'app/top-bar/top-bar.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [])
+], TopbarComponent);
 exports.TopbarComponent = TopbarComponent;
 //# sourceMappingURL=top-bar.component.js.map

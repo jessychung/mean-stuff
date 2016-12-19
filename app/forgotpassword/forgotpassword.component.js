@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var ForgotpasswordComponent = (function () {
     function ForgotpasswordComponent(location) {
         this.location = location;
@@ -17,15 +17,15 @@ var ForgotpasswordComponent = (function () {
     ForgotpasswordComponent.prototype.goBack = function () {
         this.location.back();
     };
-    ForgotpasswordComponent = __decorate([
-        core_1.Component({
-            selector: 'forgotpassword',
-            templateUrl: 'app/forgotpassword/forgotpassword.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [common_1.Location])
-    ], ForgotpasswordComponent);
     return ForgotpasswordComponent;
 }());
+ForgotpasswordComponent = __decorate([
+    core_1.Component({
+        selector: 'forgotpassword',
+        templateUrl: 'app/forgotpassword/forgotpassword.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [common_1.Location])
+], ForgotpasswordComponent);
 exports.ForgotpasswordComponent = ForgotpasswordComponent;
 //# sourceMappingURL=forgotpassword.component.js.map

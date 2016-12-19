@@ -36,11 +36,11 @@
       color: rgba(61, 71, 79, 0.7);
       transition: color .3s; }
 
-.sso-page-menu-active {
+.sso-page-menu-active, .ssopagemenuactive {
   border-bottom: 3px solid #4cb89e;
   color: #3d474f !important; }
 
-.sso-green .sso-page-menu-active {
+.sso-green .sso-page-menu-active, .sso-green .ssopagemenuactive {
   border-bottom: 3px solid #4cb89e;
   color: #3d474f !important; }
 
@@ -52,15 +52,15 @@
     outline: none;
     color: #fff; }
 
-.sso-red .sso-page-menu-active {
+.sso-red .sso-page-menu-active, .sso-red .ssopagemenuactive {
   border-bottom: 3px solid #eb563c;
   color: #3d474f !important; }
 
-.sso-yellow .sso-page-menu-active {
+.sso-yellow .sso-page-menu-active, .sso-yellow .ssopagemenuactive {
   border-bottom: 3px solid #f0b030;
   color: #3d474f !important; }
 
-.sso-blue .sso-page-menu-active {
+.sso-blue .sso-page-menu-active, .sso-blue .ssopagemenuactive {
   border-bottom: 3px solid #004f75;
   color: #3d474f !important; }
 
@@ -141,3 +141,15 @@
     line-height: 2.35em !important; }
   .sso-interior-form .k-dropdown .k-animation-container {
     font-size: 15px !important; }
+
+.sso-breadcrumbs {
+  font-size: 14px; }
+  .sso-breadcrumbs a {
+    color: rgba(61, 71, 79, 0.7); }
+    .sso-breadcrumbs a:hover, .sso-breadcrumbs a:active, .sso-breadcrumbs a:focus {
+      text-decoration: none; }
+  .sso-breadcrumbs span {
+    color: rgba(61, 71, 79, 0.35); }
+  .sso-breadcrumbs .active {
+    font-weight: 600;
+    color: #3d474f; }

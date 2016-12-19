@@ -8,19 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var SignupComponent = (function () {
     function SignupComponent() {
     }
-    SignupComponent = __decorate([
-        core_1.Component({
-            selector: 'signup-shell',
-            templateUrl: 'app/signup/signup.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [])
-    ], SignupComponent);
     return SignupComponent;
 }());
+SignupComponent = __decorate([
+    core_1.Component({
+        selector: 'signup-shell',
+        templateUrl: 'app/signup/signup.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [])
+], SignupComponent);
 exports.SignupComponent = SignupComponent;
 //# sourceMappingURL=signup.component.js.map

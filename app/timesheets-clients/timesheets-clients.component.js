@@ -8,24 +8,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
+var router_1 = require("@angular/router");
 var TimesheetsClientsComponent = (function () {
-    function TimesheetsClientsComponent(location) {
+    function TimesheetsClientsComponent(location, router) {
         this.location = location;
+        this.router = router;
     }
     TimesheetsClientsComponent.prototype.goBack = function () {
         this.location.back();
     };
-    TimesheetsClientsComponent = __decorate([
-        core_1.Component({
-            selector: 'timesheets-clients',
-            templateUrl: 'app/timesheets-clients/timesheets-clients.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [common_1.Location])
-    ], TimesheetsClientsComponent);
+    TimesheetsClientsComponent.prototype.checkIfEdit = function () {
+        console.log(this.router.url);
+    };
     return TimesheetsClientsComponent;
 }());
+TimesheetsClientsComponent = __decorate([
+    core_1.Component({
+        selector: 'timesheets-clients',
+        templateUrl: 'app/timesheets-clients/timesheets-clients.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [common_1.Location,
+        router_1.Router])
+], TimesheetsClientsComponent);
 exports.TimesheetsClientsComponent = TimesheetsClientsComponent;
 //# sourceMappingURL=timesheets-clients.component.js.map

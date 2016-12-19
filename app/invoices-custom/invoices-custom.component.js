@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var InvoicesCustomComponent = (function () {
     function InvoicesCustomComponent(location) {
         this.location = location;
@@ -17,15 +17,15 @@ var InvoicesCustomComponent = (function () {
     InvoicesCustomComponent.prototype.goBack = function () {
         this.location.back();
     };
-    InvoicesCustomComponent = __decorate([
-        core_1.Component({
-            selector: 'invoices-custom',
-            templateUrl: 'app/invoices-custom/invoices-custom.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [common_1.Location])
-    ], InvoicesCustomComponent);
     return InvoicesCustomComponent;
 }());
+InvoicesCustomComponent = __decorate([
+    core_1.Component({
+        selector: 'invoices-custom',
+        templateUrl: 'app/invoices-custom/invoices-custom.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [common_1.Location])
+], InvoicesCustomComponent);
 exports.InvoicesCustomComponent = InvoicesCustomComponent;
 //# sourceMappingURL=invoices-custom.component.js.map

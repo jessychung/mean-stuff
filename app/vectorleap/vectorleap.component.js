@@ -8,19 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var VectorleapComponent = (function () {
     function VectorleapComponent() {
     }
-    VectorleapComponent = __decorate([
-        core_1.Component({
-            selector: 'vectorleap',
-            templateUrl: 'app/vectorleap/vectorleap.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [])
-    ], VectorleapComponent);
     return VectorleapComponent;
 }());
+VectorleapComponent = __decorate([
+    core_1.Component({
+        selector: 'vectorleap',
+        templateUrl: 'app/vectorleap/vectorleap.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [])
+], VectorleapComponent);
 exports.VectorleapComponent = VectorleapComponent;
 //# sourceMappingURL=vectorleap.component.js.map

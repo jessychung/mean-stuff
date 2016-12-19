@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
+var core_1 = require("@angular/core");
+var common_1 = require("@angular/common");
 var SupportTicketsPriorityComponent = (function () {
     function SupportTicketsPriorityComponent(location) {
         this.location = location;
@@ -17,15 +17,15 @@ var SupportTicketsPriorityComponent = (function () {
     SupportTicketsPriorityComponent.prototype.goBack = function () {
         this.location.back();
     };
-    SupportTicketsPriorityComponent = __decorate([
-        core_1.Component({
-            selector: 'support-tickets-priority',
-            templateUrl: 'app/support-tickets-priority/support-tickets-priority.component.html',
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [common_1.Location])
-    ], SupportTicketsPriorityComponent);
     return SupportTicketsPriorityComponent;
 }());
+SupportTicketsPriorityComponent = __decorate([
+    core_1.Component({
+        selector: 'support-tickets-priority',
+        templateUrl: 'app/support-tickets-priority/support-tickets-priority.component.html',
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [common_1.Location])
+], SupportTicketsPriorityComponent);
 exports.SupportTicketsPriorityComponent = SupportTicketsPriorityComponent;
 //# sourceMappingURL=support-tickets-priority.component.js.map

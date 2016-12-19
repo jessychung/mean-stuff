@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation} from '@angular/core';
 import { Location }                 from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component ({
     selector: 'timesheets-clients',
@@ -9,10 +10,19 @@ import { Location }                 from '@angular/common';
 
 export class TimesheetsClientsComponent {
     constructor(
-        private location: Location
+        private location: Location,
+        private router: Router
     ) {}
 
     goBack(): void {
         this.location.back();
     }
+
+    checkIfEdit():void {
+        console.log(this.router.url);
+    }
+
+    // onClick () {
+    //     this.router.navigate(['/component-two', 456]);
+    // }
 }

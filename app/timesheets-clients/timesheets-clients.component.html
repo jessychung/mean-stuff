@@ -22,7 +22,10 @@
         </td>
         <td>
             <div class="sso-table-button" [routerLink]="['/main/timesheets-single']">
-                <i class="thentia-eye"></i>  view
+                <i class="thentia-eye"></i>  view projects
+            </div>
+            <div class="sso-table-button" [routerLink]="['/main/timesheets/timesheets-clients-edit', 1]">
+                <i class="thentia-edit"></i>  edit
             </div>
         </td>
     </tr>
@@ -37,8 +40,11 @@
             Canada
         </td>
         <td>
-            <div class="sso-table-button" [routerLink]="['/main/timesheets-single']">
-                <i class="thentia-eye"></i>  view
+            <div class="sso-table-button" [routerLink]="['/main/timesheets-single', 1]">
+                <i class="thentia-eye"></i>  view projects
+            </div>
+            <div class="sso-table-button" [routerLink]="['/main/timesheets/timesheets-clients-edit', 1]">
+                <i class="thentia-edit"></i>  edit
             </div>
         </td>
     </tr>
@@ -54,9 +60,22 @@
         </td>
         <td>
             <div class="sso-table-button" [routerLink]="['/main/timesheets-single']">
-                <i class="thentia-eye"></i>  view
+                <i class="thentia-eye"></i>  view projects
+            </div>
+
+            <div class="sso-table-button" [routerLink]="['/main/timesheets/timesheets-clients-edit', 1]">
+                <i class="thentia-edit"></i>  edit
             </div>
         </td>
     </tr>
     </tbody>
 </table>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-sm btn-yellow" style="margin-top: 7px" [routerLink]="['/main/timesheets/timesheets-clients-add']">
+            <i class="fa fa-plus"></i> Add a new client
+        </button>
+    </div>
+</div>

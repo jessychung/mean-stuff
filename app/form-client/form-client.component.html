@@ -1,0 +1,62 @@
+<form [formGroup]="clientForm" (ngSubmit)="submitForm(clientForm.value)" novalidate>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <div class="form-group" [ngClass]="{ 'form-error': !clientForm.controls['ssoclientname'].valid && submitted || clientForm.controls['ssoclientname'].touched, 'form-success': clientForm.controls['ssoclientname'].valid }">
+                <label for="sso-clientname">Client Name</label>
+                <div style="padding: 2px"></div>
+                <input type="text" class="form-control" id="sso-clientname" [formControl]="clientForm.controls['ssoclientname']" />
+                <div class="sso-help-block-inline" *ngIf="clientForm.controls['ssoclientname'].hasError('required') && submitted || clientForm.controls['ssoclientname'].hasError('required') && clientForm.controls['ssoclientname'].touched">Required</div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="form-group" [ngClass]="{ 'form-error': !clientForm.controls['ssomaincontact'].valid && submitted || clientForm.controls['ssomaincontact'].touched, 'form-success': clientForm.controls['ssomaincontact'].valid }">
+                <label for="sso-maincontact">Main Contact</label>
+                <div style="padding: 2px"></div>
+                <input type="text" class="form-control" id="sso-maincontact" [formControl]="clientForm.controls['ssomaincontact']" />
+                <div class="sso-help-block-inline" *ngIf="clientForm.controls['ssomaincontact'].hasError('required') && submitted || clientForm.controls['ssomaincontact'].hasError('required') && clientForm.controls['ssomaincontact'].touched">Required</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <div class="form-group" [ngClass]="{ 'form-error': !clientForm.controls['ssoclientemail'].valid && submitted || clientForm.controls['ssoclientemail'].touched, 'form-success': clientForm.controls['ssoclientemail'].valid }">
+                <label for="sso-clientemail">Contact Email</label>
+                <div style="padding: 2px"></div>
+                <input type="text" class="form-control" id="sso-clientemail" [formControl]="clientForm.controls['ssoclientemail']" />
+                <div class="sso-help-block-inline" *ngIf="clientForm.controls['ssoclientemail'].hasError('required') && submitted || clientForm.controls['ssoclientemail'].hasError('required') && clientForm.controls['ssoclientemail'].touched">Required</div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <div class="form-group" [ngClass]="{ 'form-error': !clientForm.controls['ssoclienttel'].valid && submitted || clientForm.controls['ssoclienttel'].touched, 'form-success': clientForm.controls['ssoclienttel'].valid }">
+                <label for="sso-clienttel">Phone</label>
+                <div style="padding: 2px"></div>
+                <input type="text" class="form-control" id="sso-clienttel" [formControl]="clientForm.controls['ssoclienttel']" />
+                <div class="sso-help-block-inline" *ngIf="clientForm.controls['ssoclienttel'].hasError('required') && submitted || clientForm.controls['ssoclienttel'].hasError('required') && clientForm.controls['ssoclienttel'].touched">Required</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <div class="form-group" [ngClass]="{ 'form-error': !clientForm.controls['ssoclientaddress'].valid && submitted || clientForm.controls['ssoclientaddress'].touched, 'form-success': clientForm.controls['ssoclientaddress'].valid }">
+                <label for="sso-clientaddress">Contact Address</label>
+                <div style="padding: 2px"></div>
+                <textarea type="text" class="form-control" id="sso-clientaddress" [formControl]="clientForm.controls['ssoclientaddress']"></textarea>
+                <div class="sso-help-block-inline" *ngIf="clientForm.controls['ssoclientaddress'].hasError('required') && submitted || clientForm.controls['ssoclientaddress'].hasError('required') && clientForm.controls['ssoclientaddress'].touched">Required</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding: 10px"></div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <button type="submit" class="btn btn-yellow" style="margin-bottom: 0; margin-right: 10px">Save</button>
+            <button type="button" class="btn btn-light" style="margin-bottom: 0" (click)="goBack()" >Cancel</button>
+        </div>
+    </div>
+
+</form>

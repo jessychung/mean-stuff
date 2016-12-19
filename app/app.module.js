@@ -8,15 +8,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var forms_1 = require('@angular/forms');
-var kendo_angular_buttons_1 = require('@progress/kendo-angular-buttons');
-var kendo_angular_dropdowns_1 = require('@progress/kendo-angular-dropdowns');
-var angular_in_memory_web_api_1 = require('angular-in-memory-web-api');
-var fake_service_1 = require('./fake.service');
-var app_routing_1 = require('./app.routing');
-var app_component_1 = require('./app.component');
+var core_1 = require("@angular/core");
+var platform_browser_1 = require("@angular/platform-browser");
+var forms_1 = require("@angular/forms");
+var kendo_angular_buttons_1 = require("@progress/kendo-angular-buttons");
+var kendo_angular_dropdowns_1 = require("@progress/kendo-angular-dropdowns");
+var kendo_angular_grid_1 = require("@progress/kendo-angular-grid");
+var ng2_bootstrap_1 = require("ng2-bootstrap/ng2-bootstrap");
+var angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
+var fake_service_1 = require("./fake.service");
+var app_routing_1 = require("./app.routing");
+var app_component_1 = require("./app.component");
 var login_component_1 = require("./login/login.component");
 var forgotpassword_component_1 = require("./forgotpassword/forgotpassword.component");
 var alert_component_1 = require("./alerts/alert.component");
@@ -55,66 +57,74 @@ var timesheets_single_component_1 = require("./timesheets-single/timesheets-sing
 var timesheets_clients_component_1 = require("./timesheets-clients/timesheets-clients.component");
 var invoices_custom_component_1 = require("./invoices-custom/invoices-custom.component");
 var vectorleap_component_1 = require("./vectorleap/vectorleap.component");
+var timesheets_task_component_1 = require("./timesheets-task/timesheets-task.component");
+var timesheets_clients_addedit_component_1 = require("./timesheets-clients-addedit/timesheets-clients-addedit.component");
+var form_client_component_1 = require("./form-client/form-client.component");
 var AppModule = (function () {
     function AppModule() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule,
-                forms_1.ReactiveFormsModule,
-                kendo_angular_dropdowns_1.DropDownsModule,
-                kendo_angular_buttons_1.ButtonsModule,
-                app_routing_1.routing,
-                angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(fake_service_1.InMemoryDataService)
-            ],
-            declarations: [
-                app_component_1.AppComponent,
-                login_component_1.LoginComponent,
-                login_form_component_1.LoginFormComponent,
-                forgotpassword_component_1.ForgotpasswordComponent,
-                alert_component_1.AlertComponent,
-                signup_component_1.SignupComponent,
-                signup_form_one_component_1.SignupFormOneComponent,
-                signup_form_two_component_1.SignupFormTwoComponent,
-                signup_success_component_1.SignupSuccessComponent,
-                resetpassword_component_1.ResetpasswordComponent,
-                dashboard_component_1.DashboardComponent,
-                main_component_1.MainComponent,
-                support_tickets_component_1.SupportTicketsComponent,
-                support_tickets_all_component_1.SupportTicketsAllComponent,
-                support_tickets_priority_component_1.SupportTicketsPriorityComponent,
-                support_tickets_single_component_1.SupportTicketsSingleComponent,
-                manage_users_component_1.ManageUsersComponent,
-                manage_users_all_component_1.ManageUsersAllComponent,
-                manage_users_single_component_1.ManageUsersSingleComponent,
-                manage_users_display_component_1.ManageUsersDisplayComponent,
-                manage_users_edit_component_1.ManageUsersEditComponent,
-                timesheets_component_1.TimesheetsComponent,
-                timesheets_all_component_1.TimesheetsAllComponent,
-                timesheets_clients_component_1.TimesheetsClientsComponent,
-                timesheets_single_component_1.TimesheetsSingleComponent,
-                address_component_1.AddressComponent,
-                address_company_component_1.AddressCompanyComponent,
-                address_primary_component_1.AddressPrimaryComponent,
-                invoices_component_1.InvoicesComponent,
-                invoices_all_component_1.InvoicesAllComponent,
-                invoices_thismonth_component_1.InvoicesThismonthComponent,
-                invoices_single_component_1.InvoicesSingleComponent,
-                invoices_custom_component_1.InvoicesCustomComponent,
-                top_bar_component_1.TopbarComponent,
-                page_controls_component_1.PageControlsComponent,
-                form_company_component_1.FormCompanyComponent,
-                form_primary_component_1.FormPrimaryComponent,
-                form_user_component_1.FormUserComponent,
-                vectorleap_component_1.VectorleapComponent
-            ],
-            bootstrap: [app_component_1.AppComponent]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppModule);
     return AppModule;
 }());
+AppModule = __decorate([
+    core_1.NgModule({
+        imports: [
+            platform_browser_1.BrowserModule,
+            forms_1.FormsModule,
+            forms_1.ReactiveFormsModule,
+            kendo_angular_dropdowns_1.DropDownsModule,
+            kendo_angular_buttons_1.ButtonsModule,
+            ng2_bootstrap_1.TooltipModule,
+            kendo_angular_grid_1.GridModule,
+            app_routing_1.routing,
+            angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(fake_service_1.InMemoryDataService)
+        ],
+        declarations: [
+            app_component_1.AppComponent,
+            login_component_1.LoginComponent,
+            login_form_component_1.LoginFormComponent,
+            forgotpassword_component_1.ForgotpasswordComponent,
+            alert_component_1.AlertComponent,
+            signup_component_1.SignupComponent,
+            signup_form_one_component_1.SignupFormOneComponent,
+            signup_form_two_component_1.SignupFormTwoComponent,
+            signup_success_component_1.SignupSuccessComponent,
+            resetpassword_component_1.ResetpasswordComponent,
+            dashboard_component_1.DashboardComponent,
+            main_component_1.MainComponent,
+            support_tickets_component_1.SupportTicketsComponent,
+            support_tickets_all_component_1.SupportTicketsAllComponent,
+            support_tickets_priority_component_1.SupportTicketsPriorityComponent,
+            support_tickets_single_component_1.SupportTicketsSingleComponent,
+            manage_users_component_1.ManageUsersComponent,
+            manage_users_all_component_1.ManageUsersAllComponent,
+            manage_users_single_component_1.ManageUsersSingleComponent,
+            manage_users_display_component_1.ManageUsersDisplayComponent,
+            manage_users_edit_component_1.ManageUsersEditComponent,
+            timesheets_component_1.TimesheetsComponent,
+            timesheets_all_component_1.TimesheetsAllComponent,
+            timesheets_clients_component_1.TimesheetsClientsComponent,
+            timesheets_single_component_1.TimesheetsSingleComponent,
+            timesheets_task_component_1.TimesheetsTaskComponent,
+            timesheets_clients_addedit_component_1.TimesheetsClientsAddeditComponent,
+            address_component_1.AddressComponent,
+            address_company_component_1.AddressCompanyComponent,
+            address_primary_component_1.AddressPrimaryComponent,
+            invoices_component_1.InvoicesComponent,
+            invoices_all_component_1.InvoicesAllComponent,
+            invoices_thismonth_component_1.InvoicesThismonthComponent,
+            invoices_single_component_1.InvoicesSingleComponent,
+            invoices_custom_component_1.InvoicesCustomComponent,
+            top_bar_component_1.TopbarComponent,
+            page_controls_component_1.PageControlsComponent,
+            form_company_component_1.FormCompanyComponent,
+            form_primary_component_1.FormPrimaryComponent,
+            form_user_component_1.FormUserComponent,
+            form_client_component_1.FormClientComponent,
+            vectorleap_component_1.VectorleapComponent
+        ],
+        bootstrap: [app_component_1.AppComponent]
+    }),
+    __metadata("design:paramtypes", [])
+], AppModule);
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map
