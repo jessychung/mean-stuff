@@ -958,11 +958,6 @@ tbody tr:active {
 .k-grid-content {
     overflow-y: auto !important;
 }
-
-.k-pager-numbers .k-link:hover {
-    background-color: white !important;
-}
-
 .k-pager-info {
     color: #c9c9c9 !important;
 }
@@ -992,13 +987,31 @@ tbody tr:active {
     color: rgba(61, 71, 79, 0.5) !important;
     font-weight: 600 !important;
     border: 0px !important;
+    line-height: 2.3em;
+    min-width: 2.3em;
 }
 
-.k-pager-numbers .k-state-selected {
+.k-pager-numbers .k-link:hover {
+    color: #3d474f !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.k-grid-pager .k-link:focus, .k-grid-pager .k-link:link:focus {
+    box-shadow: none !important;
+}
+
+.k-grid-pager .k-link.k-state-selected, .k-grid-pager .k-link.k-state-selected:link {
     color: #3d474f !important;
     background-color: #eaeaea !important;
     border-radius: 100px;
     font-weight: 600 !important;
+}
+
+.k-grid-pager .k-link.k-state-selected:hover {
+    background-color: #eaeaea !important;
+    color: #3d474f !important;
+    cursor: default !important;
 }
 
 .k-grid .k-widget {
@@ -1009,12 +1022,6 @@ tbody tr:active {
     border: 0px !important;
 }
 
-.k-pager-numbers .k-link:hover {
-    color: #666666 !important;
-    background-color: #f2f2f2 !important;
-    border-color: #fff !important;
-}
-
 .k-pager-numbers .k-link:focus, .k-pager-numbers .k-link:active {
     outline: none !important;
 }
@@ -1023,8 +1030,8 @@ tbody tr:active {
     border: 0px !important;
 }
 
-.k-pager-nav:hover {
-    background-color: white !important;
+.k-pager-nav .k-icon{
+    margin-top: 6px;
 }
 
 .k-state-disabled span {

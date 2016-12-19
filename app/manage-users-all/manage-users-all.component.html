@@ -137,8 +137,12 @@
     </kendo-grid-column>
     <kendo-grid-column>
         <template kendoCellTemplate let-dataItem>
-            <button (click)="onEdit(dataItem)" class="k-button k-button-icontext k-grid-edit">Edit</button>
-            <button (click)="onDelete(dataItem)" class="k-button k-button-icontext k-grid-delete">Delete</button>
+            <div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">
+                <i class="thentia-eye"></i>  view
+            </div>
+            <div class="sso-table-button" (click)="onDelete(dataItem)">
+                <i class="thentia-trash"></i>  delete
+            </div>
         </template>
     </kendo-grid-column>
 </kendo-grid>
