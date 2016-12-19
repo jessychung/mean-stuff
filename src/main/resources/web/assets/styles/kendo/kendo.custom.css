@@ -902,7 +902,7 @@ span.k-numerictextbox {
     margin-left: 237px !important;
 }
 .k-grid-header {
-    border-bottom: 1px solid #e6e6e6 !important;
+    border-bottom: 0px !important;
 }
 
 .k-widget.k-grid {
@@ -911,6 +911,10 @@ span.k-numerictextbox {
 
 #rowSelection {
     max-height: auto !important;
+}
+
+.k-grid .k-alt, .k-grid .k-alt:hover {
+    background-color: #f3f3f3 !important;
 }
 
 .k-grid td {
@@ -970,17 +974,8 @@ tbody tr:active {
     color: #4d4d4d !important;
 }
 
-.k-pager-wrap {
-    border-top: 1px solid #e6e6e6 !important;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.k-pager-wrap.k-grid-pager.k-widget.k-floatwrap
-{
-    border-top: 1px solid #e6e6e6 !important;
+.k-pager-wrap.k-grid-pager.k-widget {
+    border-top: 0px !important;
 }
 
 .k-grid-pager .k-link, .k-grid-pager .k-link:link {

@@ -1534,7 +1534,8 @@ input::-webkit-inner-spin-button {
   border-radius: 3px;
   font-size: 13px;
   transition: all .3s;
-  margin-right: 5px; }
+  margin-right: 5px;
+  line-height: normal; }
   .sso-table-button:hover, .sso-table-button:active, .sso-table-button:focus {
     cursor: pointer;
     background-color: #fff;
@@ -1609,9 +1610,6 @@ input::-webkit-inner-spin-button {
   background-color: #eaeaea !important;
   border-radius: 100px;
   color: #3d474f !important; }
-
-.k-widget.k-grid {
-  background-color: transparent !important; }
 
 .sso-top-bar {
   border-bottom: 1px solid #eaeaea;

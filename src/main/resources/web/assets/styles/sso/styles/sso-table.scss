@@ -11,6 +11,7 @@
   font-size: 13px;
   transition: all .3s;
   margin-right: 5px;
+  line-height: normal;
   @include  hover-state {
     cursor: pointer;
     background-color: #fff;
