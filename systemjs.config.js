@@ -42,6 +42,7 @@
             "@progress/kendo-angular-grid": { main: './dist/npm/main.js', defaultExtension: 'js' },
             "@progress/kendo-data-query": { main: './dist/npm/main.js', defaultExtension: 'js' },
             "@progress/kendo-angular-intl": { main: './dist/npm/main.js', defaultExtension: 'js' },
+            "@progress/kendo-angular-dialog": { main: './dist/npm/main.js', defaultExtension: 'js' },
             "@telerik/kendo-intl": { main: './dist/npm/main.js', defaultExtension: 'js' },
             "@telerik/kendo-dropdowns-common": { main: './dist/npm/js/main.js', defaultExtension: 'js' },
             "@progress/kendo-popup-common": { main: './dist/npm/js/main.js', defaultExtension: 'js' },

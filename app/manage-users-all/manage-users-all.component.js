@@ -43,6 +43,8 @@ var ManageUsersAllComponent = (function () {
                 "userRole": "User"
             }
         ];
+        // init dialog hidden
+        this.dialogOpened = false;
         this.loadProducts();
     }
     ManageUsersAllComponent.prototype.goBack = function () {
@@ -61,6 +63,15 @@ var ManageUsersAllComponent = (function () {
             data: kendo_data_query_1.orderBy(this.gridData.slice(this.skip, this.skip + this.pageSize), this.sort),
             total: this.gridData.length
         };
+    };
+    ManageUsersAllComponent.prototype.onDelete = function (data) {
+        confirm("Are you sure you want to delete " + data.userFname + " " + data.userLname + "?");
+    };
+    ManageUsersAllComponent.prototype.openDialog = function () {
+        this.dialogOpened = true;
+    };
+    ManageUsersAllComponent.prototype.closeDialog = function () {
+        this.dialogOpened = false;
     };
     return ManageUsersAllComponent;
 }());

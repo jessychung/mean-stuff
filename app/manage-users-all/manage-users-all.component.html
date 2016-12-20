@@ -1,119 +1,3 @@
-<!--<table class="table table-striped">-->
-    <!--<thead>-->
-    <!--<tr>-->
-        <!--<th></th>-->
-        <!--<th>First Name</th>-->
-        <!--<th>Last Name</th>-->
-        <!--<th>Email</th>-->
-        <!--<th>Roles</th>-->
-        <!--<th></th>-->
-    <!--</tr>-->
-    <!--</thead>-->
-    <!--<tbody>-->
-    <!--<tr>-->
-        <!--<td><div class="sso-avatar-small">JS</div></td>-->
-        <!--<td>John</td>-->
-        <!--<td>Smith</td>-->
-        <!--<td>johns@thentia.com <span style="opacity: .5">(you)</span> </td>-->
-        <!--<td>Owner</td>-->
-        <!--<td>-->
-        <!--</td>-->
-    <!--</tr>-->
-    <!--<tr>-->
-        <!--<td><div class="sso-avatar-small" style="background-color: #185ba6">ML</div></td>-->
-        <!--<td>Monte</td>-->
-        <!--<td>Levine</td>-->
-        <!--<td>MonteJLevine@rhyta.com</td>-->
-        <!--<td>Admin</td>-->
-        <!--<td>-->
-            <!--<div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">-->
-                <!--<i class="thentia-eye"></i>  view-->
-            <!--</div>-->
-            <!--<div class="sso-table-button">-->
-                <!--<i class="thentia-trash"></i>  delete-->
-            <!--</div>-->
-        <!--</td>-->
-    <!--</tr>-->
-    <!--<tr>-->
-        <!--<td><div class="sso-avatar-small" style="background-color: #ad2c57">BE</div></td>-->
-        <!--<td>Beth</td>-->
-        <!--<td>Ericksen</td>-->
-        <!--<td>BethWEricksen@rhyta.com</td>-->
-        <!--<td>User</td>-->
-        <!--<td>-->
-            <!--<div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">-->
-                <!--<i class="thentia-eye"></i>  view-->
-            <!--</div>-->
-            <!--<div class="sso-table-button">-->
-                <!--<i class="thentia-trash"></i>  delete-->
-            <!--</div>-->
-        <!--</td>-->
-    <!--</tr>-->
-    <!--<tr>-->
-        <!--<td><div class="sso-avatar-small" style="background-color: #ad5a00">WP</div></td>-->
-        <!--<td>William</td>-->
-        <!--<td>Powell</td>-->
-        <!--<td>WilliamVPowell@teleworm.us</td>-->
-        <!--<td>User</td>-->
-        <!--<td>-->
-            <!--<div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">-->
-                <!--<i class="thentia-eye"></i>  view-->
-            <!--</div>-->
-            <!--<div class="sso-table-button">-->
-                <!--<i class="thentia-trash"></i>  delete-->
-            <!--</div>-->
-        <!--</td>-->
-    <!--</tr>-->
-    <!--<tr>-->
-        <!--<td><div class="sso-avatar-small" style="background-color: #1a9872">CT</div></td>-->
-        <!--<td>Craig</td>-->
-        <!--<td>Thomas</td>-->
-        <!--<td>CraigSThomas@rhyta.com</td>-->
-        <!--<td>User</td>-->
-        <!--<td>-->
-            <!--<div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">-->
-                <!--<i class="thentia-eye"></i>  view-->
-            <!--</div>-->
-            <!--<div class="sso-table-button">-->
-                <!--<i class="thentia-trash"></i>  delete-->
-            <!--</div>-->
-        <!--</td>-->
-    <!--</tr>-->
-    <!--</tbody>-->
-<!--</table>-->
-
-<!--<div class="row">-->
-
-    <!--<div class="col-lg-6 col-md-6 col-sm-6">-->
-        <!--<button class="btn btn-sm btn-brand" style="margin-top: 10px">-->
-            <!--<i aria-hidden="true" class="fa fa-plus"></i>   Add New-->
-        <!--</button>-->
-    <!--</div>-->
-
-    <!--<div class="col-lg-6 col-md-6 col-sm-6" style="text-align: right">-->
-        <!--<nav aria-label="Page navigation">-->
-            <!--<ul class="pagination">-->
-                <!--<li>-->
-                    <!--<a href="#" aria-label="Previous">-->
-                        <!--<span aria-hidden="true">&laquo;</span>-->
-                    <!--</a>-->
-                <!--</li>-->
-                <!--<li><a href="#">1</a></li>-->
-                <!--<li class="active"><a href="#">2</a></li>-->
-                <!--<li><a href="#">3</a></li>-->
-                <!--<li><a href="#">4</a></li>-->
-                <!--<li><a href="#">5</a></li>-->
-                <!--<li>-->
-                    <!--<a href="#" aria-label="Next">-->
-                        <!--<span aria-hidden="true">&raquo;</span>-->
-                    <!--</a>-->
-                <!--</li>-->
-            <!--</ul>-->
-        <!--</nav>-->
-    <!--</div>-->
-<!--</div>-->
-
-
 <kendo-grid [data]="gridView"
             [pageSize]="pageSize"
             [skip]="skip"
@@ -127,14 +11,10 @@
             <div class="sso-avatar-small" [ngStyle]="{'backgroundColor': dataItem.userAvatarColour}">{{dataItem.userAvatar}}</div>
         </template>
     </kendo-grid-column>
-    <kendo-grid-column field="userFname" title="First Name">
-    </kendo-grid-column>
-    <kendo-grid-column field="userLname" title="Last name" >
-    </kendo-grid-column>
-    <kendo-grid-column field="userEmail" title="Email" >
-    </kendo-grid-column>
-    <kendo-grid-column field="userRole" title="Role" >
-    </kendo-grid-column>
+    <kendo-grid-column field="userFname" title="First Name"></kendo-grid-column>
+    <kendo-grid-column field="userLname" title="Last name"></kendo-grid-column>
+    <kendo-grid-column field="userEmail" title="Email"></kendo-grid-column>
+    <kendo-grid-column field="userRole" title="Role"></kendo-grid-column>
     <kendo-grid-column>
         <template kendoCellTemplate let-dataItem>
             <div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">
@@ -146,3 +26,19 @@
         </template>
     </kendo-grid-column>
 </kendo-grid>
+
+<div class="row" style="margin-top: -43px;">
+    <div class="col-md-6 col-md-offset-6" style="text-align: right;">
+        <button class="btn btn-sm btn-brand" (click)="openDialog()" >
+            <i class="fa fa-plus"></i> Add a new user
+        </button>
+    </div>
+</div>
+
+<kendo-dialog title="Delete User" *ngIf="dialogOpened" (close)="closeDialog()">
+    <p>Are you sure you want to delete this user? This cannot be undone.</p>
+    <div style="padding: 5px"></div>
+    <button class="btn btn-sm btn-brand" (click)="closeDialog()">Confirm</button>
+    <button class="btn btn-sm btn-light" (click)="closeDialog()">Cancel</button>
+
+</kendo-dialog>

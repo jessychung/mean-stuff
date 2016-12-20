@@ -14,6 +14,7 @@ var forms_1 = require("@angular/forms");
 var kendo_angular_buttons_1 = require("@progress/kendo-angular-buttons");
 var kendo_angular_dropdowns_1 = require("@progress/kendo-angular-dropdowns");
 var kendo_angular_grid_1 = require("@progress/kendo-angular-grid");
+var kendo_angular_dialog_1 = require("@progress/kendo-angular-dialog");
 var ng2_bootstrap_1 = require("ng2-bootstrap/ng2-bootstrap");
 var angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
 var fake_service_1 = require("./fake.service");
@@ -75,6 +76,7 @@ AppModule = __decorate([
             kendo_angular_buttons_1.ButtonsModule,
             ng2_bootstrap_1.TooltipModule,
             kendo_angular_grid_1.GridModule,
+            kendo_angular_dialog_1.DialogModule,
             app_routing_1.routing,
             angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(fake_service_1.InMemoryDataService)
         ],

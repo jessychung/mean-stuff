@@ -688,13 +688,13 @@ textarea:active, textarea:focus {
     border: 1px solid #cccccc !important;
 }
 
-.k-button:hover, #textButton:hover {
-    border-color: #CCCCCC !important;
-    border-radius: 0px !important;
-    background-color: #f2f2f2 !important;
-    box-shadow: none !important;
-    transition: background-color .5s;
-}
+/*.k-button:hover, #textButton:hover {*/
+    /*border-color: #CCCCCC !important;*/
+    /*border-radius: 0px !important;*/
+    /*background-color: #f2f2f2 !important;*/
+    /*box-shadow: none !important;*/
+    /*transition: background-color .5s;*/
+/*}*/
 
 .k-primary {
     border-radius: 0px !important;
@@ -978,6 +978,10 @@ tbody tr:active {
     border-top: 0px !important;
 }
 
+.k-pager-wrap {
+    margin-top: 20px;
+}
+
 .k-grid-pager .k-link, .k-grid-pager .k-link:link {
     color: rgba(61, 71, 79, 0.5) !important;
     font-weight: 600 !important;
@@ -1242,4 +1246,43 @@ html {
 .k-series-f {
     border-color: #da3b36 !important;
     background-color: rgba(218, 59, 54, 0.15) !important;
+}
+
+.k-window>.k-header {
+    color: #3d474f !important;
+    background-color: transparent !important;
+    padding: 0px !important;
+    border-bottom: 0px !important;
+}
+
+div.k-window-content {
+    padding: 15px;
+    padding-top: 0;
+}
+
+.k-window-title {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.k-window-titlebar .k-window-actions {
+    padding-top: 10px;
+}
+
+.k-window-titlebar .k-window-action:hover {
+    background-color: #f7f7f7 !important;
+}
+
+.k-window-titlebar .k-window-action:hover .k-icon {
+    font-size: 16px !important;
+}
+
+.k-window>.k-header .k-window-action {
+    border-radius: 100px !important;
+    border: 1px solid #e6e6e6;
+    width: 25px !important;
+    height: 25px !important;
+    line-height: 25px !important;
+    padding-top: 4px;
+    margin-right: 10px;
 }

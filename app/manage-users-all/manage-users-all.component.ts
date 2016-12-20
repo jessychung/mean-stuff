@@ -70,5 +70,19 @@ export class ManageUsersAllComponent {
         };
     }
 
+    public onDelete(data): void {
+        confirm("Are you sure you want to delete " + data.userFname + " " + data.userLname + "?");
+    }
+
+    // init dialog hidden
+    public dialogOpened: boolean = false;
+
+    public openDialog(): void {
+        this.dialogOpened = true;
+    }
+
+    public closeDialog(): void {
+        this.dialogOpened = false;
+    }
 
 }

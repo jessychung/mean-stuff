@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { GridModule } from '@progress/kendo-angular-grid';
+import { DialogModule } from '@progress/kendo-angular-dialog';
 import { TooltipModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 
@@ -64,6 +65,7 @@ import {FormClientComponent} from "./form-client/form-client.component";
         ButtonsModule,
         TooltipModule,
         GridModule,
+        DialogModule,
         routing,
         InMemoryWebApiModule.forRoot(InMemoryDataService)
     ],

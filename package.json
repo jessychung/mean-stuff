@@ -28,6 +28,7 @@
     "@angular/router": "~3.2.0",
     "@angular/upgrade": "~2.2.0",
     "@progress/kendo-angular-buttons": "^0.14.0",
+    "@progress/kendo-angular-dialog": "^0.13.1",
     "@progress/kendo-angular-dropdowns": "^0.16.11",
     "@progress/kendo-angular-grid": "^0.7.0",
     "@progress/kendo-data-query": "^0.3.3",
