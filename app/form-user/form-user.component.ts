@@ -19,14 +19,7 @@ export class FormUserComponent {
 
     constructor(fb: FormBuilder, private location: Location, private _router: Router) {
         this.userForm = fb.group({
-            'ssoFname': ['', Validators.required],
-            'ssoLname': ['', Validators.required],
-            'ssoTel': ['', Validators.required],
-            'ssoCell': ['', Validators.required],
-            'ssoEmail' : ['', Validators.compose([
-                Validators.required,
-                Validators.pattern(this.emailRegex)
-            ])]
+            'userFname': ['', Validators.required]
         })
     }
 

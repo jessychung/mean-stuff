@@ -20,14 +20,7 @@ var FormUserComponent = (function () {
         this.router = this._router;
         this.submitted = false;
         this.userForm = fb.group({
-            'ssoFname': ['', forms_1.Validators.required],
-            'ssoLname': ['', forms_1.Validators.required],
-            'ssoTel': ['', forms_1.Validators.required],
-            'ssoCell': ['', forms_1.Validators.required],
-            'ssoEmail': ['', forms_1.Validators.compose([
-                    forms_1.Validators.required,
-                    forms_1.Validators.pattern(this.emailRegex)
-                ])]
+            'userFname': ['', forms_1.Validators.required]
         });
     }
     FormUserComponent.prototype.submitForm = function (value) {

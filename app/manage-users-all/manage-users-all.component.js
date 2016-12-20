@@ -44,7 +44,8 @@ var ManageUsersAllComponent = (function () {
             }
         ];
         // init dialog hidden
-        this.dialogOpened = false;
+        this.ConfirmDialogOpened = false;
+        this.EditDialogOpened = false;
         this.loadProducts();
     }
     ManageUsersAllComponent.prototype.goBack = function () {
@@ -67,11 +68,21 @@ var ManageUsersAllComponent = (function () {
     ManageUsersAllComponent.prototype.onDelete = function (data) {
         confirm("Are you sure you want to delete " + data.userFname + " " + data.userLname + "?");
     };
-    ManageUsersAllComponent.prototype.openDialog = function () {
-        this.dialogOpened = true;
+    ManageUsersAllComponent.prototype.openConfirmDialog = function (data) {
+        this.ConfirmDialogOpened = true;
+        this.firstname = data.userFname;
+        this.lastname = data.userLname;
     };
-    ManageUsersAllComponent.prototype.closeDialog = function () {
-        this.dialogOpened = false;
+    ManageUsersAllComponent.prototype.openEditDialog = function (data) {
+        this.EditDialogOpened = true;
+        this.firstname = data.userFname;
+        this.lastname = data.userLname;
+    };
+    ManageUsersAllComponent.prototype.closeConfirmDialog = function () {
+        this.ConfirmDialogOpened = false;
+    };
+    ManageUsersAllComponent.prototype.closeEditDialog = function () {
+        this.EditDialogOpened = false;
     };
     return ManageUsersAllComponent;
 }());

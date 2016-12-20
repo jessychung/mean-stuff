@@ -1,49 +1,58 @@
-<form [formGroup]="userForm" (ngSubmit)="submitForm(userForm.value)" novalidate>
-
-    <div class="row">
-        <div class="col-md-6 col-sm-6">
-            <div class="form-group" [ngClass]="{ 'form-error': !userForm.controls['ssoFname'].valid && submitted || userForm.controls['ssoFname'].touched, 'form-success': userForm.controls['ssoFname'].valid }">
-                <label for="sso-fname">First Name</label>
-                <div style="padding: 2px"></div>
-                <input type="text" class="form-control" id="sso-fname" [formControl]="userForm.controls['ssoFname']" />
-                <div class="sso-help-block-inline" *ngIf="userForm.controls['ssoFname'].hasError('required') && submitted || userForm.controls['ssoFname'].hasError('required') && userForm.controls['ssoFname'].touched">Required</div>
-                <div class="sso-help-block-inline" *ngIf="userForm.controls['ssoFname'].hasError('pattern') && submitted || userForm.controls['ssoFname'].hasError('pattern') && userForm.controls['ssoFname'].touched">Invalid email address</div>
-            </div>
-        </div>
-        <div class="col-md-6 col-sm-6">
-            <div class="form-group" [ngClass]="{ 'form-error': !userForm.controls['ssoLname'].valid && submitted || userForm.controls['ssoLname'].touched, 'form-success': userForm.controls['ssoLname'].valid }">
-                <label for="sso-lname">Last Name</label>
-                <div style="padding: 2px"></div>
-                <input type="text" class="form-control" id="sso-lname" [formControl]="userForm.controls['ssoLname']" />
-                <div class="sso-help-block-inline" *ngIf="userForm.controls['ssoLname'].hasError('required') && submitted || userForm.controls['ssoLname'].hasError('required') && userForm.controls['ssoLname'].touched">Required</div>
-                <div class="sso-help-block-inline" *ngIf="userForm.controls['ssoLname'].hasError('pattern') && submitted || userForm.controls['ssoLname'].hasError('pattern') && userForm.controls['ssoLname'].touched">Invalid email address</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-6 col-sm-6">
-            <div class="form-group" [ngClass]="{ 'form-error': !userForm.controls['ssoEmail'].valid && submitted || userForm.controls['ssoEmail'].touched, 'form-success': userForm.controls['ssoEmail'].valid }">
-                <label for="sso-email">Email</label>
-                <div style="padding: 2px"></div>
-                <input type="email" class="form-control" id="sso-email" [formControl]="userForm.controls['ssoEmail']" />
-                <div class="sso-help-block-inline" *ngIf="userForm.controls['ssoEmail'].hasError('required') && submitted || userForm.controls['ssoEmail'].hasError('required') && userForm.controls['ssoEmail'].touched">Required</div>
-                <div class="sso-help-block-inline" *ngIf="userForm.controls['ssoEmail'].hasError('pattern') && submitted || userForm.controls['ssoEmail'].hasError('pattern') && userForm.controls['ssoEmail'].touched">Invalid email address</div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="row" *ngIf="isAddNew()">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-            <button type="submit" class="btn btn-brand" style="margin-bottom: 0">Submit</button>
-        </div>
-    </div>
-
-    <div class="row" *ngIf="!isAddNew()">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-            <button type="submit" class="btn btn-brand" style="margin-bottom: 0">Save & Update</button>
-        </div>
+<form [formGroup]="userForm">
+    <div>
+        <label>First Name</label>
+        <input type="text" [(ngModel)]="dataItem.userFname" />
     </div>
 
 </form>
+
+
+<!--<form [formGroup]="userForm" (ngSubmit)="submitForm(userForm.value)" novalidate>-->
+
+    <!--<div class="row">-->
+        <!--<div class="col-md-6 col-sm-6">-->
+            <!--<div class="form-group" [ngClass]="{ 'form-error': !userForm.controls['ssoFname'].valid && submitted || userForm.controls['ssoFname'].touched, 'form-success': userForm.controls['ssoFname'].valid }">-->
+                <!--<label for="sso-fname">First Name</label>-->
+                <!--<div style="padding: 2px"></div>-->
+                <!--<input type="text" class="form-control" id="sso-fname" [formControl]="userForm.controls['ssoFname']" />-->
+                <!--<div class="sso-help-block-inline" *ngIf="userForm.controls['ssoFname'].hasError('required') && submitted || userForm.controls['ssoFname'].hasError('required') && userForm.controls['ssoFname'].touched">Required</div>-->
+                <!--<div class="sso-help-block-inline" *ngIf="userForm.controls['ssoFname'].hasError('pattern') && submitted || userForm.controls['ssoFname'].hasError('pattern') && userForm.controls['ssoFname'].touched">Invalid email address</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-6 col-sm-6">-->
+            <!--<div class="form-group" [ngClass]="{ 'form-error': !userForm.controls['ssoLname'].valid && submitted || userForm.controls['ssoLname'].touched, 'form-success': userForm.controls['ssoLname'].valid }">-->
+                <!--<label for="sso-lname">Last Name</label>-->
+                <!--<div style="padding: 2px"></div>-->
+                <!--<input type="text" class="form-control" id="sso-lname" [formControl]="userForm.controls['ssoLname']" />-->
+                <!--<div class="sso-help-block-inline" *ngIf="userForm.controls['ssoLname'].hasError('required') && submitted || userForm.controls['ssoLname'].hasError('required') && userForm.controls['ssoLname'].touched">Required</div>-->
+                <!--<div class="sso-help-block-inline" *ngIf="userForm.controls['ssoLname'].hasError('pattern') && submitted || userForm.controls['ssoLname'].hasError('pattern') && userForm.controls['ssoLname'].touched">Invalid email address</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="row">-->
+        <!--<div class="col-md-6 col-sm-6">-->
+            <!--<div class="form-group" [ngClass]="{ 'form-error': !userForm.controls['ssoEmail'].valid && submitted || userForm.controls['ssoEmail'].touched, 'form-success': userForm.controls['ssoEmail'].valid }">-->
+                <!--<label for="sso-email">Email</label>-->
+                <!--<div style="padding: 2px"></div>-->
+                <!--<input type="email" class="form-control" id="sso-email" [formControl]="userForm.controls['ssoEmail']" />-->
+                <!--<div class="sso-help-block-inline" *ngIf="userForm.controls['ssoEmail'].hasError('required') && submitted || userForm.controls['ssoEmail'].hasError('required') && userForm.controls['ssoEmail'].touched">Required</div>-->
+                <!--<div class="sso-help-block-inline" *ngIf="userForm.controls['ssoEmail'].hasError('pattern') && submitted || userForm.controls['ssoEmail'].hasError('pattern') && userForm.controls['ssoEmail'].touched">Invalid email address</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+    <!--<div class="row" *ngIf="isAddNew()">-->
+        <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
+            <!--<button type="submit" class="btn btn-brand" style="margin-bottom: 0">Submit</button>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="row" *ngIf="!isAddNew()">-->
+        <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
+            <!--<button type="submit" class="btn btn-brand" style="margin-bottom: 0">Save & Update</button>-->
+        <!--</div>-->
+    <!--</div>-->
+
+<!--</form>-->

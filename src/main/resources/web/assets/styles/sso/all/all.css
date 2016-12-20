@@ -65,7 +65,8 @@ input::-webkit-inner-spin-button {
   margin: 0; }
 
 .form-control {
-  font-size: 15px !important; }
+  font-size: 15px !important;
+  border: 1px solid #e6e6e6 !important; }
 
 .form-group label {
   padding-top: 12px;
@@ -121,7 +122,7 @@ input::-webkit-inner-spin-button {
     color: #004f75; }
 
 .form-error input {
-  border-bottom: 1px solid #ef8da1 !important;
+  border: 1px solid #ef8da1 !important;
   transition: all .3s; }
 
 .form-error .icon i {
@@ -131,7 +132,7 @@ input::-webkit-inner-spin-button {
 .form-success {
   position: relative; }
   .form-success input {
-    border-bottom: 1px solid #4cb89e !important;
+    border: 1px solid #4cb89e !important;
     transition: all .3s; }
   .form-success .k-dropdown-wrap {
     border-bottom: 1px solid #4cb89e !important; }
@@ -369,6 +370,14 @@ input::-webkit-inner-spin-button {
   line-height: 0.8;
   color: #09ad7e;
   transition: all .2s; }
+
+.sso-inline-span.span-blue {
+  background-color: rgba(0, 79, 117, 0.09);
+  padding: 3px 5px;
+  color: #004f75;
+  border-radius: 3px;
+  font-weight: 600;
+  display: inline-block; }
 
 .btn {
   border-radius: 3px;

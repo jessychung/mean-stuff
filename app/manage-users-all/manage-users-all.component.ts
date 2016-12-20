@@ -75,14 +75,30 @@ export class ManageUsersAllComponent {
     }
 
     // init dialog hidden
-    public dialogOpened: boolean = false;
+    public ConfirmDialogOpened: boolean = false;
+    public EditDialogOpened: boolean = false;
 
-    public openDialog(): void {
-        this.dialogOpened = true;
+    firstname: string;
+    lastname: string;
+
+    public openConfirmDialog(data): void {
+        this.ConfirmDialogOpened = true;
+        this.firstname = data.userFname;
+        this.lastname = data.userLname;
     }
 
-    public closeDialog(): void {
-        this.dialogOpened = false;
+    public openEditDialog(data): void {
+        this.EditDialogOpened = true;
+        this.firstname = data.userFname;
+        this.lastname = data.userLname;
+    }
+
+    public closeConfirmDialog(): void {
+        this.ConfirmDialogOpened = false;
+    }
+
+    public closeEditDialog(): void {
+        this.EditDialogOpened = false;
     }
 
 }
