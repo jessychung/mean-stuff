@@ -10,10 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
+var router_1 = require("@angular/router");
+var forms_1 = require("@angular/forms");
 var kendo_data_query_1 = require("@progress/kendo-data-query");
 var ManageUsersAllComponent = (function () {
-    function ManageUsersAllComponent(location) {
+    function ManageUsersAllComponent(location, _router) {
         this.location = location;
+        this._router = _router;
         this.sort = [];
         this.pageSize = 2;
         this.skip = 0;
@@ -47,6 +50,9 @@ var ManageUsersAllComponent = (function () {
         this.ConfirmDialogOpened = false;
         this.EditDialogOpened = false;
         this.loadProducts();
+        this.editForm = new forms_1.FormGroup({
+            'firstname': new forms_1.FormControl("", forms_1.Validators.required)
+        });
     }
     ManageUsersAllComponent.prototype.goBack = function () {
         this.location.back();
@@ -64,9 +70,6 @@ var ManageUsersAllComponent = (function () {
             data: kendo_data_query_1.orderBy(this.gridData.slice(this.skip, this.skip + this.pageSize), this.sort),
             total: this.gridData.length
         };
-    };
-    ManageUsersAllComponent.prototype.onDelete = function (data) {
-        confirm("Are you sure you want to delete " + data.userFname + " " + data.userLname + "?");
     };
     ManageUsersAllComponent.prototype.openConfirmDialog = function (data) {
         this.ConfirmDialogOpened = true;
@@ -92,7 +95,8 @@ ManageUsersAllComponent = __decorate([
         templateUrl: 'app/manage-users-all/manage-users-all.component.html',
         encapsulation: core_1.ViewEncapsulation.None
     }),
-    __metadata("design:paramtypes", [common_1.Location])
+    __metadata("design:paramtypes", [common_1.Location,
+        router_1.Router])
 ], ManageUsersAllComponent);
 exports.ManageUsersAllComponent = ManageUsersAllComponent;
 //# sourceMappingURL=manage-users-all.component.js.map

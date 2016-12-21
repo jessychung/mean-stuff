@@ -1,5 +1,8 @@
 import { Component, ViewEncapsulation} from '@angular/core';
 import { Location }                 from '@angular/common';
+import { Router } from '@angular/router';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+
 import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
 import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
 
@@ -10,10 +13,17 @@ import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
 })
 
 export class ManageUsersAllComponent {
+
+    editForm;
+
     constructor(
-        private location: Location
+        private location: Location,
+        private _router: Router
     ) {
         this.loadProducts();
+        this.editForm = new FormGroup({
+            'firstname': new FormControl("", Validators.required)
+        })
     }
 
     goBack(): void {
@@ -68,10 +78,6 @@ export class ManageUsersAllComponent {
             data: orderBy(this.gridData.slice(this.skip, this.skip + this.pageSize), this.sort),
             total: this.gridData.length
         };
-    }
-
-    public onDelete(data): void {
-        confirm("Are you sure you want to delete " + data.userFname + " " + data.userLname + "?");
     }
 
     // init dialog hidden

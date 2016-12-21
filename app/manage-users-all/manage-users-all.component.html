@@ -49,10 +49,16 @@
 
 <kendo-dialog *ngIf="EditDialogOpened" (close)="closeEditDialog()">
     <kendo-dialog-titlebar>
-        <img src="http://goo.gl/OAo2Mg" />
         <span>Edit User</span>
     </kendo-dialog-titlebar>
-    <form-user></form-user>
+
+    <form [formGroup]="editForm">
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" class="form-control" formControlName="firstname"  [(ngModel)]="firstname" />
+        </div>
+    </form>
+
     <div style="padding: 5px"></div>
     <button class="btn btn-sm btn-brand" (click)="closeEditDialog()">Save</button>
     <button class="btn btn-sm btn-light" (click)="closeEditDialog()">Cancel</button>
