@@ -125,7 +125,8 @@
   width: 100% !important;
   padding-right: 0 !important; }
   .sso-interior-form .k-dropdown .k-dropdown-wrap {
-    height: 41px !important; }
+    height: 41px !important;
+    background-image: none !important; }
     .sso-interior-form .k-dropdown .k-dropdown-wrap .k-icon {
       line-height: 2.5em;
       height: 100%; }

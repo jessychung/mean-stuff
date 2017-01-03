@@ -6,6 +6,8 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
 import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
 
+import { UserType } from '../user';
+
 @Component ({
     selector: 'manage-users-all',
     templateUrl: 'app/manage-users-all/manage-users-all.component.html',
@@ -14,7 +16,13 @@ import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
 
 export class ManageUsersAllComponent {
 
-    editForm;
+    private editForm;
+
+    private userdata;
+
+    public rolelist: Array<string> = [
+       "Admin","User"
+    ];
 
     constructor(
         private location: Location,
@@ -22,7 +30,10 @@ export class ManageUsersAllComponent {
     ) {
         this.loadProducts();
         this.editForm = new FormGroup({
-            'firstname': new FormControl("", Validators.required)
+            'firstname': new FormControl("", Validators.required),
+            'lastname': new FormControl("", Validators.required),
+            'email': new FormControl("", Validators.required),
+            'role': new FormControl("", Validators.required)
         })
     }
 
@@ -36,14 +47,19 @@ export class ManageUsersAllComponent {
     private pageSize: number = 2;
     private skip: number = 0;
 
-    private gridData: any[] = [
+    public genders: Array<{ text: string, value: number }> = [
+        { text: "Male", value: 1 },
+        { text: "Female", value: 2 }
+    ];
+
+    private gridData: Array<UserType> = [
         {
             "userAvatar": "JS",
             "userAvatarColour" : "#048586",
             "userFname": "John",
             "userLname": "Smith",
             "userEmail": "johns@thentia.com",
-            "userRole": "Admin"
+            "userRole": 1
         },
         {
             "userAvatar": "BE",
@@ -51,7 +67,7 @@ export class ManageUsersAllComponent {
             "userFname": "Beth",
             "userLname": "Ericksen",
             "userEmail": "bethe@thentia.com",
-            "userRole": "User"
+            "userRole": 2
         },
         {
             "userAvatar": "WP",
@@ -84,19 +100,14 @@ export class ManageUsersAllComponent {
     public ConfirmDialogOpened: boolean = false;
     public EditDialogOpened: boolean = false;
 
-    firstname: string;
-    lastname: string;
-
     public openConfirmDialog(data): void {
         this.ConfirmDialogOpened = true;
-        this.firstname = data.userFname;
-        this.lastname = data.userLname;
+        this.userdata = data;
     }
 
     public openEditDialog(data): void {
         this.EditDialogOpened = true;
-        this.firstname = data.userFname;
-        this.lastname = data.userLname;
+        this.userdata = data;
     }
 
     public closeConfirmDialog(): void {

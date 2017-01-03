@@ -1,5 +1,8 @@
 export class UserType {
-    firstname: string;
-    lastname: string;
-    email: string;
+    userAvatar: string;
+    userAvatarColour : string;
+    userFname: string;
+    userLname: string;
+    userEmail: string;
+    userRole: number;
 }

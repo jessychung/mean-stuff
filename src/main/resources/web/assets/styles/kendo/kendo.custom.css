@@ -278,9 +278,7 @@
 
 .k-dropdown-wrap.k-state-default {
     border-radius: 0px !important;
-    border-top: 0px !important;
-    border-left: 0px !important;
-    border-right: 0px !important;
+    border: 1px solid #e6e6e6 !important;
     border-color: #e6e6e6 !important;
     box-shadow: none !important;
 }
@@ -351,12 +349,10 @@ input.k-textbox:focus, input.k-textbox:active {
 
 
 .k-dropdown-wrap:hover, .k-dropdown-wrap:hover .k-select {
-    background-color: #ededed;
-    background-image: -webkit-linear-gradient(#fff,#fff);
-    background-image: linear-gradient(#fff,#fff);
+    background-color: transparent !important;
+    background-image: none !important;
+    background-image: none !important;
 }
-
-
 
 .k-dropdown .k-input:focus, .k-dropdown .k-input:active {
     box-shadow: none !important;
@@ -366,8 +362,9 @@ input.k-textbox:focus, input.k-textbox:active {
 
 .k-dropdown {
     background-color: transparent !important;
-    width: 100%;
+    width: 100% !important;
     padding-right: 0px;
+    display: block !important;
 }
 
 .k-list-container {
@@ -397,6 +394,8 @@ input.k-textbox:focus, input.k-textbox:active {
 
 .k-animation-container {
     box-shadow: none !important;
+    left: inherit !important;
+    top:inherit !important;
 }
 
 .k-list-container {
@@ -914,7 +913,7 @@ span.k-numerictextbox {
 }
 
 .k-grid .k-alt, .k-grid .k-alt:hover {
-    background-color: #f3f3f3 !important;
+    background-color: #f1f1f1 !important;
 }
 
 .k-grid td {
@@ -1250,19 +1249,29 @@ html {
 
 .k-window>.k-header {
     color: #3d474f !important;
-    background-color: transparent !important;
+    background-color: #f1f1f1 !important;
+    border-radius: 3px;
     padding: 0px !important;
     border-bottom: 0px !important;
 }
+.k-window {
+    min-width: 500px !important;
+}
 
 div.k-window-content {
-    padding: 15px;
-    padding-top: 0;
+    padding: 25px;
+    padding-top: 10px;
+}
+
+div.k-window-content .btn:first-of-type {
+    margin-right: 5px;
 }
 
 .k-window-title {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
+    left: 25px !important;
+    right: 25px !important;
 }
 
 .k-window-titlebar .k-window-actions {

@@ -17,9 +17,16 @@ var ManageUsersAllComponent = (function () {
     function ManageUsersAllComponent(location, _router) {
         this.location = location;
         this._router = _router;
+        this.rolelist = [
+            "Admin", "User"
+        ];
         this.sort = [];
         this.pageSize = 2;
         this.skip = 0;
+        this.genders = [
+            { text: "Male", value: 1 },
+            { text: "Female", value: 2 }
+        ];
         this.gridData = [
             {
                 "userAvatar": "JS",
@@ -27,7 +34,7 @@ var ManageUsersAllComponent = (function () {
                 "userFname": "John",
                 "userLname": "Smith",
                 "userEmail": "johns@thentia.com",
-                "userRole": "Admin"
+                "userRole": 1
             },
             {
                 "userAvatar": "BE",
@@ -35,7 +42,7 @@ var ManageUsersAllComponent = (function () {
                 "userFname": "Beth",
                 "userLname": "Ericksen",
                 "userEmail": "bethe@thentia.com",
-                "userRole": "User"
+                "userRole": 2
             },
             {
                 "userAvatar": "WP",
@@ -51,7 +58,10 @@ var ManageUsersAllComponent = (function () {
         this.EditDialogOpened = false;
         this.loadProducts();
         this.editForm = new forms_1.FormGroup({
-            'firstname': new forms_1.FormControl("", forms_1.Validators.required)
+            'firstname': new forms_1.FormControl("", forms_1.Validators.required),
+            'lastname': new forms_1.FormControl("", forms_1.Validators.required),
+            'email': new forms_1.FormControl("", forms_1.Validators.required),
+            'role': new forms_1.FormControl("", forms_1.Validators.required)
         });
     }
     ManageUsersAllComponent.prototype.goBack = function () {
@@ -73,13 +83,11 @@ var ManageUsersAllComponent = (function () {
     };
     ManageUsersAllComponent.prototype.openConfirmDialog = function (data) {
         this.ConfirmDialogOpened = true;
-        this.firstname = data.userFname;
-        this.lastname = data.userLname;
+        this.userdata = data;
     };
     ManageUsersAllComponent.prototype.openEditDialog = function (data) {
         this.EditDialogOpened = true;
-        this.firstname = data.userFname;
-        this.lastname = data.userLname;
+        this.userdata = data;
     };
     ManageUsersAllComponent.prototype.closeConfirmDialog = function () {
         this.ConfirmDialogOpened = false;
