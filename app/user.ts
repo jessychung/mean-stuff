@@ -4,5 +4,5 @@ export class UserType {
     userFname: string;
     userLname: string;
     userEmail: string;
-    userRole: number;
+    userRole: string;
 }

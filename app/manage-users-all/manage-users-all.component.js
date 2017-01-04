@@ -17,16 +17,9 @@ var ManageUsersAllComponent = (function () {
     function ManageUsersAllComponent(location, _router) {
         this.location = location;
         this._router = _router;
-        this.rolelist = [
-            "Admin", "User"
-        ];
         this.sort = [];
         this.pageSize = 2;
         this.skip = 0;
-        this.genders = [
-            { text: "Male", value: 1 },
-            { text: "Female", value: 2 }
-        ];
         this.gridData = [
             {
                 "userAvatar": "JS",
@@ -34,7 +27,7 @@ var ManageUsersAllComponent = (function () {
                 "userFname": "John",
                 "userLname": "Smith",
                 "userEmail": "johns@thentia.com",
-                "userRole": 1
+                "userRole": "Admin"
             },
             {
                 "userAvatar": "BE",
@@ -42,7 +35,7 @@ var ManageUsersAllComponent = (function () {
                 "userFname": "Beth",
                 "userLname": "Ericksen",
                 "userEmail": "bethe@thentia.com",
-                "userRole": 2
+                "userRole": "User"
             },
             {
                 "userAvatar": "WP",
@@ -52,6 +45,9 @@ var ManageUsersAllComponent = (function () {
                 "userEmail": "willp@thentia.com",
                 "userRole": "User"
             }
+        ];
+        this.rolelist = [
+            "Admin", "User"
         ];
         // init dialog hidden
         this.ConfirmDialogOpened = false;

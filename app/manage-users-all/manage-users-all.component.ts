@@ -20,10 +20,6 @@ export class ManageUsersAllComponent {
 
     private userdata;
 
-    public rolelist: Array<string> = [
-       "Admin","User"
-    ];
-
     constructor(
         private location: Location,
         private _router: Router
@@ -47,10 +43,6 @@ export class ManageUsersAllComponent {
     private pageSize: number = 2;
     private skip: number = 0;
 
-    public genders: Array<{ text: string, value: number }> = [
-        { text: "Male", value: 1 },
-        { text: "Female", value: 2 }
-    ];
 
     private gridData: Array<UserType> = [
         {
@@ -59,7 +51,7 @@ export class ManageUsersAllComponent {
             "userFname": "John",
             "userLname": "Smith",
             "userEmail": "johns@thentia.com",
-            "userRole": 1
+            "userRole": "Admin"
         },
         {
             "userAvatar": "BE",
@@ -67,7 +59,7 @@ export class ManageUsersAllComponent {
             "userFname": "Beth",
             "userLname": "Ericksen",
             "userEmail": "bethe@thentia.com",
-            "userRole": 2
+            "userRole": "User"
         },
         {
             "userAvatar": "WP",
@@ -77,6 +69,10 @@ export class ManageUsersAllComponent {
             "userEmail": "willp@thentia.com",
             "userRole": "User"
         }
+    ];
+
+    public rolelist: Array<string> = [
+        "Admin", "User"
     ];
 
     protected sortChange(sort: SortDescriptor[]): void {

@@ -59,9 +59,10 @@
     <form [formGroup]="editForm">
         <div class=" row">
             <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
-                <div class="form-group">
+                <div class="form-group" [ngClass]="{ 'form-error': !editForm.controls['firstname'].valid && submitted || editForm.controls['firstname'].touched && !editForm.controls['firstname'].valid }">
                     <label>First Name</label>
                     <input type="text" class="form-control" formControlName="firstname"  [ngModel]="userdata.userFname" />
+                    <div class="sso-help-block-inline" *ngIf="editForm.controls['firstname'].hasError('required') && submitted || editForm.controls['firstname'].touched && !editForm.controls['firstname'].valid">Required</div>
                 </div>
             </div>
 
@@ -84,7 +85,7 @@
             <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
                 <div class="form-group">
                     <label>Role</label>
-                    <kendo-dropdownlist  [data]="rolelist" ></kendo-dropdownlist>
+                    <kendo-dropdownlist formControlName="role" [data]="rolelist" [ngModel]="userdata.userRole"></kendo-dropdownlist>
                 </div>
             </div>
         </div>
@@ -92,6 +93,6 @@
     </form>
 
     <div style="padding: 5px"></div>
-    <button class="btn btn-sm btn-brand" (click)="closeEditDialog()">Save</button>
-    <button class="btn btn-sm btn-light" (click)="closeEditDialog()">Cancel</button>
+    <button type="submit" class="btn btn-sm btn-brand">Save</button>
+    <button type="button" class="btn btn-sm btn-light" (click)="closeEditDialog()">Cancel</button>
 </kendo-dialog>

@@ -1249,9 +1249,10 @@ html {
 
 .k-window>.k-header {
     color: #3d474f !important;
-    background-color: #f1f1f1 !important;
+    background-color: transparent !important;
     border-radius: 3px;
     padding: 0px !important;
+    padding-top: 10px !important;
     border-bottom: 0px !important;
 }
 .k-window {
@@ -1260,7 +1261,7 @@ html {
 
 div.k-window-content {
     padding: 25px;
-    padding-top: 10px;
+    padding-top: 0px;
 }
 
 div.k-window-content .btn:first-of-type {
