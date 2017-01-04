@@ -116,7 +116,6 @@ export class ManageUsersAllComponent {
     public openAddNew():void {
         this.EditDialogOpened = true;
         this.userdata = new UserType();
-        console.log(this.userdata);
         this.newform = true;
         this.editForm = this.getnewform();
     }

@@ -1296,3 +1296,9 @@ div.k-window-content .btn:first-of-type {
     padding-top: 4px;
     margin-right: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .k-window {
+        min-width: 93% !important;
+    }
+}

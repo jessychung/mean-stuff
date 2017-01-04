@@ -59,7 +59,7 @@
 
     <form [formGroup]="editForm">
         <div class=" row">
-            <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+            <div class="col-md-6 col-lg-6 col-xs-12 col-sm-6">
                 <div class="form-group" [ngClass]="{ 'form-error': !editForm.controls['firstname'].valid && submitted || editForm.controls['firstname'].touched && !editForm.controls['firstname'].valid }">
                     <label>First Name</label>
                     <input type="text" class="form-control" formControlName="firstname"  [ngModel]="userdata.userFname" />
@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+            <div class="col-md-6 col-lg-6 col-xs-12 col-sm-6">
                 <div class="form-group" [ngClass]="{ 'form-error': !editForm.controls['lastname'].valid && submitted || editForm.controls['lastname'].touched && !editForm.controls['lastname'].valid }">
                     <label>Last Name</label>
                     <input type="text" class="form-control" formControlName="lastname"  [ngModel]="userdata.userLname" />
@@ -77,7 +77,7 @@
         </div>
 
         <div class="sso-interior-form row">
-            <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+            <div class="col-md-6 col-lg-6 col-xs-12 col-sm-6">
                 <div class="form-group" [ngClass]="{ 'form-error': !editForm.controls['email'].valid && submitted || editForm.controls['email'].touched && !editForm.controls['email'].valid }">
                     <label>Email</label>
                     <input type="text" class="form-control" formControlName="email"  [ngModel]="userdata.userEmail" />
@@ -85,7 +85,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+            <div class="col-md-6 col-lg-6 col-xs-12 col-sm-6">
                 <div class="form-group" [ngClass]="{ 'form-error': !editForm.controls['role'].valid && submitted || editForm.controls['role'].touched && !editForm.controls['role'].valid }">
                     <label>Role</label>
                     <kendo-dropdownlist formControlName="role" [data]="rolelist" [ngModel]="userdata.userRole"></kendo-dropdownlist>

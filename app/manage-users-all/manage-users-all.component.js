@@ -93,7 +93,6 @@ var ManageUsersAllComponent = (function () {
     ManageUsersAllComponent.prototype.openAddNew = function () {
         this.EditDialogOpened = true;
         this.userdata = new user_1.UserType();
-        console.log(this.userdata);
         this.newform = true;
         this.editForm = this.getnewform();
     };
