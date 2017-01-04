@@ -13,10 +13,12 @@ var common_1 = require("@angular/common");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
 var kendo_data_query_1 = require("@progress/kendo-data-query");
+var user_1 = require("../user");
 var ManageUsersAllComponent = (function () {
     function ManageUsersAllComponent(location, _router) {
         this.location = location;
         this._router = _router;
+        this.newform = false;
         this.sort = [];
         this.pageSize = 2;
         this.skip = 0;
@@ -53,12 +55,7 @@ var ManageUsersAllComponent = (function () {
         this.ConfirmDialogOpened = false;
         this.EditDialogOpened = false;
         this.loadProducts();
-        this.editForm = new forms_1.FormGroup({
-            'firstname': new forms_1.FormControl("", forms_1.Validators.required),
-            'lastname': new forms_1.FormControl("", forms_1.Validators.required),
-            'email': new forms_1.FormControl("", forms_1.Validators.required),
-            'role': new forms_1.FormControl("", forms_1.Validators.required)
-        });
+        this.editForm = this.getnewform();
     }
     ManageUsersAllComponent.prototype.goBack = function () {
         this.location.back();
@@ -77,6 +74,14 @@ var ManageUsersAllComponent = (function () {
             total: this.gridData.length
         };
     };
+    ManageUsersAllComponent.prototype.getnewform = function () {
+        return new forms_1.FormGroup({
+            'firstname': new forms_1.FormControl("", forms_1.Validators.required),
+            'lastname': new forms_1.FormControl("", forms_1.Validators.required),
+            'email': new forms_1.FormControl("", forms_1.Validators.required),
+            'role': new forms_1.FormControl("", forms_1.Validators.required)
+        });
+    };
     ManageUsersAllComponent.prototype.openConfirmDialog = function (data) {
         this.ConfirmDialogOpened = true;
         this.userdata = data;
@@ -85,11 +90,19 @@ var ManageUsersAllComponent = (function () {
         this.EditDialogOpened = true;
         this.userdata = data;
     };
+    ManageUsersAllComponent.prototype.openAddNew = function () {
+        this.EditDialogOpened = true;
+        this.userdata = new user_1.UserType();
+        console.log(this.userdata);
+        this.newform = true;
+        this.editForm = this.getnewform();
+    };
     ManageUsersAllComponent.prototype.closeConfirmDialog = function () {
         this.ConfirmDialogOpened = false;
     };
     ManageUsersAllComponent.prototype.closeEditDialog = function () {
         this.EditDialogOpened = false;
+        this.newform = false;
     };
     return ManageUsersAllComponent;
 }());

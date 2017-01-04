@@ -14,23 +14,21 @@ import { UserType } from '../user';
     encapsulation: ViewEncapsulation.None
 })
 
+
 export class ManageUsersAllComponent {
 
-    private editForm;
 
+    private editForm;
     private userdata;
+
+    private newform:boolean = false;
 
     constructor(
         private location: Location,
         private _router: Router
     ) {
         this.loadProducts();
-        this.editForm = new FormGroup({
-            'firstname': new FormControl("", Validators.required),
-            'lastname': new FormControl("", Validators.required),
-            'email': new FormControl("", Validators.required),
-            'role': new FormControl("", Validators.required)
-        })
+        this.editForm = this.getnewform();
     }
 
     goBack(): void {
@@ -92,6 +90,15 @@ export class ManageUsersAllComponent {
         };
     }
 
+    public getnewform():any {
+        return new FormGroup({
+            'firstname': new FormControl("", Validators.required),
+            'lastname': new FormControl("", Validators.required),
+            'email': new FormControl("", Validators.required),
+            'role': new FormControl("", Validators.required)
+        })
+    }
+
     // init dialog hidden
     public ConfirmDialogOpened: boolean = false;
     public EditDialogOpened: boolean = false;
@@ -106,12 +113,21 @@ export class ManageUsersAllComponent {
         this.userdata = data;
     }
 
+    public openAddNew():void {
+        this.EditDialogOpened = true;
+        this.userdata = new UserType();
+        console.log(this.userdata);
+        this.newform = true;
+        this.editForm = this.getnewform();
+    }
+
     public closeConfirmDialog(): void {
         this.ConfirmDialogOpened = false;
     }
 
     public closeEditDialog(): void {
         this.EditDialogOpened = false;
+        this.newform = false;
     }
 
 }

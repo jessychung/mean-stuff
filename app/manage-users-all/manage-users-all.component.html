@@ -33,7 +33,7 @@
 
 <div class="row" style="margin-top: -43px;">
     <div class="col-md-6 col-md-offset-6" style="text-align: right;">
-        <button class="btn btn-sm btn-brand">
+        <button class="btn btn-sm btn-brand" (click)="openAddNew()">
             <i class="fa fa-plus"></i> Add a new user
         </button>
     </div>
@@ -53,7 +53,8 @@
 
 <kendo-dialog *ngIf="EditDialogOpened" (close)="closeEditDialog()">
     <kendo-dialog-titlebar>
-        <span>Edit User</span>
+        <span *ngIf="newform">Add a New User</span>
+        <span *ngIf="!newform">Edit User</span>
     </kendo-dialog-titlebar>
 
     <form [formGroup]="editForm">
@@ -88,7 +89,6 @@
                 <div class="form-group" [ngClass]="{ 'form-error': !editForm.controls['role'].valid && submitted || editForm.controls['role'].touched && !editForm.controls['role'].valid }">
                     <label>Role</label>
                     <kendo-dropdownlist formControlName="role" [data]="rolelist" [ngModel]="userdata.userRole"></kendo-dropdownlist>
-                    <div class="sso-help-block-inline" *ngIf="editForm.controls['role'].hasError('required') && submitted || editForm.controls['role'].touched && !editForm.controls['role'].valid">Required</div>
                 </div>
             </div>
         </div>
