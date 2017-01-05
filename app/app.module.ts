@@ -54,6 +54,7 @@ import {VectorleapComponent} from "./vectorleap/vectorleap.component";
 import {TimesheetsTaskComponent} from "./timesheets-task/timesheets-task.component";
 import {TimesheetsClientsAddeditComponent} from "./timesheets-clients-addedit/timesheets-clients-addedit.component";
 import {FormClientComponent} from "./form-client/form-client.component";
+import {testService} from "./testService.service";
 
 
 @NgModule({
@@ -113,7 +114,8 @@ import {FormClientComponent} from "./form-client/form-client.component";
         FormClientComponent,
         VectorleapComponent
     ],
-    bootstrap: [ AppComponent ]
+    bootstrap: [ AppComponent ],
+    providers: [testService]
 })
 
 export class AppModule { }

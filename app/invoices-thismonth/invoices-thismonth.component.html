@@ -1,1 +1,29 @@
-whatever
+<kendo-grid [data]="gridView"
+            [pageSize]="pageSize"
+            [skip]="skip"
+            [pageable]="{ info: false }"
+            (pageChange)="pageChange($event)"
+            [sortable]="{ mode: 'multiple' }"
+            [scrollable]="'none'"
+            [sort]="sort"
+            (sortChange)="sortChange($event)">
+    <kendo-grid-column field="invoiceNumber" title="Invoice #"></kendo-grid-column>
+    <kendo-grid-column field="invoiceIssue" title="Issue Date"></kendo-grid-column>
+    <kendo-grid-column field="invoiceDue" title="Due Date"></kendo-grid-column>
+    <kendo-grid-column field="invoiceAmount" title="Total Amount Due"></kendo-grid-column>
+    <kendo-grid-column field="invoiceOwing" title="Total Balance Owing"></kendo-grid-column>
+    <kendo-grid-column field="invoiceStatus" title="Status">
+        <template kendoCellTemplate let-dataItem let-rowIndex="rowIndex">
+            <div class="sso-status" [ngClass]="{'sso-status-success': dataItem.invoiceStatus == 'Paid', 'sso-status-error': dataItem.invoiceStatus == 'Overdue', 'sso-status-warning': dataItem.invoiceStatus == 'Unpaid' }">{{dataItem.invoiceStatus}}</div>
+        </template>
+    </kendo-grid-column>
+    <kendo-grid-column title=" ">
+        <template kendoCellTemplate let-dataItem>
+            <div style="text-align: right; width: 100%">
+                <div class="sso-table-button">
+                    <i class="thentia-eye"></i> View
+                </div>
+            </div>
+        </template>
+    </kendo-grid-column>
+</kendo-grid>

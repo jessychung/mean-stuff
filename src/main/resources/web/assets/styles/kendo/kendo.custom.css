@@ -1315,3 +1315,7 @@ div.k-window-content .btn:first-of-type {
 .k-animation-container-fixed {
     position: absolute !important;
 }
+
+.k-link {
+    color: #3d474f !important;
+}

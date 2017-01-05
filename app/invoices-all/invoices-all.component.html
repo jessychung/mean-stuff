@@ -1,60 +1,90 @@
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>Invoice #</th>
-        <th>Issue Date</th>
-        <th>Due Date</th>
-        <th>Total Amount Due</th>
-        <th>Total Balance Owing</th>
-        <th>Status</th>
-        <th></th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>00123</td>
-        <td>09-07-2016</td>
-        <td>10-07-2016</td>
-        <td>$3200</td>
-        <td>$3200</td>
-        <td>
-            <div class="sso-status sso-status-success">Paid</div>
-        </td>
-        <td>
-            <div class="sso-table-button" [routerLink]="['/main/invoices-single']">
-                <i class="thentia-eye"></i>  view
+<!--<table class="table table-striped">-->
+    <!--<thead>-->
+    <!--<tr>-->
+        <!--<th>Invoice #</th>-->
+        <!--<th>Issue Date</th>-->
+        <!--<th>Due Date</th>-->
+        <!--<th>Total Amount Due</th>-->
+        <!--<th>Total Balance Owing</th>-->
+        <!--<th>Status</th>-->
+        <!--<th></th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--<tbody>-->
+    <!--<tr>-->
+        <!--<td>00123</td>-->
+        <!--<td>09-07-2016</td>-->
+        <!--<td>10-07-2016</td>-->
+        <!--<td>$3200</td>-->
+        <!--<td>$3200</td>-->
+        <!--<td>-->
+            <!--<div class="sso-status sso-status-success">Paid</div>-->
+        <!--</td>-->
+        <!--<td>-->
+            <!--<div class="sso-table-button" [routerLink]="['/main/invoices-single']">-->
+                <!--<i class="thentia-eye"></i>  view-->
+            <!--</div>-->
+        <!--</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<td>00123</td>-->
+        <!--<td>09-07-2016</td>-->
+        <!--<td>10-07-2016</td>-->
+        <!--<td>$3200</td>-->
+        <!--<td>$3200</td>-->
+        <!--<td>-->
+            <!--<div class="sso-status sso-status-warning">Unpaid</div>-->
+        <!--</td>-->
+        <!--<td>-->
+            <!--<div class="sso-table-button" [routerLink]="['/main/invoices-single']">-->
+                <!--<i class="thentia-eye"></i>  view-->
+            <!--</div>-->
+        <!--</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<td>00123</td>-->
+        <!--<td>09-07-2016</td>-->
+        <!--<td>10-07-2016</td>-->
+        <!--<td>$3200</td>-->
+        <!--<td>$3200</td>-->
+        <!--<td>-->
+            <!--<div class="sso-status sso-status-error">Overdue</div>-->
+        <!--</td>-->
+        <!--<td>-->
+            <!--<div class="sso-table-button" [routerLink]="['/main/invoices-single']">-->
+                <!--<i class="thentia-eye"></i>  view-->
+            <!--</div>-->
+        <!--</td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+<!--</table>-->
+
+<kendo-grid [data]="gridView"
+            [pageSize]="pageSize"
+            [skip]="skip"
+            [pageable]="{ info: false }"
+            (pageChange)="pageChange($event)"
+            [sortable]="{ mode: 'multiple' }"
+            [scrollable]="'none'"
+            [sort]="sort"
+            (sortChange)="sortChange($event)">
+    <kendo-grid-column field="invoiceNumber" title="Invoice #"></kendo-grid-column>
+    <kendo-grid-column field="invoiceIssue" title="Issue Date"></kendo-grid-column>
+    <kendo-grid-column field="invoiceDue" title="Due Date"></kendo-grid-column>
+    <kendo-grid-column field="invoiceAmount" title="Total Amount Due"></kendo-grid-column>
+    <kendo-grid-column field="invoiceOwing" title="Total Balance Owing"></kendo-grid-column>
+    <kendo-grid-column field="invoiceStatus" title="Status">
+        <template kendoCellTemplate let-dataItem let-rowIndex="rowIndex">
+            <div class="sso-status" [ngClass]="{'sso-status-success': dataItem.invoiceStatus == 'Paid', 'sso-status-error': dataItem.invoiceStatus == 'Overdue', 'sso-status-warning': dataItem.invoiceStatus == 'Unpaid' }">{{dataItem.invoiceStatus}}</div>
+        </template>
+    </kendo-grid-column>
+    <kendo-grid-column title=" ">
+        <template kendoCellTemplate let-dataItem>
+            <div style="text-align: right; width: 100%">
+                <div class="sso-table-button">
+                    <i class="thentia-eye"></i> View
+                </div>
             </div>
-        </td>
-    </tr>
-    <tr>
-        <td>00123</td>
-        <td>09-07-2016</td>
-        <td>10-07-2016</td>
-        <td>$3200</td>
-        <td>$3200</td>
-        <td>
-            <div class="sso-status sso-status-warning">Unpaid</div>
-        </td>
-        <td>
-            <div class="sso-table-button" [routerLink]="['/main/invoices-single']">
-                <i class="thentia-eye"></i>  view
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>00123</td>
-        <td>09-07-2016</td>
-        <td>10-07-2016</td>
-        <td>$3200</td>
-        <td>$3200</td>
-        <td>
-            <div class="sso-status sso-status-error">Overdue</div>
-        </td>
-        <td>
-            <div class="sso-table-button" [routerLink]="['/main/invoices-single']">
-                <i class="thentia-eye"></i>  view
-            </div>
-        </td>
-    </tr>
-    </tbody>
-</table>
+        </template>
+    </kendo-grid-column>
+</kendo-grid>
