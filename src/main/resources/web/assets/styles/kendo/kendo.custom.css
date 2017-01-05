@@ -1261,7 +1261,7 @@ html {
 
 div.k-window-content {
     padding: 25px;
-    padding-top: 0px;
+    padding-top: 1px;
 }
 
 div.k-window-content .btn:first-of-type {
@@ -1301,4 +1301,13 @@ div.k-window-content .btn:first-of-type {
     .k-window {
         min-width: 93% !important;
     }
+}
+
+.k-dialog.k-window {
+    position: absolute !important;
+}
+
+.k-list-optionlabel {
+    font-size: 0px;
+    margin-top: -3px;
 }

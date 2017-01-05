@@ -58,7 +58,8 @@
     </kendo-dialog-titlebar>
 
     <form [formGroup]="editForm">
-        <div class=" row">
+
+        <div class="row">
             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-6">
                 <div class="form-group" [ngClass]="{ 'form-error': !editForm.controls['firstname'].valid && submitted || editForm.controls['firstname'].touched && !editForm.controls['firstname'].valid }">
                     <label>First Name</label>
@@ -67,6 +68,7 @@
                 </div>
             </div>
 
+            <div></div>
             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-6">
                 <div class="form-group" [ngClass]="{ 'form-error': !editForm.controls['lastname'].valid && submitted || editForm.controls['lastname'].touched && !editForm.controls['lastname'].valid }">
                     <label>Last Name</label>
@@ -87,8 +89,12 @@
 
             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-6">
                 <div class="form-group" [ngClass]="{ 'form-error': !editForm.controls['role'].valid && submitted || editForm.controls['role'].touched && !editForm.controls['role'].valid }">
-                    <label>Role</label>
-                    <kendo-dropdownlist formControlName="role" [data]="rolelist" [ngModel]="userdata.userRole"></kendo-dropdownlist>
+                    <label>Role <i class="fa fa-question-circle" aria-hidden="true"></i></label>
+                    <kendo-dropdownlist formControlName="role" [data]="rolelist" [ngModel]="userdata.userRole" [defaultItem]="defaultrole">
+                        <template kendoDropDownListValueTemplate let-dataItem>
+                            {{ userdata.userRole }}
+                        </template>
+                    </kendo-dropdownlist>
                 </div>
             </div>
         </div>
@@ -96,6 +102,7 @@
     </form>
 
     <div style="padding: 5px"></div>
+
     <button type="submit" class="btn btn-sm btn-brand">Save</button>
     <button type="button" class="btn btn-sm btn-light" (click)="closeEditDialog()">Cancel</button>
 </kendo-dialog>

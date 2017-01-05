@@ -73,6 +73,8 @@ export class ManageUsersAllComponent {
         "Admin", "User"
     ];
 
+    public defaultrole:string = "User";
+
     protected sortChange(sort: SortDescriptor[]): void {
         this.sort = sort;
         this.loadProducts();
@@ -116,6 +118,7 @@ export class ManageUsersAllComponent {
     public openAddNew():void {
         this.EditDialogOpened = true;
         this.userdata = new UserType();
+
         this.newform = true;
         this.editForm = this.getnewform();
     }

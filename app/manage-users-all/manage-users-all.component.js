@@ -51,6 +51,7 @@ var ManageUsersAllComponent = (function () {
         this.rolelist = [
             "Admin", "User"
         ];
+        this.defaultrole = "User";
         // init dialog hidden
         this.ConfirmDialogOpened = false;
         this.EditDialogOpened = false;

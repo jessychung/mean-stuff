@@ -5,18 +5,18 @@
     <div class="sso-page-controls sso-page-single sso-blue row">
         <div class="container">
             <div class="row" style="padding: 20px 0;">
-                <div class="col-lg-8 col-md-8">
+                <div class="col-lg-8 col-md-8 col-sm-6">
                     <div class="sso-back" [routerLink]="['/dashboard']">
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </div>
                     <img class="sso-page-logo" src="src/main/resources/web/assets/images/thentia_users_sm.png" />
                     <h1>Manage Users</h1>
                 </div>
-                <div class="col-lg-4 col-md-4" style="text-align: right;">
-                    <div class="sso-addnew">
-                        <i class="fa fa-plus" aria-hidden="true"></i>
+                <div class="col-lg-4 col-md-4 col-sm-6" style="text-align: right;">
+                    <div class="sso-addnew visible-xs" >
+                        <i class="fa fa-search" aria-hidden="true"></i>
                     </div>
-                    <input type="search" class="form-control sso-round-input sso-search" placeholder="Search..." />
+                    <input type="search" class="form-control sso-round-input sso-search hidden-xs" placeholder="Search..." />
                 </div>
             </div>
 
