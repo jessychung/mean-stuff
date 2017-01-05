@@ -108,15 +108,19 @@ input::-webkit-inner-spin-button {
 
 .form-control {
   font-size: 15px !important;
-  border: 1px solid #e6e6e6 !important;
+  border: 1px solid #dedede !important;
   box-sizing: border-box;
+  @include hover-state {
+    border: 1px solid #cccccc !important;
+  }
 }
 
 .form-group {
   label {
     padding-top: 12px;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
     font-size: 14px;
+    color: $black;
   }
 }
 
@@ -185,7 +189,12 @@ input::-webkit-inner-spin-button {
 .form-error {
   input {
     border: 1px solid lighten(#c71c3e, 30%) !important;
+    background-color: lighten(#c71c3e, 54%);
     transition: all .3s;
+    @include hover-state {
+      border: 1px solid lighten(#c71c3e, 30%) !important;
+      background-color: lighten(#c71c3e, 54%);
+    }
   }
   .icon {
     i {
@@ -199,10 +208,18 @@ input::-webkit-inner-spin-button {
   position: relative;
   input {
     border: 1px solid $thentia-green !important;
+    background-color: lighten($thentia-green, 54%);
     transition: all .3s;
+    @include hover-state {
+      border: 1px solid $thentia-green !important;
+      background-color: lighten($thentia-green, 54%);
+    }
   }
   .k-dropdown-wrap {
-    border-bottom: 1px solid $thentia-green !important;
+    border: 1px solid $thentia-green !important;
+    &:hover {
+      border: 1px solid $thentia-green !important;
+    }
     .k-i-arrow-s {
       &:before {
         color: #fff !important;
@@ -324,9 +341,6 @@ input::-webkit-inner-spin-button {
 .sso-status-error {
   background-color: $thentia-red;
 }
-
-
-
 
 @keyframes fadein {
   from { opacity: 0; }
@@ -455,4 +469,54 @@ input::-webkit-inner-spin-button {
     font-weight: 600;
     display: inline-block
   }
+}
+
+.sso-tooltip {
+  font-size: 14px;
+  color: $thentia-blue;
+}
+
+.tooltip-inner {
+  background-color: #fff !important;
+  border: 1px solid #dedede !important;
+  color: $black !important;
+  border-radius: 3px !important;
+  font-family: "proxima-nova", sans-serif !important;
+  font-size: 13px;
+  padding: 6px 9px;
+}
+
+.tooltip.right .tooltip-arrow {
+  display: none !important;
+}
+
+.tooltip.right {
+  padding: 0;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.tooltip.right:after, .tooltip.right:before {
+  right: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  margin-right: -1px;
+}
+
+.tooltip.right:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-right-color: #fff;
+  border-width: 6px;
+  margin-top: -6px;
+}
+.tooltip.right:before {
+  border-color: rgba(222, 222, 222, 0);
+  border-right-color: #dedede;
+  border-width: 7px;
+  margin-top: -7px;
 }

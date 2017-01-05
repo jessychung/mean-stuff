@@ -88,15 +88,12 @@
 
 .k-list-container .k-reset {
   background-color: #fff;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #dedede;
 }
 
 .k-list-scroller {
-  -webkit-box-shadow: 0 1px 8px 0 rgba(0,0,0,0.09) !important;
-  -moz-box-shadow: 0 1px 8px 0 rgba(0,0,0,0.09) !important;
-  box-shadow: 0 1px 8px 0 rgba(0,0,0,0.09) !important;
+    border-bottom: 1px solid #e6e6e6;
 }
-
 
 .k-picker-wrap .k-input {
     background-color: white !important;
@@ -278,8 +275,8 @@
 
 .k-dropdown-wrap.k-state-default {
     border-radius: 0px !important;
-    border: 1px solid #e6e6e6 !important;
-    border-color: #e6e6e6 !important;
+    border: 1px solid #dedede !important;
+    border-color: #dedede !important;
     box-shadow: none !important;
 }
 
@@ -325,7 +322,7 @@ input.k-textbox:focus, input.k-textbox:active {
 }
 
 .k-list .k-item {
-    font-size: 16px !important;
+    font-size: 15px !important;
     font-weight: 300 !important;
     padding-left: 15px !important;
     padding: 7px 15px 7px 15px !important;
@@ -349,8 +346,7 @@ input.k-textbox:focus, input.k-textbox:active {
 
 
 .k-dropdown-wrap:hover, .k-dropdown-wrap:hover .k-select {
-    background-color: transparent !important;
-    background-image: none !important;
+    background-color: #fff !important;
     background-image: none !important;
 }
 
@@ -1310,4 +1306,12 @@ div.k-window-content .btn:first-of-type {
 .k-list-optionlabel {
     font-size: 0px;
     margin-top: -3px;
+}
+
+.k-popup.k-list-container .k-item:hover {
+    background-color: #f7f7f7 !important;
+}
+
+.k-animation-container-fixed {
+    position: absolute !important;
 }
