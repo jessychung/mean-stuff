@@ -12,7 +12,7 @@ export class testService {
     // get data
     getUsers() {
         return this.http.get('http://localhost:3000/api/tasks')
-            .map(res => JSON.stringify(res));
+            .map(res => res.json());
     }
 
 }

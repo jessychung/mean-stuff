@@ -19,7 +19,7 @@ var testService = (function () {
     // get data
     testService.prototype.getUsers = function () {
         return this.http.get('http://localhost:3000/api/tasks')
-            .map(function (res) { return JSON.stringify(res); });
+            .map(function (res) { return res.json(); });
     };
     return testService;
 }());
