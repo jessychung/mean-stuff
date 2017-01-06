@@ -16,8 +16,7 @@ var kendo_angular_dropdowns_1 = require("@progress/kendo-angular-dropdowns");
 var kendo_angular_grid_1 = require("@progress/kendo-angular-grid");
 var kendo_angular_dialog_1 = require("@progress/kendo-angular-dialog");
 var ng2_bootstrap_1 = require("ng2-bootstrap/ng2-bootstrap");
-var angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
-var fake_service_1 = require("./fake.service");
+var http_1 = require("@angular/http");
 var app_routing_1 = require("./app.routing");
 var app_component_1 = require("./app.component");
 var login_component_1 = require("./login/login.component");
@@ -61,6 +60,7 @@ var vectorleap_component_1 = require("./vectorleap/vectorleap.component");
 var timesheets_task_component_1 = require("./timesheets-task/timesheets-task.component");
 var timesheets_clients_addedit_component_1 = require("./timesheets-clients-addedit/timesheets-clients-addedit.component");
 var form_client_component_1 = require("./form-client/form-client.component");
+var testService_service_1 = require("./testService.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -78,7 +78,7 @@ AppModule = __decorate([
             kendo_angular_grid_1.GridModule,
             kendo_angular_dialog_1.DialogModule,
             app_routing_1.routing,
-            angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(fake_service_1.InMemoryDataService)
+            http_1.HttpModule
         ],
         declarations: [
             app_component_1.AppComponent,
@@ -124,7 +124,8 @@ AppModule = __decorate([
             form_client_component_1.FormClientComponent,
             vectorleap_component_1.VectorleapComponent
         ],
-        bootstrap: [app_component_1.AppComponent]
+        bootstrap: [app_component_1.AppComponent],
+        providers: [testService_service_1.testService]
     }),
     __metadata("design:paramtypes", [])
 ], AppModule);

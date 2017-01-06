@@ -14,17 +14,20 @@ var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
 var kendo_data_query_1 = require("@progress/kendo-data-query");
 var user_1 = require("../user");
+var testService_service_1 = require("../testService.service");
 var ManageUsersAllComponent = (function () {
-    function ManageUsersAllComponent(location, _router) {
+    function ManageUsersAllComponent(location, _router, TestService) {
         this.location = location;
         this._router = _router;
+        this.TestService = TestService;
         this.newform = false;
+        this.users = [];
         this.sort = [];
         this.pageSize = 2;
         this.skip = 0;
         this.gridData = [
             {
-                "userAvatar": "JS",
+                "userAvatar": "ab",
                 "userAvatarColour": "#048586",
                 "userFname": "John",
                 "userLname": "Smith",
@@ -57,6 +60,10 @@ var ManageUsersAllComponent = (function () {
         this.EditDialogOpened = false;
         this.loadProducts();
         this.editForm = this.getnewform();
+        this.TestService.getUsers()
+            .subscribe(function (tasks) {
+            console.log(tasks);
+        });
     }
     ManageUsersAllComponent.prototype.goBack = function () {
         this.location.back();
@@ -110,10 +117,12 @@ ManageUsersAllComponent = __decorate([
     core_1.Component({
         selector: 'manage-users-all',
         templateUrl: 'app/manage-users-all/manage-users-all.component.html',
+        providers: [testService_service_1.testService],
         encapsulation: core_1.ViewEncapsulation.None
     }),
     __metadata("design:paramtypes", [common_1.Location,
-        router_1.Router])
+        router_1.Router,
+        testService_service_1.testService])
 ], ManageUsersAllComponent);
 exports.ManageUsersAllComponent = ManageUsersAllComponent;
 //# sourceMappingURL=manage-users-all.component.js.map

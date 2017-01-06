@@ -1,16 +1,17 @@
-import { Component, ViewEncapsulation} from '@angular/core';
+import {Component, ViewEncapsulation, OnInit} from '@angular/core';
 import { Location }                 from '@angular/common';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
 import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
-
 import { UserType } from '../user';
+import {testService} from "../testService.service";
 
 @Component ({
     selector: 'manage-users-all',
     templateUrl: 'app/manage-users-all/manage-users-all.component.html',
+    providers: [testService],
     encapsulation: ViewEncapsulation.None
 })
 
@@ -25,11 +26,21 @@ export class ManageUsersAllComponent {
 
     constructor(
         private location: Location,
-        private _router: Router
+        private _router: Router,
+        private TestService: testService
     ) {
         this.loadProducts();
         this.editForm = this.getnewform();
+
+        this.TestService.getUsers()
+            .subscribe(tasks => {
+                console.log(tasks);
+            });
+
     }
+
+    users = [];
+
 
     goBack(): void {
         this.location.back();
@@ -44,7 +55,7 @@ export class ManageUsersAllComponent {
 
     private gridData: Array<UserType> = [
         {
-            "userAvatar": "JS",
+            "userAvatar": "ab",
             "userAvatarColour" : "#048586",
             "userFname": "John",
             "userLname": "Smith",
