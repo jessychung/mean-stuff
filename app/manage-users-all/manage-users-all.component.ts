@@ -26,6 +26,9 @@ export class ManageUsersAllComponent {
 
     private newform:boolean = false;
 
+    users = [];
+
+
     constructor(
         private location: Location,
         private _router: Router,
@@ -44,8 +47,6 @@ export class ManageUsersAllComponent {
 
     }
 
-    users = [];
-
     goBack(): void {
         this.location.back();
     }
@@ -55,34 +56,6 @@ export class ManageUsersAllComponent {
 
     private pageSize: number = 2;
     private skip: number = 0;
-
-
-    private gridData: Array<UserType> = [
-        {
-            "userAvatar": "ab",
-            "userAvatarColour" : "#048586",
-            "userFname": "John",
-            "userLname": "Smith",
-            "userEmail": "johns@thentia.com",
-            "userRole": "Admin"
-        },
-        {
-            "userAvatar": "BE",
-            "userAvatarColour" : "#ad2c57",
-            "userFname": "Beth",
-            "userLname": "Ericksen",
-            "userEmail": "bethe@thentia.com",
-            "userRole": "User"
-        },
-        {
-            "userAvatar": "WP",
-            "userAvatarColour" : "#185ba6",
-            "userFname": "William",
-            "userLname": "Powell",
-            "userEmail": "willp@thentia.com",
-            "userRole": "User"
-        }
-    ];
 
     public rolelist: Array<string> = [
         "Admin", "User"
@@ -145,6 +118,11 @@ export class ManageUsersAllComponent {
     public closeEditDialog(): void {
         this.EditDialogOpened = false;
         this.newform = false;
+    }
+
+    public addUser():void {
+        event.preventDefault();
+        console.log(this.editForm.value.firstname);
     }
 
 }

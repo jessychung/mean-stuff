@@ -25,32 +25,6 @@ var ManageUsersAllComponent = (function () {
         this.sort = [];
         this.pageSize = 2;
         this.skip = 0;
-        this.gridData = [
-            {
-                "userAvatar": "ab",
-                "userAvatarColour": "#048586",
-                "userFname": "John",
-                "userLname": "Smith",
-                "userEmail": "johns@thentia.com",
-                "userRole": "Admin"
-            },
-            {
-                "userAvatar": "BE",
-                "userAvatarColour": "#ad2c57",
-                "userFname": "Beth",
-                "userLname": "Ericksen",
-                "userEmail": "bethe@thentia.com",
-                "userRole": "User"
-            },
-            {
-                "userAvatar": "WP",
-                "userAvatarColour": "#185ba6",
-                "userFname": "William",
-                "userLname": "Powell",
-                "userEmail": "willp@thentia.com",
-                "userRole": "User"
-            }
-        ];
         this.rolelist = [
             "Admin", "User"
         ];
@@ -111,6 +85,10 @@ var ManageUsersAllComponent = (function () {
     ManageUsersAllComponent.prototype.closeEditDialog = function () {
         this.EditDialogOpened = false;
         this.newform = false;
+    };
+    ManageUsersAllComponent.prototype.addUser = function () {
+        event.preventDefault();
+        console.log(this.editForm.value.firstname);
     };
     return ManageUsersAllComponent;
 }());
