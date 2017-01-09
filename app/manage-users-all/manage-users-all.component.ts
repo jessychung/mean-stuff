@@ -28,7 +28,6 @@ export class ManageUsersAllComponent {
 
     users = [];
 
-
     constructor(
         private location: Location,
         private _router: Router,
@@ -120,9 +119,20 @@ export class ManageUsersAllComponent {
         this.newform = false;
     }
 
-    public addUser():void {
+    public addUser() {
         event.preventDefault();
-        console.log(this.editForm.value.firstname);
+
+        var newUser = {
+            userAvatar: this.editForm.value.firstname.charAt(0).toUpperCase() + this.editForm.value.lastname.charAt(0).toUpperCase(),
+            userAvatarColour : "#f2f2f2",
+            userFname: this.editForm.value.firstname,
+            userLname: this.editForm.value.lastname,
+            userEmail: this.editForm.value.email,
+            userRole: this.editForm.value.role
+        };
+
+        this.TestService.createUser(newUser)
+            .subscribe();
     }
 
 }

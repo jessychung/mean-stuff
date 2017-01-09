@@ -91,7 +91,7 @@
             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-6">
                 <div class="form-group" [ngClass]="{ 'form-error': !editForm.controls['role'].valid && submitted || editForm.controls['role'].touched && !editForm.controls['role'].valid }">
                     <label>Role <i class="fa fa-question-circle sso-tooltip" aria-hidden="true" tooltipPlacement="right" tooltip="Admin has the ability to create new users."></i></label>
-                    <kendo-dropdownlist formControlName="role" [data]="rolelist" [ngModel]="userdata.userRole" [defaultItem]="defaultrole">
+                    <kendo-dropdownlist formControlName="role" [data]="rolelist" [ngModel]="userdata.userRole" [value]="defaultrole">
                         <template kendoDropDownListValueTemplate let-dataItem>
                             {{ userdata.userRole }}
                         </template>
@@ -105,7 +105,7 @@
     <div style="padding: 5px"></div>
 
     <button type="submit" *ngIf="newform" [disabled]="!editForm.valid" class="btn btn-sm btn-brand" (click)="addUser()">Save</button>
-    <button type="submit" *ngIf="!newform" class="btn btn-sm btn-brand">Save & Update</button>
+    <button type="submit" *ngIf="!newform" [disabled]="!editForm.valid" class="btn btn-sm btn-brand">Save & Update</button>
 
     <button type="button" class="btn btn-sm btn-light" (click)="closeEditDialog()">Cancel</button>
 </kendo-dialog>

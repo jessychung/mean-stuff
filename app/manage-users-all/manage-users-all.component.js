@@ -88,7 +88,16 @@ var ManageUsersAllComponent = (function () {
     };
     ManageUsersAllComponent.prototype.addUser = function () {
         event.preventDefault();
-        console.log(this.editForm.value.firstname);
+        var newUser = {
+            userAvatar: this.editForm.value.firstname.charAt(0).toUpperCase() + this.editForm.value.lastname.charAt(0).toUpperCase(),
+            userAvatarColour: "#f2f2f2",
+            userFname: this.editForm.value.firstname,
+            userLname: this.editForm.value.lastname,
+            userEmail: this.editForm.value.email,
+            userRole: this.editForm.value.role
+        };
+        this.TestService.createUser(newUser)
+            .subscribe();
     };
     return ManageUsersAllComponent;
 }());

@@ -34,7 +34,7 @@ router.get('/task/:id', function (req, res, next) {
 //save
 router.post('/task', function (req, res, next) {
     const task = req.body;
-    if(!task.title ) {
+    if(!task ) {
         res.status(400);
         res.json({
             "error": "bad data"

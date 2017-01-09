@@ -21,6 +21,12 @@ var testService = (function () {
         return this.http.get('/api/tasks')
             .map(function (res) { return res.json(); });
     };
+    testService.prototype.createUser = function (newUser) {
+        var headers = new http_1.Headers();
+        headers.append('Content-Type', 'application/json');
+        return this.http.post('/api/task', JSON.stringify(newUser), { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
     return testService;
 }());
 testService = __decorate([
