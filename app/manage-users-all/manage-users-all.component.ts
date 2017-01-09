@@ -38,7 +38,6 @@ export class ManageUsersAllComponent {
 
         this.TestService.getUsers()
             .subscribe(tasks => {
-                console.log(tasks);
                 this.testData = tasks;
                 this.loadProducts();
             });
@@ -53,7 +52,7 @@ export class ManageUsersAllComponent {
     private sort: SortDescriptor[] = [];
     private gridView: GridDataResult;
 
-    private pageSize: number = 2;
+    private pageSize: number = 10;
     private skip: number = 0;
 
     public rolelist: Array<string> = [
@@ -124,7 +123,7 @@ export class ManageUsersAllComponent {
 
         var newUser = {
             userAvatar: this.editForm.value.firstname.charAt(0).toUpperCase() + this.editForm.value.lastname.charAt(0).toUpperCase(),
-            userAvatarColour : "#f2f2f2",
+            userAvatarColour : '#'+(Math.random()*0xFFFFFF<<0).toString(16),
             userFname: this.editForm.value.firstname,
             userLname: this.editForm.value.lastname,
             userEmail: this.editForm.value.email,
@@ -133,6 +132,15 @@ export class ManageUsersAllComponent {
 
         this.TestService.createUser(newUser)
             .subscribe();
+
+        this.EditDialogOpened = false;
+
+        this.TestService.getUsers()
+            .subscribe(tasks => {
+                this.testData = tasks;
+                this.loadProducts();
+            });
+
     }
 
 }

@@ -23,7 +23,7 @@ var ManageUsersAllComponent = (function () {
         this.newform = false;
         this.users = [];
         this.sort = [];
-        this.pageSize = 2;
+        this.pageSize = 10;
         this.skip = 0;
         this.rolelist = [
             "Admin", "User"
@@ -35,7 +35,6 @@ var ManageUsersAllComponent = (function () {
         this.editForm = this.getnewform();
         this.TestService.getUsers()
             .subscribe(function (tasks) {
-            console.log(tasks);
             _this.testData = tasks;
             _this.loadProducts();
         });
@@ -87,10 +86,11 @@ var ManageUsersAllComponent = (function () {
         this.newform = false;
     };
     ManageUsersAllComponent.prototype.addUser = function () {
+        var _this = this;
         event.preventDefault();
         var newUser = {
             userAvatar: this.editForm.value.firstname.charAt(0).toUpperCase() + this.editForm.value.lastname.charAt(0).toUpperCase(),
-            userAvatarColour: "#f2f2f2",
+            userAvatarColour: '#' + (Math.random() * 0xFFFFFF << 0).toString(16),
             userFname: this.editForm.value.firstname,
             userLname: this.editForm.value.lastname,
             userEmail: this.editForm.value.email,
@@ -98,6 +98,12 @@ var ManageUsersAllComponent = (function () {
         };
         this.TestService.createUser(newUser)
             .subscribe();
+        this.EditDialogOpened = false;
+        this.TestService.getUsers()
+            .subscribe(function (tasks) {
+            _this.testData = tasks;
+            _this.loadProducts();
+        });
     };
     return ManageUsersAllComponent;
 }());

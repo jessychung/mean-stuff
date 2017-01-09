@@ -16,7 +16,7 @@ export class testService {
     }
 
     createUser(newUser) {
-        var headers = new Headers();
+        let headers = new Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post('/api/task', JSON.stringify(newUser), {headers: headers} )
             .map(res => res.json());
