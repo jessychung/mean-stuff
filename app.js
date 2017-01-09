@@ -1,31 +1,29 @@
 const express = require('express');
 const path = require('path');
 const http = require('http');
+
 const app = express();
 const bodyParser = require('body-parser');
 const mongojs = require('mongojs');
 
-const index = require('./routes/index');
-const tasks = require('./routes/tasks');
+const api = require('./routes/tasks');
 
 
-const port = 3000;
-
-
-//set static folder
-app.use(express.static(path.join(__dirname, '/')));
-
-//run angular
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
-});
 
 //body parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+//set static folder
+app.use(express.static(path.join(__dirname, '/')));
+
 //routing
-app.use('/api', tasks);
+app.use('/api', api);
+
+//run angular
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 //connect to mlab
 // MongoClient.connect('mongodb://jessy:123@ds133328.mlab.com:33328/testwhatever', function (err, db) {
@@ -37,7 +35,11 @@ app.use('/api', tasks);
 //     })
 // });
 
+const port = process.env.PORT || '3000';
+app.set('port', port);
 
-app.listen(port, function () {
+const server = http.createServer(app);
+
+server.listen(port, function () {
     console.log(`app started on port ${port}!`);
 });

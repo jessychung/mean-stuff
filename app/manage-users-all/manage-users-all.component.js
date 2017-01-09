@@ -12,11 +12,11 @@ var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
-var kendo_data_query_1 = require("@progress/kendo-data-query");
 var user_1 = require("../user");
 var testService_service_1 = require("../testService.service");
 var ManageUsersAllComponent = (function () {
     function ManageUsersAllComponent(location, _router, TestService) {
+        var _this = this;
         this.location = location;
         this._router = _router;
         this.TestService = TestService;
@@ -58,11 +58,12 @@ var ManageUsersAllComponent = (function () {
         // init dialog hidden
         this.ConfirmDialogOpened = false;
         this.EditDialogOpened = false;
-        this.loadProducts();
         this.editForm = this.getnewform();
         this.TestService.getUsers()
             .subscribe(function (tasks) {
             console.log(tasks);
+            _this.testData = tasks;
+            _this.loadProducts();
         });
     }
     ManageUsersAllComponent.prototype.goBack = function () {
@@ -78,8 +79,8 @@ var ManageUsersAllComponent = (function () {
     };
     ManageUsersAllComponent.prototype.loadProducts = function () {
         this.gridView = {
-            data: kendo_data_query_1.orderBy(this.gridData.slice(this.skip, this.skip + this.pageSize), this.sort),
-            total: this.gridData.length
+            data: this.testData.slice(this.skip, this.skip + this.pageSize),
+            total: this.testData.length
         };
     };
     ManageUsersAllComponent.prototype.getnewform = function () {

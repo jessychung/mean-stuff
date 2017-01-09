@@ -4,6 +4,11 @@ const router = express.Router();
 const mongojs = require('mongojs');
 const db = mongojs('mongodb://jessy:123@ds133328.mlab.com:33328/testwhatever', ['users']);
 
+//api
+router.get('/', (req, res) => {
+    res.send('api works');
+});
+
 
 //get all
 router.get('/tasks', function (req, res, next) {
@@ -12,6 +17,7 @@ router.get('/tasks', function (req, res, next) {
             res.send(err);
         }
         res.json(users);
+        console.log('testing!');
     })
 });
 
@@ -40,7 +46,7 @@ router.post('/task', function (req, res, next) {
             }
             res.json(task);
         });
-    };
+    }
 });
 
 //delete

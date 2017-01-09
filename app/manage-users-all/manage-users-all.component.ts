@@ -6,7 +6,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
 import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
 import { UserType } from '../user';
-import {testService} from "../testService.service";
+import { testService } from "../testService.service";
 
 @Component ({
     selector: 'manage-users-all',
@@ -22,6 +22,8 @@ export class ManageUsersAllComponent {
     private editForm;
     private userdata;
 
+    private testData:Array<UserType>;
+
     private newform:boolean = false;
 
     constructor(
@@ -29,18 +31,20 @@ export class ManageUsersAllComponent {
         private _router: Router,
         private TestService: testService
     ) {
-        this.loadProducts();
+
         this.editForm = this.getnewform();
 
         this.TestService.getUsers()
             .subscribe(tasks => {
                 console.log(tasks);
+                this.testData = tasks;
+                this.loadProducts();
             });
+
 
     }
 
     users = [];
-
 
     goBack(): void {
         this.location.back();
@@ -98,8 +102,8 @@ export class ManageUsersAllComponent {
 
     private loadProducts(): void {
         this.gridView = {
-            data: orderBy(this.gridData.slice(this.skip, this.skip + this.pageSize), this.sort),
-            total: this.gridData.length
+            data: this.testData.slice(this.skip, this.skip + this.pageSize),
+            total: this.testData.length
         };
     }
 

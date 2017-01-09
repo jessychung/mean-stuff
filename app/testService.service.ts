@@ -11,7 +11,7 @@ export class testService {
 
     // get data
     getUsers() {
-        return this.http.get('http://localhost:3000/api/tasks')
+        return this.http.get('/api/tasks')
             .map(res => res.json());
     }
 
