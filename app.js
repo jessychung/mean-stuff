@@ -4,7 +4,6 @@ const http = require('http');
 const app = express();
 const bodyParser = require('body-parser');
 const mongojs = require('mongojs');
-const MongoClient = require('mongodb').MongoClient;
 
 const index = require('./routes/index');
 const tasks = require('./routes/tasks');
@@ -26,7 +25,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 //routing
-app.use('/', index);
 app.use('/api', tasks);
 
 //connect to mlab
