@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
 
 //get all
-router.get('/tasks', function (req, res, next) {
+router.get('/users', function (req, res, next) {
     db.users.find(function (err, users) {
         if(err) {
             res.send(err);
@@ -22,7 +22,7 @@ router.get('/tasks', function (req, res, next) {
 });
 
 //get one
-router.get('/task/:id', function (req, res, next) {
+router.get('/users/:id', function (req, res, next) {
     db.users.findOne({_id: mongojs.ObjectId(req.params.id) }, function (err, users) {
         if(err) {
             res.send(err);
@@ -31,8 +31,8 @@ router.get('/task/:id', function (req, res, next) {
     })
 });
 
-//save
-router.post('/task', function (req, res, next) {
+//create
+router.post('/users', function (req, res, next) {
     const task = req.body;
     if(!task ) {
         res.status(400);
@@ -50,7 +50,7 @@ router.post('/task', function (req, res, next) {
 });
 
 //delete
-router.delete('/task/:id', function (req, res, next) {
+router.delete('/users/:id', function (req, res, next) {
     db.users.remove({_id: mongojs.ObjectId(req.params.id) }, function (err, users) {
         if(err) {
             res.send(err);
@@ -60,12 +60,19 @@ router.delete('/task/:id', function (req, res, next) {
 });
 
 //update
-router.put('/task/:id', function (req, res, next) {
+router.put('/users/:id', function (req, res, next) {
 
-    const task = req.body;
-    const newtask = {};
+    const users = req.body;
+    const updateduser = {
+        userAvatar: users.userAvatar,
+        userAvatarColour: users.userAvatarColour,
+        userFname: users.userFname,
+        userLname: users.userLname,
+        userEmail: users.userEmail,
+        userRole: users.userRole
+    };
 
-    db.users.remove({_id: mongojs.ObjectId(req.params.id) }, function (err, users) {
+    db.users.update({_id: mongojs.ObjectId(req.params.id) }, updateduser, {},function (err, users) {
         if(err) {
             res.send(err);
         }

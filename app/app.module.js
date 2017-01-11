@@ -60,7 +60,8 @@ var vectorleap_component_1 = require("./vectorleap/vectorleap.component");
 var timesheets_task_component_1 = require("./timesheets-task/timesheets-task.component");
 var timesheets_clients_addedit_component_1 = require("./timesheets-clients-addedit/timesheets-clients-addedit.component");
 var form_client_component_1 = require("./form-client/form-client.component");
-var testService_service_1 = require("./testService.service");
+var userService_service_1 = require("./userService.service");
+var accountService_service_1 = require("./accountService.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -125,7 +126,7 @@ AppModule = __decorate([
             vectorleap_component_1.VectorleapComponent
         ],
         bootstrap: [app_component_1.AppComponent],
-        providers: [testService_service_1.testService]
+        providers: [userService_service_1.userService, accountService_service_1.accountService]
     }),
     __metadata("design:paramtypes", [])
 ], AppModule);

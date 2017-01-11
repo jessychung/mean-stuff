@@ -3,24 +3,20 @@ import { Http, Jsonp, URLSearchParams, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class testService {
+export class accountService {
 
     constructor(private http: Http) {
         console.log('getting the users...');
     }
 
-    // get data
-    getUsers() {
-        return this.http.get('/api/tasks')
+    getAllAccounts() {
+        return this.http.get('/api/accounts')
             .map(res => res.json());
     }
 
-    createUser(newUser) {
-        let headers = new Headers();
-        headers.append('Content-Type', 'application/json');
-        return this.http.post('/api/task', JSON.stringify(newUser), {headers: headers} )
+    getAccount(email) {
+        return this.http.get('/api/accounts/' + email)
             .map(res => res.json());
-
     }
 
 }

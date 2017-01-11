@@ -6,8 +6,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongojs = require('mongojs');
 
-const api = require('./routes/tasks');
-
+const users = require('./routes/users');
+const accounts = require('./routes/accounts');
 
 
 //body parser
@@ -18,7 +18,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, '/')));
 
 //routing
-app.use('/api', api);
+app.use('/api', users);
+app.use('/api', accounts);
 
 //run angular
 app.get('*', (req, res) => {

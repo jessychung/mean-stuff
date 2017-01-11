@@ -6,12 +6,12 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
 import { SortDescriptor, orderBy } from '@progress/kendo-data-query';
 import { UserType } from '../user';
-import { testService } from "../testService.service";
+import { userService } from "../userService.service";
 
 @Component ({
     selector: 'manage-users-all',
     templateUrl: 'app/manage-users-all/manage-users-all.component.html',
-    providers: [testService],
+    providers: [userService],
     encapsulation: ViewEncapsulation.None
 })
 
@@ -31,22 +31,23 @@ export class ManageUsersAllComponent {
     constructor(
         private location: Location,
         private _router: Router,
-        private TestService: testService
+        private UserService: userService
     ) {
 
         this.editForm = this.getnewform();
-
-        this.TestService.getUsers()
-            .subscribe(tasks => {
-                this.testData = tasks;
-                this.loadProducts();
-            });
-
-
+        this.reloadUsers();
     }
 
     goBack(): void {
         this.location.back();
+    }
+
+    private reloadUsers():void {
+        this.UserService.getUsers()
+            .subscribe(tasks => {
+                this.testData = tasks;
+                this.loadProducts();
+            });
     }
 
     private sort: SortDescriptor[] = [];
@@ -58,8 +59,6 @@ export class ManageUsersAllComponent {
     public rolelist: Array<string> = [
         "Admin", "User"
     ];
-
-    public defaultrole:string = "User";
 
     protected sortChange(sort: SortDescriptor[]): void {
         this.sort = sort;
@@ -73,7 +72,7 @@ export class ManageUsersAllComponent {
 
     private loadProducts(): void {
         this.gridView = {
-            data: this.testData.slice(this.skip, this.skip + this.pageSize),
+            data: orderBy(this.testData, this.sort),
             total: this.testData.length
         };
     }
@@ -107,6 +106,7 @@ export class ManageUsersAllComponent {
 
         this.newform = true;
         this.editForm = this.getnewform();
+        this.userdata.userRole = "User";
     }
 
     public closeConfirmDialog(): void {
@@ -120,6 +120,8 @@ export class ManageUsersAllComponent {
 
     public addUser() {
         event.preventDefault();
+        this.EditDialogOpened = false;
+        this.newform = false;
 
         var newUser = {
             userAvatar: this.editForm.value.firstname.charAt(0).toUpperCase() + this.editForm.value.lastname.charAt(0).toUpperCase(),
@@ -130,16 +132,42 @@ export class ManageUsersAllComponent {
             userRole: this.editForm.value.role
         };
 
-        this.TestService.createUser(newUser)
+        this.UserService.createUser(newUser)
+            .subscribe(()=>{
+            this.reloadUsers();
+        });
+    }
+
+    public deleteUser(id) {
+        this.UserService.deleteUser(id)
+            .subscribe(data => {
+                console.log(data)
+            });
+
+        this.reloadUsers();
+
+        this.ConfirmDialogOpened = false;
+    }
+
+    public updateUser(id) {
+
+        console.log(this.userdata.userAvatarColour);
+
+        var updatedUser = {
+            _id: id,
+            userAvatar: this.editForm.value.firstname.charAt(0).toUpperCase() + this.editForm.value.lastname.charAt(0).toUpperCase(),
+            userAvatarColour: this.userdata.userAvatarColour,
+            userFname: this.editForm.value.firstname,
+            userLname: this.editForm.value.lastname,
+            userEmail: this.editForm.value.email,
+            userRole: this.editForm.value.role
+        };
+
+        this.UserService.updateUser(updatedUser)
             .subscribe();
 
+        this.reloadUsers();
         this.EditDialogOpened = false;
-
-        this.TestService.getUsers()
-            .subscribe(tasks => {
-                this.testData = tasks;
-                this.loadProducts();
-            });
 
     }
 

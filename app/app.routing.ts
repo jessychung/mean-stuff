@@ -200,6 +200,7 @@ const appRoutes: Routes = [
             }
         ]
     }
+    // { path: '**', redirectTo: '/login/login-form' }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

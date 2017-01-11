@@ -11,27 +11,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
-var testService = (function () {
-    function testService(http) {
+var accountService = (function () {
+    function accountService(http) {
         this.http = http;
         console.log('getting the users...');
     }
-    // get data
-    testService.prototype.getUsers = function () {
-        return this.http.get('/api/tasks')
+    accountService.prototype.getAllAccounts = function () {
+        return this.http.get('/api/accounts')
             .map(function (res) { return res.json(); });
     };
-    testService.prototype.createUser = function (newUser) {
-        var headers = new http_1.Headers();
-        headers.append('Content-Type', 'application/json');
-        return this.http.post('/api/task', JSON.stringify(newUser), { headers: headers })
+    accountService.prototype.getAccount = function (email) {
+        return this.http.get('/api/accounts/' + email)
             .map(function (res) { return res.json(); });
     };
-    return testService;
+    return accountService;
 }());
-testService = __decorate([
+accountService = __decorate([
     core_1.Injectable(),
     __metadata("design:paramtypes", [http_1.Http])
-], testService);
-exports.testService = testService;
-//# sourceMappingURL=testService.service.js.map
+], accountService);
+exports.accountService = accountService;
+//# sourceMappingURL=accountService.service.js.map
