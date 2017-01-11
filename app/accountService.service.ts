@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 export class accountService {
 
     constructor(private http: Http) {
-        console.log('getting the users...');
+        console.log('account api works');
     }
 
     getAllAccounts() {

@@ -14,7 +14,7 @@ require("rxjs/add/operator/map");
 var accountService = (function () {
     function accountService(http) {
         this.http = http;
-        console.log('getting the users...');
+        console.log('account api works');
     }
     accountService.prototype.getAllAccounts = function () {
         return this.http.get('/api/accounts')
