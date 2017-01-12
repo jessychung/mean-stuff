@@ -35,7 +35,7 @@
     font-size: 19px;
     display: block;
     position: absolute;
-    margin-top: 5px;
+    margin-top: 8px;
     margin-left: 14px; }
   .form-group label span {
     font-weight: 400;
@@ -43,8 +43,6 @@
 
 .sso-login-form .form-control {
   padding: 10px 15px 10px 47px; }
-  .sso-login-form .form-control:hover, .sso-login-form .form-control:active, .sso-login-form .form-control:focus {
-    background-color: #fff; }
 
 .sso-login-form .btn {
   margin-top: 20px;

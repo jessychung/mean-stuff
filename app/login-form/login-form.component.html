@@ -1,10 +1,25 @@
 <!--reactive form-->
 
+<div class="alert alert-danger" role="alert" *ngIf="badLogin">
+    <div style="display: table">
+        <div style="padding-right: 12px; display: table-cell; vertical-align: middle;">
+            <div class="alert-icon">
+                <i class="thentia-email" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div style="display: table-cell; vertical-align: middle;">
+            <h1>Oops! Email or Password is incorrect.</h1>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+
 <form [formGroup]="loginForm" (ngSubmit)="submitForm(loginForm.value)" novalidate>
 
     <p>Please enter your email address and password below. <br/> Click login to continue.</p>
 
-    <div class="form-group" [ngClass]="{ 'form-error': !loginForm.controls['sgEmail'].valid && submitted }">
+    <div class="form-group" [ngClass]="{ 'form-error': !loginForm.controls['sgEmail'].valid && submitted || badLogin }">
         <label for="sso-email">Email Address</label>
         <div style="padding: 2px"></div>
         <span class="icon"><i class="thentia-email"></i></span>
@@ -12,7 +27,7 @@
         <div class="sso-help-block" *ngIf="loginForm.controls['sgEmail'].hasError('required') && submitted">Email is required</div>
     </div>
 
-    <div class="form-group" [ngClass]="{ 'form-error': !loginForm.controls['sgPassword'].valid && submitted }" style="margin-bottom: 0 !important;">
+    <div class="form-group" [ngClass]="{ 'form-error': !loginForm.controls['sgPassword'].valid && submitted || badLogin}" style="margin-bottom: 0 !important;">
         <label for="sso-password">Password</label>
         <div style="padding: 2px"></div>
         <span class="icon"><i class="thentia-key"></i></span>
@@ -55,3 +70,6 @@
     <!--<a href="#" class="btn btn-light" [routerLink]="['/login/forgotpassword']">Forgot Password</a>-->
     <!--<div class="sso-no-account">First time here? <a href="#" [routerLink]="['/signup/signup-form']">Sign up</a></div>-->
 <!--</form>-->
+
+<a href="" class="bccsw-social"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+<a href="" class="bccsw-social"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>

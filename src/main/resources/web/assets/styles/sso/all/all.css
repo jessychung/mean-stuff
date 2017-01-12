@@ -109,7 +109,7 @@ input::-webkit-inner-spin-button {
 .alert {
   border-radius: 0px;
   border: 0px;
-  padding: 20px;
+  padding: 15px;
   margin-bottom: 20px;
   display: block; }
   .alert .alert-icon {
@@ -123,6 +123,7 @@ input::-webkit-inner-spin-button {
   .alert h1 {
     font-size: 15px !important;
     font-weight: 600 !important;
+    margin-bottom: 0 !important;
     margin-top: 0; }
   .alert p {
     margin-bottom: 0px !important; }
@@ -667,7 +668,7 @@ input::-webkit-inner-spin-button {
     font-size: 19px;
     display: block;
     position: absolute;
-    margin-top: 5px;
+    margin-top: 8px;
     margin-left: 14px; }
   .form-group label span {
     font-weight: 400;
@@ -675,8 +676,6 @@ input::-webkit-inner-spin-button {
 
 .sso-login-form .form-control {
   padding: 10px 15px 10px 47px; }
-  .sso-login-form .form-control:hover, .sso-login-form .form-control:active, .sso-login-form .form-control:focus {
-    background-color: #fff; }
 
 .sso-login-form .btn {
   margin-top: 20px;

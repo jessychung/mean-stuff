@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { accountService } from "../accountService.service";
+
 import { AccountType } from "../account";
 import {error} from "util";
 
@@ -15,6 +16,7 @@ import {error} from "util";
 export class LoginFormComponent {
 
     loginForm : FormGroup;
+    public badLogin:boolean = false;
 
     private currentAccount;
 
@@ -39,10 +41,10 @@ export class LoginFormComponent {
                     if(value.sgPassword === this.currentAccount.accountPassword) {
                         this.router.navigate(['/dashboard'])
                     } else {
-                        console.log('email good but password bad')
+                        this.badLogin = true;
                     }
                 } else {
-                    console.log('email and password bad')
+                    this.badLogin = true;
                 }
             });
     }

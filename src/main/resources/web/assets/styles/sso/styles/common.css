@@ -109,7 +109,7 @@ input::-webkit-inner-spin-button {
 .alert {
   border-radius: 0px;
   border: 0px;
-  padding: 20px;
+  padding: 15px;
   margin-bottom: 20px;
   display: block; }
   .alert .alert-icon {
@@ -123,6 +123,7 @@ input::-webkit-inner-spin-button {
   .alert h1 {
     font-size: 15px !important;
     font-weight: 600 !important;
+    margin-bottom: 0 !important;
     margin-top: 0; }
   .alert p {
     margin-bottom: 0px !important; }

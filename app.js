@@ -6,6 +6,8 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongojs = require('mongojs');
 
+var jwt = require('jwt-simple');
+
 const users = require('./routes/users');
 const accounts = require('./routes/accounts');
 
@@ -25,6 +27,11 @@ app.use('/api', accounts);
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
+
+
+//set jwt
+
+app.set('jwtTokenSecret', 'coffeeANDdonuts');
 
 //connect to mlab
 // MongoClient.connect('mongodb://jessy:123@ds133328.mlab.com:33328/testwhatever', function (err, db) {

@@ -16,6 +16,7 @@ var LoginFormComponent = (function () {
     function LoginFormComponent(fb, AccountService, router) {
         this.AccountService = AccountService;
         this.router = router;
+        this.badLogin = false;
         this.submitted = false;
         this.loginForm = fb.group({
             'sgEmail': [null, forms_1.Validators.required],
@@ -32,11 +33,11 @@ var LoginFormComponent = (function () {
                     _this.router.navigate(['/dashboard']);
                 }
                 else {
-                    console.log('email good but password bad');
+                    _this.badLogin = true;
                 }
             }
             else {
-                console.log('email and password bad');
+                _this.badLogin = true;
             }
         });
     };
