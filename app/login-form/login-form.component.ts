@@ -1,15 +1,16 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { accountService } from "../accountService.service";
+import {authService} from "../auth.service";
 
 import { AccountType } from "../account";
 import {error} from "util";
 
+
 @Component({
     selector: 'login-form',
     templateUrl: 'app/login-form/login-form.component.html',
-    providers: [accountService],
+    providers: [authService],
     encapsulation: ViewEncapsulation.None
 })
 
@@ -21,7 +22,7 @@ export class LoginFormComponent {
     private currentAccount;
 
     constructor(fb: FormBuilder,
-                private AccountService: accountService,
+                private AuthService: authService,
                 private router: Router) {
         this.loginForm = fb.group({
             'sgEmail': [null, Validators.required],
@@ -32,21 +33,15 @@ export class LoginFormComponent {
     submitted = false;
 
     submitForm(value: any):void {
-        this.AccountService.getAccount(value.sgEmail)
+        this.AuthService.login(value.sgEmail, value.sgPassword)
             .subscribe(
-                data => {
-                this.currentAccount = data;
-
-                if(data != null) {
-                    if(value.sgPassword === this.currentAccount.accountPassword) {
+                result => {
+                    if(result === true) {
                         this.router.navigate(['/dashboard'])
                     } else {
-                        this.badLogin = true;
+                        console.log('bad login')
                     }
-                } else {
-                    this.badLogin = true;
-                }
-            });
+                });
     }
 
 }

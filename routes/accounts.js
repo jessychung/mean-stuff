@@ -17,17 +17,23 @@ router.get('/accounts', function (req, res, next) {
             res.send(err);
         }
         res.json(users);
-        console.log('getting the account');
     })
 });
 
-//get one
-router.get('/accounts/:accountEmail', function (req, res, next) {
-    db.accounts.findOne({accountEmail: req.params.accountEmail }, function (err, users) {
+//get current user by email and password entered at login
+router.get('/accounts/:accountEmail/:accountPassword', function (req, res, next) {
+    db.accounts.findOne({accountEmail: req.params.accountEmail, accountPassword: req.params.accountPassword }, function (err, users) {
         if(err) {
             res.send(err);
         }
-        res.json(users);
+        if(users) {
+            res.json({
+                "token": "fake token"
+            });
+        } else {
+            console.log("doesn't match");
+        }
+
     })
 });
 

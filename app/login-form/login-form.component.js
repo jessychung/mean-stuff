@@ -11,10 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var router_1 = require("@angular/router");
-var accountService_service_1 = require("../accountService.service");
+var auth_service_1 = require("../auth.service");
 var LoginFormComponent = (function () {
-    function LoginFormComponent(fb, AccountService, router) {
-        this.AccountService = AccountService;
+    function LoginFormComponent(fb, AuthService, router) {
+        this.AuthService = AuthService;
         this.router = router;
         this.badLogin = false;
         this.submitted = false;
@@ -25,19 +25,13 @@ var LoginFormComponent = (function () {
     }
     LoginFormComponent.prototype.submitForm = function (value) {
         var _this = this;
-        this.AccountService.getAccount(value.sgEmail)
-            .subscribe(function (data) {
-            _this.currentAccount = data;
-            if (data != null) {
-                if (value.sgPassword === _this.currentAccount.accountPassword) {
-                    _this.router.navigate(['/dashboard']);
-                }
-                else {
-                    _this.badLogin = true;
-                }
+        this.AuthService.login(value.sgEmail, value.sgPassword)
+            .subscribe(function (result) {
+            if (result === true) {
+                _this.router.navigate(['/dashboard']);
             }
             else {
-                _this.badLogin = true;
+                console.log('bad login');
             }
         });
     };
@@ -47,11 +41,11 @@ LoginFormComponent = __decorate([
     core_1.Component({
         selector: 'login-form',
         templateUrl: 'app/login-form/login-form.component.html',
-        providers: [accountService_service_1.accountService],
+        providers: [auth_service_1.authService],
         encapsulation: core_1.ViewEncapsulation.None
     }),
     __metadata("design:paramtypes", [forms_1.FormBuilder,
-        accountService_service_1.accountService,
+        auth_service_1.authService,
         router_1.Router])
 ], LoginFormComponent);
 exports.LoginFormComponent = LoginFormComponent;

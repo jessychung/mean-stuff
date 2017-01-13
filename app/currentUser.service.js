@@ -11,24 +11,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
-var accountService = (function () {
-    function accountService(http) {
+var auth_service_1 = require("./auth.service");
+var currentUserService = (function () {
+    function currentUserService(http, AuthService) {
         this.http = http;
-        console.log('account api works');
+        this.AuthService = AuthService;
     }
-    accountService.prototype.getAllAccounts = function () {
-        return this.http.get('/api/accounts')
+    currentUserService.prototype.getCurrentUser = function () {
+        // add authorization header with jwt token
+        var headers = new http_1.Headers({ 'Authorization': 'Bearer ' + this.AuthService.token });
+        var options = new http_1.RequestOptions({ headers: headers });
+        console.log("heelo" + this.AuthService.token);
+        // get users from api
+        return this.http.get('/api/accounts', options)
             .map(function (res) { return res.json(); });
     };
-    accountService.prototype.getAccount = function (email) {
-        return this.http.get('/api/accounts/' + email)
-            .map(function (res) { return res.json(); });
-    };
-    return accountService;
+    return currentUserService;
 }());
-accountService = __decorate([
+currentUserService = __decorate([
     core_1.Injectable(),
-    __metadata("design:paramtypes", [http_1.Http])
-], accountService);
-exports.accountService = accountService;
-//# sourceMappingURL=accountService.service.js.map
+    __metadata("design:paramtypes", [http_1.Http,
+        auth_service_1.authService])
+], currentUserService);
+exports.currentUserService = currentUserService;
+//# sourceMappingURL=currentUser.service.js.map

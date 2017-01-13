@@ -61,8 +61,8 @@ var timesheets_task_component_1 = require("./timesheets-task/timesheets-task.com
 var timesheets_clients_addedit_component_1 = require("./timesheets-clients-addedit/timesheets-clients-addedit.component");
 var form_client_component_1 = require("./form-client/form-client.component");
 var userService_service_1 = require("./userService.service");
-var accountService_service_1 = require("./accountService.service");
-var angular2_jwt_1 = require("angular2-jwt");
+var auth_service_1 = require("./auth.service");
+var currentUser_service_1 = require("./currentUser.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -127,7 +127,7 @@ AppModule = __decorate([
             vectorleap_component_1.VectorleapComponent
         ],
         bootstrap: [app_component_1.AppComponent],
-        providers: [userService_service_1.userService, accountService_service_1.accountService, angular2_jwt_1.AUTH_PROVIDERS]
+        providers: [userService_service_1.userService, auth_service_1.authService, currentUser_service_1.currentUserService]
     }),
     __metadata("design:paramtypes", [])
 ], AppModule);

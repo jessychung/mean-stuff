@@ -9,18 +9,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var currentUser_service_1 = require("../currentUser.service");
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/map");
 var DashboardComponent = (function () {
-    function DashboardComponent() {
+    function DashboardComponent(http, CurrentUserService) {
+        this.http = http;
+        this.CurrentUserService = CurrentUserService;
+        this.currentUser = [];
     }
+    DashboardComponent.prototype.ngOnInit = function () {
+        this.CurrentUserService.getCurrentUser()
+            .subscribe(function (res) {
+            console.log(res);
+        });
+    };
     return DashboardComponent;
 }());
 DashboardComponent = __decorate([
     core_1.Component({
         selector: 'dashboard',
         templateUrl: 'app/dashboard/dashboard.component.html',
+        providers: [currentUser_service_1.currentUserService],
         encapsulation: core_1.ViewEncapsulation.None
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [http_1.Http,
+        currentUser_service_1.currentUserService])
 ], DashboardComponent);
 exports.DashboardComponent = DashboardComponent;
 //# sourceMappingURL=dashboard.component.js.map

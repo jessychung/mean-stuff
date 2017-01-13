@@ -53,8 +53,8 @@ import {TimesheetsTaskComponent} from "./timesheets-task/timesheets-task.compone
 import {TimesheetsClientsAddeditComponent} from "./timesheets-clients-addedit/timesheets-clients-addedit.component";
 import {FormClientComponent} from "./form-client/form-client.component";
 import {userService} from "./userService.service";
-import {accountService} from "./accountService.service";
-import {AUTH_PROVIDERS} from "angular2-jwt";
+import {authService} from "./auth.service";
+import {currentUserService} from "./currentUser.service";
 
 
 @NgModule({
@@ -115,7 +115,7 @@ import {AUTH_PROVIDERS} from "angular2-jwt";
         VectorleapComponent
     ],
     bootstrap: [ AppComponent ],
-    providers: [userService, accountService, AUTH_PROVIDERS]
+    providers: [userService, authService, currentUserService]
 })
 
 export class AppModule { }
