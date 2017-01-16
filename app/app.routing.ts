@@ -35,6 +35,7 @@ import {TimesheetsClientsComponent} from "./timesheets-clients/timesheets-client
 import {InvoicesCustomComponent} from "./invoices-custom/invoices-custom.component";
 import {VectorleapComponent} from "./vectorleap/vectorleap.component";
 import {TimesheetsClientsAddeditComponent} from "./timesheets-clients-addedit/timesheets-clients-addedit.component";
+import {authGuard} from "./route.guard";
 
 const appRoutes: Routes = [
     {
@@ -80,11 +81,13 @@ const appRoutes: Routes = [
     },
     {
         path: 'dashboard',
-        component: DashboardComponent
+        component: DashboardComponent,
+        canActivate: [authGuard]
     },
     {
         path: 'main',
         component: MainComponent,
+        canActivate: [authGuard],
         children: [
             {
                 path: 'manage-users',

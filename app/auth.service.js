@@ -30,6 +30,10 @@ var authService = (function () {
             }
         });
     };
+    authService.prototype.logout = function () {
+        this.token = null;
+        localStorage.removeItem('currentUser');
+    };
     return authService;
 }());
 authService = __decorate([

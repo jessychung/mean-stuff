@@ -34,6 +34,7 @@ var timesheets_clients_component_1 = require("./timesheets-clients/timesheets-cl
 var invoices_custom_component_1 = require("./invoices-custom/invoices-custom.component");
 var vectorleap_component_1 = require("./vectorleap/vectorleap.component");
 var timesheets_clients_addedit_component_1 = require("./timesheets-clients-addedit/timesheets-clients-addedit.component");
+var route_guard_1 = require("./route.guard");
 var appRoutes = [
     {
         path: '',
@@ -78,11 +79,13 @@ var appRoutes = [
     },
     {
         path: 'dashboard',
-        component: dashboard_component_1.DashboardComponent
+        component: dashboard_component_1.DashboardComponent,
+        canActivate: [route_guard_1.authGuard]
     },
     {
         path: 'main',
         component: main_component_1.MainComponent,
+        canActivate: [route_guard_1.authGuard],
         children: [
             {
                 path: 'manage-users',

@@ -55,6 +55,7 @@ import {FormClientComponent} from "./form-client/form-client.component";
 import {userService} from "./userService.service";
 import {authService} from "./auth.service";
 import {currentUserService} from "./currentUser.service";
+import {authGuard} from "./route.guard";
 
 
 @NgModule({
@@ -115,7 +116,7 @@ import {currentUserService} from "./currentUser.service";
         VectorleapComponent
     ],
     bootstrap: [ AppComponent ],
-    providers: [userService, authService, currentUserService]
+    providers: [userService, authService, currentUserService, authGuard]
 })
 
 export class AppModule { }

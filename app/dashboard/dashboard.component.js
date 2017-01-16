@@ -25,8 +25,7 @@ var DashboardComponent = (function () {
             var currentUserEmail = currentUser.accountEmail;
             this.CurrentUserService.getCurrentUser(currentUserEmail)
                 .subscribe(function (res) {
-                _this.currentUser = res;
-                console.log(_this.currentUser);
+                _this.currentUser.push(res);
             });
         }
     };

@@ -31,8 +31,7 @@ export class DashboardComponent implements OnInit {
 
             this.CurrentUserService.getCurrentUser(currentUserEmail)
                 .subscribe(res => {
-                    this.currentUser = res;
-                    console.log(this.currentUser);
+                    this.currentUser.push(res);
                 })
 
         }

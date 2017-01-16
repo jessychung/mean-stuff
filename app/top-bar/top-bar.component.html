@@ -4,14 +4,14 @@
             <div class="sso-main-logo pull-left">
                 <img src="src/main/resources/web/assets/images/thentia_logo_web.svg" height="65px">
             </div>
-            <div class="pull-right" style="position: relative">
+            <div class="pull-right" style="position: relative" *ngFor="let currentuser of currentUser">
                 <div class="dropdown" style="display: inline-block">
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <div class="sso-avatar-small" style="float: left">JS</div>
-                        <div style="display: inline-block; float:left; margin-top: 8px;"><span>John Smith</span></div>
+                        <div class="sso-avatar-small" style="float: left;" [ngStyle]="{'backgroundColor': currentuser.accountAvatarColour}">{{currentuser.accountAvatar}}</div>
+                        <div style="display: inline-block; float:left; margin-top: 8px;"><span>{{currentuser.accountName }}</span></div>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href=""><i class="fa fa-power-off"></i>  Logout</a></li>
+                        <li><a href="/login/login-form" (click)="logout()"><i class="fa fa-power-off"></i>  Logout</a></li>
                     </ul>
                 </div>
             </div>

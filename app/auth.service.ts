@@ -26,6 +26,11 @@ export class authService {
             });
     }
 
+    logout():void {
+        this.token = null;
+        localStorage.removeItem('currentUser');
+    }
+
 
 
 }

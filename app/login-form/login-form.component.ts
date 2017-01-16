@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {authService} from "../auth.service";
@@ -14,7 +14,7 @@ import {error} from "util";
     encapsulation: ViewEncapsulation.None
 })
 
-export class LoginFormComponent {
+export class LoginFormComponent implements OnInit {
 
     loginForm : FormGroup;
     public badLogin:boolean = false;
@@ -29,6 +29,10 @@ export class LoginFormComponent {
             'sgEmail': [null, Validators.required],
             'sgPassword' : [null, Validators.required]
         })
+    }
+
+    ngOnInit() {
+        this.AuthService.logout();
     }
 
 

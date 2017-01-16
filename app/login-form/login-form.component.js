@@ -23,6 +23,9 @@ var LoginFormComponent = (function () {
             'sgPassword': [null, forms_1.Validators.required]
         });
     }
+    LoginFormComponent.prototype.ngOnInit = function () {
+        this.AuthService.logout();
+    };
     LoginFormComponent.prototype.submitForm = function (value) {
         var _this = this;
         this.AuthService.login(value.sgEmail, value.sgPassword)

@@ -63,6 +63,7 @@ var form_client_component_1 = require("./form-client/form-client.component");
 var userService_service_1 = require("./userService.service");
 var auth_service_1 = require("./auth.service");
 var currentUser_service_1 = require("./currentUser.service");
+var route_guard_1 = require("./route.guard");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -127,7 +128,7 @@ AppModule = __decorate([
             vectorleap_component_1.VectorleapComponent
         ],
         bootstrap: [app_component_1.AppComponent],
-        providers: [userService_service_1.userService, auth_service_1.authService, currentUser_service_1.currentUserService]
+        providers: [userService_service_1.userService, auth_service_1.authService, currentUser_service_1.currentUserService, route_guard_1.authGuard]
     }),
     __metadata("design:paramtypes", [])
 ], AppModule);

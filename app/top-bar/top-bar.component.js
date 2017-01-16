@@ -9,18 +9,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var currentUser_service_1 = require("../currentUser.service");
 var TopbarComponent = (function () {
-    function TopbarComponent() {
+    function TopbarComponent(CurrentUserService) {
+        this.CurrentUserService = CurrentUserService;
+        this.currentUser = [];
     }
+    TopbarComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (localStorage.getItem('currentUser')) {
+            var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            var currentUserEmail = currentUser.accountEmail;
+            this.CurrentUserService.getCurrentUser(currentUserEmail)
+                .subscribe(function (res) {
+                _this.currentUser.push(res);
+            });
+        }
+    };
     return TopbarComponent;
 }());
 TopbarComponent = __decorate([
     core_1.Component({
         selector: 'top-bar',
         templateUrl: 'app/top-bar/top-bar.component.html',
+        providers: [currentUser_service_1.currentUserService],
         encapsulation: core_1.ViewEncapsulation.None
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [currentUser_service_1.currentUserService])
 ], TopbarComponent);
 exports.TopbarComponent = TopbarComponent;
 //# sourceMappingURL=top-bar.component.js.map
