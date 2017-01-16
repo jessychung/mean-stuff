@@ -19,10 +19,16 @@ var DashboardComponent = (function () {
         this.currentUser = [];
     }
     DashboardComponent.prototype.ngOnInit = function () {
-        this.CurrentUserService.getCurrentUser()
-            .subscribe(function (res) {
-            console.log(res);
-        });
+        var _this = this;
+        if (localStorage.getItem('currentUser')) {
+            var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            var currentUserEmail = currentUser.accountEmail;
+            this.CurrentUserService.getCurrentUser(currentUserEmail)
+                .subscribe(function (res) {
+                _this.currentUser = res;
+                console.log(_this.currentUser);
+            });
+        }
     };
     return DashboardComponent;
 }());

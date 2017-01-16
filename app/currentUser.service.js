@@ -17,14 +17,16 @@ var currentUserService = (function () {
         this.http = http;
         this.AuthService = AuthService;
     }
-    currentUserService.prototype.getCurrentUser = function () {
-        // add authorization header with jwt token
-        var headers = new http_1.Headers({ 'Authorization': 'Bearer ' + this.AuthService.token });
-        var options = new http_1.RequestOptions({ headers: headers });
-        console.log("heelo" + this.AuthService.token);
-        // get users from api
-        return this.http.get('/api/accounts', options)
-            .map(function (res) { return res.json(); });
+    currentUserService.prototype.getCurrentUser = function (email) {
+        if (localStorage.getItem('currentUser')) {
+            // logged in so return true
+            var headers = new http_1.Headers({ 'Authorization': 'Bearer ' + this.AuthService.token });
+            var options = new http_1.RequestOptions({ headers: headers });
+            console.log(this.AuthService.token);
+            // get users from api
+            return this.http.get('/api/currentuser/' + email, options)
+                .map(function (res) { return res.json(); });
+        }
     };
     return currentUserService;
 }());

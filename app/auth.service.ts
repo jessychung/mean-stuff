@@ -8,7 +8,8 @@ export class authService {
     public token: string;
 
     constructor(private http: Http) {
-        console.log('account api works');
+        var currentuser = JSON.parse(localStorage.getItem('currentUser'));
+        this.token = currentuser && currentuser.token;
     }
 
     login(email, password) {
@@ -22,7 +23,6 @@ export class authService {
                 } else  {
                     return false;
                 }
-
             });
     }
 

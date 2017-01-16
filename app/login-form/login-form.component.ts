@@ -18,6 +18,7 @@ export class LoginFormComponent {
 
     loginForm : FormGroup;
     public badLogin:boolean = false;
+    submitted = false;
 
     private currentAccount;
 
@@ -30,7 +31,6 @@ export class LoginFormComponent {
         })
     }
 
-    submitted = false;
 
     submitForm(value: any):void {
         this.AuthService.login(value.sgEmail, value.sgPassword)
@@ -39,6 +39,7 @@ export class LoginFormComponent {
                     if(result === true) {
                         this.router.navigate(['/dashboard'])
                     } else {
+                        this.badLogin = true;
                         console.log('bad login')
                     }
                 });

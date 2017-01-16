@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1" style="padding-top: 25px; padding-bottom: 25px;">
                     <div class="col-lg-8 col-md-8">
-                        <h1>Welcome! John Smith.</h1>
+                        <h1 *ngFor="let currentuser of currentUser">Welcome! {{currentuser.accountName }}</h1>
                         <p>Welcome to the Thentia Self-service Portal. This self-service system offers all the tools you need to manage all your accounts with Thentia.</p>
                     </div>
                     <div class="col-lg-4 col-md-4">

@@ -31,6 +31,7 @@ var LoginFormComponent = (function () {
                 _this.router.navigate(['/dashboard']);
             }
             else {
+                _this.badLogin = true;
                 console.log('bad login');
             }
         });

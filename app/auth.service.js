@@ -14,7 +14,8 @@ require("rxjs/add/operator/map");
 var authService = (function () {
     function authService(http) {
         this.http = http;
-        console.log('account api works');
+        var currentuser = JSON.parse(localStorage.getItem('currentUser'));
+        this.token = currentuser && currentuser.token;
     }
     authService.prototype.login = function (email, password) {
         return this.http.get('/api/accounts/' + email + '/' + password)
