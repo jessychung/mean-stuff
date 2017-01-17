@@ -26,7 +26,7 @@
 
     <div class="row">
         <div class="col-md-6 col-sm-12">
-            <div class="form-group" [ngClass]="{ 'form-error': !companyForm.controls['ssoCstreet1'].valid && submitted || !companyForm.controls['ssoCname'].valid && companyForm.controls['ssoCstreet1'].touched }">
+            <div class="form-group" [ngClass]="{ 'form-error': !companyForm.controls['ssoCstreet1'].valid && submitted || !companyForm.controls['ssoCstreet1'].valid && companyForm.controls['ssoCstreet1'].touched }">
                 <label for="sso-cstreet1">Street Address (Line 1)</label>
                 <div style="padding: 2px"></div>
                 <input type="text" class="form-control" id="sso-cstreet1" [formControl]="companyForm.controls['ssoCstreet1']" [ngModel]="x.cStreet1" />
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="col-md-6 col-sm-12">
-            <div class="form-group" [ngClass]="{ 'form-error': !companyForm.controls['ssoCprovince'].valid && submitted || companyForm.controls['ssoCprovince'].touched, 'form-success': companyForm.controls['ssoCprovince'].valid }">
+            <div class="form-group" [ngClass]="{ 'form-error': !companyForm.controls['ssoCprovince'].valid && submitted || !companyForm.controls['ssoCprovince'].valid && companyForm.controls['ssoCprovince'].touched }">
                 <label for="sso-cprovince">Province/State</label>
                 <div style="padding: 2px"></div>
                 <input type="text" class="form-control" id="sso-cprovince" [formControl]="companyForm.controls['ssoCprovince']" [ngModel]="x.cProvince" />
@@ -63,14 +63,14 @@
 
     <div class="row">
         <div class="col-md-6 col-sm-12">
-            <div class="form-group" [ngClass]="{ 'form-error': !companyForm.controls['ssoCcountry'].valid && submitted || companyForm.controls['ssoCcountry'].touched, 'form-success': companyForm.controls['ssoCcountry'].valid }">
+            <div class="form-group" [ngClass]="{ 'form-error': !companyForm.controls['ssoCcountry'].valid && submitted || !companyForm.controls['ssoCcountry'].valid && companyForm.controls['ssoCcountry'].touched }">
                 <label>Country</label>
                 <div style="padding: 2px"></div>
                 <kendo-dropdownlist [data]="countrylist" [defaultItem]="'Select...'" [formControl]="companyForm.controls['ssoCcountry']" [ngModel]="x.cCountry"></kendo-dropdownlist>
             </div>
         </div>
         <div class="col-md-6 col-sm-12">
-            <div class="form-group" [ngClass]="{ 'form-error': !companyForm.controls['ssoCpostal'].valid && submitted || companyForm.controls['ssoCpostal'].touched, 'form-success': companyForm.controls['ssoCpostal'].valid }">
+            <div class="form-group" [ngClass]="{ 'form-error': !companyForm.controls['ssoCpostal'].valid && submitted ||  !companyForm.controls['ssoCpostal'].valid && companyForm.controls['ssoCpostal'].touched }">
                 <label for="sso-cpostal">Postal/ZIP Code</label>
                 <div style="padding: 2px"></div>
                 <input type="text" class="form-control" id="sso-cpostal" [formControl]="companyForm.controls['ssoCpostal']" [ngModel]="x.cPostal"/>
@@ -81,7 +81,7 @@
 
     <div class="row">
         <div class="col-md-6 col-sm-12">
-            <div class="form-group" style="margin-bottom: 0 !important;" [ngClass]="{ 'form-error': !companyForm.controls['ssoCtel'].valid && submitted || companyForm.controls['ssoCtel'].touched, 'form-success': companyForm.controls['ssoCtel'].valid }">
+            <div class="form-group" style="margin-bottom: 0 !important;" [ngClass]="{ 'form-error': !companyForm.controls['ssoCtel'].valid && submitted || !companyForm.controls['ssoCtel'].valid && companyForm.controls['ssoCtel'].touched }">
                 <label for="sso-ctel">Company Telephone</label>
                 <div style="padding: 2px"></div>
                 <input type="number" class="form-control" id="sso-ctel" [formControl]="companyForm.controls['ssoCtel']" [ngModel]="x.cTel" />

@@ -1,7 +1,8 @@
-import { Component, ViewEncapsulation, Input } from '@angular/core';
+import { Component, ViewEncapsulation, Input, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
+import {accountService} from "../accounts.service";
 
 @Component({
     selector: 'form-primary',
@@ -9,17 +10,22 @@ import { Router } from '@angular/router';
     encapsulation: ViewEncapsulation.None
 })
 
-export class FormPrimaryComponent {
+export class FormPrimaryComponent implements OnInit{
 
-    @Input() currentId:string;
+    @Input('currentId') CurrentId:string;
 
     primaryForm : FormGroup;
 
     emailRegex = /@/;
 
+    public primarycontact = [];
+
     router = this._router;
 
-    constructor(fb: FormBuilder, private location: Location, private _router: Router) {
+    constructor(fb: FormBuilder,
+                private location: Location,
+                private _router: Router,
+                private AccountsService :accountService) {
         this.primaryForm = fb.group({
             'ssoFname': ['', Validators.required],
             'ssoLname': ['', Validators.required],
@@ -30,6 +36,19 @@ export class FormPrimaryComponent {
                 Validators.pattern(this.emailRegex)
             ])]
         })
+    }
+
+    ngOnInit() {
+
+        if (localStorage.getItem('currentUser')) {
+
+            this.AccountsService.getAccounts(this.CurrentId)
+                .subscribe(res => {
+                    this.primarycontact.push(res);
+                })
+
+        }
+
     }
 
     submitted = false;

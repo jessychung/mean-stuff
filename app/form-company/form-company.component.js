@@ -20,7 +20,6 @@ var FormCompanyComponent = (function () {
         this._router = _router;
         this.AddressService = AddressService;
         this.address = [];
-        this.test = "wets";
         this.router = this._router;
         this.submitted = false;
         this.countrylist = new country_1.CountryList();
@@ -45,7 +44,6 @@ var FormCompanyComponent = (function () {
         }
     };
     FormCompanyComponent.prototype.submitForm = function (value) {
-        this.submitted = true;
         var updatedAddress = {
             accountId: this.CurrentId,
             cName: this.companyForm.value.ssoCname,
@@ -57,9 +55,14 @@ var FormCompanyComponent = (function () {
             cPostal: this.companyForm.value.ssoCpostal,
             cTel: this.companyForm.value.ssoCtel
         };
-        console.log(updatedAddress);
-        this.AddressService.updateAddress(updatedAddress)
-            .subscribe();
+        if (this.companyForm.valid) {
+            this.AddressService.updateAddress(updatedAddress)
+                .subscribe();
+            this.submitted = true;
+        }
+        else {
+            console.log("not valid");
+        }
     };
     FormCompanyComponent.prototype.isSignup = function () {
         return this.router.url == 'main/address/address-company';

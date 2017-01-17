@@ -13,13 +13,12 @@ import {addressService} from "../address.service";
 })
 
 export class FormCompanyComponent implements OnInit{
+
     @Input('currentId') CurrentId:string;
 
     companyForm : FormGroup;
 
     public address = [];
-
-    public test = "wets";
 
     router = this._router;
 
@@ -55,7 +54,7 @@ export class FormCompanyComponent implements OnInit{
     submitted = false;
 
     submitForm(value: any):void {
-        this.submitted = true;
+
         let updatedAddress = {
             accountId: this.CurrentId,
             cName: this.companyForm.value.ssoCname,
@@ -67,9 +66,15 @@ export class FormCompanyComponent implements OnInit{
             cPostal: this.companyForm.value.ssoCpostal,
             cTel:  this.companyForm.value.ssoCtel
         };
-        console.log(updatedAddress);
-        this.AddressService.updateAddress(updatedAddress)
-            .subscribe();
+
+        if(this.companyForm.valid) {
+            this.AddressService.updateAddress(updatedAddress)
+                .subscribe();
+            this.submitted = true;
+        } else {
+            console.log("not valid");
+        }
+
     }
 
     countrylist = new CountryList();

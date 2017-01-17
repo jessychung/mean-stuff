@@ -12,11 +12,14 @@ var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var common_1 = require("@angular/common");
 var router_1 = require("@angular/router");
+var accounts_service_1 = require("../accounts.service");
 var FormPrimaryComponent = (function () {
-    function FormPrimaryComponent(fb, location, _router) {
+    function FormPrimaryComponent(fb, location, _router, AccountsService) {
         this.location = location;
         this._router = _router;
+        this.AccountsService = AccountsService;
         this.emailRegex = /@/;
+        this.primarycontact = [];
         this.router = this._router;
         this.submitted = false;
         this.primaryForm = fb.group({
@@ -30,6 +33,15 @@ var FormPrimaryComponent = (function () {
                 ])]
         });
     }
+    FormPrimaryComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (localStorage.getItem('currentUser')) {
+            this.AccountsService.getAccounts(this.CurrentId)
+                .subscribe(function (res) {
+                _this.primarycontact.push(res);
+            });
+        }
+    };
     FormPrimaryComponent.prototype.submitForm = function (value) {
         console.log(value);
         this.submitted = true;
@@ -44,16 +56,19 @@ var FormPrimaryComponent = (function () {
     return FormPrimaryComponent;
 }());
 __decorate([
-    core_1.Input(),
+    core_1.Input('currentId'),
     __metadata("design:type", String)
-], FormPrimaryComponent.prototype, "currentId", void 0);
+], FormPrimaryComponent.prototype, "CurrentId", void 0);
 FormPrimaryComponent = __decorate([
     core_1.Component({
         selector: 'form-primary',
         templateUrl: 'app/form-primary/form-primary.component.html',
         encapsulation: core_1.ViewEncapsulation.None
     }),
-    __metadata("design:paramtypes", [forms_1.FormBuilder, common_1.Location, router_1.Router])
+    __metadata("design:paramtypes", [forms_1.FormBuilder,
+        common_1.Location,
+        router_1.Router,
+        accounts_service_1.accountService])
 ], FormPrimaryComponent);
 exports.FormPrimaryComponent = FormPrimaryComponent;
 //# sourceMappingURL=form-primary.component.js.map
