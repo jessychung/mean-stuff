@@ -56,6 +56,7 @@ import {userService} from "./userService.service";
 import {authService} from "./auth.service";
 import {currentUserService} from "./currentUser.service";
 import {authGuard} from "./route.guard";
+import {accountService} from "./accounts.service";
 
 
 @NgModule({
@@ -116,7 +117,7 @@ import {authGuard} from "./route.guard";
         VectorleapComponent
     ],
     bootstrap: [ AppComponent ],
-    providers: [userService, authService, currentUserService, authGuard]
+    providers: [userService, authService, accountService, currentUserService, authGuard]
 })
 
 export class AppModule { }
