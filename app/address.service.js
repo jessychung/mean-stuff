@@ -12,27 +12,34 @@ var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
 var auth_service_1 = require("./auth.service");
-var currentUserService = (function () {
-    function currentUserService(http, AuthService) {
+var addressService = (function () {
+    function addressService(http, AuthService) {
         this.http = http;
         this.AuthService = AuthService;
     }
-    currentUserService.prototype.getCurrentUser = function (email) {
+    addressService.prototype.getAddress = function (id) {
         if (localStorage.getItem('currentUser')) {
-            // logged in so return true
             var headers = new http_1.Headers({ 'Authorization': 'Bearer ' + this.AuthService.token });
             var options = new http_1.RequestOptions({ headers: headers });
-            // get users from api
-            return this.http.get('/api/currentuser/' + email, options)
+            return this.http.get('/api/address/' + id, options)
                 .map(function (res) { return res.json(); });
         }
     };
-    return currentUserService;
+    addressService.prototype.updateAddress = function (updatedAddress) {
+        if (localStorage.getItem('currentUser')) {
+            var headers = new http_1.Headers({ 'Authorization': 'Bearer ' + this.AuthService.token });
+            var options = new http_1.RequestOptions({ headers: headers });
+            headers.append('Content-Type', 'application/json');
+            return this.http.put('/api/address/' + updatedAddress.accountId, JSON.stringify(updatedAddress), options)
+                .map(function (res) { return res.json(); });
+        }
+    };
+    return addressService;
 }());
-currentUserService = __decorate([
+addressService = __decorate([
     core_1.Injectable(),
     __metadata("design:paramtypes", [http_1.Http,
         auth_service_1.authService])
-], currentUserService);
-exports.currentUserService = currentUserService;
-//# sourceMappingURL=currentUser.service.js.map
+], addressService);
+exports.addressService = addressService;
+//# sourceMappingURL=address.service.js.map

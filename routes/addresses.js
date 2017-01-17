@@ -2,16 +2,16 @@ const express = require('express');
 const router = express.Router();
 
 const mongojs = require('mongojs');
-const db = mongojs('mongodb://jessy:123@ds133328.mlab.com:33328/testwhatever', ['accounts']);
+const db = mongojs('mongodb://jessy:123@ds133328.mlab.com:33328/testwhatever', ['address']);
 
 //api
 router.get('/', (req, res) => {
-    res.send('currentuser');
+    res.send('address');
 });
 
 
-router.get('/currentuser/:accountEmail', function (req, res, next) {
-    db.accounts.findOne({accountEmail: req.params.accountEmail }, function (err, users) {
+router.get('/address/:id', function (req, res, next) {
+    db.address.findOne({accountId: req.params.id }, function (err, users) {
         if(err) {
             res.send(err);
         }
@@ -29,6 +29,17 @@ router.get('/currentuser/:accountEmail', function (req, res, next) {
             });
         }
 
+    })
+});
+
+router.put('/address/:id', function (req, res, next) {
+    const updatedaddress = req.body;
+
+    db.address.update({accountId: req.params.id }, updatedaddress, {},function (err, users) {
+        if(err) {
+            res.send(err);
+        }
+        res.json(users);
     })
 });
 

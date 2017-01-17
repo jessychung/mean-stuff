@@ -9,25 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var forms_1 = require("@angular/forms");
 var common_1 = require("@angular/common");
 var country_1 = require("../list/country");
+var currentUser_service_1 = require("../currentUser.service");
 var AddressPrimaryComponent = (function () {
-    function AddressPrimaryComponent(fb, location) {
+    function AddressPrimaryComponent(location, CurrentUserService) {
         this.location = location;
+        this.CurrentUserService = CurrentUserService;
+        this.currentUser = [];
         this.submitted = false;
         this.countrylist = new country_1.CountryList();
-        this.signupForm = fb.group({
-            'ssoCname': ['', forms_1.Validators.required],
-            'ssoCstreet1': ['', forms_1.Validators.required],
-            'ssoCstreet2': [''],
-            'ssoCcity': ['', forms_1.Validators.required],
-            'ssoCprovince': ['', forms_1.Validators.required],
-            'ssoCcountry': ['', forms_1.Validators.required],
-            'ssoCpostal': ['', forms_1.Validators.required],
-            'ssoCtel': ['', forms_1.Validators.required]
-        });
     }
+    AddressPrimaryComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (localStorage.getItem('currentUser')) {
+            var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            var currentUserEmail = currentUser.accountEmail;
+            this.CurrentUserService.getCurrentUser(currentUserEmail)
+                .subscribe(function (res) {
+                _this.currentUser.push(res);
+                _this.currentId = _this.currentUser[0]._id;
+            });
+        }
+    };
     AddressPrimaryComponent.prototype.submitForm = function (value) {
         console.log(value);
         this.submitted = true;
@@ -42,9 +46,10 @@ AddressPrimaryComponent = __decorate([
     core_1.Component({
         selector: 'address-primary',
         templateUrl: 'app/address-primary/address-primary.component.html',
+        providers: [currentUser_service_1.currentUserService],
         encapsulation: core_1.ViewEncapsulation.None
     }),
-    __metadata("design:paramtypes", [forms_1.FormBuilder, common_1.Location])
+    __metadata("design:paramtypes", [common_1.Location, currentUser_service_1.currentUserService])
 ], AddressPrimaryComponent);
 exports.AddressPrimaryComponent = AddressPrimaryComponent;
 //# sourceMappingURL=address-primary.component.js.map

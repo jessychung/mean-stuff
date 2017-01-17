@@ -6,22 +6,35 @@ import 'rxjs/add/operator/map'
 import {authService} from "./auth.service";
 
 @Injectable()
-export class currentUserService {
+export class addressService {
 
     constructor(
         private http: Http,
         private AuthService: authService) {
     }
 
-    getCurrentUser(email) {
+    getAddress(id) {
 
         if (localStorage.getItem('currentUser')) {
-            // logged in so return true
+
             let headers = new Headers({ 'Authorization': 'Bearer ' + this.AuthService.token });
             let options = new RequestOptions({ headers: headers });
-            // get users from api
-            return this.http.get('/api/currentuser/' + email, options)
+
+            return this.http.get('/api/address/' + id, options)
                 .map(res => res.json());
+        }
+    }
+
+    updateAddress(updatedAddress) {
+        if (localStorage.getItem('currentUser')) {
+
+            let headers = new Headers({ 'Authorization': 'Bearer ' + this.AuthService.token });
+            let options = new RequestOptions({ headers: headers });
+            headers.append('Content-Type', 'application/json');
+
+            return this.http.put('/api/address/'+updatedAddress.accountId, JSON.stringify(updatedAddress), options)
+                .map(res => res.json());
+
         }
     }
 }

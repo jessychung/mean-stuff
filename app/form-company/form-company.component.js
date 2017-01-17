@@ -13,10 +13,14 @@ var forms_1 = require("@angular/forms");
 var common_1 = require("@angular/common");
 var router_1 = require("@angular/router");
 var country_1 = require("../list/country");
+var address_service_1 = require("../address.service");
 var FormCompanyComponent = (function () {
-    function FormCompanyComponent(fb, location, _router) {
+    function FormCompanyComponent(fb, location, _router, AddressService) {
         this.location = location;
         this._router = _router;
+        this.AddressService = AddressService;
+        this.address = [];
+        this.test = "wets";
         this.router = this._router;
         this.submitted = false;
         this.countrylist = new country_1.CountryList();
@@ -30,25 +34,53 @@ var FormCompanyComponent = (function () {
             'ssoCpostal': ['', forms_1.Validators.required],
             'ssoCtel': ['', forms_1.Validators.required]
         });
-        console.log(this.router.url);
     }
+    FormCompanyComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (localStorage.getItem('currentUser')) {
+            this.AddressService.getAddress(this.CurrentId)
+                .subscribe(function (res) {
+                _this.address.push(res);
+            });
+        }
+    };
     FormCompanyComponent.prototype.submitForm = function (value) {
-        console.log(value);
         this.submitted = true;
-        console.log(this.submitted);
+        var updatedAddress = {
+            accountId: this.CurrentId,
+            cName: this.companyForm.value.ssoCname,
+            cStreet1: this.companyForm.value.ssoCstreet1,
+            cStreet2: this.companyForm.value.ssoCstreet2,
+            cCity: this.companyForm.value.ssoCcity,
+            cProvince: this.companyForm.value.ssoCprovince,
+            cCountry: this.companyForm.value.ssoCcountry,
+            cPostal: this.companyForm.value.ssoCpostal,
+            cTel: this.companyForm.value.ssoCtel
+        };
+        console.log(updatedAddress);
+        this.AddressService.updateAddress(updatedAddress)
+            .subscribe();
     };
     FormCompanyComponent.prototype.isSignup = function () {
         return this.router.url == 'main/address/address-company';
     };
     return FormCompanyComponent;
 }());
+__decorate([
+    core_1.Input('currentId'),
+    __metadata("design:type", String)
+], FormCompanyComponent.prototype, "CurrentId", void 0);
 FormCompanyComponent = __decorate([
     core_1.Component({
         selector: 'form-company',
         templateUrl: 'app/form-company/form-company.component.html',
+        providers: [address_service_1.addressService],
         encapsulation: core_1.ViewEncapsulation.None
     }),
-    __metadata("design:paramtypes", [forms_1.FormBuilder, common_1.Location, router_1.Router])
+    __metadata("design:paramtypes", [forms_1.FormBuilder,
+        common_1.Location,
+        router_1.Router,
+        address_service_1.addressService])
 ], FormCompanyComponent);
 exports.FormCompanyComponent = FormCompanyComponent;
 //# sourceMappingURL=form-company.component.js.map

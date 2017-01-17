@@ -10,10 +10,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
+var currentUser_service_1 = require("../currentUser.service");
 var AddressCompanyComponent = (function () {
-    function AddressCompanyComponent(location) {
+    function AddressCompanyComponent(location, CurrentUserService) {
         this.location = location;
+        this.CurrentUserService = CurrentUserService;
+        this.currentUser = [];
     }
+    AddressCompanyComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (localStorage.getItem('currentUser')) {
+            var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            var currentUserEmail = currentUser.accountEmail;
+            this.CurrentUserService.getCurrentUser(currentUserEmail)
+                .subscribe(function (res) {
+                _this.currentUser.push(res);
+                _this.currentId = _this.currentUser[0]._id;
+            });
+        }
+    };
     AddressCompanyComponent.prototype.goBack = function () {
         this.location.back();
     };
@@ -23,9 +38,11 @@ AddressCompanyComponent = __decorate([
     core_1.Component({
         selector: 'address-company',
         templateUrl: 'app/address-company/address-company.component.html',
+        providers: [currentUser_service_1.currentUserService],
         encapsulation: core_1.ViewEncapsulation.None
     }),
-    __metadata("design:paramtypes", [common_1.Location])
+    __metadata("design:paramtypes", [common_1.Location,
+        currentUser_service_1.currentUserService])
 ], AddressCompanyComponent);
 exports.AddressCompanyComponent = AddressCompanyComponent;
 //# sourceMappingURL=address-company.component.js.map

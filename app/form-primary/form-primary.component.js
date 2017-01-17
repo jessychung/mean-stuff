@@ -43,6 +43,10 @@ var FormPrimaryComponent = (function () {
     };
     return FormPrimaryComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", String)
+], FormPrimaryComponent.prototype, "currentId", void 0);
 FormPrimaryComponent = __decorate([
     core_1.Component({
         selector: 'form-primary',

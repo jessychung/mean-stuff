@@ -5,17 +5,16 @@
     <div class="sso-page-controls sso-page-main">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1" style="padding-top: 25px; padding-bottom: 25px;">
-                    <div class="col-lg-8 col-md-8">
+                <div class="col-lg-12 col-md-12" style="padding-top: 25px; padding-bottom: 25px;">
+                    <div class="col-lg-5 col-md-5">
                         <h1 *ngFor="let currentuser of currentUser">Welcome! {{currentuser.accountName }}</h1>
                         <p>Welcome to the Thentia Self-service Portal. This self-service system offers all the tools you need to manage all your accounts with Thentia.</p>
                     </div>
-                    <div class="col-lg-4 col-md-4">
+                    <div class="col-lg-offset-4 col-lg-3 col-md-offset-4 col-md-3">
                         <div class="sso-last-login">
                             <span>Last login:</span>
                             12:20PM 12/12/16
                         </div>
-
                     </div>
                 </div>
             </div>

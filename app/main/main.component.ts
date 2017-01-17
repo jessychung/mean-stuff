@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation} from '@angular/core';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import {AccountType} from "../account";
 
 @Component ({
     selector: 'main-shell',
@@ -6,6 +7,9 @@ import { Component, ViewEncapsulation} from '@angular/core';
     encapsulation: ViewEncapsulation.None
 })
 
-export class MainComponent {
+export class MainComponent{
+
+    constructor() {
+    }
 
 }

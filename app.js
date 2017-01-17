@@ -11,6 +11,7 @@ var jwt = require('jwt-simple');
 const users = require('./routes/users');
 const accounts = require('./routes/accounts');
 const currentuser = require('./routes/currentuser');
+const address = require('./routes/addresses');
 
 //body parser
 app.use(bodyParser.json());
@@ -23,6 +24,7 @@ app.use(express.static(path.join(__dirname, '/')));
 app.use('/api', users);
 app.use('/api', accounts);
 app.use('/api', currentuser);
+app.use('/api', address);
 
 //run angular
 app.get('*', (req, res) => {
