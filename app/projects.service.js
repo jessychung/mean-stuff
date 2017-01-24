@@ -21,6 +21,10 @@ var projectsService = (function () {
         return this.http.get('/api/projects/' + token)
             .map(function (res) { return res.json(); });
     };
+    projectsService.prototype.getOneProject = function (id) {
+        return this.http.get('/api/projects/view-project/' + id)
+            .map(function (res) { return res.json(); });
+    };
     projectsService.prototype.createProjects = function (newUser) {
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');

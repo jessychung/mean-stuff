@@ -89,7 +89,7 @@
 
             <div class="col-md-6 col-lg-6 col-xs-12 col-sm-6">
                 <div class="form-group" [ngClass]="{ 'form-error': !editForm.controls['role'].valid && submitted || editForm.controls['role'].touched && !editForm.controls['role'].valid }">
-                    <label>Role <i class="fa fa-question-circle sso-tooltip" aria-hidden="true" tooltipPlacement="right" tooltip="Admin has the ability to create new users."></i></label>
+                    <label>Role <i class="fa fa-question-circle sso-tooltip" aria-hidden="true"></i></label>
                     <kendo-dropdownlist formControlName="role" [data]="rolelist" [ngModel]="userdata.userRole">
                         <template kendoDropDownListValueTemplate let-dataItem>
                             {{ userdata.userRole }}

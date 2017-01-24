@@ -1,0 +1,12 @@
+.sso-timesheets-total {
+  font-size: 28px;
+  padding: 30px 0; }
+  .sso-timesheets-total h1 {
+    font-size: 14px;
+    font-weight: 400;
+    display: block; }
+  .sso-timesheets-total span {
+    color: #b3b3b3;
+    font-size: 17px; }
+  .sso-timesheets-total div {
+    border-left: 2px solid #e6e6e6; }

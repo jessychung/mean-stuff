@@ -13,15 +13,16 @@ export class currentUserService {
         private AuthService: authService) {
     }
 
-    getCurrentUser(email) {
+    getCurrentUser(token) {
 
         if (localStorage.getItem('currentUser')) {
-            // logged in so return true
-            let headers = new Headers({ 'Authorization': 'Bearer ' + this.AuthService.token });
+
+            let headers = new Headers({ 'Authorization': 'Bearer ' + token });
             let options = new RequestOptions({ headers: headers });
-            // get users from api
-            return this.http.get('/api/currentuser/' + email, options)
+
+            return this.http.get('/api/currentuser/' + token, options)
                 .map(res => res.json());
         }
+
     }
 }
