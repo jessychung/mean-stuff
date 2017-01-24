@@ -19,8 +19,9 @@ export class ProjectsSingleComponent implements OnInit{
 
     projectsAll = [];
     timesheetsAll;
-
     projectId;
+
+    empty:boolean = false;
 
     constructor(
         private location: Location,
@@ -44,8 +45,12 @@ export class ProjectsSingleComponent implements OnInit{
 
             this.TimesheetsService.getTimesheets(this.projectId.id)
                 .subscribe(res => {
-                    this.timesheetsAll = res;
-                    this.loadProducts();
+                    if(res.length === 0) {
+                        this.empty = true;
+                    } else {
+                        this.timesheetsAll = res;
+                        this.loadProducts();
+                    }
                 });
 
             console.log(this.projectId.id);

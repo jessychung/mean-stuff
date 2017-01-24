@@ -21,6 +21,7 @@ var ProjectsSingleComponent = (function () {
         this.TimesheetsService = TimesheetsService;
         this.activatedRoute = activatedRoute;
         this.projectsAll = [];
+        this.empty = false;
         this.sort = [];
         this.pageSize = 10;
         this.skip = 0;
@@ -37,8 +38,13 @@ var ProjectsSingleComponent = (function () {
             });
             this.TimesheetsService.getTimesheets(this.projectId.id)
                 .subscribe(function (res) {
-                _this.timesheetsAll = res;
-                _this.loadProducts();
+                if (res.length === 0) {
+                    _this.empty = true;
+                }
+                else {
+                    _this.timesheetsAll = res;
+                    _this.loadProducts();
+                }
             });
             console.log(this.projectId.id);
             console.log(this.timesheetsAll);
