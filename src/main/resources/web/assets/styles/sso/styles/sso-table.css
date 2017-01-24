@@ -12,7 +12,8 @@
   line-height: normal; }
   .sso-table-button:hover, .sso-table-button:active, .sso-table-button:focus {
     cursor: pointer;
-    background-color: #fff;
+    border: 1px solid #adadad;
+    background-color: #f9f9f9;
     transition: all .3s; }
 
 .table > tbody > tr > td {

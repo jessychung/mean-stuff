@@ -1,0 +1,18 @@
+@import "variables.scss";
+
+.sso-timesheets-total {
+  font-size: 28px;
+  padding: 30px 0;
+  h1 {
+    font-size: 14px;
+    font-weight: $regular;
+    display: block;
+  }
+  span {
+    color: #b3b3b3;
+    font-size: 17px;
+  }
+  div {
+    border-left: 2px solid #e6e6e6;
+  }
+}

@@ -1319,3 +1319,6 @@ div.k-window-content .btn:first-of-type {
 .k-link {
     color: #3d474f !important;
 }
+.k-pager-wrap {
+    background-color: transparent !important;
+}

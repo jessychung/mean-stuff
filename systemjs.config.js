@@ -46,7 +46,7 @@
             "@telerik/kendo-intl": { main: './dist/npm/main.js', defaultExtension: 'js' },
             "@telerik/kendo-dropdowns-common": { main: './dist/npm/js/main.js', defaultExtension: 'js' },
             "@progress/kendo-popup-common": { main: './dist/npm/js/main.js', defaultExtension: 'js' },
-            'ng2-bootstrap': { main: './ng2-bootstrap.js', defaultExtension: 'js' },
+            'ng2-bootstrap': { main: 'bundles/ng2-bootstrap.umd.js', defaultExtension: 'js' },
             'moment': { main: './moment.js', defaultExtension: 'js' }
         }
     });

@@ -17,13 +17,11 @@ var currentUserService = (function () {
         this.http = http;
         this.AuthService = AuthService;
     }
-    currentUserService.prototype.getCurrentUser = function (email) {
+    currentUserService.prototype.getCurrentUser = function (token) {
         if (localStorage.getItem('currentUser')) {
-            // logged in so return true
-            var headers = new http_1.Headers({ 'Authorization': 'Bearer ' + this.AuthService.token });
+            var headers = new http_1.Headers({ 'Authorization': 'Bearer ' + token });
             var options = new http_1.RequestOptions({ headers: headers });
-            // get users from api
-            return this.http.get('/api/currentuser/' + email, options)
+            return this.http.get('/api/currentuser/' + token, options)
                 .map(function (res) { return res.json(); });
         }
     };

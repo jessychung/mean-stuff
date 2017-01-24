@@ -2,7 +2,7 @@
     <div class="row">
         <top-bar></top-bar>
     </div>
-    <div class="container">
+    <div class="container" *ngFor="let project of projectsAll">
         <div class="row" style="padding: 20px 0">
             <div class="col-lg-12 col-md-12">
                 <div class="sso-page-single-buttons">
@@ -21,119 +21,76 @@
 
                 <div class="sso-timesheets sso-interior-block">
 
-                    <div class="sso-breadcrumbs">
-                        <a href="#">CMO</a>
-                        <span> / </span>
-                        <a href="#">All Projects</a>
-                        <span> / </span>
-                        <a class="active">CCC</a>
+                    <!--<div class="sso-breadcrumbs">-->
+                        <!--<a href="#">CMO</a>-->
+                        <!--<span> / </span>-->
+                        <!--<a href="#">All Projects</a>-->
+                        <!--<span> / </span>-->
+                        <!--<a class="active">{{project.projectName}}</a>-->
+                    <!--</div>-->
+
+                    <div class="sso-status" [ngClass]="{'sso-status-success': project.projectCompleted === true, 'sso-status-warning': project.projectCompleted === false }">{{project.projectCompleted ? 'Completed' : 'In-Progress'}}</div>
+
+                    <h1 style="margin-top: 10px; margin-bottom: 10px">{{project.projectName}}</h1>
+
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-12 sso-timesheets-total">
+                                <div class="col-md-4 col-sm-4">
+                                    <h1>Billable Hours</h1>
+                                    16 <span>hrs</span>
+                                </div>
+                                <div class="col-md-4 col-sm-4">
+                                    <h1>Non-Billable Hours</h1>
+                                    3 <span>hrs</span>
+                                </div>
+                                <div class="col-md-4 col-sm-4">
+                                    <h1>Total Hours</h1>
+                                    19 <span>hrs</span>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <h1 style="margin-top: 10px; margin-bottom: 20px">CMO Online Self Service</h1>
 
-                    <table class="table table-no-hover">
-                        <thead>
-                        <tr>
-                            <th>Assignee</th>
-                            <th>Tasks</th>
-                            <th>Notes</th>
-                            <th>Hours</th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td rowspan="3">
-                                <div class="sso-avatar-small">JS</div>
-                                John Smith <span style="opacity: .5">(you)</span>
-                            </td>
-                            <td>Adding invoicing capability</td>
-                            <td>
-                                <ul>
-                                    <li>Designed UI</li>
-                                    <li>Added responsive layout</li>
-                                </ul>
-                            </td>
-                            <td><strong>3h30m</strong></td>
-                            <td>
-                                <div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">
-                                    <i class="thentia-edit"></i> edit
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Adding invoicing capability</td>
-                            <td>
-                                <ul>
-                                    <li>Designed UI</li>
-                                    <li>Added responsive layout</li>
-                                </ul>
-                            </td>
-                            <td><strong>3h30m</strong></td>
-                            <td>
-                                <div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">
-                                    <i class="thentia-edit"></i> edit
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Adding invoicing capability</td>
-                            <td>
-                                <ul>
-                                    <li>Designed UI</li>
-                                    <li>Added responsive layout</li>
-                                </ul>
-                            </td>
-                            <td><strong>3h30m</strong></td>
-                            <td>
-                                <div class="sso-table-button" [routerLink]="['/main/manage-users-single/view-user']">
-                                    <i class="thentia-edit"></i> edit
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                        <tbody>
-                        <tr>
-                            <td rowspan="3">
-                                <div class="sso-avatar-small" style="background-color: #ad2c57">BE</div>
-                                Jane Doe
-                            </td>
-                            <td>Adding invoicing capability</td>
-                            <td>
-                                <ul>
-                                    <li>Designed UI</li>
-                                    <li>Added responsive layout</li>
-                                </ul>
-                            </td>
-                            <td><strong>3h30m</strong></td>
-                            <td>
+                    <kendo-grid [data]="gridView"
+                                [pageSize]="pageSize"
+                                [skip]="skip"
+                                [pageable]="{ info: false }"
+                                (pageChange)="pageChange($event)"
+                                [sortable]="{ mode: 'multiple' }"
+                                [scrollable]="'none'"
+                                [sort]="sort"
+                                (sortChange)="sortChange($event)">
+                        <kendo-grid-column field="taskApproved" title=" ">
+                            <template kendoCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                <div class="sso-status" [ngClass]="{'sso-status-success': dataItem.taskApproved === true, 'sso-status-warning': dataItem.taskApproved === false }">{{dataItem.taskApproved ? 'Approved' : 'Approval Pending'}}</div>
+                            </template>
+                        </kendo-grid-column>
+                        <kendo-grid-column field="taskName" title="Task" [width]="250"></kendo-grid-column>
+                        <kendo-grid-column field="taskNotes" title="Notes" [width]="400">
+                            <template kendoCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                <div [innerHTML]="dataItem.taskNotes"></div>
+                            </template>
+                        </kendo-grid-column>
+                        <kendo-grid-column field="taskBillable" title="Status">
+                            <template kendoCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                <div style="color: #bbbbbb">{{dataItem.taskBillable ? 'Billable' : 'Non-Billable'}}</div>
+                            </template>
+                        </kendo-grid-column>
+                        <kendo-grid-column field="taskTime" title="Hours">
+                            <!--<template kendoCellTemplate let-dataItem>-->
+                                <!--<strong>{{dataItem.taskTime}}</strong>-->
+                            <!--</template>-->
+                            <template kendoGridFooterTemplate let-column let-columnIndex="columnIndex">
+                                Total: {{column.field}}
+                            </template>
+                        </kendo-grid-column>
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Adding invoicing capability</td>
-                            <td>
-                                <ul>
-                                    <li>Designed UI</li>
-                                    <li>Added responsive layout</li>
-                                </ul>
-                            </td>
-                            <td><strong>3h30m</strong></td>
-                            <td>
 
-                            </td>
-                        </tr>
-                        </tbody>
-                        <tbody>
-                        <tr class="sso-table-total">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td colspan="2">Total: 30h30m</td>
-                        </tr>
-                        </tbody>
-                    </table>
-
+                    </kendo-grid>
 
                 </div>
             </div>

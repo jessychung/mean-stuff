@@ -12,6 +12,7 @@ const accounts = require('./routes/accounts');
 const currentuser = require('./routes/currentuser');
 const address = require('./routes/addresses');
 const projects = require('./routes/projects');
+const timesheets = require('./routes/timesheets');
 
 //body parser
 app.use(bodyParser.json());
@@ -26,6 +27,7 @@ app.use('/api', accounts);
 app.use('/api', currentuser);
 app.use('/api', address);
 app.use('/api', projects);
+app.use('/api', timesheets);
 
 //run angular
 app.get('*', (req, res) => {

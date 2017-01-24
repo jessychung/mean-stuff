@@ -18,7 +18,7 @@ export class authService {
                 let token = res.json().token;
 
                 if(token) {
-                    localStorage.setItem('currentUser', JSON.stringify({ accountEmail: email, token: token }));
+                    localStorage.setItem('currentUser', JSON.stringify({ token: token }));
                     return true;
                 } else  {
                     return false;
@@ -30,7 +30,6 @@ export class authService {
         this.token = null;
         localStorage.removeItem('currentUser');
     }
-
 
 
 }

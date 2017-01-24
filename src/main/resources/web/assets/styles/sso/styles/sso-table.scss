@@ -14,7 +14,8 @@
   line-height: normal;
   @include  hover-state {
     cursor: pointer;
-    background-color: #fff;
+    border: 1px solid #adadad;
+    background-color: #f9f9f9;
     transition: all .3s;
   }
 }

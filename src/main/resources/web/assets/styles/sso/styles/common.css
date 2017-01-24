@@ -280,13 +280,13 @@ input::-webkit-inner-spin-button {
 .sso-status {
   background-color: #3d474f;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
   border-radius: 100px;
   display: inline-block;
-  padding: 0px 10px;
+  padding: 1px 10px;
   letter-spacing: 1px; }
 
 .sso-status-success {

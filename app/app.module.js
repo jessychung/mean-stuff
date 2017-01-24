@@ -5,9 +5,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
@@ -15,7 +12,6 @@ var kendo_angular_buttons_1 = require("@progress/kendo-angular-buttons");
 var kendo_angular_dropdowns_1 = require("@progress/kendo-angular-dropdowns");
 var kendo_angular_grid_1 = require("@progress/kendo-angular-grid");
 var kendo_angular_dialog_1 = require("@progress/kendo-angular-dialog");
-var ng2_bootstrap_1 = require("ng2-bootstrap/ng2-bootstrap");
 var http_1 = require("@angular/http");
 var app_routing_1 = require("./app.routing");
 var app_component_1 = require("./app.component");
@@ -37,14 +33,12 @@ var page_controls_component_1 = require("./page-controls/page-controls.component
 var dashboard_component_1 = require("./dashboard/dashboard.component");
 var invoices_all_component_1 = require("./invoices-all/invoices-all.component");
 var invoices_thismonth_component_1 = require("./invoices-thismonth/invoices-thismonth.component");
-var timesheets_component_1 = require("./timesheets/timesheets.component");
 var address_component_1 = require("./address/address.component");
 var invoices_single_component_1 = require("./invoices-single/invoices-single.component");
 var support_tickets_all_component_1 = require("./support-tickets-all/support-tickets-all.component");
 var support_tickets_priority_component_1 = require("./support-tickets-priority/support-tickets-priority.component");
 var support_tickets_single_component_1 = require("./support-tickets-single/support-tickets-single.component");
 var manage_users_all_component_1 = require("./manage-users-all/manage-users-all.component");
-var timesheets_all_component_1 = require("./timesheets-all/timesheets-all.component");
 var address_company_component_1 = require("./address-company/address-company.component");
 var address_primary_component_1 = require("./address-primary/address-primary.component");
 var form_company_component_1 = require("./form-company/form-company.component");
@@ -53,18 +47,22 @@ var manage_users_single_component_1 = require("./manage-users-single/manage-user
 var form_user_component_1 = require("./form-user/form-user.component");
 var manage_users_display_component_1 = require("./manage-users-display/manage-users-display.component");
 var manage_users_edit_component_1 = require("./manage-users-edit/manage-users-edit.component");
-var timesheets_single_component_1 = require("./timesheets-single/timesheets-single.component");
-var timesheets_clients_component_1 = require("./timesheets-clients/timesheets-clients.component");
 var invoices_custom_component_1 = require("./invoices-custom/invoices-custom.component");
 var vectorleap_component_1 = require("./vectorleap/vectorleap.component");
-var timesheets_task_component_1 = require("./timesheets-task/timesheets-task.component");
-var timesheets_clients_addedit_component_1 = require("./timesheets-clients-addedit/timesheets-clients-addedit.component");
 var form_client_component_1 = require("./form-client/form-client.component");
 var userService_service_1 = require("./userService.service");
 var auth_service_1 = require("./auth.service");
 var currentUser_service_1 = require("./currentUser.service");
 var route_guard_1 = require("./route.guard");
 var accounts_service_1 = require("./accounts.service");
+var ng2_bootstrap_1 = require("ng2-bootstrap");
+var projects_all_component_1 = require("./projects-all/projects-all.component");
+var projects_clients_component_1 = require("./projects-clients/projects-clients.component");
+var projects_clients_addedit_component_1 = require("./projects-clients-addedit/projects-clients-addedit.component");
+var projects_component_1 = require("./projects/projects.component");
+var projects_single_component_1 = require("./projects-single/projects-single.component");
+var projects_task_component_1 = require("./projects-task/projects-task.component");
+var projects_service_1 = require("./projects.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -106,12 +104,12 @@ AppModule = __decorate([
             manage_users_single_component_1.ManageUsersSingleComponent,
             manage_users_display_component_1.ManageUsersDisplayComponent,
             manage_users_edit_component_1.ManageUsersEditComponent,
-            timesheets_component_1.TimesheetsComponent,
-            timesheets_all_component_1.TimesheetsAllComponent,
-            timesheets_clients_component_1.TimesheetsClientsComponent,
-            timesheets_single_component_1.TimesheetsSingleComponent,
-            timesheets_task_component_1.TimesheetsTaskComponent,
-            timesheets_clients_addedit_component_1.TimesheetsClientsAddeditComponent,
+            projects_all_component_1.ProjectsAllComponent,
+            projects_clients_component_1.ProjectsClientsComponent,
+            projects_clients_addedit_component_1.ProjectsClientsAddeditComponent,
+            projects_component_1.ProjectsComponent,
+            projects_single_component_1.ProjectsSingleComponent,
+            projects_task_component_1.ProjectsTaskComponent,
             address_component_1.AddressComponent,
             address_company_component_1.AddressCompanyComponent,
             address_primary_component_1.AddressPrimaryComponent,
@@ -129,9 +127,8 @@ AppModule = __decorate([
             vectorleap_component_1.VectorleapComponent
         ],
         bootstrap: [app_component_1.AppComponent],
-        providers: [userService_service_1.userService, auth_service_1.authService, accounts_service_1.accountService, currentUser_service_1.currentUserService, route_guard_1.authGuard]
-    }),
-    __metadata("design:paramtypes", [])
+        providers: [userService_service_1.userService, auth_service_1.authService, accounts_service_1.accountService, currentUser_service_1.currentUserService, projects_service_1.projectsService, route_guard_1.authGuard]
+    })
 ], AppModule);
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map
