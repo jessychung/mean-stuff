@@ -5,7 +5,7 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { DialogModule } from '@progress/kendo-angular-dialog';
-import { TooltipModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 import { HttpModule } from '@angular/http';
 
 import { routing } from './app.routing';
@@ -29,14 +29,12 @@ import {PageControlsComponent} from "./page-controls/page-controls.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {InvoicesAllComponent} from "./invoices-all/invoices-all.component";
 import {InvoicesThismonthComponent} from "./invoices-thismonth/invoices-thismonth.component";
-import {TimesheetsComponent} from "./timesheets/timesheets.component";
 import {AddressComponent} from "./address/address.component";
 import {InvoicesSingleComponent} from "./invoices-single/invoices-single.component";
 import {SupportTicketsAllComponent} from "./support-tickets-all/support-tickets-all.component";
 import {SupportTicketsPriorityComponent} from "./support-tickets-priority/support-tickets-priority.component";
 import {SupportTicketsSingleComponent} from "./support-tickets-single/support-tickets-single.component";
 import {ManageUsersAllComponent} from "./manage-users-all/manage-users-all.component";
-import {TimesheetsAllComponent} from "./timesheets-all/timesheets-all.component";
 import {AddressCompanyComponent} from "./address-company/address-company.component";
 import {AddressPrimaryComponent} from "./address-primary/address-primary.component";
 import {FormCompanyComponent} from "./form-company/form-company.component";
@@ -45,18 +43,23 @@ import {ManageUsersSingleComponent} from "./manage-users-single/manage-users-sin
 import {FormUserComponent} from "./form-user/form-user.component";
 import {ManageUsersDisplayComponent} from "./manage-users-display/manage-users-display.component";
 import {ManageUsersEditComponent} from "./manage-users-edit/manage-users-edit.component";
-import {TimesheetsSingleComponent} from "./timesheets-single/timesheets-single.component";
-import {TimesheetsClientsComponent} from "./timesheets-clients/timesheets-clients.component";
 import {InvoicesCustomComponent} from "./invoices-custom/invoices-custom.component";
 import {VectorleapComponent} from "./vectorleap/vectorleap.component";
-import {TimesheetsTaskComponent} from "./timesheets-task/timesheets-task.component";
-import {TimesheetsClientsAddeditComponent} from "./timesheets-clients-addedit/timesheets-clients-addedit.component";
 import {FormClientComponent} from "./form-client/form-client.component";
 import {userService} from "./userService.service";
 import {authService} from "./auth.service";
 import {currentUserService} from "./currentUser.service";
 import {authGuard} from "./route.guard";
 import {accountService} from "./accounts.service";
+
+import {TooltipModule} from "ng2-bootstrap";
+import {ProjectsAllComponent} from "./projects-all/projects-all.component";
+import {ProjectsClientsComponent} from "./projects-clients/projects-clients.component";
+import {ProjectsClientsAddeditComponent} from "./projects-clients-addedit/projects-clients-addedit.component";
+import {ProjectsComponent} from "./projects/projects.component";
+import {ProjectsSingleComponent} from "./projects-single/projects-single.component";
+import {ProjectsTaskComponent} from "./projects-task/projects-task.component";
+import {projectsService} from "./projects.service";
 
 
 @NgModule({
@@ -94,12 +97,12 @@ import {accountService} from "./accounts.service";
         ManageUsersSingleComponent,
         ManageUsersDisplayComponent,
         ManageUsersEditComponent,
-        TimesheetsComponent,
-        TimesheetsAllComponent,
-        TimesheetsClientsComponent,
-        TimesheetsSingleComponent,
-        TimesheetsTaskComponent,
-        TimesheetsClientsAddeditComponent,
+        ProjectsAllComponent,
+        ProjectsClientsComponent,
+        ProjectsClientsAddeditComponent,
+        ProjectsComponent,
+        ProjectsSingleComponent,
+        ProjectsTaskComponent,
         AddressComponent,
         AddressCompanyComponent,
         AddressPrimaryComponent,
@@ -117,7 +120,7 @@ import {accountService} from "./accounts.service";
         VectorleapComponent
     ],
     bootstrap: [ AppComponent ],
-    providers: [userService, authService, accountService, currentUserService, authGuard]
+    providers: [userService, authService, accountService, currentUserService, projectsService, authGuard]
 })
 
 export class AppModule { }

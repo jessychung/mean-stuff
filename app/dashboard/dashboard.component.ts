@@ -27,9 +27,9 @@ export class DashboardComponent implements OnInit {
 
         if (localStorage.getItem('currentUser')) {
             let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-            const currentUserEmail = currentUser.accountEmail;
+            const currentUserToken = currentUser.token;
 
-            this.CurrentUserService.getCurrentUser(currentUserEmail)
+            this.CurrentUserService.getCurrentUser(currentUserToken)
                 .subscribe(res => {
                     this.currentUser.push(res);
                 })

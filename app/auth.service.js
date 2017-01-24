@@ -22,7 +22,7 @@ var authService = (function () {
             .map(function (res) {
             var token = res.json().token;
             if (token) {
-                localStorage.setItem('currentUser', JSON.stringify({ accountEmail: email, token: token }));
+                localStorage.setItem('currentUser', JSON.stringify({ token: token }));
                 return true;
             }
             else {

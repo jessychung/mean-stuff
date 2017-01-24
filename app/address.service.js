@@ -17,11 +17,11 @@ var addressService = (function () {
         this.http = http;
         this.AuthService = AuthService;
     }
-    addressService.prototype.getAddress = function (id) {
+    addressService.prototype.getAddress = function (token) {
         if (localStorage.getItem('currentUser')) {
-            var headers = new http_1.Headers({ 'Authorization': 'Bearer ' + this.AuthService.token });
+            var headers = new http_1.Headers({ 'Authorization': 'Bearer ' + token });
             var options = new http_1.RequestOptions({ headers: headers });
-            return this.http.get('/api/address/' + id, options)
+            return this.http.get('/api/address/' + token, options)
                 .map(function (res) { return res.json(); });
         }
     };

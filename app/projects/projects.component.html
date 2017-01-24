@@ -1,0 +1,50 @@
+<div class="sso-page container-fluid">
+    <div class="row">
+        <top-bar></top-bar>
+    </div>
+    <div class="sso-page-controls sso-page-single sso-yellow row">
+        <div class="container">
+            <div class="row" style="padding: 20px 0;">
+                <div class="col-lg-8 col-md-8">
+                    <div class="sso-back" [routerLink]="['/dashboard']">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </div>
+                    <img class="sso-page-logo" src="src/main/resources/web/assets/images/thentia_projects_sm.png" />
+                    <h1>Projects</h1>
+                </div>
+                <div class="col-lg-4 col-md-4" style="text-align: right;">
+                    <!--<div class="sso-addnew">-->
+                        <!--<i class="fa fa-plus" aria-hidden="true"></i>-->
+                    <!--</div>-->
+                    <input type="search" class="form-control sso-round-input sso-search" placeholder="Search..." />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 col-md-10 col-sm-8">
+                    <ul class="sso-page-menu">
+                        <li [routerLink]="['/main/projects/projects-all']" [routerLinkActive]="['sso-page-menu-active']">All Projects</li>
+                        <li [routerLink]="['/main/projects/projects-clients']" [routerLinkActive]="['sso-page-menu-active']" [ngClass]="{ ssopagemenuactive: checkifactive() }">Timesheets</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-4" style="text-align: right">
+                    <!--<button class="btn btn-sm btn-yellow" style="margin-top: 7px">-->
+                        <!--<i class="fa fa-plus"></i> Add New-->
+                    <!--</button>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div style="padding: 20px 0">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

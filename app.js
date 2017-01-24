@@ -6,12 +6,12 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongojs = require('mongojs');
 
-var jwt = require('jwt-simple');
 
 const users = require('./routes/users');
 const accounts = require('./routes/accounts');
 const currentuser = require('./routes/currentuser');
 const address = require('./routes/addresses');
+const projects = require('./routes/projects');
 
 //body parser
 app.use(bodyParser.json());
@@ -25,26 +25,13 @@ app.use('/api', users);
 app.use('/api', accounts);
 app.use('/api', currentuser);
 app.use('/api', address);
+app.use('/api', projects);
 
 //run angular
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-
-//set jwt
-
-app.set('jwtTokenSecret', 'coffeeANDdonuts');
-
-//connect to mlab
-// MongoClient.connect('mongodb://jessy:123@ds133328.mlab.com:33328/testwhatever', function (err, db) {
-//     if (err) throw err;
-//
-//     db.collection('users').find().toArray(function (err, result) {
-//         if (err) throw err;
-//         console.log(result);
-//     })
-// });
 
 const port = process.env.PORT || '3000';
 app.set('port', port);

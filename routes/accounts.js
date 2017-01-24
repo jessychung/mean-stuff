@@ -1,8 +1,11 @@
 const express = require('express');
+const jwt = require('jsonwebtoken');
 const router = express.Router();
 
 const mongojs = require('mongojs');
 const db = mongojs('mongodb://jessy:123@ds133328.mlab.com:33328/testwhatever', ['accounts']);
+
+var secretkey = 'secret';
 
 //api
 router.get('/', (req, res) => {
@@ -47,9 +50,14 @@ router.get('/accounts/:accountEmail/:accountPassword', function (req, res, next)
             res.send(err);
         }
         if(users) {
-            res.json({
-                "token": "fake token"
+            var userid = users._id;
+            const time = "24h";
+            jwt.sign({ userId: userid }, secretkey, { expiresIn: time }, function(err, token) {
+                res.json({
+                    "token": token
+                });
             });
+
         } else {
             res.json({
                 "error": "doesn't match!"

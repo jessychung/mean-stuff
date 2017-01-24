@@ -15,26 +15,26 @@ var invoices_component_1 = require("./invoices/invoices.component");
 var dashboard_component_1 = require("./dashboard/dashboard.component");
 var invoices_all_component_1 = require("./invoices-all/invoices-all.component");
 var invoices_thismonth_component_1 = require("./invoices-thismonth/invoices-thismonth.component");
-var timesheets_component_1 = require("./timesheets/timesheets.component");
 var address_component_1 = require("./address/address.component");
 var invoices_single_component_1 = require("./invoices-single/invoices-single.component");
 var support_tickets_all_component_1 = require("./support-tickets-all/support-tickets-all.component");
 var support_tickets_single_component_1 = require("./support-tickets-single/support-tickets-single.component");
 var support_tickets_priority_component_1 = require("./support-tickets-priority/support-tickets-priority.component");
 var manage_users_all_component_1 = require("./manage-users-all/manage-users-all.component");
-var timesheets_all_component_1 = require("./timesheets-all/timesheets-all.component");
 var address_company_component_1 = require("./address-company/address-company.component");
 var address_primary_component_1 = require("./address-primary/address-primary.component");
 var manage_users_single_component_1 = require("./manage-users-single/manage-users-single.component");
 var manage_users_display_component_1 = require("./manage-users-display/manage-users-display.component");
 var manage_users_edit_component_1 = require("./manage-users-edit/manage-users-edit.component");
-var timesheets_single_component_1 = require("./timesheets-single/timesheets-single.component");
-var timesheets_task_component_1 = require("./timesheets-task/timesheets-task.component");
-var timesheets_clients_component_1 = require("./timesheets-clients/timesheets-clients.component");
 var invoices_custom_component_1 = require("./invoices-custom/invoices-custom.component");
 var vectorleap_component_1 = require("./vectorleap/vectorleap.component");
-var timesheets_clients_addedit_component_1 = require("./timesheets-clients-addedit/timesheets-clients-addedit.component");
 var route_guard_1 = require("./route.guard");
+var projects_component_1 = require("./projects/projects.component");
+var projects_all_component_1 = require("./projects-all/projects-all.component");
+var projects_clients_component_1 = require("./projects-clients/projects-clients.component");
+var projects_clients_addedit_component_1 = require("./projects-clients-addedit/projects-clients-addedit.component");
+var projects_single_component_1 = require("./projects-single/projects-single.component");
+var projects_task_component_1 = require("./projects-task/projects-task.component");
 var appRoutes = [
     {
         path: '',
@@ -130,24 +130,24 @@ var appRoutes = [
                 ]
             },
             {
-                path: 'timesheets',
-                component: timesheets_component_1.TimesheetsComponent,
+                path: 'projects',
+                component: projects_component_1.ProjectsComponent,
                 children: [
                     {
-                        path: 'timesheets-all',
-                        component: timesheets_all_component_1.TimesheetsAllComponent
+                        path: 'projects-all',
+                        component: projects_all_component_1.ProjectsAllComponent
                     },
                     {
-                        path: 'timesheets-clients',
-                        component: timesheets_clients_component_1.TimesheetsClientsComponent
+                        path: 'projects-clients',
+                        component: projects_clients_component_1.ProjectsClientsComponent
                     },
                     {
-                        path: 'timesheets-clients-edit/:id',
-                        component: timesheets_clients_addedit_component_1.TimesheetsClientsAddeditComponent
+                        path: 'projects-clients-edit/:id',
+                        component: projects_clients_addedit_component_1.ProjectsClientsAddeditComponent
                     },
                     {
-                        path: 'timesheets-clients-add',
-                        component: timesheets_clients_addedit_component_1.TimesheetsClientsAddeditComponent
+                        path: 'projects-clients-add',
+                        component: projects_clients_addedit_component_1.ProjectsClientsAddeditComponent
                     }
                 ]
             },
@@ -188,12 +188,12 @@ var appRoutes = [
                 ]
             },
             {
-                path: 'timesheets-single',
-                component: timesheets_single_component_1.TimesheetsSingleComponent
+                path: 'projects-single/:id',
+                component: projects_single_component_1.ProjectsSingleComponent
             },
             {
-                path: 'timesheets-task',
-                component: timesheets_task_component_1.TimesheetsTaskComponent
+                path: 'projects-task',
+                component: projects_task_component_1.ProjectsTaskComponent
             },
             {
                 path: 'vectorleap',

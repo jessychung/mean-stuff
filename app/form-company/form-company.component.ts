@@ -36,13 +36,17 @@ export class FormCompanyComponent implements OnInit{
             'ssoCpostal': ['', Validators.required],
             'ssoCtel': ['', Validators.required]
         });
+
     }
 
     ngOnInit() {
 
         if (localStorage.getItem('currentUser')) {
 
-            this.AddressService.getAddress(this.CurrentId)
+            let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            const currentUserToken = currentUser.token;
+
+            this.AddressService.getAddress(currentUserToken)
                 .subscribe(res => {
                     this.address.push(res);
                 })

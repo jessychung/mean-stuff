@@ -16,26 +16,26 @@ import {InvoicesComponent} from "./invoices/invoices.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
 import {InvoicesAllComponent} from "./invoices-all/invoices-all.component";
 import {InvoicesThismonthComponent} from "./invoices-thismonth/invoices-thismonth.component";
-import {TimesheetsComponent} from "./timesheets/timesheets.component";
 import {AddressComponent} from "./address/address.component";
 import {InvoicesSingleComponent} from "./invoices-single/invoices-single.component";
 import {SupportTicketsAllComponent} from "./support-tickets-all/support-tickets-all.component";
 import {SupportTicketsSingleComponent} from "./support-tickets-single/support-tickets-single.component";
 import {SupportTicketsPriorityComponent} from "./support-tickets-priority/support-tickets-priority.component";
 import {ManageUsersAllComponent} from "./manage-users-all/manage-users-all.component";
-import {TimesheetsAllComponent} from "./timesheets-all/timesheets-all.component";
 import {AddressCompanyComponent} from "./address-company/address-company.component";
 import {AddressPrimaryComponent} from "./address-primary/address-primary.component";
 import {ManageUsersSingleComponent} from "./manage-users-single/manage-users-single.component";
 import {ManageUsersDisplayComponent} from "./manage-users-display/manage-users-display.component";
 import {ManageUsersEditComponent} from "./manage-users-edit/manage-users-edit.component";
-import {TimesheetsSingleComponent} from "./timesheets-single/timesheets-single.component";
-import {TimesheetsTaskComponent} from "./timesheets-task/timesheets-task.component"
-import {TimesheetsClientsComponent} from "./timesheets-clients/timesheets-clients.component";
 import {InvoicesCustomComponent} from "./invoices-custom/invoices-custom.component";
 import {VectorleapComponent} from "./vectorleap/vectorleap.component";
-import {TimesheetsClientsAddeditComponent} from "./timesheets-clients-addedit/timesheets-clients-addedit.component";
 import {authGuard} from "./route.guard";
+import {ProjectsComponent} from "./projects/projects.component";
+import {ProjectsAllComponent} from "./projects-all/projects-all.component";
+import {ProjectsClientsComponent} from "./projects-clients/projects-clients.component";
+import {ProjectsClientsAddeditComponent} from "./projects-clients-addedit/projects-clients-addedit.component";
+import {ProjectsSingleComponent} from "./projects-single/projects-single.component";
+import {ProjectsTaskComponent} from "./projects-task/projects-task.component";
 
 const appRoutes: Routes = [
     {
@@ -132,24 +132,24 @@ const appRoutes: Routes = [
                 ]
             },
             {
-                path: 'timesheets',
-                component: TimesheetsComponent,
+                path: 'projects',
+                component: ProjectsComponent,
                 children: [
                     {
-                        path: 'timesheets-all',
-                        component: TimesheetsAllComponent
+                        path: 'projects-all',
+                        component: ProjectsAllComponent
                     },
                     {
-                        path: 'timesheets-clients',
-                        component: TimesheetsClientsComponent
+                        path: 'projects-clients',
+                        component: ProjectsClientsComponent
                     },
                     {
-                        path: 'timesheets-clients-edit/:id',
-                        component: TimesheetsClientsAddeditComponent
+                        path: 'projects-clients-edit/:id',
+                        component: ProjectsClientsAddeditComponent
                     },
                     {
-                        path: 'timesheets-clients-add',
-                        component: TimesheetsClientsAddeditComponent
+                        path: 'projects-clients-add',
+                        component: ProjectsClientsAddeditComponent
                     }
                 ]
             },
@@ -190,12 +190,12 @@ const appRoutes: Routes = [
                 ]
             },
             {
-                path: 'timesheets-single',
-                component: TimesheetsSingleComponent
+                path: 'projects-single/:id',
+                component: ProjectsSingleComponent
             },
             {
-                path: 'timesheets-task',
-                component: TimesheetsTaskComponent
+                path: 'projects-task',
+                component: ProjectsTaskComponent
             },
             {
                 path: 'vectorleap',

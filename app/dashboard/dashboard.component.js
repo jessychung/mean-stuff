@@ -22,8 +22,8 @@ var DashboardComponent = (function () {
         var _this = this;
         if (localStorage.getItem('currentUser')) {
             var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-            var currentUserEmail = currentUser.accountEmail;
-            this.CurrentUserService.getCurrentUser(currentUserEmail)
+            var currentUserToken = currentUser.token;
+            this.CurrentUserService.getCurrentUser(currentUserToken)
                 .subscribe(function (res) {
                 _this.currentUser.push(res);
             });

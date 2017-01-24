@@ -13,14 +13,14 @@ export class addressService {
         private AuthService: authService) {
     }
 
-    getAddress(id) {
+    getAddress(token) {
 
         if (localStorage.getItem('currentUser')) {
 
-            let headers = new Headers({ 'Authorization': 'Bearer ' + this.AuthService.token });
+            let headers = new Headers({ 'Authorization': 'Bearer ' + token });
             let options = new RequestOptions({ headers: headers });
 
-            return this.http.get('/api/address/' + id, options)
+            return this.http.get('/api/address/' + token, options)
                 .map(res => res.json());
         }
     }
@@ -30,6 +30,7 @@ export class addressService {
 
             let headers = new Headers({ 'Authorization': 'Bearer ' + this.AuthService.token });
             let options = new RequestOptions({ headers: headers });
+
             headers.append('Content-Type', 'application/json');
 
             return this.http.put('/api/address/'+updatedAddress.accountId, JSON.stringify(updatedAddress), options)

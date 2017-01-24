@@ -37,7 +37,9 @@ var FormCompanyComponent = (function () {
     FormCompanyComponent.prototype.ngOnInit = function () {
         var _this = this;
         if (localStorage.getItem('currentUser')) {
-            this.AddressService.getAddress(this.CurrentId)
+            var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            var currentUserToken = currentUser.token;
+            this.AddressService.getAddress(currentUserToken)
                 .subscribe(function (res) {
                 _this.address.push(res);
             });
