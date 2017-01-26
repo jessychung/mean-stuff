@@ -109,6 +109,7 @@ input::-webkit-inner-spin-button {
 .form-control {
   font-size: 15px !important;
   border: 1px solid #dedede !important;
+  border-radius: 3px !important;
   box-sizing: border-box;
   @include hover-state {
     border: 1px solid #cccccc !important;
@@ -348,6 +349,7 @@ input::-webkit-inner-spin-button {
   display: inline-block;
   padding: 1px 10px;
   letter-spacing: 1px;
+  white-space: nowrap;
 }
 
 .sso-status-success {
@@ -539,4 +541,17 @@ input::-webkit-inner-spin-button {
   border-right-color: #dedede;
   border-width: 7px;
   margin-top: -7px;
+}
+
+.sso-empty-state {
+  text-align: center;
+  font-size: 22px;
+  font-weight: $semibold;
+  color: #dddddd;
+  padding: 30px 0;
+  .sso-empty-state-icon {
+    font-size: 50px;
+    color: #e6e6e6;
+    display: block;
+  }
 }

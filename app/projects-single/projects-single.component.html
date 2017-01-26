@@ -33,74 +33,79 @@
 
                     <h1 style="margin-top: 10px; margin-bottom: 10px">{{project.projectName}}</h1>
 
-
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-8 col-sm-12 sso-timesheets-total">
-                                <div class="col-md-4 col-sm-4">
-                                    <h1>Billable Hours</h1>
-                                    16 <span>hrs</span>
-                                </div>
-                                <div class="col-md-4 col-sm-4">
-                                    <h1>Non-Billable Hours</h1>
-                                    3 <span>hrs</span>
-                                </div>
-                                <div class="col-md-4 col-sm-4">
-                                    <h1>Total Hours</h1>
-                                    19 <span>hrs</span>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
                     <div *ngIf="empty">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <i class=""></i>
+                                    <div class="sso-empty-state">
+                                        <i class="fa fa-folder-open-o sso-empty-state-icon" aria-hidden="true"></i>
+                                        Oops, nothing here yet.
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <div *ngIf="!empty">
 
-                    <kendo-grid [data]="gridView"
-                                [pageSize]="pageSize"
-                                [skip]="skip"
-                                [pageable]="{ info: false }"
-                                (pageChange)="pageChange($event)"
-                                [sortable]="{ mode: 'multiple' }"
-                                [scrollable]="'none'"
-                                [sort]="sort"
-                                (sortChange)="sortChange($event)">
-                        <kendo-grid-column field="taskApproved" title=" ">
-                            <template kendoCellTemplate let-dataItem let-rowIndex="rowIndex">
-                                <div class="sso-status" [ngClass]="{'sso-status-success': dataItem.taskApproved === true, 'sso-status-warning': dataItem.taskApproved === false }">{{dataItem.taskApproved ? 'Approved' : 'Approval Pending'}}</div>
-                            </template>
-                        </kendo-grid-column>
-                        <kendo-grid-column field="taskName" title="Task" [width]="250"></kendo-grid-column>
-                        <kendo-grid-column field="taskNotes" title="Notes" [width]="400">
-                            <template kendoCellTemplate let-dataItem let-rowIndex="rowIndex">
-                                <div [innerHTML]="dataItem.taskNotes"></div>
-                            </template>
-                        </kendo-grid-column>
-                        <kendo-grid-column field="taskBillable" title="Status">
-                            <template kendoCellTemplate let-dataItem let-rowIndex="rowIndex">
-                                <div style="color: #bbbbbb">{{dataItem.taskBillable ? 'Billable' : 'Non-Billable'}}</div>
-                            </template>
-                        </kendo-grid-column>
-                        <kendo-grid-column field="taskTime" title="Hours">
-                            <!--<template kendoCellTemplate let-dataItem>-->
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-8 col-sm-12 sso-timesheets-total">
+                                    <div class="col-md-4 col-sm-4">
+                                        <h1>Billable Hours</h1>
+                                        16 <span>hrs</span>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <h1>Non-Billable Hours</h1>
+                                        3 <span>hrs</span>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <h1>Total Hours</h1>
+                                        19 <span>hrs</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <kendo-grid [data]="gridView"
+                                    [pageSize]="pageSize"
+                                    [skip]="skip"
+                                    [pageable]="{ info: false }"
+                                    (pageChange)="pageChange($event)"
+                                    [sortable]="{ mode: 'multiple' }"
+                                    [scrollable]="'none'"
+                                    [sort]="sort"
+                                    (sortChange)="sortChange($event)">
+                            <kendo-grid-column field="taskApproved" title=" ">
+                                <template kendoCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                    <div class="sso-status" [ngClass]="{'sso-status-success': dataItem.taskApproved === true, 'sso-status-warning': dataItem.taskApproved === false }">{{dataItem.taskApproved ? 'Approved' : 'Approval Pending'}}</div>
+                                </template>
+                            </kendo-grid-column>
+                            <kendo-grid-column field="taskName" title="Task" [width]="250"></kendo-grid-column>
+                            <kendo-grid-column field="taskNotes" title="Notes" [width]="400">
+                                <template kendoCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                    <div [innerHTML]="dataItem.taskNotes"></div>
+                                </template>
+                            </kendo-grid-column>
+                            <kendo-grid-column field="taskBillable" title="Status">
+                                <template kendoCellTemplate let-dataItem let-rowIndex="rowIndex">
+                                    <div style="color: #bbbbbb">{{dataItem.taskBillable ? 'Billable' : 'Non-Billable'}}</div>
+                                </template>
+                            </kendo-grid-column>
+                            <kendo-grid-column field="taskTime" title="Hours">
+                                <!--<template kendoCellTemplate let-dataItem>-->
                                 <!--<strong>{{dataItem.taskTime}}</strong>-->
-                            <!--</template>-->
-                            <template kendoGridFooterTemplate let-column let-columnIndex="columnIndex">
-                                Total: {{column.field}}
-                            </template>
-                        </kendo-grid-column>
+                                <!--</template>-->
+                                <template kendoGridFooterTemplate let-column let-columnIndex="columnIndex">
+                                    Total: {{column.field}}
+                                </template>
+                            </kendo-grid-column>
 
 
-                    </kendo-grid>
+                        </kendo-grid>
+                    </div>
+
 
                 </div>
             </div>

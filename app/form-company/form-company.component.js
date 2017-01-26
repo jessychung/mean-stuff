@@ -19,6 +19,7 @@ var FormCompanyComponent = (function () {
         this.location = location;
         this._router = _router;
         this.AddressService = AddressService;
+        this.loaded = false;
         this.address = [];
         this.router = this._router;
         this.submitted = false;
@@ -41,7 +42,10 @@ var FormCompanyComponent = (function () {
             var currentUserToken = currentUser.token;
             this.AddressService.getAddress(currentUserToken)
                 .subscribe(function (res) {
-                _this.address.push(res);
+                if (res) {
+                    _this.loaded = true;
+                    _this.address.push(res);
+                }
             });
         }
     };

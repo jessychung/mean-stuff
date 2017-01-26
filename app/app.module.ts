@@ -60,6 +60,7 @@ import {ProjectsComponent} from "./projects/projects.component";
 import {ProjectsSingleComponent} from "./projects-single/projects-single.component";
 import {ProjectsTaskComponent} from "./projects-task/projects-task.component";
 import {projectsService} from "./projects.service";
+import {Ng2AutoCompleteModule} from "ng2-auto-complete";
 
 
 @NgModule({
@@ -73,6 +74,7 @@ import {projectsService} from "./projects.service";
         GridModule,
         DialogModule,
         routing,
+        Ng2AutoCompleteModule,
         HttpModule
     ],
     declarations: [

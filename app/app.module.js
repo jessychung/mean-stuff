@@ -63,6 +63,7 @@ var projects_component_1 = require("./projects/projects.component");
 var projects_single_component_1 = require("./projects-single/projects-single.component");
 var projects_task_component_1 = require("./projects-task/projects-task.component");
 var projects_service_1 = require("./projects.service");
+var ng2_auto_complete_1 = require("ng2-auto-complete");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -80,6 +81,7 @@ AppModule = __decorate([
             kendo_angular_grid_1.GridModule,
             kendo_angular_dialog_1.DialogModule,
             app_routing_1.routing,
+            ng2_auto_complete_1.Ng2AutoCompleteModule,
             http_1.HttpModule
         ],
         declarations: [

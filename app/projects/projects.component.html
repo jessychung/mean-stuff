@@ -16,7 +16,7 @@
                     <!--<div class="sso-addnew">-->
                         <!--<i class="fa fa-plus" aria-hidden="true"></i>-->
                     <!--</div>-->
-                    <input type="search" class="form-control sso-round-input sso-search" placeholder="Search..." />
+                    <input type="search" class="form-control sso-round-input sso-search" placeholder="Search by project name..." />
                 </div>
             </div>
 
@@ -24,7 +24,8 @@
                 <div class="col-lg-10 col-md-10 col-sm-8">
                     <ul class="sso-page-menu">
                         <li [routerLink]="['/main/projects/projects-all']" [routerLinkActive]="['sso-page-menu-active']">All Projects</li>
-                        <li [routerLink]="['/main/projects/projects-clients']" [routerLinkActive]="['sso-page-menu-active']" [ngClass]="{ ssopagemenuactive: checkifactive() }">Timesheets</li>
+                        <li [routerLink]="['/main/projects/projects-clients']" [routerLinkActive]="['sso-page-menu-active']">Timesheets</li>
+                        <!--<li [routerLink]="['/main/projects/projects-clients']" [routerLinkActive]="['sso-page-menu-active']" [ngClass]="{ ssopagemenuactive: checkifactive() }">Timesheets</li>-->
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-2 col-sm-4" style="text-align: right">

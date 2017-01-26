@@ -17,6 +17,7 @@ export class FormCompanyComponent implements OnInit{
     @Input('currentId') CurrentId:string;
 
     companyForm : FormGroup;
+    loaded:boolean = false;
 
     public address = [];
 
@@ -48,7 +49,10 @@ export class FormCompanyComponent implements OnInit{
 
             this.AddressService.getAddress(currentUserToken)
                 .subscribe(res => {
-                    this.address.push(res);
+                    if(res) {
+                        this.loaded = true;
+                        this.address.push(res);
+                    }
                 })
 
         }

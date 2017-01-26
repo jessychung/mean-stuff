@@ -25,7 +25,8 @@
             'moment': 'npm:moment',
             //kendo
             '@progress': 'npm:@progress',
-            '@telerik': 'npm:@telerik'
+            '@telerik': 'npm:@telerik',
+            'ng2-auto-complete': 'node_modules/ng2-auto-complete/dist'
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -47,7 +48,8 @@
             "@telerik/kendo-dropdowns-common": { main: './dist/npm/js/main.js', defaultExtension: 'js' },
             "@progress/kendo-popup-common": { main: './dist/npm/js/main.js', defaultExtension: 'js' },
             'ng2-bootstrap': { main: 'bundles/ng2-bootstrap.umd.js', defaultExtension: 'js' },
-            'moment': { main: './moment.js', defaultExtension: 'js' }
+            'moment': { main: './moment.js', defaultExtension: 'js' },
+            'ng2-auto-complete': { main: 'ng2-auto-complete.umd.js', defaultExtension: 'js' }
         }
     });
 })(this);
