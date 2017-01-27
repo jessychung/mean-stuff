@@ -1,0 +1,87 @@
+.sso-table-button {
+  border: 1px solid #cccccc;
+  background-color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-size: 13px;
+  transition: all .3s;
+  margin-right: 5px;
+  line-height: normal; }
+  .sso-table-button:hover, .sso-table-button:active, .sso-table-button:focus {
+    cursor: pointer;
+    border: 1px solid #adadad;
+    background-color: #f9f9f9;
+    transition: all .3s; }
+
+.table > tbody > tr > td {
+  border-top: 1px solid #e6e6e6 !important; }
+
+.table > thead > tr > th {
+  border-bottom: 1px solid #dddddd !important; }
+
+.table {
+  margin-bottom: 0; }
+  .table ul {
+    padding-left: 17px;
+    margin-bottom: 0; }
+  .table a {
+    font-weight: 600;
+    text-decoration: none; }
+
+.table-no-hover tr:hover, .table-no-hover tr:active, .table-no-hover tr:focus {
+  background-color: transparent !important; }
+
+.table-no-hover:hover, .table-no-hover:active, .table-no-hover:focus {
+  background-color: transparent !important; }
+
+.table-no-hover .sso-table-total:hover {
+  background-color: #f7f7f7 !important; }
+
+.table > tbody + tbody {
+  border-top: 0; }
+
+.body-striped tbody:nth-of-type(even) {
+  background-color: #f3f3f3; }
+
+.sso-table-total {
+  background-color: #f7f7f7; }
+  .sso-table-total td {
+    padding: 12px 10px !important;
+    font-weight: 600; }
+  .sso-table-total:hover, .sso-table-total:active, .sso-table-total:focus {
+    background-color: #f7f7f7 !important; }
+
+.datatable.material {
+  background: transparent !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important; }
+
+.pagination > li > a, .pagination > li > span {
+  color: rgba(61, 71, 79, 0.5) !important;
+  font-weight: 600;
+  background-color: transparent !important;
+  border: 0px !important;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+  .pagination > li > a:hover, .pagination > li > a:active, .pagination > li > a:focus, .pagination > li > span:hover, .pagination > li > span:active, .pagination > li > span:focus {
+    background-color: #eaeaea !important;
+    border-radius: 100px !important;
+    color: #3d474f !important;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+
+.pagination .active a {
+  background-color: #eaeaea !important;
+  border-radius: 100px;
+  color: #3d474f !important; }
