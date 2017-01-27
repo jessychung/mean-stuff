@@ -10,10 +10,6 @@
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </div>
 
-                    <div class="sso-addnew" style="display:block; margin-bottom: 15px">
-                        <i aria-hidden="true" class="fa fa-plus"></i>
-                    </div>
-
                     <div class="sso-delete" style="display:block;" >
                         <i class="thentia-trash" aria-hidden="true"></i>
                     </div>
@@ -21,11 +17,11 @@
 
                 <div class="sso-interior-block"  *ngFor="let instance of VectorleapInstances">
 
-                    <div class="sso-status sso-status-success" ng-reflect-klass="sso-status" ng-reflect-ng-class="[object Object]">Active</div>
+                    <div class="sso-breadcrumbs">
+                        <a>Database: {{instance.vectorleapName}}</a>
+                    </div>
 
-                    <h1 style="margin-top: 10px; margin-bottom: 10px">{{instance.vectorleapName}}</h1>
-
-                    <hr>
+                    <h1 style="margin-top: 10px; margin-bottom: 10px">Manage Users</h1>
 
                     <manage-users-all></manage-users-all>
 

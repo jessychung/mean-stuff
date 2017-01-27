@@ -1840,6 +1840,7 @@ input::-webkit-inner-spin-button {
   line-height: 35px; }
 
 .sso-instance {
+  height: 107px;
   background-color: #fff;
   padding: 20px;
   margin-bottom: 20px;
