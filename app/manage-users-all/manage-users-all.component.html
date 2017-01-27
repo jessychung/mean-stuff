@@ -34,7 +34,7 @@
 
 <div class="row" style="margin-top: -43px;">
     <div class="col-md-6 col-md-offset-6" style="text-align: right;">
-        <button class="btn btn-sm btn-brand" (click)="openAddNew()">
+        <button class="btn btn-sm btn-red" (click)="openAddNew()">
             <i class="fa fa-plus"></i> Add a new user
         </button>
     </div>
@@ -47,7 +47,7 @@
 
     <p>Are you sure you want to delete <span class="sso-inline-span span-blue">{{userdata.userFname}} {{userdata.userLname}}</span>?</p>
     <div style="padding: 5px"></div>
-    <button class="btn btn-sm btn-brand" (click)="deleteUser(userdata._id)">Delete</button>
+    <button class="btn btn-sm btn-red" (click)="deleteUser(userdata._id)">Delete</button>
     <button class="btn btn-sm btn-light" (click)="closeConfirmDialog()">Cancel</button>
 </kendo-dialog>
 
@@ -103,8 +103,8 @@
 
     <div style="padding: 5px"></div>
 
-    <button type="submit" *ngIf="newform" [disabled]="!editForm.valid" class="btn btn-sm btn-brand" (click)="addUser()">Save</button>
-    <button type="submit" *ngIf="!newform" [disabled]="!editForm.valid" class="btn btn-sm btn-brand" (click)="updateUser(userdata._id)">Save & Update</button>
+    <button type="submit" *ngIf="newform" [disabled]="!editForm.valid" class="btn btn-sm btn-red" (click)="addUser()">Save</button>
+    <button type="submit" *ngIf="!newform" [disabled]="!editForm.valid" class="btn btn-sm btn-red" (click)="updateUser(userdata._id)">Save & Update</button>
 
     <button type="button" class="btn btn-sm btn-light" (click)="closeEditDialog()">Cancel</button>
 </kendo-dialog>

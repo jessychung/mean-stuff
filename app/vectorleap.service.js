@@ -11,37 +11,41 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
-var userService = (function () {
-    function userService(http) {
+var vectorleapService = (function () {
+    function vectorleapService(http) {
         this.http = http;
         console.log('getting the users...');
     }
-    // get data
-    userService.prototype.getUsers = function (id) {
-        return this.http.get('/api/users/' + id)
+    // get vectorleap instances
+    vectorleapService.prototype.getInstances = function (token) {
+        return this.http.get('/api/vectorleap/' + token)
             .map(function (res) { return res.json(); });
     };
-    userService.prototype.createUser = function (newUser) {
+    vectorleapService.prototype.getOneInstance = function (id) {
+        return this.http.get('/api/vectorleap/get/' + id)
+            .map(function (res) { return res.json(); });
+    };
+    vectorleapService.prototype.createInstance = function (newUser) {
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('/api/users', JSON.stringify(newUser), { headers: headers })
+        return this.http.post('/api/vectorleap', JSON.stringify(newUser), { headers: headers })
             .map(function (res) { return res.json(); });
     };
-    userService.prototype.deleteUser = function (id) {
-        return this.http.delete('/api/users/' + id)
+    vectorleapService.prototype.deleteInstance = function (id) {
+        return this.http.delete('/api/vectorleap/' + id)
             .map(function (res) { return res.json(); });
     };
-    userService.prototype.updateUser = function (updatedUser) {
+    vectorleapService.prototype.updateInstance = function (updatedUser) {
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
-        return this.http.put('/api/users/' + updatedUser._id, JSON.stringify(updatedUser), { headers: headers })
+        return this.http.put('/api/vectorleap/' + updatedUser._id, JSON.stringify(updatedUser), { headers: headers })
             .map(function (res) { return res.json(); });
     };
-    return userService;
+    return vectorleapService;
 }());
-userService = __decorate([
+vectorleapService = __decorate([
     core_1.Injectable(),
     __metadata("design:paramtypes", [http_1.Http])
-], userService);
-exports.userService = userService;
-//# sourceMappingURL=userService.service.js.map
+], vectorleapService);
+exports.vectorleapService = vectorleapService;
+//# sourceMappingURL=vectorleap.service.js.map

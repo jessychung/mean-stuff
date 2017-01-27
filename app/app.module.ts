@@ -61,6 +61,8 @@ import {ProjectsSingleComponent} from "./projects-single/projects-single.compone
 import {ProjectsTaskComponent} from "./projects-task/projects-task.component";
 import {projectsService} from "./projects.service";
 import {Ng2AutoCompleteModule} from "ng2-auto-complete";
+import {VectorleapAllComponent} from "./vectorleap-all/vectorleap-all.component";
+import {VectorleapManageComponent} from "./vectorleap-manage/vectorleap-manage.component";
 
 
 @NgModule({
@@ -119,7 +121,9 @@ import {Ng2AutoCompleteModule} from "ng2-auto-complete";
         FormPrimaryComponent,
         FormUserComponent,
         FormClientComponent,
-        VectorleapComponent
+        VectorleapComponent,
+        VectorleapAllComponent,
+        VectorleapManageComponent
     ],
     bootstrap: [ AppComponent ],
     providers: [userService, authService, accountService, currentUserService, projectsService, authGuard]

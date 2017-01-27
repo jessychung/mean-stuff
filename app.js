@@ -13,6 +13,7 @@ const currentuser = require('./routes/currentuser');
 const address = require('./routes/addresses');
 const projects = require('./routes/projects');
 const timesheets = require('./routes/timesheets');
+const vectorleap = require('./routes/vectorleap');
 
 //body parser
 app.use(bodyParser.json());
@@ -28,6 +29,7 @@ app.use('/api', currentuser);
 app.use('/api', address);
 app.use('/api', projects);
 app.use('/api', timesheets);
+app.use('/api', vectorleap);
 
 //run angular
 app.get('*', (req, res) => {

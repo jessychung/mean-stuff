@@ -64,6 +64,8 @@ var projects_single_component_1 = require("./projects-single/projects-single.com
 var projects_task_component_1 = require("./projects-task/projects-task.component");
 var projects_service_1 = require("./projects.service");
 var ng2_auto_complete_1 = require("ng2-auto-complete");
+var vectorleap_all_component_1 = require("./vectorleap-all/vectorleap-all.component");
+var vectorleap_manage_component_1 = require("./vectorleap-manage/vectorleap-manage.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -126,7 +128,9 @@ AppModule = __decorate([
             form_primary_component_1.FormPrimaryComponent,
             form_user_component_1.FormUserComponent,
             form_client_component_1.FormClientComponent,
-            vectorleap_component_1.VectorleapComponent
+            vectorleap_component_1.VectorleapComponent,
+            vectorleap_all_component_1.VectorleapAllComponent,
+            vectorleap_manage_component_1.VectorleapManageComponent
         ],
         bootstrap: [app_component_1.AppComponent],
         providers: [userService_service_1.userService, auth_service_1.authService, accounts_service_1.accountService, currentUser_service_1.currentUserService, projects_service_1.projectsService, route_guard_1.authGuard]

@@ -10,8 +10,8 @@ export class userService {
     }
 
     // get data
-    getUsers() {
-        return this.http.get('/api/users')
+    getUsers(id) {
+        return this.http.get('/api/users/' + id)
             .map(res => res.json());
     }
 

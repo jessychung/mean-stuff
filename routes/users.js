@@ -11,13 +11,12 @@ router.get('/', (req, res) => {
 
 
 //get all
-router.get('/users', function (req, res, next) {
-    db.users.find(function (err, users) {
+router.get('/users/:id', function (req, res, next) {
+    db.users.find({vectorleapId: req.params.id },function (err, users) {
         if(err) {
             res.send(err);
         }
         res.json(users);
-        console.log('testing!');
     })
 });
 
@@ -64,6 +63,7 @@ router.put('/users/:id', function (req, res, next) {
 
     const users = req.body;
     const updateduser = {
+        vectorleapId: users.vectorleapId,
         userAvatar: users.userAvatar,
         userAvatarColour: users.userAvatarColour,
         userFname: users.userFname,

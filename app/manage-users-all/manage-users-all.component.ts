@@ -1,6 +1,6 @@
 import {Component, ViewEncapsulation, OnInit} from '@angular/core';
 import { Location }                 from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
@@ -16,9 +16,10 @@ import { userService } from "../userService.service";
 })
 
 
-export class ManageUsersAllComponent {
+export class ManageUsersAllComponent implements OnInit{
 
 
+    private vectorleapid;
     private editForm;
     private userdata;
 
@@ -31,19 +32,35 @@ export class ManageUsersAllComponent {
     constructor(
         private location: Location,
         private _router: Router,
+        private activatedRoute: ActivatedRoute,
         private UserService: userService
     ) {
 
         this.editForm = this.getnewform();
-        this.reloadUsers();
+        this.activatedRoute.params.subscribe(params => {
+            this.vectorleapid = params; //get the project id from url
+        });
+
+    }
+
+    ngOnInit() {
+
+        this.activatedRoute.params.subscribe(params => {
+            this.vectorleapid = params; //get the project id from url
+            this.UserService.getUsers(this.vectorleapid.id)
+                .subscribe(tasks => {
+                    this.testData = tasks;
+                    this.loadProducts();
+                });
+        });
     }
 
     goBack(): void {
         this.location.back();
     }
 
-    private reloadUsers():void {
-        this.UserService.getUsers()
+    private reloadUsers(id):void {
+        this.UserService.getUsers(id)
             .subscribe(tasks => {
                 this.testData = tasks;
                 this.loadProducts();
@@ -124,6 +141,7 @@ export class ManageUsersAllComponent {
         this.newform = false;
 
         var newUser = {
+            vectorleapId: this.vectorleapid.id,
             userAvatar: this.editForm.value.firstname.charAt(0).toUpperCase() + this.editForm.value.lastname.charAt(0).toUpperCase(),
             userAvatarColour : '#'+(Math.random()*0xFFFFFF<<0).toString(16),
             userFname: this.editForm.value.firstname,
@@ -134,7 +152,7 @@ export class ManageUsersAllComponent {
 
         this.UserService.createUser(newUser)
             .subscribe(()=>{
-            this.reloadUsers();
+            this.reloadUsers(this.vectorleapid.id);
         });
     }
 
@@ -144,17 +162,16 @@ export class ManageUsersAllComponent {
                 console.log(data)
             });
 
-        this.reloadUsers();
+        this.reloadUsers(this.vectorleapid.id);
 
         this.ConfirmDialogOpened = false;
     }
 
     public updateUser(id) {
 
-        console.log(this.userdata.userAvatarColour);
-
         var updatedUser = {
             _id: id,
+            vectorleapId: this.vectorleapid.id,
             userAvatar: this.editForm.value.firstname.charAt(0).toUpperCase() + this.editForm.value.lastname.charAt(0).toUpperCase(),
             userAvatarColour: this.userdata.userAvatarColour,
             userFname: this.editForm.value.firstname,
@@ -164,9 +181,12 @@ export class ManageUsersAllComponent {
         };
 
         this.UserService.updateUser(updatedUser)
-            .subscribe();
+            .subscribe(res => {
+                if(res) {
+                    this.reloadUsers(this.vectorleapid.id);
+                }
 
-        this.reloadUsers();
+            });
         this.EditDialogOpened = false;
 
     }

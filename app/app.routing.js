@@ -35,6 +35,8 @@ var projects_clients_component_1 = require("./projects-clients/projects-clients.
 var projects_clients_addedit_component_1 = require("./projects-clients-addedit/projects-clients-addedit.component");
 var projects_single_component_1 = require("./projects-single/projects-single.component");
 var projects_task_component_1 = require("./projects-task/projects-task.component");
+var vectorleap_all_component_1 = require("./vectorleap-all/vectorleap-all.component");
+var vectorleap_manage_component_1 = require("./vectorleap-manage/vectorleap-manage.component");
 var appRoutes = [
     {
         path: '',
@@ -197,7 +199,17 @@ var appRoutes = [
             },
             {
                 path: 'vectorleap',
-                component: vectorleap_component_1.VectorleapComponent
+                component: vectorleap_component_1.VectorleapComponent,
+                children: [
+                    {
+                        path: 'vectorleap-all',
+                        component: vectorleap_all_component_1.VectorleapAllComponent
+                    }
+                ]
+            },
+            {
+                path: 'vectorleap-manage/:id',
+                component: vectorleap_manage_component_1.VectorleapManageComponent
             }
         ]
     }

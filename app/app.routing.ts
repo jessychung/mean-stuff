@@ -36,6 +36,8 @@ import {ProjectsClientsComponent} from "./projects-clients/projects-clients.comp
 import {ProjectsClientsAddeditComponent} from "./projects-clients-addedit/projects-clients-addedit.component";
 import {ProjectsSingleComponent} from "./projects-single/projects-single.component";
 import {ProjectsTaskComponent} from "./projects-task/projects-task.component";
+import {VectorleapAllComponent} from "./vectorleap-all/vectorleap-all.component";
+import {VectorleapManageComponent} from "./vectorleap-manage/vectorleap-manage.component";
 
 const appRoutes: Routes = [
     {
@@ -199,7 +201,17 @@ const appRoutes: Routes = [
             },
             {
                 path: 'vectorleap',
-                component: VectorleapComponent
+                component: VectorleapComponent,
+                children: [
+                    {
+                        path: 'vectorleap-all',
+                        component: VectorleapAllComponent
+                    }
+                ]
+            },
+            {
+                path: 'vectorleap-manage/:id',
+                component: VectorleapManageComponent
             }
         ]
     }

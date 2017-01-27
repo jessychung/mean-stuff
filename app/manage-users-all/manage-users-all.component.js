@@ -16,9 +16,11 @@ var kendo_data_query_1 = require("@progress/kendo-data-query");
 var user_1 = require("../user");
 var userService_service_1 = require("../userService.service");
 var ManageUsersAllComponent = (function () {
-    function ManageUsersAllComponent(location, _router, UserService) {
+    function ManageUsersAllComponent(location, _router, activatedRoute, UserService) {
+        var _this = this;
         this.location = location;
         this._router = _router;
+        this.activatedRoute = activatedRoute;
         this.UserService = UserService;
         this.newform = false;
         this.users = [];
@@ -32,14 +34,27 @@ var ManageUsersAllComponent = (function () {
         this.ConfirmDialogOpened = false;
         this.EditDialogOpened = false;
         this.editForm = this.getnewform();
-        this.reloadUsers();
+        this.activatedRoute.params.subscribe(function (params) {
+            _this.vectorleapid = params; //get the project id from url
+        });
     }
+    ManageUsersAllComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.activatedRoute.params.subscribe(function (params) {
+            _this.vectorleapid = params; //get the project id from url
+            _this.UserService.getUsers(_this.vectorleapid.id)
+                .subscribe(function (tasks) {
+                _this.testData = tasks;
+                _this.loadProducts();
+            });
+        });
+    };
     ManageUsersAllComponent.prototype.goBack = function () {
         this.location.back();
     };
-    ManageUsersAllComponent.prototype.reloadUsers = function () {
+    ManageUsersAllComponent.prototype.reloadUsers = function (id) {
         var _this = this;
-        this.UserService.getUsers()
+        this.UserService.getUsers(id)
             .subscribe(function (tasks) {
             _this.testData = tasks;
             _this.loadProducts();
@@ -95,6 +110,7 @@ var ManageUsersAllComponent = (function () {
         this.EditDialogOpened = false;
         this.newform = false;
         var newUser = {
+            vectorleapId: this.vectorleapid.id,
             userAvatar: this.editForm.value.firstname.charAt(0).toUpperCase() + this.editForm.value.lastname.charAt(0).toUpperCase(),
             userAvatarColour: '#' + (Math.random() * 0xFFFFFF << 0).toString(16),
             userFname: this.editForm.value.firstname,
@@ -104,7 +120,7 @@ var ManageUsersAllComponent = (function () {
         };
         this.UserService.createUser(newUser)
             .subscribe(function () {
-            _this.reloadUsers();
+            _this.reloadUsers(_this.vectorleapid.id);
         });
     };
     ManageUsersAllComponent.prototype.deleteUser = function (id) {
@@ -112,13 +128,14 @@ var ManageUsersAllComponent = (function () {
             .subscribe(function (data) {
             console.log(data);
         });
-        this.reloadUsers();
+        this.reloadUsers(this.vectorleapid.id);
         this.ConfirmDialogOpened = false;
     };
     ManageUsersAllComponent.prototype.updateUser = function (id) {
-        console.log(this.userdata.userAvatarColour);
+        var _this = this;
         var updatedUser = {
             _id: id,
+            vectorleapId: this.vectorleapid.id,
             userAvatar: this.editForm.value.firstname.charAt(0).toUpperCase() + this.editForm.value.lastname.charAt(0).toUpperCase(),
             userAvatarColour: this.userdata.userAvatarColour,
             userFname: this.editForm.value.firstname,
@@ -127,8 +144,11 @@ var ManageUsersAllComponent = (function () {
             userRole: this.editForm.value.role
         };
         this.UserService.updateUser(updatedUser)
-            .subscribe();
-        this.reloadUsers();
+            .subscribe(function (res) {
+            if (res) {
+                _this.reloadUsers(_this.vectorleapid.id);
+            }
+        });
         this.EditDialogOpened = false;
     };
     return ManageUsersAllComponent;
@@ -142,6 +162,7 @@ ManageUsersAllComponent = __decorate([
     }),
     __metadata("design:paramtypes", [common_1.Location,
         router_1.Router,
+        router_1.ActivatedRoute,
         userService_service_1.userService])
 ], ManageUsersAllComponent);
 exports.ManageUsersAllComponent = ManageUsersAllComponent;
