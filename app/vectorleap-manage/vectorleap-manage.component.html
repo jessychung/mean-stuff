@@ -21,8 +21,11 @@
 
                 <div class="sso-interior-block"  *ngFor="let instance of VectorleapInstances">
 
-                    <h1>{{instance.vectorleapName}}</h1>
+                    <div class="sso-status sso-status-success" ng-reflect-klass="sso-status" ng-reflect-ng-class="[object Object]">Active</div>
 
+                    <h1 style="margin-top: 10px; margin-bottom: 10px">{{instance.vectorleapName}}</h1>
+
+                    <hr>
 
                     <manage-users-all></manage-users-all>
 

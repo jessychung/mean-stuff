@@ -1,3 +1,5 @@
+<h1 style="margin-top: 10px; margin-bottom: 20px; font-size: 17px">Manage Users</h1>
+
 <kendo-grid [data]="gridView"
             [pageSize]="pageSize"
             [skip]="skip"
@@ -7,11 +9,11 @@
             [scrollable]="'none'"
             [sort]="sort"
             (sortChange)="sortChange($event)">
-    <kendo-grid-column field="userAvatar" title=" " [width]="80">
-        <template kendoCellTemplate let-dataItem let-rowIndex="rowIndex">
-            <div class="sso-avatar-small" [ngStyle]="{'backgroundColor': dataItem.userAvatarColour}">{{dataItem.userAvatar}}</div>
-        </template>
-    </kendo-grid-column>
+    <!--<kendo-grid-column field="userAvatar" title=" " [width]="80">-->
+        <!--<template kendoCellTemplate let-dataItem let-rowIndex="rowIndex">-->
+            <!--<div class="sso-avatar-small" [ngStyle]="{'backgroundColor': dataItem.userAvatarColour}">{{dataItem.userAvatar}}</div>-->
+        <!--</template>-->
+    <!--</kendo-grid-column>-->
     <kendo-grid-column field="userFname" title="First Name"></kendo-grid-column>
     <kendo-grid-column field="userLname" title="Last name"></kendo-grid-column>
     <kendo-grid-column field="userEmail" title="Email"></kendo-grid-column>
