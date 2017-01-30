@@ -16,7 +16,6 @@ var VectorleapAllComponent = (function () {
         this.VectorleapService = VectorleapService;
         this.UserService = UserService;
         this.VectorleapInstances = [];
-        this.count = [];
     }
     VectorleapAllComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -26,13 +25,16 @@ var VectorleapAllComponent = (function () {
             this.VectorleapService.getInstances(currentUserToken)
                 .subscribe(function (res) {
                 _this.VectorleapInstances = res;
-                //count how many users each instance has
-                for (var i = 0; i < _this.VectorleapInstances.length; i++) {
+                var _loop_1 = function (i) {
                     _this.UserService.getUsers(_this.VectorleapInstances[i]._id)
                         .subscribe(function (res) {
-                        console.log(i);
-                        // this.VectorleapInstances[i].vectorleapUsers = res.length;
+                        _this.VectorleapInstances[i].vectorleapUsers = res.length;
+                        console.log(_this.VectorleapInstances);
                     });
+                };
+                //count how many users each instance has
+                for (var i = 0; i < _this.VectorleapInstances.length; i++) {
+                    _loop_1(i);
                 }
             });
         }

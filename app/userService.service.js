@@ -21,6 +21,12 @@ var userService = (function () {
         return this.http.get('/api/users/' + id)
             .map(function (res) { return res.json(); });
     };
+    // getUserCount(id): Observable<any> {
+    //     return this.http.get('/api/users/' + id)
+    //         .flatMap((response: Response) => response.json())
+    //         .flatMap((film: string) => this.http.get(film),
+    //             (_, resp) => resp.json().title)
+    // }
     userService.prototype.createUser = function (newUser) {
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');

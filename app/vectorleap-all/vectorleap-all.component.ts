@@ -5,6 +5,8 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import {vectorleapService} from "../vectorleap.service";
 import {userService} from "../userService.service";
 
+import {Observable} from 'rxjs/Observable';
+
 
 @Component ({
     selector: 'vectorleap-all',
@@ -16,7 +18,6 @@ import {userService} from "../userService.service";
 export class VectorleapAllComponent implements OnInit {
 
     VectorleapInstances = [];
-    count = [];
 
     constructor(
         private VectorleapService: vectorleapService,
@@ -35,11 +36,12 @@ export class VectorleapAllComponent implements OnInit {
                     this.VectorleapInstances = res;
 
                     //count how many users each instance has
-                    for(var i = 0; i < this.VectorleapInstances.length; i++) {
+                    for(let i = 0; i < this.VectorleapInstances.length; i++) {
+
                         this.UserService.getUsers(this.VectorleapInstances[i]._id)
                             .subscribe(res => {
-                                console.log(i);
-                                // this.VectorleapInstances[i].vectorleapUsers = res.length;
+                                this.VectorleapInstances[i].vectorleapUsers = res.length;
+                                console.log(this.VectorleapInstances);
                             })
                     }
 

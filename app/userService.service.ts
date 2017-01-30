@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Http, Jsonp, URLSearchParams, Headers } from '@angular/http';
+import {Http, Jsonp, URLSearchParams, Headers, Response} from '@angular/http';
 import 'rxjs/add/operator/map';
+import {Observable} from "rxjs";
 
 @Injectable()
 export class userService {
@@ -14,6 +15,13 @@ export class userService {
         return this.http.get('/api/users/' + id)
             .map(res => res.json());
     }
+
+    // getUserCount(id): Observable<any> {
+    //     return this.http.get('/api/users/' + id)
+    //         .flatMap((response: Response) => response.json())
+    //         .flatMap((film: string) => this.http.get(film),
+    //             (_, resp) => resp.json().title)
+    // }
 
     createUser(newUser) {
         let headers = new Headers();
